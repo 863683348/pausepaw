@@ -1,0 +1,13 @@
+{
+  "name": "pausepaw",
+  "version": "0.2.0",
+  "private": true,
+  "description": "PausePaw - digital wellness focus companion (SaaS + browser extension). Zero external dependencies, deployable MVP.",
+  "type": "module",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": ">=22.5"
+  }
+}
