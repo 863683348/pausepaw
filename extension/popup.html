@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <style>
+    body { width: 340px; font-family: system-ui, sans-serif; padding: 14px; color: #4A2E12; }
+    h3 { margin: 0 0 8px; font-size: 16px; }
+    input { width: 100%; padding: 9px; font-size: 12px; border: 1px solid #F1E2CE; border-radius: 8px; box-sizing: border-box; font-family: ui-monospace, monospace; }
+    button { width: 100%; margin-top: 8px; padding: 9px; border: 0; border-radius: 999px; background: #FB923C; color: #fff; font-weight: 700; cursor: pointer; }
+    button.ghost { background: #fff; color: #EA7A1F; border: 1px solid #F1E2CE; }
+    .stats { margin-top: 12px; background: #FFE8D2; border-radius: 10px; padding: 10px; font-size: 13px; }
+    .stats b { color: #EA7A1F; }
+    .hint { font-size: 11px; color: #9A7B5A; margin-top: 6px; }
+    .ok { color: #2E7D32; font-size: 12px; margin-top: 6px; }
+    .status { font-size: 12px; margin-top: 6px; }
+  </style>
+</head>
+<body>
+  <h3>⏳ PausePaw</h3>
+  <div class="hint">后端地址（部署后改成你的域名，如 https://pausepaw.com）：</div>
+  <input id="base" placeholder="http://localhost:3000" />
+  <div class="hint">从网站「扩展」页复制你的设备 Token，粘贴到这里连接云端：</div>
+  <input id="token" placeholder="设备 token（来自网站）" />
+  <button id="connect">连接云端</button>
+  <button id="disconnect" class="ghost">断开</button>
+  <div class="ok" id="ok" style="display:none">已连接，规则每 30 秒自动同步 ✓</div>
+  <div class="stats" id="stats">今日拦截：<b id="sBlocks">0</b> ｜ 省下：<b id="sSaved">0</b> 分钟</div>
+  <div class="hint">演示建议：网站里阈值选“秒”、设 10。切走标签页/最小化会重置计时（信任底线）。</div>
+  <script src="popup.js"></script>
+</body>
+</html>
