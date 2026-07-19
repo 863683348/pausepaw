@@ -1,0 +1,24 @@
+{
+  "manifest_version": 3,
+  "name": "PausePaw - Focus Companion",
+  "version": "0.1.0",
+  "description": "A cute companion that gently forces a break when you over-scroll. Digital wellness, not blocking.",
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "PausePaw"
+  },
+  "permissions": ["storage", "activeTab"],
+  "host_permissions": ["<all_urls>"],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
