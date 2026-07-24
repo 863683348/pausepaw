@@ -1,0 +1,11 @@
+# Nixpacks config for zero-dependency Node project
+# Tells Nixpacks: don't run npm install, just start the server
+[phases.build]
+nixPkgs = ["nodejs_22"]
+
+[variables]
+NPM_PRODUCTION = "false"
+NODE_ENV = "production"
+
+[start]
+cmd = "node server.js"
