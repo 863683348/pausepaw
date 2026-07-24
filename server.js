@@ -608,14 +608,13 @@ const server = http.createServer(async (req, res) => {
     }
     if (p === "/sitemap.xml") {
       setSecurityHeaders(res);
-      const alt = (loc, lang) =>
-        `    <xhtml:link rel="alternate" hreflang="${lang}" href="${loc}"/>`;
-      const urls = [
-        { loc: SITE_URL + "/", zh: SITE_URL + "/", en: SITE_URL + "/?lang=en" },
-        { loc: SITE_URL + "/app.html", zh: SITE_URL + "/app.html", en: SITE_URL + "/app.html?lang=en" }
-      ].map(pg =>
-        `  <url>\n    <loc>${pg.loc}</loc>\n${alt(pg.zh, "zh")}\n${alt(pg.en, "en")}\n${alt(SITE_URL + "/", "x-default")}\n  </url>`
-      ).join("\n");
+      const pages = ["/", "/app.html", "/blog.html", "/faq.html", "/privacy.html", "/terms.html", "/contact.html"];
+      const alt = (loc, lang) => `    <xhtml:link rel="alternate" hreflang="${lang}" href="${loc}"/>`;
+      const urls = pages.map(loc => {
+        const zh = SITE_URL + loc;
+        const en = SITE_URL + loc + "?lang=en";
+        return `  <url>\n    <loc>${zh}</loc>\n${alt(zh, "zh")}\n${alt(en, "en")}\n${alt(SITE_URL + "/", "x-default")}\n  </url>`;
+      }).join("\n");
       const xml = `<?xml version="1.0" encoding="UTF-8"?>\n` +
         `<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">\n${urls}\n</urlset>\n`;
       res.writeHead(200, { "Content-Type": "application/xml; charset=utf-8" });
