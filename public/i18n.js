@@ -80,7 +80,14 @@ window.I18N = {
     "fa_q4": "怎么安装？", "fa_a4": "在控制台复制设备 Token，加载插件后粘贴即可云端同步。",
     "fa_q5": "我的数据安全吗？", "fa_a5": "密码以 scrypt 哈希存储，不出售数据，详见隐私政策。",
     "fa_q6": "如何退款？", "fa_a6": "会员通过 PayPal 订阅，可在 PayPal 内管理或取消；如有争议请联系我们。",
+    "fa_q7": "它会被一键关掉吗？", "fa_a7": "不会。休息遮罩没有关闭按钮，倒计时结束才自动淡出——这正是它「有效」的关键。",
+    "fa_q8": "适合管控孩子的屏幕时间吗？", "fa_a8": "非常适合。Family 家庭版可为孩子的设备设置远程规则，并提供家庭看板与周报。",
+    "fa_q9": "会收集我浏览了什么内容吗？", "fa_a9": "不会。插件仅上报聚合事件（域名、时长、时间戳），绝不采集页面内容、输入或 Cookie。",
+    "fa_q10": "断网时还能用吗？", "fa_a10": "能。规则保存在本地副本，断网照常执法，恢复后合并上报。",
+    "fa_q11": "和家人/朋友的区别是什么？", "fa_a11": "免费版与 Pro 面向个人多设备陪伴；Family 版额外提供家庭成员席位、远程儿童规则与家庭周报。",
+    "fa_q12": "在哪儿能看到我的休息数据？", "fa_a12": "登录后在控制台「看板」查看今日拦截、累计省时与连续守规天数；真实拦截数由插件上报。",
     "bl_t": "博客 — 数字健康与屏幕时间", "bl_intro": "关于数字健康、屏幕时间管理与自律的小文章。聊聊暑期屏幕时间翻倍、The Power of Pause 与如何培养健康用机习惯。",
+    "bl_related": "相关阅读",
     "bl_post1_t": "为什么“可爱”比“封锁”更有效", "bl_post1_d": "冷冰冰的“已屏蔽”容易激起逆反；一只会卖萌的伙伴降低了心理抵触，让人更愿意配合休息。",
     "bl_post2_t": "5 分钟法则：用小中断打断无意识刷屏", "bl_post2_d": "无意识刷屏往往源于习惯回路。一个温柔的强制休息，能打断回路、把控制权交还给你。",
     "bl_post3_t": "暑期屏幕时间翻倍？用“Pause”把控制权拿回来", "bl_post3_d": "研究显示暑期孩子每日娱乐屏幕时间从 3.8 小时飙到 7.2 小时。与其硬堵，不如用温柔的强制休息打断无意识刷屏——这正是 PausePaw 的“Pause 之力”：到点就停，可爱不羞辱，习惯自然松动。",
@@ -170,7 +177,14 @@ window.I18N = {
     "fa_q4": "How do I install it?", "fa_a4": "Copy your device token from the dashboard, then paste it into the extension popup to sync from the cloud.",
     "fa_q5": "Is my data safe?", "fa_a5": "Passwords are stored as scrypt hashes; we don't sell data. See our Privacy Policy.",
     "fa_q6": "How do I get a refund?", "fa_a6": "Membership is via PayPal; manage or cancel there. For disputes, contact us.",
+    "fa_q7": "Can it be dismissed with one click?", "fa_a7": "No. The break overlay has no close button and fades out only when the countdown ends — that's exactly what makes it effective.",
+    "fa_q8": "Is it good for managing kids' screen time?", "fa_a8": "Yes. The Family plan lets you set remote rules for kids' devices, plus a family dashboard and weekly report.",
+    "fa_q9": "Does it collect what I browse?", "fa_a9": "No. The extension reports only aggregated events (domain, duration, timestamp) — never page content, input, or cookies.",
+    "fa_q10": "Does it work offline?", "fa_a10": "Yes. Rules are kept in a local copy; enforcement works offline and merges reports when back online.",
+    "fa_q11": "What's the difference between 个人 and Family?", "fa_a11": "Free and Pro are for personal multi-device companion; Family adds member seats, remote kids' rules, and a family weekly report.",
+    "fa_q12": "Where can I see my rest data?", "fa_a12": "After login, open the dashboard to see today's blocks, total time saved, and streak; real block counts come from the extension.",
     "bl_t": "Blog — Digital Wellbeing & Screen Time Tips", "bl_intro": "Short reads on digital wellness, screen time control, and self-management. Summer screen-time spikes, the power of pause, phone-addiction recovery, and focus tips for 2026.",
+    "bl_related": "Related reading",
     "bl_post1_t": "Why “cute” beats “blocked”", "bl_post1_d": "A cold “Blocked” screen triggers resistance; a buddy that plays cute lowers that wall and makes people willing to take a break.",
     "bl_post2_t": "The 5-minute rule: small interruptions break mindless scrolling", "bl_post2_d": "Mindless scrolling runs on habit loops. A gentle forced break interrupts the loop and hands control back to you.",
     "bl_post3_t": "Summer screen time doubles? Take control back with a Pause", "bl_post3_d": "Studies show kids' daily recreational screen time jumps from 3.8 to 7.2 hours over summer. Instead of hard blocking, use a gentle forced break to interrupt mindless scrolling — that's the power of pause: stop on schedule, cute not shaming, and the habit loosens on its own.",
@@ -182,7 +196,11 @@ window.I18N = {
   }
 };
 window.getLang = function () {
-  // 提示语默认中文；用户可在右上角切换英文
+  // 优先读 URL 的 ?lang= 参数，保证 hreflang 备用 URL 真正返回对应语言；回退 localStorage，默认中文
+  try {
+    var q = new URLSearchParams(location.search).get("lang");
+    if (q === "zh" || q === "en") return q;
+  } catch (e) {}
   return localStorage.getItem("pp_locale") || "zh";
 };
 window.setLang = function (lang) {

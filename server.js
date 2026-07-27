@@ -613,7 +613,7 @@ const server = http.createServer(async (req, res) => {
       const urls = pages.map(loc => {
         const zh = SITE_URL + loc;
         const en = SITE_URL + loc + "?lang=en";
-        return `  <url>\n    <loc>${zh}</loc>\n${alt(zh, "zh")}\n${alt(en, "en")}\n${alt(SITE_URL + "/", "x-default")}\n  </url>`;
+        return `  <url>\n    <loc>${zh}</loc>\n${alt(zh, "zh")}\n${alt(en, "en")}\n${alt(zh, "x-default")}\n  </url>`;
       }).join("\n");
       const xml = `<?xml version="1.0" encoding="UTF-8"?>\n` +
         `<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">\n${urls}\n</urlset>\n`;
@@ -633,8 +633,29 @@ const server = http.createServer(async (req, res) => {
       const ext = path.extname(filePath);
       const ct = { ".html": "text/html", ".js": "text/javascript", ".css": "text/css", ".svg": "image/svg+xml", ".json": "application/json", ".png": "image/png" }[ext] || "application/octet-stream";
       res.writeHead(200, { "Content-Type": ct });
-      if (ext === ".html") res.end(data.toString("utf8").replace(/%%SITE_URL%%/g, SITE_URL).replace(/%%ANALYTICS%%/g, buildAnalyticsSnippet()));
-      else res.end(data);
+      if (ext === ".html") {
+        let html = data.toString("utf8").replace(/%%SITE_URL%%/g, SITE_URL).replace(/%%ANALYTICS%%/g, buildAnalyticsSnippet());
+        const EN_META = {
+          "/index.html": { title: "PausePaw — Digital Wellness Companion", description: "A cute digital-wellness companion that gently enforces screen breaks. Free core, with Pro and Family plans.", ogTitle: "PausePaw — Digital Wellness Companion", ogDesc: "A cute digital-wellness companion that gently enforces screen breaks. Free core, with Pro and Family plans." },
+          "/blog.html": { title: "PausePaw Blog — Digital Wellbeing and Screen Time", description: "Why cute beats blocked, the 5-minute rule for mindless scrolling, and how to take back control of summer screen time.", ogTitle: "PausePaw Blog — Digital Wellbeing and Screen Time", ogDesc: "Why cute beats blocked, the 5-minute rule for mindless scrolling, and how to take back control of summer screen time." },
+          "/faq.html": { title: "PausePaw FAQ — Install, Safety, Refunds", description: "What PausePaw is, whether it is free, which browsers it supports, how to install, data safety and refunds.", ogTitle: "PausePaw FAQ — Install, Safety, Refunds", ogDesc: "What PausePaw is, whether it is free, which browsers it supports, how to install, data safety and refunds." },
+          "/privacy.html": { title: "PausePaw Privacy Policy", description: "How PausePaw protects your data: scrypt-hashed passwords, no selling, aggregated events only.", ogTitle: "PausePaw Privacy Policy", ogDesc: "How PausePaw protects your data: scrypt-hashed passwords, no selling, aggregated events only." },
+          "/terms.html": { title: "PausePaw Terms of Service", description: "The terms governing your use of PausePaw digital-wellness companion and subscription plans.", ogTitle: "PausePaw Terms of Service", ogDesc: "The terms governing your use of PausePaw digital-wellness companion and subscription plans." },
+          "/contact.html": { title: "Contact PausePaw", description: "Get in touch with the PausePaw team for support, billing, or partnership questions.", ogTitle: "Contact PausePaw", ogDesc: "Get in touch with the PausePaw team for support, billing, or partnership questions." }
+        };
+        const reqLang = (req.url.match(/[?&]lang=(zh|en)/) || [])[1];
+        if (reqLang === "en" && EN_META[rel]) {
+          const m = EN_META[rel];
+          html = html
+            .replace('<html lang="zh-CN"', '<html lang="en-US"')
+            .replace(/(<link rel="canonical" href=")([^"]*)(")/, '$1$2?lang=en$3')
+            .replace(/<title[^>]*>.*?<\/title>/, '<title>' + m.title + '</title>')
+            .replace(/<meta name="description" content="[^"]*"/, '<meta name="description" content="' + m.description + '"')
+            .replace(/<meta property="og:title" content="[^"]*"/, '<meta property="og:title" content="' + m.ogTitle + '"')
+            .replace(/<meta property="og:description" content="[^"]*"/, '<meta property="og:description" content="' + m.ogDesc + '"');
+        }
+        res.end(html);
+      } else res.end(data);
     });
   } catch (e) {
     send(res, 401, { error: e.message || "error" });
