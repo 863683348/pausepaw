@@ -42,6 +42,13 @@ const CLARITY_ID = process.env.CLARITY_ID || "";
 const IS_PROD = process.env.NODE_ENV === "production" || !/localhost|127\.0\.0\.1/.test(SITE_URL);
 const ANALYTICS_ENABLED = IS_PROD && Boolean(GA4_ID || CLARITY_ID);
 
+// ---------- Google AdSense（项 8：Auto Ads，仅生产加载；需在 AdSense 后台拿到 ca-pub ID）----------
+// 仅当设置了 ADSENSE_CLIENT_ID 且处于生产环境才注入广告脚本。
+// 用 Auto Ads（page-level ads）模式：只需客户端 ID，Google 审核通过后自动在页面投放，
+// 不依赖具体的广告单元 Slot ID，最适合 MVP 阶段先接入、后精修。
+const ADSENSE_CLIENT_ID = process.env.ADSENSE_CLIENT_ID || "";
+const ADSENSE_ENABLED = IS_PROD && /^ca-pub-\d+$/.test(ADSENSE_CLIENT_ID);
+
 // ---------- Google OAuth（项 5：零依赖 authorization code 流程，复用自签 JWT）----------
 const GOOGLE_CLIENT_ID = process.env.GOOGLE_CLIENT_ID || "";
 const GOOGLE_CLIENT_SECRET = process.env.GOOGLE_CLIENT_SECRET || "";
@@ -83,15 +90,27 @@ function buildAnalyticsSnippet() {
   return s;
 }
 
+// Auto Ads 脚本：仅注入客户端 ID；具体广告位由 Google 自动匹配页面布局投放。
+// 欧洲用户需配合同意管理平台（CMP / Funding Choices），详见隐私政策披露与 README。
+function buildAdsenseSnippet() {
+  if (!ADSENSE_ENABLED) return "";
+  const id = ADSENSE_CLIENT_ID;
+  return `<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${id}" crossorigin="anonymous"></script>\n` +
+    `<script>(adsbygoogle=window.adsbygoogle||[]).push({google_ad_client:"${id}",enable_page_level_ads:true});</script>\n`;
+}
+
 // ---------- 安全响应头（P0：上线前必须）----------
 function setSecurityHeaders(res) {
-  // CSP：默认严格 self；仅当分析启用时放开 GA4 / Clarity 外部域名。
+  // CSP：默认严格 self；仅当分析/广告启用时放开对应外部域名。
   let csp = "default-src 'self'; script-src 'self' 'unsafe-inline'";
   if (ANALYTICS_ENABLED) csp += " https://www.googletagmanager.com https://www.google-analytics.com https://www.clarity.ms https://go.clarity.ms";
+  if (ADSENSE_ENABLED) csp += " https://pagead2.googlesyndication.com https://googleads.g.doubleclick.net https://www.googletagservices.com https://fundingchoices.google.com";
   csp += "; style-src 'self' 'unsafe-inline'; img-src 'self' data:";
   if (ANALYTICS_ENABLED) csp += " https://www.google-analytics.com https://*.clarity.ms";
+  if (ADSENSE_ENABLED) csp += " https://pagead2.googlesyndication.com https://tpc.googlesyndication.com https://adservice.google.com https://*.doubleclick.net";
   csp += "; connect-src 'self'";
   if (ANALYTICS_ENABLED) csp += " https://www.google-analytics.com https://region1.google-analytics.com https://*.clarity.ms";
+  if (ADSENSE_ENABLED) csp += " https://pagead2.googlesyndication.com https://googleads.g.doubleclick.net";
   csp += "; frame-ancestors 'none'; base-uri 'self'; form-action 'self'";
   res.setHeader("Content-Security-Policy", csp);
   res.setHeader("X-Frame-Options", "DENY");
@@ -634,7 +653,7 @@ const server = http.createServer(async (req, res) => {
       const ct = { ".html": "text/html", ".js": "text/javascript", ".css": "text/css", ".svg": "image/svg+xml", ".json": "application/json", ".png": "image/png" }[ext] || "application/octet-stream";
       res.writeHead(200, { "Content-Type": ct });
       if (ext === ".html") {
-        let html = data.toString("utf8").replace(/%%SITE_URL%%/g, SITE_URL).replace(/%%ANALYTICS%%/g, buildAnalyticsSnippet());
+        let html = data.toString("utf8").replace(/%%SITE_URL%%/g, SITE_URL).replace(/%%ANALYTICS%%/g, buildAnalyticsSnippet()).replace(/%%ADSENSE%%/g, buildAdsenseSnippet());
         const EN_META = {
           "/index.html": { title: "PausePaw — Digital Wellness Companion", description: "A cute digital-wellness companion that gently enforces screen breaks. Free core, with Pro and Family plans.", ogTitle: "PausePaw — Digital Wellness Companion", ogDesc: "A cute digital-wellness companion that gently enforces screen breaks. Free core, with Pro and Family plans." },
           "/blog.html": { title: "PausePaw Blog — Digital Wellbeing and Screen Time", description: "Why cute beats blocked, the 5-minute rule for mindless scrolling, and how to take back control of summer screen time.", ogTitle: "PausePaw Blog — Digital Wellbeing and Screen Time", ogDesc: "Why cute beats blocked, the 5-minute rule for mindless scrolling, and how to take back control of summer screen time." },
