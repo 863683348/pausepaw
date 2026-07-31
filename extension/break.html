@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="utf-8" />
+  <title>PausePaw 休息中</title>
+  <style>
+    html, body { margin: 0; height: 100%; }
+    body {
+      display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 6px;
+      background: rgba(26,20,16,0.92);
+      backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
+      color: #fff; font-family: system-ui, "PingFang SC", sans-serif;
+      text-align: center; user-select: none; overflow: hidden;
+    }
+    #mascot { width: 360px; height: 360px; }
+    .pp-cat, .pp-ear-l, .pp-ear-r, .pp-tail { transform-box: fill-box; }
+    .pp-cat { transform-origin: 50% 92%; animation: pp-slide 1s ease-out, pp-breathe 2.8s ease-in-out infinite 1s; }
+    .pp-ear-l, .pp-ear-r { transform-origin: 50% 100%; animation: pp-ear 2.4s ease-in-out infinite; }
+    .pp-ear-r { animation-direction: reverse; }
+    .pp-tail { transform-origin: 100% 100%; animation: pp-tail 2.6s ease-in-out infinite; }
+    @keyframes pp-slide { from { transform: translateX(60vw); } to { transform: translateX(0); } }
+    @keyframes pp-breathe { 0%,100% { transform: scale(1); } 50% { transform: scale(1.05); } }
+    @keyframes pp-ear { 0%,100% { transform: rotate(0); } 50% { transform: rotate(-7deg); } }
+    @keyframes pp-tail { 0%,100% { transform: rotate(0); } 50% { transform: rotate(12deg); } }
+    h1 { font-size: 34px; margin: 10px 0 0; font-weight: 800; }
+    p { color: #E9D5C2; margin: 2px 0 0; font-size: 16px; }
+    #count {
+      margin-top: 10px; font-size: 140px; font-weight: 800; line-height: 1; color: #fff;
+      background: rgba(0,0,0,0.5); border-radius: 26px; padding: 6px 34px;
+      font-variant-numeric: tabular-nums;
+    }
+  </style>
+</head>
+<body>
+  <div id="mascot"></div>
+  <h1 id="title"></h1>
+  <p id="sub"></p>
+  <div id="count">--</div>
+  <script src="break.js"></script>
+</body>
+</html>
