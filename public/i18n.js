@@ -242,5 +242,5 @@ window.setTheme = function (theme) {
 window.toggleTheme = function () { window.setTheme(window.getTheme() === "dark" ? "light" : "dark"); window.trackEvent("theme_toggle", { theme: window.getTheme() }); };
 function updateThemeBtn() {
   const b = document.getElementById("themeBtn");
-  if (b) b.textContent = window.getTheme() === "dark" ? "☀️" : "🌙";
+  if (b) { b.setAttribute('data-theme', window.getTheme()); }
 }
