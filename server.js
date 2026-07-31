@@ -210,7 +210,7 @@ function sendHtml(res, title, ok, plan) {
   const html = `<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>PausePaw · ${title}</title></head>
 <body style="margin:0;font-family:system-ui,sans-serif;background:#FFF7ED;color:#4A2E12;display:flex;align-items:center;justify-content:center;min-height:100vh">
 <div style="text-align:center;background:#fff;border:1px solid #F1E2CE;border-radius:18px;padding:40px 48px;box-shadow:0 10px 30px rgba(234,122,31,.12);max-width:420px">
-<div style="font-size:44px">${ok ? "🐾" : "⚠️"}</div>
+<div style="font-size:24px;font-weight:800;color:${color}">${ok ? "成功" : "注意"}</div>
 <h2 style="margin:10px 0 6px;color:${color}">${title}</h2>
 ${body}
 </div></body></html>`;
@@ -426,7 +426,8 @@ const server = http.createServer(async (req, res) => {
       if (p === "/api/auth/google" && req.method === "GET") {
         if (!GOOGLE_ENABLED) return send(res, 400, { error: "google_oauth_not_configured" });
         const state = crypto.randomBytes(16).toString("hex");
-        setCookie(res, "pp_gstate", state, { maxAge: 600 });
+        const ext = url.searchParams.get("ext") === "1";
+        setCookie(res, "pp_gstate", JSON.stringify({ s: state, ext }), { maxAge: 600 });
         const authUrl = GOOGLE_AUTH_URL + "?" + new URLSearchParams({
           client_id: GOOGLE_CLIENT_ID,
           redirect_uri: GOOGLE_REDIRECT_URI,
@@ -445,7 +446,9 @@ const server = http.createServer(async (req, res) => {
         try {
           const code = url.searchParams.get("code");
           const state = url.searchParams.get("state");
-          const cookieState = parseCookies(req).pp_gstate;
+          const ckRaw = parseCookies(req).pp_gstate;
+          let cookieState = null, ext = false;
+          try { const o = JSON.parse(ckRaw); cookieState = o.s; ext = !!o.ext; } catch (_) { cookieState = ckRaw; }
           if (!code) return send(res, 400, { error: "missing code" });
           if (!state || !cookieState || state !== cookieState) return send(res, 400, { error: "state mismatch" });
           const tokenResp = await fetch(GOOGLE_TOKEN_URL, {
@@ -465,7 +468,8 @@ const server = http.createServer(async (req, res) => {
           const token = signJWT({ sub: u.id, exp: Date.now() + 1000 * 60 * 60 * 24 * 30 });
           setCookie(res, "pp_gstate", "", { maxAge: 0 });
           setSecurityHeaders(res);
-          return res.writeHead(302, { Location: "/app.html#token=" + encodeURIComponent(token) }).end();
+          const landing = ext ? "/ext-done.html" : "/app.html";
+          return res.writeHead(302, { Location: landing + "#token=" + encodeURIComponent(token) }).end();
         } catch (e) {
           return send(res, 400, { error: e.message || "google callback failed" });
         }
@@ -650,7 +654,7 @@ const server = http.createServer(async (req, res) => {
       setSecurityHeaders(res);
       if (err) { res.writeHead(404, { "Content-Type": "text/plain" }); return res.end("404"); }
       const ext = path.extname(filePath);
-      const ct = { ".html": "text/html", ".js": "text/javascript", ".css": "text/css", ".svg": "image/svg+xml", ".json": "application/json", ".png": "image/png" }[ext] || "application/octet-stream";
+      const ct = { ".html": "text/html", ".js": "text/javascript", ".css": "text/css", ".svg": "image/svg+xml", ".json": "application/json", ".png": "image/png", ".txt": "text/plain; charset=utf-8" }[ext] || "application/octet-stream";
       res.writeHead(200, { "Content-Type": ct });
       if (ext === ".html") {
         let html = data.toString("utf8").replace(/%%SITE_URL%%/g, SITE_URL).replace(/%%ANALYTICS%%/g, buildAnalyticsSnippet()).replace(/%%ADSENSE%%/g, buildAdsenseSnippet());
