@@ -1,5 +1,5 @@
-// popup.js — 设备 Token 连接云端：拉配置(每30s) + 拉统计 + 上报由 background 完成
-// 存储统一走 chrome.storage.local（与 content/background 同源），默认生产域名。
+// popup.js — PausePaw 守护弹窗
+// 状态驱动：已登录 → 显示绿色卡片 + 统计；未登录 → 显示登录/手动连接区
 const $ = (id) => document.getElementById(id);
 const DEFAULT_BASE = "https://pause-paw.shop";
 
@@ -7,6 +7,21 @@ function apiBase(cb) {
   chrome.storage.local.get(["pp_base"], (res) => cb((res.pp_base || DEFAULT_BASE).replace(/\/$/, "")));
 }
 
+// ── 切换视图：已登录 / 未登录 ──
+function showLoggedIn(email) {
+  $("loginArea").style.display = "none";
+  $("loggedIn").style.display = "block";
+  $("disconnect").style.display = "block";
+  $("gEmail").textContent = email || "已连接";
+}
+
+function showLoginArea() {
+  $("loginArea").style.display = "block";
+  $("loggedIn").style.display = "none";
+  $("disconnect").style.display = "none";
+}
+
+// ── 数据拉取 ──
 function refreshStats() {
   chrome.storage.local.get(["pp_token"], (res) => {
     const tok = res.pp_token;
@@ -39,80 +54,102 @@ function pullConfig() {
   });
 }
 
+function startSync() {
+  pullConfig(); refreshStats();
+  if (window.__sync) clearInterval(window.__sync);
+  window.__sync = setInterval(() => { pullConfig(); refreshStats(); }, 30000);
+}
+
+// ── 手动 Token 连接 ──
 $("connect").addEventListener("click", () => {
   const tok = $("token").value.trim();
   if (!tok) return;
   const base = $("base").value.trim() || DEFAULT_BASE;
-  chrome.storage.local.set({ pp_base: base, pp_token: tok }, () => {
-    $("ok").style.display = "block";
-    pullConfig();
-    refreshStats();
-    if (window.__sync) clearInterval(window.__sync);
-    window.__sync = setInterval(() => { pullConfig(); refreshStats(); }, 30000);
+  chrome.storage.local.set({ pp_base: base, pp_token: tok, pp_email: "" }, () => {
+    showLoggedIn("");
+    startSync();
   });
 });
 
+// ── 断开连接 ──
 $("disconnect").addEventListener("click", () => {
   chrome.storage.local.remove(["pp_token", "pp_config", "pp_email"]);
-  $("ok").style.display = "none";
-  $("gOk").style.display = "none";
-  if (window.__sync) clearInterval(window.__sync);
+  showLoginArea();
   $("token").value = "";
+  $("gErr").style.display = "none";
+  if (window.__sync) clearInterval(window.__sync);
 });
 
-// 一键 Google 登录：launchWebAuthFlow 走后端既有 Google OAuth（复用同一 redirect_uri，无需改 Google Console）
-// 拿到 JWT 后调 /api/me 换 device_token，存为 pp_token 供 /api/config、/api/events 使用。
+// ── 一键 Google 登录 ──
 $("googleLogin").addEventListener("click", () => {
-  $("gErr").style.display = "none";
+  const btn = $("googleLogin");
+  const btnText = $("gBtnText");
+  const errEl = $("gErr");
+
+  // loading 状态
+  btn.disabled = true;
+  btnText.textContent = "正在跳转 Google ...";
+  errEl.style.display = "none";
+
   apiBase((API) => {
     const url = API + "/api/auth/google?ext=1";
     chrome.identity.launchWebAuthFlow({ url, interactive: true }, (respUrl) => {
+      // 恢复按钮（无论成功失败）
+      btn.disabled = false;
+      btnText.textContent = "使用 Google 登录";
+
       if (chrome.runtime.lastError || !respUrl) {
-        $("gErr").textContent = "登录已取消或失败";
-        $("gErr").style.display = "block";
+        errEl.textContent = chrome.runtime.lastError?.message || "登录已取消或超时";
+        errEl.style.display = "block";
         return;
       }
+
       const m = respUrl.match(/[#&]token=([^&]+)/);
       if (!m) {
-        $("gErr").textContent = "未能获取登录凭证";
-        $("gErr").style.display = "block";
+        errEl.textContent = "未能获取登录凭证（回调地址无 token）";
+        errEl.style.display = "block";
         return;
       }
+
       const jwt = decodeURIComponent(m[1]);
+      btnText.textContent = "验证中 ...";
+      btn.disabled = true;
+
       fetch(API + "/api/me", { headers: { Authorization: "Bearer " + jwt } })
         .then(r => r.ok ? r.json() : null)
         .then(d => {
+          btn.disabled = false;
+          btnText.textContent = "使用 Google 登录";
           if (!d || !d.user || !d.user.device_token) {
-            $("gErr").textContent = "获取设备令牌失败";
-            $("gErr").style.display = "block";
+            errEl.textContent = "获取设备令牌失败（后端可能未配置 OAuth）";
+            errEl.style.display = "block";
             return;
           }
-          chrome.storage.local.set({ pp_base: API, pp_token: d.user.device_token, pp_email: d.user.email || "" }, () => {
-            $("ok").style.display = "block";
-            $("gOk").textContent = "已用 Google 登录" + (d.user.email ? "：" + d.user.email : "");
-            $("gOk").style.display = "block";
-            pullConfig(); refreshStats();
-            if (window.__sync) clearInterval(window.__sync);
-            window.__sync = setInterval(() => { pullConfig(); refreshStats(); }, 30000);
+          const email = d.user.email || "";
+          chrome.storage.local.set({ pp_base: API, pp_token: d.user.device_token, pp_email: email }, () => {
+            showLoggedIn(email);
+            startSync();
           });
         })
         .catch(() => {
-          $("gErr").textContent = "网络错误，请重试";
-          $("gErr").style.display = "block";
+          btn.disabled = false;
+          btnText.textContent = "使用 Google 登录";
+          errEl.textContent = "网络错误，请检查后端地址是否可达";
+          errEl.style.display = "block";
         });
     });
   });
 });
 
-// 启动
-chrome.storage.local.get(["pp_token", "pp_base"], (res) => {
+// ── 启动：根据存储状态决定显示哪个视图 ──
+chrome.storage.local.get(["pp_token", "pp_email"], (res) => {
   if (res.pp_token) {
-    $("base").value = res.pp_base || DEFAULT_BASE;
-    $("token").value = res.pp_token;
-    $("ok").style.display = "block";
-    pullConfig(); refreshStats();
-    window.__sync = setInterval(() => { pullConfig(); refreshStats(); }, 30000);
+    // 已有 token → 显示已登录状态
+    showLoggedIn(res.pp_email || "");
+    startSync();
   } else {
+    // 未登录 → 显示登录区
+    showLoginArea();
     $("base").value = DEFAULT_BASE;
   }
 });

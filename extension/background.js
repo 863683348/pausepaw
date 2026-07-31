@@ -1,6 +1,12 @@
-// background.js — 连续计时 + 阈值判定 + 硬锁触发（PRD F-PL 强化版）
+// background.js — 连续计时 + 阈值判定 + 全局硬锁（防绕过强化版）
 // 信任模型：累计「被管域名」总时长（跨标签/窗口在后台聚合），不因子页失焦而重置。
-// 达阈值 -> 打开全屏 break 页（最稳的锁，关不掉）+ 通知命中页注入页面内硬锁遮罩。
+// 达阈值 -> 打开全屏 break 页 + 对所有被管 tab 注入遮罩 + 拦截新开 tab/导航。
+//
+// 防绕过 v2：
+//   - chrome.tabs.onCreated   → 新开 tab 也注入遮罩
+//   - chrome.webNavigation.onCompleted → 任何被管域名页面加载完也检查
+//   - break 页被关 → 立即重开
+//   - 休息期间无法通过开新标签/输地址绕过
 
 const TICK_SEC = 5;
 const DEFAULT_BASE = "https://pause-paw.shop";
@@ -74,21 +80,62 @@ function reportEvent(domain) {
   });
 }
 
+// 向所有被管域名的 tab 广播消息
 function broadcast(type, payload) {
   chrome.tabs.query({}, (tabs) => {
     tabs.forEach(t => {
       try {
         const host = t.url ? new URL(t.url).hostname : null;
-        if (host && config && hostIn(config.domains, host)) chrome.tabs.sendMessage(t.id, Object.assign({ type }, payload || {}));
+        if (host && config && hostIn(config.domains, host)) {
+          chrome.tabs.sendMessage(t.id, Object.assign({ type }, payload || {}));
+        }
       } catch (e) {}
     });
+  });
+}
+
+// 向指定 tab 注入遮罩（用于新创建的 tab）
+function injectOverlay(tabId) {
+  if (!breaking || Date.now() >= breaking.until) return;
+  chrome.tabs.get(tabId, (tab) => {
+    if (chrome.runtime.lastError || !tab || !tab.url) return;
+    // 不对 break.html 自身、chrome://、扩展页注入
+    if (tab.url.startsWith("chrome://") || tab.url.startsWith(chrome.runtime.getURL(""))) return;
+    try {
+      const host = new URL(tab.url).hostname;
+      if (hostIn(config.domains, host)) {
+        chrome.tabs.sendMessage(tabId, {
+          type: "TRIGGER_BREAK",
+          until: breaking.until,
+          breakTotal: breaking.breakTotal
+        }).catch(() => {
+          // content script 可能还没加载，用 scripting API 注入
+          chrome.scripting.executeScript({
+            target: { tabId },
+            files: ["content.js"]
+          }).then(() => {
+            setTimeout(() => {
+              chrome.tabs.sendMessage(tabId, {
+                type: "TRIGGER_BREAK",
+                until: breaking.until,
+                breakTotal: breaking.breakTotal
+              }).catch(() => {});
+            }, 300);
+          }).catch(() => {});
+        });
+      }
+    } catch (e) {}
   });
 }
 
 function startBreak(key, host) {
   breaking = { domain: key, until: Date.now() + breakSec() * 1000, tabId: null, breakTotal: breakSec() };
   chrome.storage.local.set({ pp_break: breaking });
+
+  // 1. 广播给所有现有被管 tab
   broadcast("TRIGGER_BREAK", { until: breaking.until, breakTotal: breakSec() });
+
+  // 2. 打开全屏 break 页
   chrome.tabs.create({ url: chrome.runtime.getURL("break.html") }, (tab) => {
     if (breaking) { breaking.tabId = tab.id; chrome.storage.local.set({ pp_break: breaking }); }
   });
@@ -126,7 +173,22 @@ chrome.runtime.onMessage.addListener((msg) => {
   else if (msg.type === "CONFIG_UPDATED") loadState();
 });
 
-// 休息中若 break 页被关 -> 重开（关不掉）
+// ====== 防绕过：拦截新开标签页 ======
+chrome.tabs.onCreated.addListener((tab) => {
+  if (!breaking || !tab || !tab.id) return;
+  // 等 tab 加载完 URL 后再判断是否注入
+  setTimeout(() => injectOverlay(tab.id), 500);
+});
+
+// ====== 防绕过：拦截页面导航（在已有 tab 里输入新地址/跳转） ======
+chrome.webNavigation.onCompleted.addListener((details) => {
+  if (!breaking || !details.frameId || details.frameId !== 0) return;
+  // 排除 break 页自身
+  if (details.url && details.url.startsWith(chrome.runtime.getURL(""))) return;
+  injectOverlay(details.tabId);
+}, { url: [{ urlPrefix: "http://" }, { urlPrefix: "https://" }] });
+
+// ====== 休息中若 break 页被关 -> 重开（关不掉） ======
 chrome.tabs.onRemoved.addListener((tabId) => {
   if (breaking && breaking.tabId === tabId && Date.now() < breaking.until) {
     chrome.tabs.create({ url: chrome.runtime.getURL("break.html") }, (tab) => {

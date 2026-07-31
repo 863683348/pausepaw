@@ -1,41 +1,143 @@
 <!DOCTYPE html>
 <html lang="zh">
 <head>
-  <meta charset="utf-8" />
-  <title>PausePaw 休息中</title>
-  <style>
-    html, body { margin: 0; height: 100%; }
-    body {
-      display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 6px;
-      background: rgba(26,20,16,0.92);
-      backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
-      color: #fff; font-family: system-ui, "PingFang SC", sans-serif;
-      text-align: center; user-select: none; overflow: hidden;
-    }
-    #mascot { width: 360px; height: 360px; }
-    .pp-cat, .pp-ear-l, .pp-ear-r, .pp-tail { transform-box: fill-box; }
-    .pp-cat { transform-origin: 50% 92%; animation: pp-slide 1s ease-out, pp-breathe 2.8s ease-in-out infinite 1s; }
-    .pp-ear-l, .pp-ear-r { transform-origin: 50% 100%; animation: pp-ear 2.4s ease-in-out infinite; }
-    .pp-ear-r { animation-direction: reverse; }
-    .pp-tail { transform-origin: 100% 100%; animation: pp-tail 2.6s ease-in-out infinite; }
-    @keyframes pp-slide { from { transform: translateX(60vw); } to { transform: translateX(0); } }
-    @keyframes pp-breathe { 0%,100% { transform: scale(1); } 50% { transform: scale(1.05); } }
-    @keyframes pp-ear { 0%,100% { transform: rotate(0); } 50% { transform: rotate(-7deg); } }
-    @keyframes pp-tail { 0%,100% { transform: rotate(0); } 50% { transform: rotate(12deg); } }
-    h1 { font-size: 34px; margin: 10px 0 0; font-weight: 800; }
-    p { color: #E9D5C2; margin: 2px 0 0; font-size: 16px; }
-    #count {
-      margin-top: 10px; font-size: 140px; font-weight: 800; line-height: 1; color: #fff;
-      background: rgba(0,0,0,0.5); border-radius: 26px; padding: 6px 34px;
-      font-variant-numeric: tabular-nums;
-    }
-  </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>PausePaw — Rest Time</title>
+<style>
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html,body{
+    width:100%;height:100%;overflow:hidden;
+    background:rgba(15,12,10,0.92);
+    font-family:system-ui,-apple-system,"PingFang SC","Noto Sans SC",sans-serif;
+    color:#fff;user-select:none;-webkit-user-select:none;
+    cursor:default;
+  }
+  .stage{
+    position:fixed;inset:0;display:grid;
+    grid-template-columns:1fr 1.1fr;
+    grid-template-rows:1fr auto;
+    gap:0;z-index:1;
+  }
+  /* 左区：倒计时 */
+  .left{
+    grid-row:1/span 2;display:flex;
+    flex-direction:column;align-items:center;justify-content:center;
+    padding:6vh 4vw;position:relative;z-index:2;
+  }
+  /* 右区：猫 */
+  .right{
+    grid-row:1/span 2;position:relative;overflow:hidden;
+    display:flex;align-items:flex-end;justify-content:center;
+  }
+  .overlay-fade{
+    position:absolute;inset:0;
+    background:
+      linear-gradient(to right, rgba(15,12,10,.78) 0%, rgba(15,12,10,.35) 50%, transparent 100%);
+    pointer-events:none;z-index:1;
+  }
+
+  /* ===== 自绘 SVG 猫（带动画） ===== */
+  .pp-cat-wrap{
+    width:100%;height:100%;display:flex;align-items:flex-end;justify-content:center;
+    transform-origin:50% 100%;
+    animation:catSlide 1s ease-out .15s backwards;
+    z-index:2;position:relative;
+  }
+  @keyframes catSlide{
+    from{transform:translateX(42vw) scale(.9);opacity:0;}
+    to{transform:translateX(0) scale(1);opacity:1;}
+  }
+  .pp-cat{
+    width:min(92%, 640px);height:auto;
+    transform-origin:50% 100%;
+    animation:catBreathe 3s ease-in-out infinite 1s;
+    filter:drop-shadow(0 20px 40px rgba(0,0,0,.35));
+  }
+  @keyframes catBreathe{0%,100%{transform:scale(1)}50%{transform:scale(1.04)}}
+  .pp-cat .pp-ear-l,.pp-cat .pp-ear-r{
+    transform-box:fill-box;transform-origin:50% 100%;
+    animation:catEar 2.4s ease-in-out infinite;
+  }
+  .pp-cat .pp-ear-r{animation-direction:reverse;}
+  .pp-cat .pp-tail{
+    transform-box:fill-box;transform-origin:100% 100%;
+    animation:catTail 2.6s ease-in-out infinite;
+  }
+  @keyframes catEar{0%,100%{transform:rotate(0)}50%{transform:rotate(-7deg)}}
+  @keyframes catTail{0%,100%{transform:rotate(0)}50%{transform:rotate(12deg)}}
+
+  /* 倒计时数字 — 超大白色粗体 */
+  .count-wrap{
+    text-align:center;opacity:0;animation:fadeUp .7s ease-out .4s forwards;
+  }
+  @keyframes fadeUp{from{opacity:0;transform:translateY(40px)}to{opacity:1;transform:translateY(0)}}
+  #count{
+    font-size:clamp(80px, 18vw, 220px);
+    font-weight:900;line-height:.95;letter-spacing:-.03em;color:#fff;
+    text-shadow:0 2px 40px rgba(0,0,0,.6),0 0 80px rgba(0,0,0,.3);
+    font-variant-numeric:tabular-nums;transition:color .3s, transform .15s;
+  }
+  #count.warn{color:#FF6B6B;transform:scale(1.04);}
+  #count.danger{color:#FF3860;animation:pulse .5s ease-in-out infinite;}
+  @keyframes pulse{0%,100%{transform:scale(1.04)}50%{transform:scale(1.1)}}
+
+  .msg{margin-top:2vh;font-size:clamp(16px,2.2vw,26px);font-weight:700;color:#f0e6dc;letter-spacing:.02em;opacity:0;animation:fadeUp .7s ease-out .6s forwards;}
+  .sub-msg{margin-top:1vh;font-size:clamp(13px,1.5vw,18px);color:#a89888;font-weight:400;opacity:0;animation:fadeUp .7s ease-out .8s forwards;}
+
+  .bar{grid-column:1/-1;background:rgba(0,0,0,.45);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);padding:1.2vh 3vw;display:flex;align-items:center;justify-content:center;gap:1vw;z-index:3;border-top:1px solid rgba(255,255,255,.06);}
+  .bar span{font-size:clamp(11px,1.3vw,15px);color:#8c7e70;display:flex;align-items:center;gap:.5vw;}
+  .dot{width:7px;height:7px;border-radius:50%;background:#4ade80;display:inline-block;animation:blink 1.6s ease-in-out infinite;}
+  @keyframes blink{50%{opacity:.25}}
+
+  @media(max-width:768px){
+    .stage{grid-template-columns:1fr;grid-template-rows:auto 1fr auto;}
+    .left{grid-row:1;padding:4vh 5vw;}
+    .right{grid-row:2;max-height:42vh;}
+    .pp-cat{width:min(80%,420px);}
+    .bar{grid-row:3;}
+    #count{font-size:clamp(56px,22vw,120px);}
+  }
+</style>
 </head>
 <body>
-  <div id="mascot"></div>
-  <h1 id="title"></h1>
-  <p id="sub"></p>
-  <div id="count">--</div>
-  <script src="break.js"></script>
+
+<div class="stage">
+  <div class="left">
+    <div class="count-wrap">
+      <div id="count">--:--</div>
+      <div class="msg" id="msg"></div>
+      <div class="sub-msg" id="subMsg"></div>
+    </div>
+  </div>
+  <div class="right">
+    <div class="overlay-fade"></div>
+    <div class="pp-cat-wrap">
+      <svg class="pp-cat" viewBox="0 0 240 240" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet">
+        <path class="pp-tail" d="M196 172 q42 2 36 -46" fill="none" stroke="#E8A06A" stroke-width="15" stroke-linecap="round"/>
+        <ellipse cx="120" cy="178" rx="64" ry="52" fill="#FCD9B6"/>
+        <path class="pp-ear-l" d="M72 96 L58 44 L106 84 Z" fill="#FCD9B6" stroke="#E8A06A" stroke-width="3" stroke-linejoin="round"/>
+        <path class="pp-ear-r" d="M168 96 L182 44 L134 84 Z" fill="#FCD9B6" stroke="#E8A06A" stroke-width="3" stroke-linejoin="round"/>
+        <path d="M76 92 L70 62 L94 84 Z" fill="#FFB3B3"/>
+        <path d="M164 92 L170 62 L146 84 Z" fill="#FFB3B3"/>
+        <circle cx="120" cy="112" r="66" fill="#FCD9B6" stroke="#E8A06A" stroke-width="3"/>
+        <circle cx="97" cy="108" r="10" fill="#4A2E12"/>
+        <circle cx="143" cy="108" r="10" fill="#4A2E12"/>
+        <circle cx="100" cy="105" r="3" fill="#fff"/>
+        <circle cx="146" cy="105" r="3" fill="#fff"/>
+        <circle cx="82" cy="128" r="9" fill="#FFB3B3" opacity="0.7"/>
+        <circle cx="158" cy="128" r="9" fill="#FFB3B3" opacity="0.7"/>
+        <path d="M114 124 L126 124 L120 131 Z" fill="#E8746B"/>
+        <path d="M120 131 q-7 9 -14 4 M120 131 q7 9 14 4" stroke="#4A2E12" stroke-width="3" fill="none" stroke-linecap="round"/>
+        <path d="M70 120 h-26 M72 130 h-23 M170 120 h26 M168 130 h23" stroke="#E8A06A" stroke-width="2" stroke-linecap="round"/>
+      </svg>
+    </div>
+  </div>
+  <div class="bar">
+    <span><i class="dot"></i> <span id="barText"></span></span>
+  </div>
+</div>
+
+<script src="break.js"></script>
 </body>
 </html>
