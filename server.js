@@ -49,6 +49,13 @@ const ANALYTICS_ENABLED = IS_PROD && Boolean(GA4_ID || CLARITY_ID);
 const ADSENSE_CLIENT_ID = process.env.ADSENSE_CLIENT_ID || "";
 const ADSENSE_ENABLED = IS_PROD && /^ca-pub-\d+$/.test(ADSENSE_CLIENT_ID);
 
+// ---------- 欧盟 CMP：Google 官方 Funding Choices（AdSense 在 EEA/UK/CH 合规投放的必需项）----------
+// Funding Choices 是 Google 认证的 CMP，自动向欧盟/英国/瑞士用户弹同意横幅（geo 自动识别，非欧盟用户无感）。
+// 启用条件：AdSense 已开 + 配置了 FUNDING_CHOICES_CLIENT_ID（来自 AdSense 后台「隐私与消息 → EU 用户同意」的 data-client 值）。
+// 注意：这是「认证 CMP」方案；自建非认证横幅无法满足 Google 对 EEA 流量的政策要求。
+const FUNDING_CHOICES_CLIENT_ID = process.env.FUNDING_CHOICES_CLIENT_ID || "";
+const FUNDING_CHOICES_ENABLED = IS_PROD && ADSENSE_ENABLED && /^\d+$/.test(FUNDING_CHOICES_CLIENT_ID);
+
 // ---------- Google OAuth（项 5：零依赖 authorization code 流程，复用自签 JWT）----------
 const GOOGLE_CLIENT_ID = process.env.GOOGLE_CLIENT_ID || "";
 const GOOGLE_CLIENT_SECRET = process.env.GOOGLE_CLIENT_SECRET || "";
@@ -97,6 +104,12 @@ function buildAdsenseSnippet() {
   const id = ADSENSE_CLIENT_ID;
   return `<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${id}" crossorigin="anonymous"></script>\n` +
     `<script>(adsbygoogle=window.adsbygoogle||[]).push({google_ad_client:"${id}",enable_page_level_ads:true});</script>\n`;
+}
+
+// Funding Choices 同意横幅加载器（欧盟 CMP）。必须位于广告脚本之前、<head 内。
+function buildFundingChoicesSnippet() {
+  if (!FUNDING_CHOICES_ENABLED) return "";
+  return `<script async src="https://fundingchoices.google.com/static/loader_client.js" data-client="${FUNDING_CHOICES_CLIENT_ID}" data-lc="en"></script>\n`;
 }
 
 // ---------- 安全响应头（P0：上线前必须）----------
@@ -657,7 +670,7 @@ const server = http.createServer(async (req, res) => {
       const ct = { ".html": "text/html", ".js": "text/javascript", ".css": "text/css", ".svg": "image/svg+xml", ".json": "application/json", ".png": "image/png", ".txt": "text/plain; charset=utf-8" }[ext] || "application/octet-stream";
       res.writeHead(200, { "Content-Type": ct });
       if (ext === ".html") {
-        let html = data.toString("utf8").replace(/%%SITE_URL%%/g, SITE_URL).replace(/%%ANALYTICS%%/g, buildAnalyticsSnippet()).replace(/%%ADSENSE%%/g, buildAdsenseSnippet());
+        let html = data.toString("utf8").replace(/%%SITE_URL%%/g, SITE_URL).replace(/%%ANALYTICS%%/g, buildAnalyticsSnippet()).replace(/%%ADSENSE%%/g, buildFundingChoicesSnippet() + buildAdsenseSnippet());
         const EN_META = {
           "/index.html": { title: "PausePaw — Digital Wellness Companion", description: "A cute digital-wellness companion that gently enforces screen breaks. Free core, with Pro and Family plans.", ogTitle: "PausePaw — Digital Wellness Companion", ogDesc: "A cute digital-wellness companion that gently enforces screen breaks. Free core, with Pro and Family plans." },
           "/blog.html": { title: "PausePaw Blog — Digital Wellbeing and Screen Time", description: "Why cute beats blocked, the 5-minute rule for mindless scrolling, and how to take back control of summer screen time.", ogTitle: "PausePaw Blog — Digital Wellbeing and Screen Time", ogDesc: "Why cute beats blocked, the 5-minute rule for mindless scrolling, and how to take back control of summer screen time." },

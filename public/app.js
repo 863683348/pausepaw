@@ -57,12 +57,9 @@ function renderAuth() {
 }
 
 async function startGoogle() {
-  try {
-    const r = await fetch("/api/auth/google", { redirect: "manual" });
-    const url = r.headers.get("Location");
-    if (!url) { const m = t("auth_google_off"); if ($("authErr")) $("authErr").textContent = m; else toast(m); return; }
-    window.location = url;
-  } catch (e) { const m = e.message; if ($("authErr")) $("authErr").textContent = m; else toast(m); }
+  // 直接用浏览器原生跳转：server 会 302 到 Google 同意屏。
+  // 不能用 fetch(redirect:'manual')：同源下返回 opaqueredirect，headers 不可读，拿不到 Location。
+  window.location.href = "/api/auth/google";
 }
 
 async function submitAuth() {

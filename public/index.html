@@ -121,11 +121,10 @@
     // 右上角 Google 登录：未配凭据也显示，点击给出配置提示
     function ppToast(m){ var el=document.getElementById('ppToast'); if(!el){ el=document.createElement('div'); el.className='toast'; el.id='ppToast'; document.body.appendChild(el);} el.textContent=m; el.classList.add('show'); setTimeout(function(){el.classList.remove('show');},2800); }
     function ppStartGoogle(){
-      fetch('/api/auth/google',{redirect:'manual'}).then(function(r){
-        var url=r.headers.get('Location');
-        if(url){ window.location=url; }
-        else { ppToast('Google 登录尚未启用：请在服务器 .env 配置 GOOGLE_CLIENT_ID 与 GOOGLE_CLIENT_SECRET'); }
-      }).catch(function(e){ ppToast('Google 登录失败：'+(e&&e.message||e)); });
+      // 直接用浏览器原生跳转：server 会 302 到 Google 同意屏。
+      // 注意：同源 fetch + redirect:'manual' 返回 opaqueredirect，headers 不可读，
+      // 拿不到 Location 头，会误判为“未启用”，所以不能用 fetch。
+      window.location.href = '/api/auth/google';
     }
   </script>
 </body>
