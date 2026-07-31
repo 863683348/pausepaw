@@ -85,7 +85,7 @@ function renderApp() {
     <div class="logo"><span class="dot"></span><span data-i18n="brand">PausePaw</span></div>
     <div class="topuser">
       <span class="who-email" id="who"></span>
-      <button class="theme-btn" id="themeBtn" onclick="toggleTheme()" title="切换亮/暗色" aria-label="切换主题">🌙</button>
+      <button class="theme-btn" id="themeBtn" onclick="toggleTheme()" title="切换亮/暗色" aria-label="切换主题">主题</button>
       <div class="lang-switch">
         <button data-lang="zh" onclick="setLang('zh')">中文</button>
         <button data-lang="en" onclick="setLang('en')">EN</button>
@@ -178,7 +178,7 @@ async function loadProfile() {
 async function adopt() {
   const name = $("nameInput").value.trim();
   if (!name) { toast(t("adopt_empty")); return; }
-  try { await api("POST", "/api/mascot", { name }); ME.mascot_name = name; renderBuddy(); toast("🐾 " + name); } catch (e) { toast(e.message); }
+  try { await api("POST", "/api/mascot", { name }); ME.mascot_name = name; renderBuddy(); toast(name); } catch (e) { toast(e.message); }
 }
 function renderBuddy() {
   const name = (ME && ME.mascot_name) || "";
@@ -203,7 +203,7 @@ async function saveRules() {
     threshold_min: parseFloat($("threshold").value) || 20, threshold_unit: $("thresholdUnit").value,
     break_min: parseFloat($("break").value) || 5, break_unit: $("breakUnit").value
   };
-  try { await api("POST", "/api/rules", payload); toast("✅ " + t("rules_save")); window.trackEvent("save_rules", { domains: domains.length }); } catch (e) { toast(e.message); }
+  try { await api("POST", "/api/rules", payload); toast(t("rules_save")); window.trackEvent("save_rules", { domains: domains.length }); } catch (e) { toast(e.message); }
 }
 async function loadStats() {
   try {
