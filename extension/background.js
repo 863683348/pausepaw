@@ -73,8 +73,15 @@ function reportEvent(domain) {
       body: JSON.stringify({
         token: tok,
         domain: domain,
-        elapsed_min: (config.threshold_unit === "sec" ? config.threshold_min : config.threshold_min * 60),
-        break_min: (config.break_unit === "sec" ? config.break_min : config.break_min * 60)
+        // 统一以「分钟」为单位上报（与字段名 break_min/elapsed_min 一致）
+        elapsed_min: config.threshold_unit === "sec"
+          ? Math.round((parseFloat(config.threshold_min) || 20) / 60)
+          : (parseFloat(config.threshold_min) || 20),
+        break_min: config.break_unit === "sec"
+          ? Math.round((parseFloat(config.break_min) || 5) / 60)
+          : (parseFloat(config.break_min) || 5),
+        // 附带客户端本地日期（YYYY-MM-DD），解决服务器 UTC 时区导致「今日」偏移问题
+        client_date: new Date().toISOString().slice(0, 10)
       })
     }).catch(() => {});
   });

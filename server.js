@@ -164,9 +164,12 @@ db.exec(`
     domain TEXT,
     elapsed_min REAL,
     break_min REAL,
-    created_at INTEGER NOT NULL
+    created_at INTEGER NOT NULL,
+    client_date TEXT
   );
   CREATE INDEX IF NOT EXISTS idx_events_user ON events(user_id, created_at);
+  // 兼容已有库：加 client_date 列（IF NOT EXISTS 用 try-catch 包裹）
+  try { db.prepare("ALTER TABLE events ADD COLUMN client_date TEXT").run(); } catch(e) {}
   CREATE TABLE IF NOT EXISTS subscriptions (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     user_id INTEGER NOT NULL,
@@ -425,8 +428,8 @@ const server = http.createServer(async (req, res) => {
         const u = getUserByDevice(body.token);
         if (!u) return send(res, 401, { error: "invalid device token" });
         const breakMin = parseFloat(body.break_min) || 0;
-        db.prepare("INSERT INTO events(user_id,domain,elapsed_min,break_min,created_at) VALUES(?,?,?,?,?)")
-          .run(u.id, body.domain || "", parseFloat(body.elapsed_min) || 0, breakMin, Date.now());
+        db.prepare("INSERT INTO events(user_id,domain,elapsed_min,break_min,created_at,client_date) VALUES(?,?,?,?,?,?)")
+          .run(u.id, body.domain || "", parseFloat(body.elapsed_min) || 0, breakMin, Date.now(), body.client_date || new Date().toISOString().slice(0, 10));
         return send(res, 200, { ok: true });
       }
 
@@ -614,20 +617,27 @@ const server = http.createServer(async (req, res) => {
         return send(res, 200, { ok: true });
       }
       if (p === "/api/stats" && req.method === "GET") {
-        const startOfToday = new Date(); startOfToday.setHours(0, 0, 0, 0);
-        const t0 = startOfToday.getTime();
-        const row = db.prepare("SELECT COUNT(*) c, COALESCE(SUM(break_min),0) s FROM events WHERE user_id=? AND created_at>=?").get(u.id, t0);
+        // 优先用客户端本地日期（解决服务器 UTC 时区导致「今日」偏移问题）
+        const todayLocal = new Date().toISOString().slice(0, 10);
+        // 今日拦截 + 今日省下（以 client_date 匹配，回退到 UTC created_at）
+        const row = db.prepare(
+          "SELECT COUNT(*) c, COALESCE(SUM(break_min),0) s FROM events WHERE user_id=? AND (client_date=? OR (client_date IS NULL AND created_at>=?))"
+        ).get(u.id, todayLocal, new Date(todayLocal).getTime());
+        // 全量统计
         const total = db.prepare("SELECT COUNT(*) c, COALESCE(SUM(break_min),0) s FROM events WHERE user_id=?").get(u.id);
-        // 连续守规：最近 N 天是否有拦截（简化：以自然日计）
-        const days = db.prepare("SELECT DISTINCT date(created_at/1000,'unixepoch') d FROM events WHERE user_id=? ORDER BY d DESC LIMIT 30").all(u.id);
+        // 连续守规：从今天往前数连续有事件的天数（优先 client_date）
+        const days = db.prepare(
+          "SELECT DISTINCT COALESCE(client_date, date(created_at/1000,'unixepoch')) d FROM events WHERE user_id=? ORDER BY d DESC LIMIT 30"
+        ).all(u.id);
         let streak = 0;
-        const today = new Date().toISOString().slice(0, 10);
-        let cursor = today;
+        let cursor = todayLocal;
         const set = new Set(days.map(x => x.d));
         while (set.has(cursor)) { streak++; cursor = new Date(new Date(cursor).getTime() - 864e5).toISOString().slice(0, 10); }
         return send(res, 200, {
-          blocks_today: row.c, saved_today: Math.round(row.s),
-          blocks_total: total.c, saved_total: Math.round(total.s),
+          blocks_today: row.c,
+          saved_today: Math.round(row.s),
+          blocks_total: total.c,
+          saved_total: Math.round(total.s),
           streak
         });
       }

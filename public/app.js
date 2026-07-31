@@ -206,7 +206,14 @@ async function loadStats() {
   try {
     const s = await api("GET", "/api/stats");
     $("stBlocks").textContent = s.blocks_today;
-    $("stSaved").textContent = s.saved_total + " " + t("dash_unit_min");
+    // saved_total 已是分钟整数，格式化：>=60 时转为"X小时Y分"更直观
+    const totalMin = Math.round(s.saved_total) || 0;
+    if (totalMin >= 60) {
+      const h = Math.floor(totalMin / 60), m = totalMin % 60;
+      $("stSaved").textContent = h + "h" + (m > 0 ? " " + m + t("dash_unit_min") : "");
+    } else {
+      $("stSaved").textContent = totalMin + " " + t("dash_unit_min");
+    }
     $("stStreak").textContent = s.streak;
     const r = await api("GET", "/api/rules");
     $("goalBox").textContent = t("dash_goal") + "：\n" + (r.domains.join(", ") || "—") + "\n" + r.threshold_min + (r.threshold_unit === "sec" ? "s" : "m") + " → " + t("dash_saved") + " " + r.break_min + (r.break_unit === "sec" ? "s" : "m");
