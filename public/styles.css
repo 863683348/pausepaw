@@ -83,16 +83,50 @@ footer { text-align: center; color: var(--muted); font-size: 13px; padding: 30px
 .topuser { font-size: 13px; color: var(--muted); display: flex; align-items: center; gap: 10px; flex-wrap: wrap; justify-content: flex-end; }
 .who-email { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 160px; }
 
-/* billing / plans */
-.plans { display: grid; grid-template-columns: repeat(2,1fr); gap: 16px; margin: 18px 0; }
-.plan-card { background: var(--soft); border: 1px solid var(--line); border-radius: var(--radius); padding: 22px; text-align: center; }
-.plan-card.current { border-color: var(--primary); box-shadow: 0 0 0 2px var(--primary) inset; }
-.plan-name { font-size: 18px; font-weight: 800; }
-.plan-price { font-size: 30px; font-weight: 800; color: var(--primary-d); margin: 8px 0; }
+/* billing / plans — 4-tier membership */
+.billing-toggle { display: flex; justify-content: center; gap: 0; margin: 14px auto 18px; width: fit-content; background: var(--soft); border-radius: 999px; padding: 4px; border: 1px solid var(--line); }
+.toggle-opt { padding: 8px 20px; border: none; background: transparent; cursor: pointer; font-size: 14px; font-weight: 600; color: var(--muted); border-radius: 999px; transition: all .2s ease; position: relative; }
+.toggle-opt.active { background: var(--primary); color: #fff; box-shadow: var(--shadow); }
+.save-badge { margin-left: 6px; background: #10B981; color: #fff; font-size: 10px; padding: 2px 7px; border-radius: 999px; font-weight: 700; vertical-align: middle; }
+
+.plans-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin: 18px 0; }
+@media (max-width: 720px) { .plans-grid { grid-template-columns: 1fr; } }
+
+.plan-card { background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); padding: 24px 20px; text-align: center; position: relative; transition: transform .15s ease, box-shadow .15s ease; }
+.plan-card:hover { transform: translateY(-3px); box-shadow: var(--shadow); }
+.plan-card.featured { border-color: var(--primary); background: linear-gradient(180deg, var(--soft) 0%, var(--card) 100%); }
+.plan-card.current { border-color: var(--primary); box-shadow: 0 0 0 2px var(--primary), var(--shadow); }
+.popular-tag { position: absolute; top: -11px; left: 50%; transform: translateX(-50%); background: var(--primary); color: #fff; font-size: 11px; font-weight: 700; padding: 4px 14px; border-radius: 999px; white-space: nowrap; }
+.save-tag { position: absolute; top: -11px; right: 12px; background: #10B981; color: #fff; font-size: 11px; font-weight: 700; padding: 4px 10px; border-radius: 999px; }
+.plan-name { font-size: 17px; font-weight: 800; margin-top: 8px; }
+.plan-price { font-size: 34px; font-weight: 800; color: var(--primary-d); margin: 8px 0 4px; line-height: 1; }
 .plan-price span { font-size: 14px; color: var(--muted); font-weight: 600; }
-.plan-feat { list-style: none; padding: 0; margin: 12px 0 18px; color: var(--muted); font-size: 14px; text-align: left; }
-.plan-feat li { padding: 4px 0; }
-  .plan-badge { display: inline-block; background: var(--primary); color: #fff; border-radius: 999px; padding: 8px 16px; font-weight: 700; font-size: 13px; }
+.plan-chars { font-size: 13px; color: var(--muted); margin-bottom: 8px; display: flex; align-items: center; justify-content: center; gap: 5px; }
+.plan-chars svg { flex-shrink: 0; opacity: 0.6; }
+.plan-feat { list-style: none; padding: 0; margin: 10px 0 18px; color: var(--muted); font-size: 13px; text-align: left; }
+.plan-feat li { padding: 5px 0; position: relative; padding-left: 18px; }
+.plan-feat li::before { content: ""; position: absolute; left: 0; top: 11px; width: 8px; height: 8px; border-radius: 50%; background: var(--primary); opacity: 0.5; }
+.plan-badge { display: inline-block; background: var(--primary); color: #fff; border-radius: 999px; padding: 8px 16px; font-weight: 700; font-size: 13px; }
+
+/* character preview in plan tab */
+.char-preview-section { margin-top: 24px; }
+.char-preview-section h3 { font-size: 15px; font-weight: 700; margin-bottom: 12px; color: var(--ink); }
+.char-preview-grid { display: flex; gap: 12px; flex-wrap: wrap; }
+.char-preview-card { display: flex; align-items: center; gap: 8px; background: var(--soft); border-radius: 12px; padding: 8px 14px; border: 1px solid var(--line); }
+.char-avatar { width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; background: var(--card); border: 2px solid var(--char-color, var(--primary)); overflow: hidden; flex-shrink: 0; }
+.char-name { font-size: 13px; font-weight: 600; white-space: nowrap; }
+
+/* adopt tab — character selection grid */
+.char-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(130px, 1fr)); gap: 14px; margin: 16px 0; }
+.char-card { background: var(--card); border: 2px solid var(--line); border-radius: var(--radius); padding: 18px 12px; text-align: center; cursor: pointer; transition: all .2s ease; position: relative; }
+.char-card:hover { border-color: var(--primary); transform: translateY(-2px); }
+.char-card.active { border-color: var(--primary); background: var(--soft); box-shadow: 0 0 0 3px rgba(251,146,60,.2); }
+.char-card.locked { opacity: 0.55; cursor: not-allowed; }
+.char-card.locked:hover { transform: none; border-color: var(--line); }
+.card-avatar { width: 64px; height: 64px; border-radius: 50%; display: flex; align-items: center; justify-content: center; background: var(--soft); border: 2px solid var(--char-color, var(--primary)); margin: 0 auto 10px; overflow: hidden; }
+.card-name { font-size: 14px; font-weight: 700; }
+.card-active-badge { display: inline-block; background: var(--primary); color: #fff; font-size: 10px; font-weight: 700; padding: 2px 8px; border-radius: 999px; margin-top: 6px; }
+.card-lock { position: absolute; top: 8px; right: 8px; width: 22px; height: 22px; background: var(--card); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--muted); }
 
 /* 信息页 / 文章排版（隐私/条款/FAQ/博客/联系） */
 .legal { max-width: 760px; margin: 0 auto; padding: 30px 0 50px; }

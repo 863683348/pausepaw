@@ -87,15 +87,26 @@ function reportEvent(domain) {
   });
 }
 
-// 向所有被管域名的 tab 广播消息
+// 向所有被管域名的 tab 广播消息（自带 content script 兜底注入，确保已打开的页面也生效）
 function broadcast(type, payload) {
   chrome.tabs.query({}, (tabs) => {
-    tabs.forEach(t => {
+    (tabs || []).forEach(t => {
       try {
         const host = t.url ? new URL(t.url).hostname : null;
-        if (host && config && hostIn(config.domains, host)) {
-          chrome.tabs.sendMessage(t.id, Object.assign({ type }, payload || {}));
-        }
+        if (!(host && config && hostIn(config.domains, host))) return;
+        if (t.url.startsWith(chrome.runtime.getURL(""))) return;
+        const msg = Object.assign({ type }, payload || {});
+        chrome.tabs.sendMessage(t.id, msg).catch(() => {
+          // content script 可能还没注入（刚打开的页 / SPA 动态加载）—— 强制注入兜底
+          if (type === "TRIGGER_BREAK") {
+            chrome.scripting.executeScript({
+              target: { tabId: t.id },
+              files: ["content.js"]
+            }).then(() => {
+              setTimeout(() => chrome.tabs.sendMessage(t.id, msg).catch(() => {}), 300);
+            }).catch(() => {});
+          }
+        });
       } catch (e) {}
     });
   });
@@ -135,17 +146,19 @@ function injectOverlay(tabId) {
   });
 }
 
+// ====== 方案 A：注入 + break.html 独立 tab 兜底（完整版） ======
 function startBreak(key, host) {
   breaking = { domain: key, until: Date.now() + breakSec() * 1000, tabId: null, breakTotal: breakSec() };
   chrome.storage.local.set({ pp_break: breaking });
 
-  // 1. 广播给所有现有被管 tab
+  // 1. 广播给所有现有被管 tab，content.js 注入全屏遮罩（broadcast 自带 content script 兜底注入）
   broadcast("TRIGGER_BREAK", { until: breaking.until, breakTotal: breakSec() });
 
-  // 2. 打开全屏 break 页
+  // 2. 打开全屏 break 页（兜底：防止用户当前处于非管制站/空白页时无屏）
   chrome.tabs.create({ url: chrome.runtime.getURL("break.html") }, (tab) => {
     if (breaking) { breaking.tabId = tab.id; chrome.storage.local.set({ pp_break: breaking }); }
   });
+
   reportEvent(host);
 }
 
@@ -190,7 +203,7 @@ chrome.tabs.onCreated.addListener((tab) => {
 // ====== 防绕过：拦截页面导航（在已有 tab 里输入新地址/跳转） ======
 chrome.webNavigation.onCompleted.addListener((details) => {
   if (!breaking || !details.frameId || details.frameId !== 0) return;
-  // 排除 break 页自身
+  // 排除扩展自身页面
   if (details.url && details.url.startsWith(chrome.runtime.getURL(""))) return;
   injectOverlay(details.tabId);
 }, { url: [{ urlPrefix: "http://" }, { urlPrefix: "https://" }] });

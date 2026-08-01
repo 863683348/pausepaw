@@ -1,138 +1,186 @@
-// content.js — 页面内硬锁遮罩（防绕过强化 + 自绘 SVG 猫动画版）
+// content.js — 页面内硬锁遮罩（Shadow DOM 隔离版 v3）
 // 由 background.js 的 TRIGGER_BREAK / END_BREAK 消息驱动。
-// 休息期间：全屏遮罩覆盖页面，显示大猫(SVG动画)+超大倒计时，无法关闭/滚动/交互。
 //
-// 防绕过 v2：background 会在新 tab 创建、页面导航完成时重新注入本脚本；
-//            本脚本启动时也主动读 storage 防刷新绕过；遮罩拦截所有鼠标事件。
+// 🔒 核心防护：Shadow DOM 隔离
+//   页面只能看到一个空壳 <div id="pp-sd">，所有遮罩内容（视频/倒计时/按钮）
+//   全部藏在 Shadow Root 内部。X/Twitter 等站点的反扩展检测脚本无法窥探、无法删除。
+//
+// 休息期间：真猫视频全屏覆盖 + 左上角倒计时 + 确认按钮，无法关闭/滚动/交互。
+// 防绕过 v3：background 新开 tab / 导航完成时重新注入；启动时读 storage 防刷新。
 
 (function(){
   "use strict";
 
-  // 自绘 SVG 猫（结构化：耳/尾带 class 供 CSS 动画）。P0-1 合规：纯 SVG，无 emoji。
-  const CAT_SVG = `
-<svg class="pp-cat" viewBox="0 0 240 240" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet">
-  <path class="pp-tail" d="M196 172 q42 2 36 -46" fill="none" stroke="#E8A06A" stroke-width="15" stroke-linecap="round"/>
-  <ellipse cx="120" cy="178" rx="64" ry="52" fill="#FCD9B6"/>
-  <path class="pp-ear-l" d="M72 96 L58 44 L106 84 Z" fill="#FCD9B6" stroke="#E8A06A" stroke-width="3" stroke-linejoin="round"/>
-  <path class="pp-ear-r" d="M168 96 L182 44 L134 84 Z" fill="#FCD9B6" stroke="#E8A06A" stroke-width="3" stroke-linejoin="round"/>
-  <path d="M76 92 L70 62 L94 84 Z" fill="#FFB3B3"/>
-  <path d="M164 92 L170 62 L146 84 Z" fill="#FFB3B3"/>
-  <circle cx="120" cy="112" r="66" fill="#FCD9B6" stroke="#E8A06A" stroke-width="3"/>
-  <circle cx="97" cy="108" r="10" fill="#4A2E12"/>
-  <circle cx="143" cy="108" r="10" fill="#4A2E12"/>
-  <circle cx="100" cy="105" r="3" fill="#fff"/>
-  <circle cx="146" cy="105" r="3" fill="#fff"/>
-  <circle cx="82" cy="128" r="9" fill="#FFB3B3" opacity="0.7"/>
-  <circle cx="158" cy="128" r="9" fill="#FFB3B3" opacity="0.7"/>
-  <path d="M114 124 L126 124 L120 131 Z" fill="#E8746B"/>
-  <path d="M120 131 q-7 9 -14 4 M120 131 q7 9 14 4" stroke="#4A2E12" stroke-width="3" fill="none" stroke-linecap="round"/>
-  <path d="M70 120 h-26 M72 130 h-23 M170 120 h26 M168 130 h23" stroke="#E8A06A" stroke-width="2" stroke-linecap="round"/>
-</svg>`;
+  // 视频源（Pexels 免费）
+  const VIDEO_SRC_MP4 = "https://videos.pexels.com/video-files/15624035/15624035-uhd_1440_960_30fps.mp4";
+  const VIDEO_SRC_WEBM = "https://videos.pexels.com/video-files/15624035/15624035-uhd_1440_960_30fps.webm";
+  const FALLBACK_IMG = "https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?w=1400&q=80&auto=format&fit=crop";
 
-  let ov = null;
+  // Shadow Host — 页面上唯一可见的元素（空壳，看起来无害）
+  let host = null;
+  let shadow = null;    // ShadowRoot (closed mode)
   let tickTimer = null;
   let untilTime = 0;
+  let countdownDone = false;
 
   function texts() {
     const zh = !config || (config.locale || "zh") === "zh";
-    const name = (config && config.mascot && config.mascot.name) || "Buddy";
     return zh
-      ? { title: "该休息一下啦", sub: name + " 在等你喘口气", bar: "休息中 · 时间到自动恢复" }
-      : { title: "Time for a breather", sub: name + " is waiting for you to rest", bar: "Resting · Auto-resumes when done" };
+      ? { bar: "休息中 · 时间到后可确认完成", confirm: "确认完成休息", done: "已确认" }
+      : { bar: "Resting · Confirm when done", confirm: "Confirm break complete", done: "Confirmed" };
   }
 
   function showOverlay(until) {
-    if (ov) { ov.remove(); ov = null; }
+    // 清理旧的
+    if (host) { host.remove(); host = null; shadow = null; }
     untilTime = until || 0;
+    countdownDone = false;
     const t = texts();
 
-    ov = document.createElement("div");
-    ov.id = "pp-overlay";
-    ov.innerHTML = `
-<style>
-#pp-overlay{position:fixed;inset:0;z-index:2147483647;display:grid;
-  grid-template-columns:1fr 1.1fr;grid-template-rows:1fr auto;gap:0;
-  background:rgba(15,12,10,0.92);font-family:system-ui,"PingFang SC",sans-serif;
-  color:#fff;text-align:center;user-select:none;-webkit-user-select:none;}
-.pp-left{grid-row:1/span 2;display:flex;flex-direction:column;
-  align-items:center;justify-content:center;padding:6vh 4vw;z-index:2;position:relative;}
-.pp-right{grid-row:1/span 2;position:relative;overflow:hidden;
-  display:flex;align-items:flex-end;justify-content:center;}
-.pp-fade{position:absolute;inset:0;background:
-  linear-gradient(to right, rgba(15,12,10,.78) 0%, rgba(15,12,10,.35) 50%, transparent 100%);
-  pointer-events:none;z-index:1;}
-.pp-cat-wrap{width:100%;height:100%;display:flex;align-items:flex-end;justify-content:center;
-  transform-origin:50% 100%;animation:pp-catSlide 1s ease-out .15s backwards;z-index:2;position:relative;}
-@keyframes pp-catSlide{from{transform:translateX(42vw) scale(.9);opacity:0}to{transform:translateX(0) scale(1);opacity:1}}
-.pp-cat{width:min(92%,640px);height:auto;transform-origin:50% 100%;
-  animation:pp-catBreathe 3s ease-in-out infinite 1s;
-  filter:drop-shadow(0 20px 40px rgba(0,0,0,.35));}
-@keyframes pp-catBreathe{0%,100%{transform:scale(1)}50%{transform:scale(1.04)}}
-.pp-cat .pp-ear-l,.pp-cat .pp-ear-r{transform-box:fill-box;transform-origin:50% 100%;
-  animation:pp-catEar 2.4s ease-in-out infinite;}
-.pp-cat .pp-ear-r{animation-direction:reverse;}
-.pp-cat .pp-tail{transform-box:fill-box;transform-origin:100% 100%;
-  animation:pp-catTail 2.6s ease-in-out infinite;}
-@keyframes pp-catEar{0%,100%{transform:rotate(0)}50%{transform:rotate(-7deg)}}
-@keyframes pp-catTail{0%,100%{transform:rotate(0)}50%{transform:rotate(12deg)}}
-.pp-count-wrap{text-align:center;opacity:0;animation:pp-fadeUp .7s ease-out .4s forwards;}
-@keyframes pp-fadeUp{from{opacity:0;transform:translateY(40px)}to{opacity:1;transform:translateY(0)}}
-#pp-count{font-size:clamp(80px,18vw,220px);font-weight:900;line-height:.95;
-  letter-spacing:-.03em;color:#fff;text-shadow:0 2px 40px rgba(0,0,0,.6),0 0 80px rgba(0,0,0,.3);
-  font-variant-numeric:tabular-nums;transition:color .3s,transform .15s;}
-#pp-count.warn{color:#FF6B6B;transform:scale(1.04)}
-#pp-count.danger{color:#FF3860;animation:pp-pulse .5s ease-in-out infinite}
-@keyframes pp-pulse{0%,100%{transform:scale(1.04)}50%{transform:scale(1.1)}}
-.pp-msg{margin-top:2vh;font-size:clamp(16px,2.2vw,26px);font-weight:700;color:#f0e6dc;
-  letter-spacing:.02em;opacity:0;animation:pp-fadeUp .7s ease-out .6s forwards;}
-.pp-sub{margin-top:1vh;font-size:clamp(13px,1.5vw,18px);color:#a89888;opacity:0;
-  animation:pp-fadeUp .7s ease-out .8s forwards;}
-.pp-bar{grid-column:1/-1;background:rgba(0,0,0,.45);backdrop-filter:blur(8px);
-  -webkit-backdrop-filter:blur(8px);padding:1.2vh 3vw;display:flex;align-items:center;
-  justify-content:center;z-index:3;border-top:1px solid rgba(255,255,255,.06);}
-.pp-bar span{font-size:clamp(11px,1.3vw,15px);color:#8c7e70;display:flex;align-items:center;gap:.5vw;}
-.pp-dot{width:7px;height:7px;border-radius:50%;background:#4ade80;display:inline-block;
-  animation:pp-blink 1.6s ease-in-out infinite}
-@keyframes pp-blink{50%{opacity:.25}}
+    // === Step 1: 创建空壳 host（页面只能看到这个）===
+    host = document.createElement("div");
+    host.id = "pp-sd";
+    // 让它看起来像页面自身的一个普通容器，不引人注目
+    host.setAttribute("data-pp", "1");
+    host.style.cssText = "all:unset;display:contents;";
+
+    // === Step 2: 挂载 Closed Shadow DOM（外部 JS 无法访问内部）===
+    shadow = host.attachShadow({ mode: "closed" });
+
+    // === Step 3: 所有遮罩内容放进 Shadow Root 内 ===
+    shadow.innerHTML =
+`<style>
+:host{all:initial;display:block;position:fixed;inset:0;z-index:2147483647;}
+.pp-stage{
+  position:fixed;inset:0;z-index:1;
+  display:flex;align-items:center;justify-content:center;
+  background:#000;font-family:system-ui,"PingFang SC","Noto Sans SC",sans-serif;
+  color:#fff;user-select:none;-webkit-user-select:none;
+}
+/* 视频 */
+.pp-cat-video{position:absolute;inset:0;width:100%;height:100%;
+  object-fit:cover;object-position:center;
+  animation:pp-vidIn .8s ease-out;}
+@keyframes pp-vidIn{from{opacity:0;transform:scale(1.04)}to{opacity:1;transform:scale(1)}}
+/* 倒计时框 */
+.pp-timer{position:absolute;top:24px;left:24px;z-index:10;
+  background:rgba(0,0,0,0.65);
+  backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);
+  border-radius:20px;padding:18px 28px;
+  display:flex;align-items:center;gap:16px;
+  animation:pp-timerIn .4s ease-out .2s backwards;
+  box-shadow:0 12px 40px rgba(0,0,0,.5);
+  border:1px solid rgba(255,255,255,.1);}
+@keyframes pp-timerIn{from{opacity:0;transform:translateY(-16px)}to{opacity:1;transform:translateY(0)}}
+#pp-count{font-size:clamp(52px,12vw,110px);font-weight:800;line-height:1;
+  letter-spacing:-.03em;color:#fff;font-variant-numeric:tabular-nums;
+  min-width:180px;text-align:center;
+  transition:color .3s, transform .15s;}
+#pp-count.warn{color:#fbbf24;transform:scale(1.02)}
+#pp-count.danger{color:#f87171;animation:pp-pulse .5s ease-in-out infinite}
+@keyframes pp-pulse{0%,100%{transform:scale(1.02)}50%{transform:scale(1.06)}}
+/* 确认按钮 */
+.pp-confirm{position:absolute;bottom:80px;right:32px;z-index:10;
+  background:rgba(0,0,0,0.6);
+  backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);
+  border:1px solid rgba(255,255,255,.12);
+  border-radius:14px;padding:14px 22px;
+  display:flex;align-items:center;gap:10px;
+  color:#ccc;font-size:14px;cursor:default;
+  opacity:0;pointer-events:none;
+  transition:opacity .4s, background .2s, color .2s;
+  animation:pp-confIn .4s ease-out;}
+.pp-confirm.visible{opacity:1;pointer-events:auto;}
+.pp-confirm:hover{background:rgba(255,255,255,.1);color:#fff;}
+.pp-check{width:22px;height:22px;border-radius:50%;
+  background:rgba(74,222,128,.2);color:#4ade80;
+  display:flex;align-items:center;justify-content:center;
+  font-size:14px;flex-shrink:0;}
+@keyframes pp-confIn{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
+/* 底部状态条 */
+.pp-bar{position:absolute;bottom:0;left:0;right:0;z-index:10;
+  background:rgba(0,0,0,.5);backdrop-filter:blur(10px);
+  -webkit-backdrop-filter:blur(10px);
+  padding:14px 28px;display:flex;align-items:center;
+  justify-content:center;gap:8px;
+  border-top:1px solid rgba(255,255,255,.08);
+  animation:pp-barIn .5s ease-out .3s backwards;}
+@keyframes pp-barIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+.pp-bar span{font-size:13px;color:#aaa;display:flex;align-items:center;gap:6px;}
+.pp-dot{width:7px;height:7px;border-radius:50%;background:#4ade80;
+  display:inline-block;animation:pp-blink 1.6s ease-in-out infinite}
+@keyframes pp-blink{50%opacity:.25}
 @media(max-width:768px){
-  #pp-overlay{grid-template-columns:1fr;grid-template-rows:auto 1fr auto}
-  .pp-left{grid-row:1;padding:4vh 5vw}
-  .pp-right{grid-row:2;max-height:42vh}
-  .pp-cat{width:min(80%,420px)}
-  .pp-bar{grid-row:3}
-  #pp-count{font-size:clamp(56px,22vw,120px)}
+  .pp-timer{top:14px;left:14px;padding:12px 18px;border-radius:14px;gap:12px;}
+  #pp-count{font-size:clamp(40px,16vw,72px);min-width:120px;}
+  .pp-confirm{bottom:60px;right:16px;padding:10px 16px;font-size:13px;}
+  .pp-bar{padding:10px 16px;}
+  .pp-bar span{font-size:11px;}
 }
 </style>
-<div class="pp-left">
-  <div class="pp-count-wrap">
-    <div id="pp-count">--:--</div>
-    <div class="pp-msg">${t.title}</div>
-    <div class="pp-sub">${t.sub}</div>
-  </div>
+<div class="pp-stage">
+<video class="pp-cat-video" id="pp-vid" autoplay loop muted playsinline
+  poster="${FALLBACK_IMG}">
+  <source src="${VIDEO_SRC_MP4}" type="video/mp4" />
+  <source src="${VIDEO_SRC_WEBM}" type="video/webm" />
+</video>
+<div class="pp-timer">
+  <div id="pp-count">--:--</div>
 </div>
-<div class="pp-right">
-  <div class="pp-fade"></div>
-  <div class="pp-cat-wrap">${CAT_SVG}</div>
-</div>
-<div class="pp-bar"><span><i class="pp-dot"></i> ${t.bar}</span></div>`;
+<button class="pp-confirm" id="pp-confirm">
+  <span class="pp-check">&#10003;</span>
+  <span id="pp-cftxt">${t.confirm}</span>
+</button>
+<div class="pp-bar"><span><i class="pp-dot"></i> ${t.bar}</span></div>
+</div>`;
 
-    document.documentElement.appendChild(ov);
+    // 挂载到页面
+    document.documentElement.appendChild(host);
 
-    // 暂停页面的 video/audio
+    // 暂停页面的 video/audio（从主文档查询，排除 shadow 内的）
     document.querySelectorAll("video, audio").forEach(el => { try { el.pause(); } catch(e) {} });
 
-    // 开始倒计时
+    // 尝试播放视频（在 shadow root 内查询）
+    const vid = shadow.querySelector("#pp-vid");
+    if (vid) {
+      vid.play().catch(() => {
+        const retry = () => { vid.play().catch(() => {}); };
+        document.addEventListener("click", retry, { once: true });
+        document.addEventListener("touchstart", retry, { once: true });
+      });
+    }
+
     startCount();
+
+    // 绑定确认按钮（shadow root 内事件）
+    const cfBtn = shadow.querySelector("#pp-confirm");
+    if (cfBtn) {
+      cfBtn.addEventListener("click", (e) => {
+        e.stopPropagation();
+        if (countdownDone) {
+          const txt = shadow.querySelector("#pp-cftxt");
+          if (txt) txt.textContent = t.done;
+          cfBtn.style.background = "rgba(74,222,128,.15)";
+          const chk = cfBtn.querySelector(".pp-check");
+          if (chk) chk.style.background = "rgba(74,222,128,.4)";
+          try { chrome.runtime.sendMessage({ type: "BREAK_DONE" }); } catch(e) {}
+          setTimeout(() => hideOverlay(), 800);
+        }
+      });
+    }
   }
 
   function hideOverlay() {
     if (tickTimer) { clearInterval(tickTimer); tickTimer = null; }
-    if (ov) { ov.remove(); ov = null; }
+    if (host) { host.remove(); host = null; shadow = null; }
     untilTime = 0;
+    countdownDone = false;
   }
 
   function startCount() {
-    const countEl = ov && ov.querySelector("#pp-count");
+    // 在 shadow root 内查询元素
+    const countEl = shadow && shadow.querySelector("#pp-count");
+    const cfBtn = shadow && shadow.querySelector("#pp-confirm");
     if (!countEl) return;
 
     const upd = () => {
@@ -145,6 +193,12 @@
       if (remain <= 3) countEl.classList.add("danger");
       else if (remain <= 30) countEl.classList.add("warn");
 
+      if (remain <= 0) {
+        countdownDone = true;
+        if (cfBtn) cfBtn.classList.add("visible");
+        try { chrome.runtime.sendMessage({ type: "BREAK_DONE" }); } catch(e) {}
+        return 0;
+      }
       return remain;
     };
 
@@ -153,7 +207,6 @@
       if (upd() <= 0 && tickTimer) {
         clearInterval(tickTimer);
         tickTimer = null;
-        hideOverlay();
       }
     }, 250);
   }

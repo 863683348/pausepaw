@@ -76,9 +76,20 @@ const PAYPAL_RETURN_URL = SITE_URL + "/api/billing/success";
 const PAYPAL_CANCEL_URL = SITE_URL + "/api/billing/cancel";
 // 计划：在 PayPal 后台建 Product + Plan 后，把 Plan ID 填进对应环境变量。
 const BILLING_PLANS = {
-  pro: { key: "pro", name: "Pro", price: 4.99, interval: "month", paypal_plan_id: process.env.PAYPAL_PLAN_PRO || "" },
-  family: { key: "family", name: "Family", price: 9.99, interval: "month", paypal_plan_id: process.env.PAYPAL_PLAN_FAMILY || "" }
+  free:  { key: "free",  name: "Free",     price: 0,    interval: "month", max_characters: 1, paypal_plan_id: "" },
+  pro:   { key: "pro",   name: "Pro",      price: 4.99, interval: "month", max_characters: 3, paypal_plan_id: process.env.PAYPAL_PLAN_PRO || "" },
+  pro_y: { key: "pro_y", name: "Pro Annual", price: 39.99, interval: "year", max_characters: 5, paypal_plan_id: process.env.PAYPAL_PLAN_PRO_YEAR || "", yearly_equivalent: "pro" },
+  family:{ key: "family",name: "Family",   price: 9.99, interval: "month", max_characters: 8, paypal_plan_id: process.env.PAYPAL_PLAN_FAMILY || "" }
 };
+
+// 角色目录（卡通人物，按解锁等级排列）
+const CHARACTER_CATALOG = [
+  { id: "buddy",   name_zh: "橘猫 Buddy",  name_en: "Buddy (Orange Cat)", tier: "free",   color: "#FB923C" },
+  { id: "nezha",   name_zh: "哪吒",        name_en: "Nezha",             tier: "pro",   color: "#EF4444" },
+  { id: "aobing",  name_zh: "敖丙",        name_en: "Ao Bing",           tier: "pro",   color: "#3B82F6" },
+  { id: "panda",   name_zh: "功夫熊猫",    name_en: "Kung Fu Panda",     tier: "pro_y", color: "#1F2937" },
+  { id: "wukong",  name_zh: "孙悟空",      name_en: "Monkey King",       tier: "pro_y", color: "#F59E0B" }
+];
 const PAYPAL_ENABLED = Boolean(
   PAYPAL_CLIENT_ID && PAYPAL_CLIENT_SECRET &&
   Object.values(BILLING_PLANS).some(p => p.paypal_plan_id)
@@ -167,9 +178,16 @@ db.exec(`
     created_at INTEGER NOT NULL,
     client_date TEXT
   );
+  CREATE TABLE IF NOT EXISTS user_characters (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    user_id INTEGER NOT NULL,
+    character_id TEXT NOT NULL,
+    is_active INTEGER NOT NULL DEFAULT 0,
+    unlocked_at INTEGER NOT NULL,
+    UNIQUE(user_id, character_id)
+  );
+  CREATE INDEX IF NOT EXISTS idx_characters_user ON user_characters(user_id);
   CREATE INDEX IF NOT EXISTS idx_events_user ON events(user_id, created_at);
-  // 兼容已有库：加 client_date 列（IF NOT EXISTS 用 try-catch 包裹）
-  try { db.prepare("ALTER TABLE events ADD COLUMN client_date TEXT").run(); } catch(e) {}
   CREATE TABLE IF NOT EXISTS subscriptions (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     user_id INTEGER NOT NULL,
@@ -182,6 +200,9 @@ db.exec(`
   CREATE INDEX IF NOT EXISTS idx_sub_user ON subscriptions(user_id);
   CREATE INDEX IF NOT EXISTS idx_sub_pp ON subscriptions(paypal_subscription_id);
 `);
+
+// 兼容已有库：加 client_date 列
+try { db.prepare("ALTER TABLE events ADD COLUMN client_date TEXT").run(); } catch(e) {}
 
 // 兼容旧库：补 google_sub 列（OAuth 用户标识；邮箱密码用户为 NULL）
 try { db.exec("ALTER TABLE users ADD COLUMN google_sub TEXT"); } catch (_) {}
@@ -331,8 +352,10 @@ async function paypalReq(method, path, body) {
   return { status: r.status, json: j, raw };
 }
 function billingPlansPublic() {
-  return Object.values(BILLING_PLANS).filter(p => p.paypal_plan_id).map(p => ({
-    key: p.key, name: p.name, price: p.price, interval: p.interval, currency: "USD"
+  return Object.values(BILLING_PLANS).filter(p => p.key !== "free").map(p => ({
+    key: p.key, name: p.name, price: p.price, interval: p.interval,
+    currency: "USD", max_characters: p.max_characters || 0,
+    yearly_savings: p.interval === "year" ? Math.round((1 - p.price / 12 / (BILLING_PLANS[p.yearly_equivalent] || {}).price || 0) * 100) : null
   }));
 }
 function intervalMs(interval) {
@@ -494,9 +517,52 @@ const server = http.createServer(async (req, res) => {
       // ---------- 计费（项 6：PayPal 订阅） ----------
       // 配置 + 当前计划（公开，带 JWT 则回显当前会员）
       if (p === "/api/billing/config" && req.method === "GET") {
-        const cfg = { enabled: PAYPAL_ENABLED, mode: PAYPAL_MODE, plans: billingPlansPublic(), current: { plan: "free", plan_expires: 0 } };
+        const cfg = { enabled: PAYPAL_ENABLED, mode: PAYPAL_MODE, plans: billingPlansPublic(), current: { plan: "free", plan_expires: 0 }, characters: CHARACTER_CATALOG };
         try { const uu = authUser(req); cfg.current = { plan: uu.plan || "free", plan_expires: uu.plan_expires || 0 }; } catch (_) {}
         return send(res, 200, cfg);
+      }
+      // 角色收集（需 JWT）：返回用户已解锁角色 + 可解锁列表
+      if (p === "/api/characters" && req.method === "GET") {
+        const uu = authUser(req);
+        const planKey = uu.plan || "free";
+        const plan = BILLING_PLANS[planKey] || BILLING_PLANS.free;
+        const unlockedRows = db.prepare("SELECT character_id, is_active FROM user_characters WHERE user_id=?").all(uu.id);
+        const unlockedSet = new Set(unlockedRows.map(r => r.character_id));
+        const activeId = unlockedRows.find(r => r.is_active)?.character_id || "buddy";
+        // 按计划等级决定可解锁角色
+        const tierOrder = { free: 0, pro: 1, pro_y: 2, family: 3 };
+        const userTier = tierOrder[planKey] || 0;
+        const characters = CHARACTER_CATALOG.map(ch => {
+          const chTier = tierOrder[BILLING_PLANS[ch.tier]?.key || "free"] || 0;
+          const unlocked = unlockedSet.has(ch.id) || chTier <= userTier;
+          return { ...ch, unlocked, is_active: ch.id === activeId };
+        });
+        // 自动解锁当前计划有权访问但还没记录的角色
+        for (const ch of characters) {
+          if (ch.unlocked && !unlockedSet.has(ch.id)) {
+            db.prepare("INSERT OR IGNORE INTO user_characters(user_id,character_id,is_active,unlocked_at) VALUES(?,?,0,?)")
+              .run(uu.id, ch.id, Date.now());
+          }
+        }
+        return send(res, 200, { characters, active_character: activeId, plan_max: plan.max_characters });
+      }
+      // 选择活跃角色（需 JWT）
+      if (p === "/api/characters/activate" && req.method === "POST") {
+        const uu = authUser(req);
+        const charId = (body.character_id || "").trim();
+        if (!charId) return send(res, 400, { error: "character_id required" });
+        const exists = CHARACTER_CATALOG.find(c => c.id === charId);
+        if (!exists) return send(res, 404, { error: "unknown character" });
+        db.prepare("UPDATE user_characters SET is_active=0 WHERE user_id=?").run(uu.id);
+        db.prepare("INSERT OR IGNORE INTO user_characters(user_id,character_id,is_active,unlocked_at) VALUES(?,?,1,?)")
+          .run(uu.id, charId, Date.now());
+        if (db.changes() === 0) {
+          db.prepare("UPDATE user_characters SET is_active=1 WHERE user_id=? AND character_id=?").run(uu.id, charId);
+        }
+        // 同步更新 users.mascot_name
+        const chName = exists.name_zh;
+        db.prepare("UPDATE users SET mascot_name=? WHERE id=?").run(chName, uu.id);
+        return send(res, 200, { ok: true, active_character: charId, name: chName });
       }
       // 发起订阅（需 JWT）
       if (p === "/api/billing/subscribe" && req.method === "POST") {

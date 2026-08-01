@@ -101,11 +101,9 @@ function renderApp() {
 
     <section class="panel active" id="tab-adopt">
       <h2 data-i18n="adopt_title">领养你的伙伴</h2>
-      <div class="mascot-show"><img src="mascot.svg" alt="mascot" /></div>
+      <div class="char-grid" id="charGrid"></div>
       <div class="buddy-name" id="buddyName"></div>
-      <label data-i18n="adopt_name_ph">名字</label>
-      <input type="text" id="nameInput" maxlength="16" />
-      <div style="margin-top:14px"><button class="btn" onclick="adopt()" data-i18n="adopt_btn">领养它</button></div>
+      <div class="hint" id="adoptHint"></div>
     </section>
 
     <section class="panel" id="tab-rules">
@@ -146,8 +144,13 @@ function renderApp() {
 
     <section class="panel" id="tab-plan">
       <h2 data-i18n="plan_title">升级会员</h2>
-      <div class="plans" id="planCards"></div>
+      <div class="billing-toggle"><span data-i18n="plan_toggle_month" class="toggle-opt active" data-val="month" onclick="setBillingCycle('month')">月付</span><span data-i18n="plan_toggle_year" class="toggle-opt" data-val="year" onclick="setBillingCycle('year')">年付<span class="save-badge">省20%</span></span></div>
+      <div class="plans-grid" id="planCards"></div>
       <div class="hint" id="planHint"></div>
+      <div class="char-preview-section" id="charPreviewSection" style="display:none">
+        <h3 data-i18n="plan_char_preview">套餐包含角色</h3>
+        <div class="char-preview-grid" id="charPreviewGrid"></div>
+      </div>
     </section>
   </div>`;
   $("who").textContent = ME.email;
@@ -163,8 +166,9 @@ function showTab(name) {
   document.querySelectorAll(".tabs button").forEach(b => b.classList.toggle("active", b.dataset.tab === name));
   document.querySelectorAll(".panel").forEach(p => p.classList.toggle("active", p.id === "tab-" + name));
   if (name === "dash") { loadStats(); window.trackEvent("view_dashboard"); }
-  if (name === "ext") $("tokenBox").textContent = ME.device_token || "—";
-  if (name === "plan") loadPlans();
+  if (name === "ext") $("tokenBox").textContent = ME.device_token || "\u2014";
+  if (name === "plan") { loadPlans(); loadCharacters(); }
+  if (name === "adopt") { loadCharacters(); }
 }
 
 async function loadProfile() {
@@ -224,33 +228,112 @@ function copyToken() {
   navigator.clipboard.writeText(ME.device_token).then(() => toast(t("ext_copied")));
 }
 
-/* ---------- 计费 / PayPal 会员 ---------- */
+/* ---------- 计费 / PayPal 会员（4档：Free/Pro月/Pro年/Family） ---------- */
+let billingCycle = "month"; // "month" | "year"
+function setBillingCycle(c) {
+  billingCycle = c;
+  document.querySelectorAll(".billing-toggle .toggle-opt").forEach(b => b.classList.toggle("active", b.dataset.val === c));
+  loadPlans();
+}
 async function loadPlans() {
   try {
     const cfg = await api("GET", "/api/billing/config");
     const wrap = $("planCards");
     if (!cfg.enabled) { $("planHint").textContent = t("plan_off"); wrap.innerHTML = ""; return; }
     const cur = cfg.current.plan;
-    wrap.innerHTML = cfg.plans.map(p => `
-      <div class="plan-card ${p.key === cur ? "current" : ""}">
+    const chars = cfg.characters || [];
+    // 按当前周期过滤：year 模式下只显示年度套餐，month 下显示月度
+    const showAnnual = billingCycle === "year";
+    const visible = cfg.plans.filter(p => showAnnual ? p.interval === "year" : p.interval === "month");
+    wrap.innerHTML = visible.map(p => {
+      const isCur = (p.key === cur) || (showAnnual && p.key === "pro_y" && cur === "pro") || (!showAnnual && p.key === "pro" && cur === "pro_y");
+      const saveTag = p.yearly_savings ? `<div class="save-tag">省 ${p.yearly_savings}%</div>` : "";
+      const popular = p.key === "pro" ? `<div class="popular-tag" data-i18n="plan_popular">最受欢迎</div>` : "";
+      return `
+      <div class="plan-card ${isCur ? "current" : ""} ${p.key === "pro" || p.key === "pro_y" ? "featured" : ""}">
+        ${popular}${saveTag}
         <div class="plan-name">${p.name}</div>
-        <div class="plan-price">$${p.price}<span>/${p.interval === "month" ? t("plan_month") : p.interval}</span></div>
+        <div class="plan-price">$${p.price}<span>/${p.interval === "year" ? t("plan_year") : t("plan_month")}</span></div>
+        <div class="plan-chars"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/></svg> ${t("plan_chars")} ${p.max_characters}</div>
         <ul class="plan-feat">${planFeatures(p.key)}</ul>
-        ${p.key === cur
+        ${isCur
           ? `<div class="plan-badge" data-i18n="plan_current">当前方案</div>`
           : `<button class="btn" style="width:100%" onclick="subscribe('${p.key}')" data-i18n="plan_subscribe">订阅</button>`}
-      </div>`).join("");
+      </div>`}).join("");
     $("planHint").textContent = cur !== "free" ? t("plan_active_hint") : t("plan_hint");
+    // 角色预览
+    renderCharPreview(chars, visible);
     window.applyI18n();
   } catch (e) { toast(e.message); }
 }
+function renderCharPreview(characters, plans) {
+  const section = $("charPreviewSection");
+  const grid = $("charPreviewGrid");
+  if (!characters.length || !plans.length) { section.style.display = "none"; return; }
+  section.style.display = "";
+  const maxChars = Math.max(...plans.map(p => p.max_characters || 0));
+  const showChars = characters.slice(0, maxChars);
+  grid.innerHTML = showChars.map(ch => `
+    <div class="char-preview-card" style="--char-color:${ch.color}">
+      <div class="char-avatar">${charAvatarSVG(ch.id)}</div>
+      <div class="char-name">${ch.name_zh || ch.name_en}</div>
+    </div>`).join("");
+}
+function charAvatarSVG(id) {
+  const svgs = {
+    buddy: '<svg viewBox="0 0 64 64" width="48" height="48"><circle cx="32" cy="34" r="22" fill="#FCD9B6" stroke="#E8A06A" stroke-width="2"/><ellipse cx="32" cy="50" rx="16" ry="10" fill="#FCD9B6"/><circle cx="25" cy="30" r="3" fill="#4A2E12"/><circle cx="39" cy="30" r="3" fill="#4A2E12"/><path d="M28 36 Q32 40 36 36" stroke="#E8746B" stroke-width="2" fill="none"/><path d="M20 18 L24 26 M44 18 L40 26" stroke="#E8A06A" stroke-width="3" stroke-linecap="round"/></svg>',
+    nezha: '<svg viewBox="0 0 64 64" width="48" height="48"><circle cx="32" cy="34" r="22" fill="#FEE2E2" stroke="#EF4444" stroke-width="2"/><path d="M22 16 L28 28 L16 28 Z" fill="#EF4444"/><path d="M42 16 L36 28 L48 28 Z" fill="#EF4444"/><circle cx="25" cy="32" r="3" fill="#4A2E12"/><circle cx="39" cy="32" r="3" fill="#4A2E12"/><path d="M26 38 Q32 44 38 38" stroke="#EF4444" stroke-width="2" fill="none"/><path d="M32 10 L32 18" stroke="#EF4444" stroke-width="3" stroke-linecap="round"/></svg>',
+    aobing: '<svg viewBox="0 0 64 64" width="48" height="48"><circle cx="32" cy="34" r="22" fill="#DBEAFE" stroke="#3B82F6" stroke-width="2"/><path d="M20 14 Q32 6 44 14" stroke="#3B82F6" stroke-width="3" fill="none"/><circle cx="25" cy="32" r="3" fill="#1E40AF"/><circle cx="39" cy="32" r="3" fill="#1E40AF"/><path d="M27 39 Q32 43 37 39" stroke="#3B82F6" stroke-width="2" fill="none"/><circle cx="32" cy="20" r="4" fill="#FFF" stroke="#3B82F6" stroke-width="1"/></svg>',
+    panda: '<svg viewBox="0 0 64 64" width="48" height="48"><circle cx="32" cy="34" r="22" fill="#FFF" stroke="#1F2937" stroke-width="2"/><ellipse cx="18" cy="18" rx="8" ry="10" fill="#1F2937"/><ellipse cx="46" cy="18" rx="8" ry="10" fill="#1F2937"/><circle cx="25" cy="32" r="4" fill="#1F2937"/><circle cx="39" cy="32" r="4" fill="#1F2937"/><ellipse cx="32" cy="40" rx="5" ry="3" fill="#1F2937"/></svg>',
+    wukong: '<svg viewBox="0 0 64 64" width="48" height="48"><circle cx="32" cy="34" r="22" fill="#FEF3C7" stroke="#F59E0B" stroke-width="2"/><path d="M18 12 Q14 4 22 8 Q32 2 42 8 Q50 4 46 12" fill="#F59E0B"/><circle cx="25" cy="32" r="3" fill="#92400E"/><circle cx="39" cy="32" r="3" fill="#92400E"/><rect x="28" y="38" width="8" height="6" rx="2" fill="#F59E0B"/><path d="M15 22 L10 16 M49 22 L54 16" stroke="#F59E0B" stroke-width="3" stroke-linecap="round"/></svg>'
+  };
+  return svgs[id] || svgs.buddy;
+}
 function planFeatures(key) {
   const f = {
-    pro: [t("plan_f_pro1"), t("plan_f_pro2"), t("plan_f_pro3")],
-    family: [t("plan_f_fam1"), t("plan_f_fam2"), t("plan_f_fam3")]
+    pro:   [t("plan_f_pro1"), t("plan_f_pro2"), t("plan_f_pro3"), t("plan_f_pro_chars")],
+    pro_y: [t("plan_f_pro1"), t("plan_f_pro2"), t("plan_f_pro3"), t("plan_f_proy_chars"), t("plan_f_proy_save")],
+    family:[t("plan_f_fam1"), t("plan_f_fam2"), t("plan_f_fam3"), t("plan_f_fam_chars")]
   };
   return (f[key] || []).map(x => `<li>${x}</li>`).join("");
 }
+
+/* ---------- 角色收集系统 ---------- */
+let allCharacters = [];
+async function loadCharacters() {
+  try {
+    const d = await api("GET", "/api/characters");
+    allCharacters = d.characters || [];
+    renderCharGrid(d);
+    $("buddyName").textContent = d.active_character ? (allCharacters.find(c => c.id === d.active_character)?.name_zh || "") : "";
+    // adopt tab 提示
+    const hint = $("adoptHint");
+    if (hint) hint.textContent = t("adopt_hint_chars").replace("{n}", String(d.plan_max || 1));
+  } catch (e) { /* not logged in yet */ }
+}
+function renderCharGrid(d) {
+  const grid = $("charGrid");
+  if (!grid || !d.characters) return;
+  grid.innerHTML = d.characters.map(ch => `
+    <div class="char-card ${ch.is_active ? "active" : ""} ${!ch.unlocked ? "locked" : ""}" onclick="${ch.unlocked ? `selectCharacter('${ch.id}')` : `showUpgrade('${ch.tier}')`}" data-char="${ch.id}">
+      <div class="card-avatar" style="--char-color:${ch.color}">${charAvatarSVG(ch.id)}</div>
+      <div class="card-name">${ch.name_zh || ch.name_en}</div>
+      ${ch.is_active ? `<div class="card-active-badge" data-i18n="char_active">使用中</div>` : ""}
+      ${!ch.unlocked ? `<div class="card-lock"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg></div>` : ""}
+    </div>`).join("");
+}
+async function selectCharacter(charId) {
+  try {
+    const d = await api("POST", "/api/characters/activate", { character_id: charId });
+    toast((d.name || "") + " " + t("char_activated"));
+    loadCharacters();
+  } catch (e) { toast(e.message); }
+}
+function showUpgrade(tier) {
+  showTab("plan");
+  toast(t("char_need_upgrade"));
+}
+
 async function subscribe(planKey) {
   try {
     const d = await api("POST", "/api/billing/subscribe", { plan_key: planKey });
