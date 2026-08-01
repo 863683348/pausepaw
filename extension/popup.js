@@ -67,15 +67,30 @@ function startSync() {
   window.__sync = setInterval(() => { pullConfig(); refreshStats(); }, 30000);
 }
 
-// ── 手动 Token 连接 ──
+// ── 手动 Token 连接（先验证再登录，杜绝假 token 也能"连上"）──
 $("connect").addEventListener("click", () => {
   const tok = $("token").value.trim();
   if (!tok) return;
   const base = $("base").value.trim() || DEFAULT_BASE;
-  chrome.storage.local.set({ pp_base: base, pp_token: tok, pp_email: "" }, () => {
-    showLoggedIn("");
-    startSync();
-  });
+  const API = base.replace(/\/$/, "");
+  const errEl = $("gErr");
+  // 用 /api/config 探活：无效 token 服务端返回 401，据此判定连接是否真实成功
+  fetch(API + "/api/config?token=" + encodeURIComponent(tok))
+    .then(r => {
+      if (!r.ok) throw new Error("HTTP " + r.status);
+      return r.json();
+    })
+    .then(() => {
+      errEl.style.display = "none";
+      chrome.storage.local.set({ pp_base: API, pp_token: tok, pp_email: "" }, () => {
+        showLoggedIn("");
+        startSync();
+      });
+    })
+    .catch(() => {
+      errEl.textContent = "连接失败：Token 无效或服务器无响应";
+      errEl.style.display = "block";
+    });
 });
 
 // ── 断开连接 ──
