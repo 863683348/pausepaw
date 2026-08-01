@@ -123,6 +123,8 @@ footer { text-align: center; color: var(--muted); font-size: 13px; padding: 30px
 .char-card.active { border-color: var(--primary); background: var(--soft); box-shadow: 0 0 0 3px rgba(251,146,60,.2); }
 .char-card.locked { opacity: 0.55; cursor: not-allowed; }
 .char-card.locked:hover { transform: none; border-color: var(--line); }
+.char-card.claimed { background: #F8FAFC; }
+.card-claimed-badge { position: absolute; top: 8px; right: 8px; font-size: 11px; background: #E0F2FE; color: #0369A1; border-radius: 999px; padding: 1px 8px; }
 .card-avatar { width: 64px; height: 64px; border-radius: 50%; display: flex; align-items: center; justify-content: center; background: var(--soft); border: 2px solid var(--char-color, var(--primary)); margin: 0 auto 10px; overflow: hidden; }
 .card-name { font-size: 14px; font-weight: 700; }
 .card-active-badge { display: inline-block; background: var(--primary); color: #fff; font-size: 10px; font-weight: 700; padding: 2px 8px; border-radius: 999px; margin-top: 6px; }

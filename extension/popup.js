@@ -80,65 +80,43 @@ $("disconnect").addEventListener("click", () => {
   if (window.__sync) clearInterval(window.__sync);
 });
 
-// ── 一键 Google 登录 ──
+// ── 登录弹框辅助 ──
+function okIcon() { return '<svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="#22C55E" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>'; }
+function failIcon() { return '<svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="#C0392B" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M15 9l-6 6M9 9l6 6"/></svg>'; }
+function showGModal(icon, title, text, btn) {
+  $("gModalIcon").innerHTML = icon || "";
+  $("gModalTitle").textContent = title || "";
+  $("gModalText").textContent = text || "";
+  const b = $("gModalClose");
+  if (btn) { b.style.display = "block"; b.textContent = btn; } else { b.style.display = "none"; }
+  $("gModal").style.display = "flex";
+}
+function hideGModal() { $("gModal").style.display = "none"; }
+
+// ── 一键 Google 登录（委托后台执行，弹框反馈）──
 $("googleLogin").addEventListener("click", () => {
-  const btn = $("googleLogin");
-  const btnText = $("gBtnText");
   const errEl = $("gErr");
-
-  // loading 状态
-  btn.disabled = true;
-  btnText.textContent = "正在跳转 Google ...";
   errEl.style.display = "none";
+  showGModal('<div class="spinner"></div>', "正在登录", "即将打开 Google 授权窗口，请完成登录…", "");
+  apiBase((API) => chrome.runtime.sendMessage({ type: "START_GOOGLE_AUTH", api: API }));
+});
 
-  apiBase((API) => {
-    const url = API + "/api/auth/google?ext=1";
-    chrome.identity.launchWebAuthFlow({ url, interactive: true }, (respUrl) => {
-      // 恢复按钮（无论成功失败）
-      btn.disabled = false;
-      btnText.textContent = "使用 Google 登录";
+// 后台回传登录结果
+chrome.runtime.onMessage.addListener((msg) => {
+  if (!msg || msg.type !== "GOOGLE_AUTH_RESULT") return;
+  if (msg.ok) {
+    showLoggedIn(msg.email || "");
+    startSync();
+    showGModal(okIcon(), "登录成功", "已保存你的账号。点击下面按钮关闭本弹窗，再重新点击扩展图标即可刷新生效。", "关闭并刷新插件");
+  } else {
+    showGModal(failIcon(), "登录失败", msg.error || "请重试", "关闭");
+  }
+});
 
-      if (chrome.runtime.lastError || !respUrl) {
-        errEl.textContent = chrome.runtime.lastError?.message || "登录已取消或超时";
-        errEl.style.display = "block";
-        return;
-      }
-
-      const m = respUrl.match(/[#&]token=([^&]+)/);
-      if (!m) {
-        errEl.textContent = "未能获取登录凭证（回调地址无 token）";
-        errEl.style.display = "block";
-        return;
-      }
-
-      const jwt = decodeURIComponent(m[1]);
-      btnText.textContent = "验证中 ...";
-      btn.disabled = true;
-
-      fetch(API + "/api/me", { headers: { Authorization: "Bearer " + jwt } })
-        .then(r => r.ok ? r.json() : null)
-        .then(d => {
-          btn.disabled = false;
-          btnText.textContent = "使用 Google 登录";
-          if (!d || !d.user || !d.user.device_token) {
-            errEl.textContent = "获取设备令牌失败（后端可能未配置 OAuth）";
-            errEl.style.display = "block";
-            return;
-          }
-          const email = d.user.email || "";
-          chrome.storage.local.set({ pp_base: API, pp_token: d.user.device_token, pp_email: email }, () => {
-            showLoggedIn(email);
-            startSync();
-          });
-        })
-        .catch(() => {
-          btn.disabled = false;
-          btnText.textContent = "使用 Google 登录";
-          errEl.textContent = "网络错误，请检查后端地址是否可达";
-          errEl.style.display = "block";
-        });
-    });
-  });
+// 弹框按钮：成功→关闭弹窗（重开扩展即刷新）；失败→回到登录区
+$("gModalClose").addEventListener("click", () => {
+  if ($("gModalTitle").textContent === "登录成功") window.close();
+  else hideGModal();
 });
 
 // ── 启动：根据存储状态决定显示哪个视图 ──

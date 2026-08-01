@@ -14,7 +14,7 @@ async function api(method, path, body) {
   if (TOKEN) opt.headers["Authorization"] = "Bearer " + TOKEN;
   const r = await fetch(path, opt);
   const data = await r.json().catch(() => ({}));
-  if (!r.ok) throw new Error(data.error || t("auth_err"));
+  if (!r.ok) { const e = new Error(data.error || t("auth_err")); e.status = r.status; e.data = data; throw e; }
   return data;
 }
 
@@ -281,13 +281,13 @@ function renderCharPreview(characters, plans) {
 }
 function charAvatarSVG(id) {
   const svgs = {
-    buddy: '<svg viewBox="0 0 64 64" width="48" height="48"><circle cx="32" cy="34" r="22" fill="#FCD9B6" stroke="#E8A06A" stroke-width="2"/><ellipse cx="32" cy="50" rx="16" ry="10" fill="#FCD9B6"/><circle cx="25" cy="30" r="3" fill="#4A2E12"/><circle cx="39" cy="30" r="3" fill="#4A2E12"/><path d="M28 36 Q32 40 36 36" stroke="#E8746B" stroke-width="2" fill="none"/><path d="M20 18 L24 26 M44 18 L40 26" stroke="#E8A06A" stroke-width="3" stroke-linecap="round"/></svg>',
-    nezha: '<svg viewBox="0 0 64 64" width="48" height="48"><circle cx="32" cy="34" r="22" fill="#FEE2E2" stroke="#EF4444" stroke-width="2"/><path d="M22 16 L28 28 L16 28 Z" fill="#EF4444"/><path d="M42 16 L36 28 L48 28 Z" fill="#EF4444"/><circle cx="25" cy="32" r="3" fill="#4A2E12"/><circle cx="39" cy="32" r="3" fill="#4A2E12"/><path d="M26 38 Q32 44 38 38" stroke="#EF4444" stroke-width="2" fill="none"/><path d="M32 10 L32 18" stroke="#EF4444" stroke-width="3" stroke-linecap="round"/></svg>',
-    aobing: '<svg viewBox="0 0 64 64" width="48" height="48"><circle cx="32" cy="34" r="22" fill="#DBEAFE" stroke="#3B82F6" stroke-width="2"/><path d="M20 14 Q32 6 44 14" stroke="#3B82F6" stroke-width="3" fill="none"/><circle cx="25" cy="32" r="3" fill="#1E40AF"/><circle cx="39" cy="32" r="3" fill="#1E40AF"/><path d="M27 39 Q32 43 37 39" stroke="#3B82F6" stroke-width="2" fill="none"/><circle cx="32" cy="20" r="4" fill="#FFF" stroke="#3B82F6" stroke-width="1"/></svg>',
+    cat: '<svg viewBox="0 0 64 64" width="48" height="48"><circle cx="32" cy="34" r="22" fill="#FCD9B6" stroke="#E8A06A" stroke-width="2"/><ellipse cx="32" cy="50" rx="16" ry="10" fill="#FCD9B6"/><circle cx="25" cy="30" r="3" fill="#4A2E12"/><circle cx="39" cy="30" r="3" fill="#4A2E12"/><path d="M28 36 Q32 40 36 36" stroke="#E8746B" stroke-width="2" fill="none"/><path d="M20 18 L24 26 M44 18 L40 26" stroke="#E8A06A" stroke-width="3" stroke-linecap="round"/></svg>',
+    doraemon: '<svg viewBox="0 0 64 64" width="48" height="48"><circle cx="32" cy="34" r="23" fill="#4285F4" stroke="#2B6FE0" stroke-width="2"/><ellipse cx="32" cy="41" rx="17" ry="14" fill="#fff"/><circle cx="24" cy="33" r="3.2" fill="#1F2937"/><circle cx="40" cy="33" r="3.2" fill="#1F2937"/><circle cx="32" cy="41" r="3" fill="#E8443B"/><path d="M21 39 H43 M23 44 H41" stroke="#1F2937" stroke-width="1.4"/><rect x="30" y="9" width="4" height="7" rx="2" fill="#E8443B"/><circle cx="32" cy="9" r="2.6" fill="#FBBC05"/></svg>',
     panda: '<svg viewBox="0 0 64 64" width="48" height="48"><circle cx="32" cy="34" r="22" fill="#FFF" stroke="#1F2937" stroke-width="2"/><ellipse cx="18" cy="18" rx="8" ry="10" fill="#1F2937"/><ellipse cx="46" cy="18" rx="8" ry="10" fill="#1F2937"/><circle cx="25" cy="32" r="4" fill="#1F2937"/><circle cx="39" cy="32" r="4" fill="#1F2937"/><ellipse cx="32" cy="40" rx="5" ry="3" fill="#1F2937"/></svg>',
-    wukong: '<svg viewBox="0 0 64 64" width="48" height="48"><circle cx="32" cy="34" r="22" fill="#FEF3C7" stroke="#F59E0B" stroke-width="2"/><path d="M18 12 Q14 4 22 8 Q32 2 42 8 Q50 4 46 12" fill="#F59E0B"/><circle cx="25" cy="32" r="3" fill="#92400E"/><circle cx="39" cy="32" r="3" fill="#92400E"/><rect x="28" y="38" width="8" height="6" rx="2" fill="#F59E0B"/><path d="M15 22 L10 16 M49 22 L54 16" stroke="#F59E0B" stroke-width="3" stroke-linecap="round"/></svg>'
+    nezha: '<svg viewBox="0 0 64 64" width="48" height="48"><circle cx="32" cy="34" r="22" fill="#FEE2E2" stroke="#EF4444" stroke-width="2"/><path d="M22 16 L28 28 L16 28 Z" fill="#EF4444"/><path d="M42 16 L36 28 L48 28 Z" fill="#EF4444"/><circle cx="25" cy="32" r="3" fill="#4A2E12"/><circle cx="39" cy="32" r="3" fill="#4A2E12"/><path d="M26 38 Q32 44 38 38" stroke="#EF4444" stroke-width="2" fill="none"/><path d="M32 10 L32 18" stroke="#EF4444" stroke-width="3" stroke-linecap="round"/></svg>',
+    aorun: '<svg viewBox="0 0 64 64" width="48" height="48"><circle cx="32" cy="36" r="21" fill="#D1FAE5" stroke="#14B8A6" stroke-width="2"/><path d="M22 18 Q26 8 32 14 Q38 8 42 18" fill="none" stroke="#14B8A6" stroke-width="3" stroke-linecap="round"/><circle cx="25" cy="34" r="3" fill="#0F766E"/><circle cx="39" cy="34" r="3" fill="#0F766E"/><path d="M27 43 Q32 47 37 43" stroke="#0F766E" stroke-width="2" fill="none"/><circle cx="32" cy="43" r="2" fill="#EF4444"/><path d="M30 30 q2 -3 4 0" stroke="#14B8A6" stroke-width="1.5" fill="none"/></svg>'
   };
-  return svgs[id] || svgs.buddy;
+  return svgs[id] || svgs.cat;
 }
 function planFeatures(key) {
   const f = {
@@ -308,28 +308,38 @@ async function loadCharacters() {
     $("buddyName").textContent = d.active_character ? (allCharacters.find(c => c.id === d.active_character)?.name_zh || "") : "";
     // adopt tab 提示
     const hint = $("adoptHint");
-    if (hint) hint.textContent = t("adopt_hint_chars").replace("{n}", String(d.plan_max || 1));
+    if (hint) hint.textContent = t("adopt_hint_chars").replace("{n}", String(d.plan_max || 1)).replace("{c}", String(d.claimed_count || 0));
   } catch (e) { /* not logged in yet */ }
 }
 function renderCharGrid(d) {
   const grid = $("charGrid");
   if (!grid || !d.characters) return;
-  grid.innerHTML = d.characters.map(ch => `
-    <div class="char-card ${ch.is_active ? "active" : ""} ${!ch.unlocked ? "locked" : ""}" onclick="${ch.unlocked ? `selectCharacter('${ch.id}')` : `showUpgrade('${ch.tier}')`}" data-char="${ch.id}">
+  const atLimit = (d.claimed_count || 0) >= (d.plan_max || 1);
+  grid.innerHTML = d.characters.map(ch => {
+    const isLocked = !ch.claimed && atLimit;
+    const cls = ["char-card", ch.is_active ? "active" : "", (ch.claimed && !ch.is_active) ? "claimed" : "", isLocked ? "locked" : ""].filter(Boolean).join(" ");
+    const onclick = isLocked ? `showUpgrade()` : `selectCharacter('${ch.id}')`;
+    return `
+    <div class="${cls}" onclick="${onclick}" data-char="${ch.id}">
       <div class="card-avatar" style="--char-color:${ch.color}">${charAvatarSVG(ch.id)}</div>
       <div class="card-name">${ch.name_zh || ch.name_en}</div>
       ${ch.is_active ? `<div class="card-active-badge" data-i18n="char_active">使用中</div>` : ""}
-      ${!ch.unlocked ? `<div class="card-lock"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg></div>` : ""}
-    </div>`).join("");
+      ${ch.claimed && !ch.is_active ? `<div class="card-claimed-badge" data-i18n="char_claimed">已拥有</div>` : ""}
+      ${isLocked ? `<div class="card-lock"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg></div>` : ""}
+    </div>`;
+  }).join("");
 }
 async function selectCharacter(charId) {
   try {
     const d = await api("POST", "/api/characters/activate", { character_id: charId });
     toast((d.name || "") + " " + t("char_activated"));
     loadCharacters();
-  } catch (e) { toast(e.message); }
+  } catch (e) {
+    if (e && e.status === 409) { toast(t("char_limit_reached")); showUpgrade(); }
+    else toast(e.message);
+  }
 }
-function showUpgrade(tier) {
+function showUpgrade() {
   showTab("plan");
   toast(t("char_need_upgrade"));
 }

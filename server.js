@@ -76,19 +76,20 @@ const PAYPAL_RETURN_URL = SITE_URL + "/api/billing/success";
 const PAYPAL_CANCEL_URL = SITE_URL + "/api/billing/cancel";
 // 计划：在 PayPal 后台建 Product + Plan 后，把 Plan ID 填进对应环境变量。
 const BILLING_PLANS = {
+  // 角色采用「计数制」：免费仅可领 1 个，收费不限（用 99 表示不限）
   free:  { key: "free",  name: "Free",     price: 0,    interval: "month", max_characters: 1, paypal_plan_id: "" },
-  pro:   { key: "pro",   name: "Pro",      price: 4.99, interval: "month", max_characters: 3, paypal_plan_id: process.env.PAYPAL_PLAN_PRO || "" },
-  pro_y: { key: "pro_y", name: "Pro Annual", price: 39.99, interval: "year", max_characters: 5, paypal_plan_id: process.env.PAYPAL_PLAN_PRO_YEAR || "", yearly_equivalent: "pro" },
-  family:{ key: "family",name: "Family",   price: 9.99, interval: "month", max_characters: 8, paypal_plan_id: process.env.PAYPAL_PLAN_FAMILY || "" }
+  pro:   { key: "pro",   name: "Pro",      price: 4.99, interval: "month", max_characters: 99, paypal_plan_id: process.env.PAYPAL_PLAN_PRO || "" },
+  pro_y: { key: "pro_y", name: "Pro Annual", price: 39.99, interval: "year", max_characters: 99, paypal_plan_id: process.env.PAYPAL_PLAN_PRO_YEAR || "", yearly_equivalent: "pro" },
+  family:{ key: "family",name: "Family",   price: 9.99, interval: "month", max_characters: 99, paypal_plan_id: process.env.PAYPAL_PLAN_FAMILY || "" }
 };
 
-// 角色目录（卡通人物，按解锁等级排列）
+// 角色目录（卡通动画形象，可领宠物）。cat 为默认免费宠物，其余均可选。
 const CHARACTER_CATALOG = [
-  { id: "buddy",   name_zh: "橘猫 Buddy",  name_en: "Buddy (Orange Cat)", tier: "free",   color: "#FB923C" },
-  { id: "nezha",   name_zh: "哪吒",        name_en: "Nezha",             tier: "pro",   color: "#EF4444" },
-  { id: "aobing",  name_zh: "敖丙",        name_en: "Ao Bing",           tier: "pro",   color: "#3B82F6" },
-  { id: "panda",   name_zh: "功夫熊猫",    name_en: "Kung Fu Panda",     tier: "pro_y", color: "#1F2937" },
-  { id: "wukong",  name_zh: "孙悟空",      name_en: "Monkey King",       tier: "pro_y", color: "#F59E0B" }
+  { id: "cat",      name_zh: "橘猫",     name_en: "Cat",           color: "#FB923C", is_default: true },
+  { id: "doraemon", name_zh: "机器猫",   name_en: "Doraemon",      color: "#4285F4" },
+  { id: "panda",    name_zh: "功夫熊猫", name_en: "Kung Fu Panda", color: "#1F2937" },
+  { id: "nezha",    name_zh: "哪吒",     name_en: "Nezha",         color: "#EF4444" },
+  { id: "aorun",    name_zh: "敖润",     name_en: "Ao Run",        color: "#14B8A6" }
 ];
 const PAYPAL_ENABLED = Boolean(
   PAYPAL_CLIENT_ID && PAYPAL_CLIENT_SECRET &&
@@ -521,44 +522,53 @@ const server = http.createServer(async (req, res) => {
         try { const uu = authUser(req); cfg.current = { plan: uu.plan || "free", plan_expires: uu.plan_expires || 0 }; } catch (_) {}
         return send(res, 200, cfg);
       }
-      // 角色收集（需 JWT）：返回用户已解锁角色 + 可解锁列表
+      // 角色收集（需 JWT）：返回用户已领角色 + 计数制上限
       if (p === "/api/characters" && req.method === "GET") {
         const uu = authUser(req);
         const planKey = uu.plan || "free";
         const plan = BILLING_PLANS[planKey] || BILLING_PLANS.free;
-        const unlockedRows = db.prepare("SELECT character_id, is_active FROM user_characters WHERE user_id=?").all(uu.id);
-        const unlockedSet = new Set(unlockedRows.map(r => r.character_id));
-        const activeId = unlockedRows.find(r => r.is_active)?.character_id || "buddy";
-        // 按计划等级决定可解锁角色
-        const tierOrder = { free: 0, pro: 1, pro_y: 2, family: 3 };
-        const userTier = tierOrder[planKey] || 0;
-        const characters = CHARACTER_CATALOG.map(ch => {
-          const chTier = tierOrder[BILLING_PLANS[ch.tier]?.key || "free"] || 0;
-          const unlocked = unlockedSet.has(ch.id) || chTier <= userTier;
-          return { ...ch, unlocked, is_active: ch.id === activeId };
-        });
-        // 自动解锁当前计划有权访问但还没记录的角色
-        for (const ch of characters) {
-          if (ch.unlocked && !unlockedSet.has(ch.id)) {
-            db.prepare("INSERT OR IGNORE INTO user_characters(user_id,character_id,is_active,unlocked_at) VALUES(?,?,0,?)")
-              .run(uu.id, ch.id, Date.now());
-          }
+        // 兼容旧数据：buddy 重命名为 cat
+        let claimedRows = db.prepare("SELECT character_id, is_active FROM user_characters WHERE user_id=?").all(uu.id)
+          .map(r => ({ character_id: r.character_id === "buddy" ? "cat" : r.character_id, is_active: r.is_active }));
+        // 去重（若 buddy 与 cat 并存）
+        const seen = new Set();
+        claimedRows = claimedRows.filter(r => seen.has(r.character_id) ? false : (seen.add(r.character_id), true));
+        // 新用户默认自动领养橘猫
+        if (claimedRows.length === 0) {
+          db.prepare("INSERT OR IGNORE INTO user_characters(user_id,character_id,is_active,unlocked_at) VALUES(?,?,1,?)")
+            .run(uu.id, "cat", Date.now());
+          claimedRows.push({ character_id: "cat", is_active: 1 });
         }
-        return send(res, 200, { characters, active_character: activeId, plan_max: plan.max_characters });
+        const claimedSet = new Set(claimedRows.map(r => r.character_id));
+        const activeId = claimedRows.find(r => r.is_active)?.character_id || "cat";
+        const claimedCount = claimedRows.length;
+        const characters = CHARACTER_CATALOG.map(ch => ({
+          id: ch.id, name_zh: ch.name_zh, name_en: ch.name_en, color: ch.color,
+          claimed: claimedSet.has(ch.id),
+          is_active: ch.id === activeId,
+          is_default: Boolean(ch.is_default)
+        }));
+        return send(res, 200, { characters, active_character: activeId, plan_max: plan.max_characters, claimed_count: claimedCount });
       }
-      // 选择活跃角色（需 JWT）
+      // 选择/领养角色（需 JWT）：免费限 1 个，收费不限
       if (p === "/api/characters/activate" && req.method === "POST") {
         const uu = authUser(req);
         const charId = (body.character_id || "").trim();
         if (!charId) return send(res, 400, { error: "character_id required" });
         const exists = CHARACTER_CATALOG.find(c => c.id === charId);
         if (!exists) return send(res, 404, { error: "unknown character" });
+        const plan = BILLING_PLANS[uu.plan || "free"] || BILLING_PLANS.free;
+        const claimedRows = db.prepare("SELECT character_id FROM user_characters WHERE user_id=?").all(uu.id);
+        const alreadyClaimed = claimedRows.some(r => r.character_id === charId);
+        // 免费版最多领 1 个：未领过且已达上限 -> 拦截
+        if (!alreadyClaimed && claimedRows.length >= plan.max_characters) {
+          return send(res, 409, { error: "limit_reached", need_upgrade: true, plan_max: plan.max_characters });
+        }
         db.prepare("UPDATE user_characters SET is_active=0 WHERE user_id=?").run(uu.id);
         db.prepare("INSERT OR IGNORE INTO user_characters(user_id,character_id,is_active,unlocked_at) VALUES(?,?,1,?)")
           .run(uu.id, charId, Date.now());
-        if (db.changes() === 0) {
-          db.prepare("UPDATE user_characters SET is_active=1 WHERE user_id=? AND character_id=?").run(uu.id, charId);
-        }
+        // 无论是否新插入，都把该角色置为 active（node:sqlite 无 db.changes() 方法，直接兜底 UPDATE）
+        db.prepare("UPDATE user_characters SET is_active=1 WHERE user_id=? AND character_id=?").run(uu.id, charId);
         // 同步更新 users.mascot_name
         const chName = exists.name_zh;
         db.prepare("UPDATE users SET mascot_name=? WHERE id=?").run(chName, uu.id);

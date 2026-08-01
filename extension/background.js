@@ -191,7 +191,31 @@ chrome.runtime.onMessage.addListener((msg) => {
   if (!msg) return;
   if (msg.type === "BREAK_DONE") endBreak();
   else if (msg.type === "CONFIG_UPDATED") loadState();
+  else if (msg.type === "START_GOOGLE_AUTH") startGoogleAuth(msg.api);
 });
+
+// ====== 谷歌登录（后台执行，避免弹窗失焦关闭导致回调丢失）======
+function startGoogleAuth(API) {
+  if (!API) { chrome.runtime.sendMessage({ type: "GOOGLE_AUTH_RESULT", ok: false, error: "no api" }); return; }
+  chrome.identity.launchWebAuthFlow({ url: API + "/api/auth/google?ext=1", interactive: true }, (respUrl) => {
+    if (chrome.runtime.lastError || !respUrl) {
+      chrome.runtime.sendMessage({ type: "GOOGLE_AUTH_RESULT", ok: false, error: chrome.runtime.lastError?.message || "已取消或超时" });
+      return;
+    }
+    const m = respUrl.match(/[#&]token=([^&]+)/);
+    if (!m) { chrome.runtime.sendMessage({ type: "GOOGLE_AUTH_RESULT", ok: false, error: "回调地址无 token" }); return; }
+    const jwt = decodeURIComponent(m[1]);
+    fetch(API + "/api/me", { headers: { Authorization: "Bearer " + jwt } })
+      .then(r => r.ok ? r.json() : null)
+      .then(d => {
+        if (!d || !d.user || !d.user.device_token) { chrome.runtime.sendMessage({ type: "GOOGLE_AUTH_RESULT", ok: false, error: "设备令牌获取失败" }); return; }
+        chrome.storage.local.set({ pp_base: API, pp_token: d.user.device_token, pp_email: d.user.email || "" }, () => {
+          chrome.runtime.sendMessage({ type: "GOOGLE_AUTH_RESULT", ok: true, email: d.user.email || "" });
+        });
+      })
+      .catch(() => chrome.runtime.sendMessage({ type: "GOOGLE_AUTH_RESULT", ok: false, error: "网络错误" }));
+  });
+}
 
 // ====== 防绕过：拦截新开标签页 ======
 chrome.tabs.onCreated.addListener((tab) => {
