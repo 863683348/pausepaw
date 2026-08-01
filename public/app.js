@@ -138,7 +138,10 @@ function renderApp() {
       <h2 data-i18n="ext_title">连接插件</h2>
       <label data-i18n="ext_token">Token</label>
       <div class="token-box" id="tokenBox">—</div>
-      <div style="margin-top:10px"><button class="btn ghost small" onclick="copyToken()" data-i18n="ext_copy">复制 Token</button></div>
+      <div style="margin-top:10px;display:flex;gap:10px;flex-wrap:wrap">
+        <button class="btn ghost small" onclick="copyToken()" data-i18n="ext_copy">复制 Token</button>
+        <a class="btn ghost small" href="/downloads/pausepaw-extension-v0.2.0.zip" download data-i18n="ext_download">下载插件</a>
+      </div>
       <div class="hint" data-i18n="ext_hint">安装插件后粘贴此 Token，规则与拦截数据云端同步。</div>
     </section>
 

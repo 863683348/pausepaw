@@ -734,7 +734,7 @@ const server = http.createServer(async (req, res) => {
     }
     if (p === "/sitemap.xml") {
       setSecurityHeaders(res);
-      const pages = ["/", "/app.html", "/blog.html", "/faq.html", "/privacy.html", "/terms.html", "/contact.html"];
+      const pages = ["/", "/app.html", "/extension.html", "/blog.html", "/faq.html", "/privacy.html", "/terms.html", "/contact.html"];
       const alt = (loc, lang) => `    <xhtml:link rel="alternate" hreflang="${lang}" href="${loc}"/>`;
       const urls = pages.map(loc => {
         const zh = SITE_URL + loc;
@@ -767,7 +767,8 @@ const server = http.createServer(async (req, res) => {
           "/faq.html": { title: "PausePaw FAQ — Install, Safety, Refunds", description: "What PausePaw is, whether it is free, which browsers it supports, how to install, data safety and refunds.", ogTitle: "PausePaw FAQ — Install, Safety, Refunds", ogDesc: "What PausePaw is, whether it is free, which browsers it supports, how to install, data safety and refunds." },
           "/privacy.html": { title: "PausePaw Privacy Policy", description: "How PausePaw protects your data: scrypt-hashed passwords, no selling, aggregated events only.", ogTitle: "PausePaw Privacy Policy", ogDesc: "How PausePaw protects your data: scrypt-hashed passwords, no selling, aggregated events only." },
           "/terms.html": { title: "PausePaw Terms of Service", description: "The terms governing your use of PausePaw digital-wellness companion and subscription plans.", ogTitle: "PausePaw Terms of Service", ogDesc: "The terms governing your use of PausePaw digital-wellness companion and subscription plans." },
-          "/contact.html": { title: "Contact PausePaw", description: "Get in touch with the PausePaw team for support, billing, or partnership questions.", ogTitle: "Contact PausePaw", ogDesc: "Get in touch with the PausePaw team for support, billing, or partnership questions." }
+          "/contact.html": { title: "Contact PausePaw", description: "Get in touch with the PausePaw team for support, billing, or partnership questions.", ogTitle: "Contact PausePaw", ogDesc: "Get in touch with the PausePaw team for support, billing, or partnership questions." },
+          "/extension.html": { title: "PausePaw — Download the Browser Extension", description: "Download the PausePaw browser extension for Chrome / Edge, then load it unpacked and connect your token to sync break rules from the cloud.", ogTitle: "PausePaw — Download the Browser Extension", ogDesc: "Download the PausePaw browser extension for Chrome / Edge, then load it unpacked and connect your token to sync break rules from the cloud." }
         };
         const reqLang = (req.url.match(/[?&]lang=(zh|en)/) || [])[1];
         if (reqLang === "en" && EN_META[rel]) {
