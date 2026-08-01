@@ -28,9 +28,16 @@ function refreshStats() {
     if (!tok) return;
     apiBase((API) => {
       fetch(API + "/api/stats", { headers: { Authorization: "Bearer " + tok } })
-        .then(r => r.ok ? r.json() : null)
+        .then(r => {
+          if (!r.ok) throw new Error("HTTP " + r.status);
+          return r.json();
+        })
         .then(d => { if (d) { $("sBlocks").textContent = d.blocks_today; $("sSaved").textContent = d.saved_total; } })
-        .catch(() => {});
+        .catch(err => {
+          console.warn("[PausePaw] refreshStats failed:", err.message);
+          $("sBlocks").textContent = "?";
+          $("sSaved").textContent = "?";
+        });
     });
   });
 }

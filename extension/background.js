@@ -83,7 +83,13 @@ function reportEvent(domain) {
         // 附带客户端本地日期（YYYY-MM-DD），解决服务器 UTC 时区导致「今日」偏移问题
         client_date: new Date().toISOString().slice(0, 10)
       })
-    }).catch(() => {});
+    }).then(r => {
+      if (!r.ok) console.warn("[PausePaw] reportEvent HTTP", r.status, "for", domain);
+      else chrome.storage.local.set({ pp_last_sync: Date.now() });
+    }).catch(err => {
+      console.warn("[PausePaw] reportEvent failed:", err.message, "API:", API);
+      chrome.storage.local.set({ pp_sync_err: err.message });
+    });
   });
 }
 

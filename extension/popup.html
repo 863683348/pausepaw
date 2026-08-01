@@ -43,7 +43,7 @@
   <!-- 已登录状态（默认隐藏） -->
   <div id="loggedIn">
     <div class="email"><span id="gEmail"></span><span class="badge">Google</span></div>
-    <div class="ok" style="margin-top:4px">已连接云端，规则每 30 秒自动同步</div>
+    <div class="ok" style="margin-top:4px">已连接云端，数据自动同步中</div>
   </div>
 
   <!-- 未登录 / 手动连接区域 -->
@@ -66,7 +66,7 @@
 
   <button id="disconnect" class="ghost" style="display:none;margin-top:8px">断开连接</button>
   <div class="stats" id="stats">今日拦截：<b id="sBlocks">0</b> ｜ 省下：<b id="sSaved">0</b> 分钟</div>
-  <div class="hint">演示建议：网站里阈值选"秒"、设 10。后台连续累计使用时长，到阈值整屏强制休息。</div>
+  <div class="hint">使用提示：在网站设置管制域名和阈值（建议先用"秒"级测试）。扩展会在后台累计使用时长，到达阈值后自动强制休息。</div>
 
   <!-- 谷歌登录弹框 -->
   <div id="gModal" class="gmodal" style="display:none">

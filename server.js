@@ -651,6 +651,35 @@ const server = http.createServer(async (req, res) => {
         return send(res, 200, { ok: true });
       }
 
+      // ── 统计（支持 JWT 或 device_token 两种认证）──
+      if (p === "/api/stats" && req.method === "GET") {
+        let u;
+        try { u = authUser(req); } catch (_) {
+          const h = (req.headers["authorization"] || "").replace(/^Bearer /, "");
+          u = getUserByDevice(h);
+          if (!u) return send(res, 401, { error: "unauthorized" });
+        }
+        const todayLocal = new Date().toISOString().slice(0, 10);
+        const row = db.prepare(
+          "SELECT COUNT(*) c, COALESCE(SUM(break_min),0) s FROM events WHERE user_id=? AND (client_date=? OR (client_date IS NULL AND created_at>=?))"
+        ).get(u.id, todayLocal, new Date(todayLocal).getTime());
+        const total = db.prepare("SELECT COUNT(*) c, COALESCE(SUM(break_min),0) s FROM events WHERE user_id=?").get(u.id);
+        const days = db.prepare(
+          "SELECT DISTINCT COALESCE(client_date, date(created_at/1000,'unixepoch')) d FROM events WHERE user_id=? ORDER BY d DESC LIMIT 30"
+        ).all(u.id);
+        let streak = 0;
+        let cursor = todayLocal;
+        const set = new Set(days.map(x => x.d));
+        while (set.has(cursor)) { streak++; cursor = new Date(new Date(cursor).getTime() - 864e5).toISOString().slice(0, 10); }
+        return send(res, 200, {
+          blocks_today: row.c,
+          saved_today: Math.round(row.s),
+          blocks_total: total.c,
+          saved_total: Math.round(total.s),
+          streak
+        });
+      }
+
       // 以下接口需 JWT ----
       const u = authUser(req);
 
@@ -691,31 +720,6 @@ const server = http.createServer(async (req, res) => {
           break_min=excluded.break_min, break_unit=excluded.break_unit, whitelist_json=excluded.whitelist_json, updated_at=excluded.updated_at`)
           .run(u.id, domains, threshold_min, threshold_unit, break_min, break_unit, whitelist, Date.now());
         return send(res, 200, { ok: true });
-      }
-      if (p === "/api/stats" && req.method === "GET") {
-        // 优先用客户端本地日期（解决服务器 UTC 时区导致「今日」偏移问题）
-        const todayLocal = new Date().toISOString().slice(0, 10);
-        // 今日拦截 + 今日省下（以 client_date 匹配，回退到 UTC created_at）
-        const row = db.prepare(
-          "SELECT COUNT(*) c, COALESCE(SUM(break_min),0) s FROM events WHERE user_id=? AND (client_date=? OR (client_date IS NULL AND created_at>=?))"
-        ).get(u.id, todayLocal, new Date(todayLocal).getTime());
-        // 全量统计
-        const total = db.prepare("SELECT COUNT(*) c, COALESCE(SUM(break_min),0) s FROM events WHERE user_id=?").get(u.id);
-        // 连续守规：从今天往前数连续有事件的天数（优先 client_date）
-        const days = db.prepare(
-          "SELECT DISTINCT COALESCE(client_date, date(created_at/1000,'unixepoch')) d FROM events WHERE user_id=? ORDER BY d DESC LIMIT 30"
-        ).all(u.id);
-        let streak = 0;
-        let cursor = todayLocal;
-        const set = new Set(days.map(x => x.d));
-        while (set.has(cursor)) { streak++; cursor = new Date(new Date(cursor).getTime() - 864e5).toISOString().slice(0, 10); }
-        return send(res, 200, {
-          blocks_today: row.c,
-          saved_today: Math.round(row.s),
-          blocks_total: total.c,
-          saved_total: Math.round(total.s),
-          streak
-        });
       }
 
       return send(res, 404, { error: "not found" });
