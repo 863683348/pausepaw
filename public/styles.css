@@ -130,6 +130,62 @@ footer { text-align: center; color: var(--muted); font-size: 13px; padding: 30px
 .card-active-badge { display: inline-block; background: var(--primary); color: #fff; font-size: 10px; font-weight: 700; padding: 2px 8px; border-radius: 999px; margin-top: 6px; }
 .card-lock { position: absolute; top: 8px; right: 8px; width: 22px; height: 22px; background: var(--card); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--muted); }
 
+/* adopt tab — marketing header */
+.adopt-header { text-align: center; margin-bottom: 6px; }
+.adopt-header h2 { margin-bottom: 4px; }
+.adopt-sub { color: var(--muted); font-size: 14px; margin-bottom: 0; }
+
+/* upgrade banner — shown when free user at limit */
+.upgrade-banner { margin: 14px 0 18px; animation: fadeUp .35s ease; }
+.upgrade-banner-inner {
+  display: flex; align-items: center; gap: 16px;
+  background: linear-gradient(135deg, #FFF7ED, #FEF3C7);
+  border: 1.5px solid #FBBF24; border-radius: var(--radius);
+  padding: 14px 18px; flex-wrap: wrap;
+}
+.upgrade-banner-text { display: flex; flex-direction: column; gap: 2px; flex: 1; min-width: 180px; }
+.upgrade-banner-text strong { font-size: 15px; color: #92400E; }
+.upgrade-banner-text span { font-size: 13px; color: #B45309; }
+.upgrade-banner .btn { white-space: nowrap; background: #F59E0B; color: #fff; border-color: #F59E0B; flex-shrink: 0; }
+.upgrade-banner .btn:hover { background: #D97706; border-color: #D97706; }
+
+/* locked card — premium look (not just grayed out) */
+.char-card.locked {
+  opacity: 1; cursor: pointer; position: relative; overflow: hidden;
+  background: linear-gradient(145deg, #FFFBEB, #FEF3C7);
+  border-color: #FCD34D;
+}
+.char-card.locked:hover {
+  transform: translateY(-3px); box-shadow: 0 6px 20px rgba(251,191,36,.25);
+  border-color: #FBBF24;
+}
+.char-card.locked::after {
+  content: ""; position: absolute; inset: 0;
+  background: linear-gradient(105deg, transparent 40%, rgba(255,255,255,.35) 50%, transparent 60%);
+  transform: translateX(-100%); transition: transform .55s ease;
+  pointer-events: none;
+}
+.char-card.locked:hover::after { transform: translateX(100%); }
+
+/* PRO badge on locked cards */
+.card-pro-badge {
+  position: absolute; top: 8px; right: 8px; z-index: 2;
+  background: linear-gradient(135deg, #F59E0B, #D97706);
+  color: #fff; font-size: 10px; font-weight: 800; letter-spacing: .5px;
+  padding: 2px 7px; border-radius: 999px; line-height: 1.4;
+}
+
+/* lock overlay with CTA text */
+.card-lock-overlay {
+  position: absolute; bottom: 0; left: 0; right: 0;
+  background: linear-gradient(transparent, rgba(217,119,6,.12));
+  padding: 28px 8px 10px; display: flex; align-items: center; justify-content: center; gap: 4px;
+  color: #B45309; font-size: 12px; font-weight: 700; z-index: 1;
+}
+.card-lock-overlay svg { flex-shrink: 0; }
+
+@keyframes fadeUp { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+
 /* 信息页 / 文章排版（隐私/条款/FAQ/博客/联系） */
 .legal { max-width: 760px; margin: 0 auto; padding: 30px 0 50px; }
 .legal .back { display: inline-block; color: var(--primary-d); font-size: 14px; margin-bottom: 18px; font-weight: 600; }

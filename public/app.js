@@ -82,7 +82,19 @@ function renderApp() {
     </div>
 
     <section class="panel active" id="tab-adopt">
-      <h2 data-i18n="adopt_title">领养你的伙伴</h2>
+      <div class="adopt-header">
+        <h2 data-i18n="adopt_title">领养你的伙伴</h2>
+        <p class="adopt-sub" data-i18n="adopt_sub">选择一只卡通伙伴，每次休息时它会出现陪你放松</p>
+      </div>
+      <div class="upgrade-banner" id="upgradeBanner" style="display:none">
+        <div class="upgrade-banner-inner">
+          <div class="upgrade-banner-text">
+            <strong data-i18n="adopt_banner_title">解锁全部伙伴</strong>
+            <span data-i18n="adopt_banner_desc">升级 Pro / Family，领养全部 5 只角色，休息时随心切换</span>
+          </div>
+          <button class="btn" onclick="showTab('plan')" data-i18n="adopt_banner_cta">查看套餐</button>
+        </div>
+      </div>
       <div class="char-grid" id="charGrid"></div>
       <div class="buddy-name" id="buddyName"></div>
       <div class="hint" id="adoptHint"></div>
@@ -300,17 +312,24 @@ function renderCharGrid(d) {
   const grid = $("charGrid");
   if (!grid || !d.characters) return;
   const atLimit = (d.claimed_count || 0) >= (d.plan_max || 1);
+  // 显示/隐藏升级横幅
+  const banner = $("upgradeBanner");
+  if (banner) banner.style.display = atLimit && (d.plan_max || 1) < 5 ? "" : "none";
   grid.innerHTML = d.characters.map(ch => {
     const isLocked = !ch.claimed && atLimit;
     const cls = ["char-card", ch.is_active ? "active" : "", (ch.claimed && !ch.is_active) ? "claimed" : "", isLocked ? "locked" : ""].filter(Boolean).join(" ");
     const onclick = isLocked ? `showUpgrade()` : `selectCharacter('${ch.id}')`;
     return `
     <div class="${cls}" onclick="${onclick}" data-char="${ch.id}">
+      ${isLocked ? `<div class="card-pro-badge" data-i18n="char_pro_badge">PRO</div>` : ""}
       <div class="card-avatar" style="--char-color:${ch.color}">${charAvatarSVG(ch.id)}</div>
       <div class="card-name">${ch.name_zh || ch.name_en}</div>
       ${ch.is_active ? `<div class="card-active-badge" data-i18n="char_active">使用中</div>` : ""}
       ${ch.claimed && !ch.is_active ? `<div class="card-claimed-badge" data-i18n="char_claimed">已拥有</div>` : ""}
-      ${isLocked ? `<div class="card-lock"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg></div>` : ""}
+      ${isLocked ? `<div class="card-lock-overlay">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>
+        <span data-i18n="char_unlock_cta">升级解锁</span>
+      </div>` : ""}
     </div>`;
   }).join("");
 }
