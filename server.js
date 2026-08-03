@@ -78,9 +78,9 @@ const PAYPAL_CANCEL_URL = SITE_URL + "/api/billing/cancel";
 const BILLING_PLANS = {
   // 角色采用「计数制」：免费仅可领 1 个，收费不限（用 99 表示不限）
   free:  { key: "free",  name: "Free",     price: 0,    interval: "month", max_characters: 1, paypal_plan_id: "" },
-  pro:   { key: "pro",   name: "Pro",      price: 4.99, interval: "month", max_characters: 99, paypal_plan_id: process.env.PAYPAL_PLAN_PRO || "" },
-  pro_y: { key: "pro_y", name: "Pro Annual", price: 39.99, interval: "year", max_characters: 99, paypal_plan_id: process.env.PAYPAL_PLAN_PRO_YEAR || "", yearly_equivalent: "pro" },
-  family:{ key: "family",name: "Family",   price: 9.99, interval: "month", max_characters: 99, paypal_plan_id: process.env.PAYPAL_PLAN_FAMILY || "" }
+  pro:   { key: "pro",   name: "Pro",      price: 3.99, interval: "month", max_characters: 99, paypal_plan_id: process.env.PAYPAL_PLAN_PRO || "" },
+  pro_y: { key: "pro_y", name: "Pro Annual", price: 38.99, interval: "year", max_characters: 99, paypal_plan_id: process.env.PAYPAL_PLAN_PRO_YEAR || "", yearly_equivalent: "pro" },
+  family:{ key: "family",name: "Family",   price: 7.99, interval: "month", max_characters: 99, paypal_plan_id: process.env.PAYPAL_PLAN_FAMILY || "" }
 };
 
 // 角色目录（卡通动画形象，可领宠物）。cat 为默认免费宠物，其余均可选。
@@ -200,6 +200,14 @@ db.exec(`
   );
   CREATE INDEX IF NOT EXISTS idx_sub_user ON subscriptions(user_id);
   CREATE INDEX IF NOT EXISTS idx_sub_pp ON subscriptions(paypal_subscription_id);
+  CREATE TABLE IF NOT EXISTS billing_events (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    event_id TEXT UNIQUE,
+    event_type TEXT,
+    handled_at INTEGER,
+    created_at INTEGER
+  );
+  CREATE INDEX IF NOT EXISTS idx_be_event ON billing_events(event_id);
 `);
 
 // 兼容已有库：加 client_date 列
@@ -289,7 +297,12 @@ function ensureRules(uid) {
   return r;
 }
 function publicUser(u) {
-  return { id: u.id, email: u.email, mascot_name: u.mascot_name, locale: u.locale, device_token: u.device_token, plan: u.plan || "free", plan_expires: u.plan_expires || 0 };
+  let subscription_status = "none";
+  try {
+    const sub = db.prepare("SELECT status FROM subscriptions WHERE user_id=? ORDER BY updated_at DESC LIMIT 1").get(u.id);
+    if (sub) subscription_status = sub.status;
+  } catch (_) {}
+  return { id: u.id, email: u.email, mascot_name: u.mascot_name, locale: u.locale, device_token: u.device_token, plan: u.plan || "free", plan_expires: u.plan_expires || 0, subscription_status };
 }
 
 // ---------- Cookie 工具（谷歌 OAuth state 校验用）----------
@@ -511,8 +524,10 @@ const server = http.createServer(async (req, res) => {
           const landing = ext ? "/ext-done.html" : "/app.html";
           return res.writeHead(302, { Location: landing + "#token=" + encodeURIComponent(token) }).end();
         } catch (e) {
-          return send(res, 400, { error: e.message || "google callback failed" });
-        }
+          // e.message 在 undici 上是 "fetch failed" 太模糊；带出底层 cause（DNS / TLS / 阻塞）
+          const cause = e.cause ? { code: e.cause.code, message: e.cause.message, addr: e.cause.address } : null;
+          console.log("[google callback] err:", e.message, cause);
+          return send(res, 400, { error: e.message || "google callback failed", cause });
       }
 
       // ---------- 计费（项 6：PayPal 订阅） ----------
@@ -614,6 +629,16 @@ const server = http.createServer(async (req, res) => {
       if (p === "/api/billing/cancel" && req.method === "GET") {
         return sendHtml(res, "已取消订阅流程", false);
       }
+      // 取消自动续费（需 JWT）：调用 PayPal 取消订阅 + 本地标记；当前周期结束前仍可用
+      if (p === "/api/billing/cancel" && req.method === "POST") {
+        const uu = authUser(req);
+        const sub = db.prepare("SELECT * FROM subscriptions WHERE user_id=? AND status IN ('ACTIVE','APPROVED','PENDING') ORDER BY updated_at DESC LIMIT 1").get(uu.id);
+        if (!sub || !sub.paypal_subscription_id) return send(res, 400, { error: "no_active_subscription" });
+        const r = await paypalReq("PATCH", "/v1/billing/subscriptions/" + encodeURIComponent(sub.paypal_subscription_id), [{ op: "replace", path: "/status", value: "CANCELLED" }]);
+        if (r.status < 200 || r.status >= 300) return send(res, 502, { error: "paypal_cancel_failed", detail: r.raw });
+        db.prepare("UPDATE subscriptions SET status='CANCELLED', updated_at=? WHERE id=?").run(Date.now(), sub.id);
+        return send(res, 200, { ok: true, status: "CANCELLED" });
+      }
       // PayPal Webhook（公开；生产建议配置 PAYPAL_WEBHOOK_ID 校验签名）
       if (p === "/api/billing/webhook" && req.method === "POST") {
         if (PAYPAL_WEBHOOK_ID) {
@@ -627,6 +652,12 @@ const server = http.createServer(async (req, res) => {
             webhook_event: body
           }).catch(() => ({ status: 0, json: {} }));
           if (v.status !== 200 || v.json.verification_status !== "SUCCESS") return send(res, 400, { error: "webhook verification failed" });
+        }
+        // 幂等：PayPal 可能重发同一事件，按 event_id 去重
+        const eventId = body.id || (body.resource && body.resource.id) || "";
+        if (eventId) {
+          const dup = db.prepare("SELECT 1 FROM billing_events WHERE event_id=?").get(eventId);
+          if (dup) return send(res, 200, { ok: true, duplicated: true });
         }
         const ev = body.event_type || "";
         const resource = body.resource || {};
@@ -647,6 +678,9 @@ const server = http.createServer(async (req, res) => {
             try { exp = resource.billing_info && resource.billing_info.next_billing_time ? new Date(resource.billing_info.next_billing_time).getTime() : 0; } catch (_) {}
             applySubscription(resource.id, status, exp);
           }
+        }
+        if (eventId) {
+          try { db.prepare("INSERT OR IGNORE INTO billing_events(event_id,event_type,handled_at,created_at) VALUES(?,?,?,?)").run(eventId, ev, Date.now(), Date.now()); } catch (_) {}
         }
         return send(res, 200, { ok: true });
       }

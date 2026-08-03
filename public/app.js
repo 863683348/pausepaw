@@ -74,14 +74,47 @@ function renderApp() {
   </header>
   <div class="appwrap">
     <div class="tabs">
-      <button class="active" data-tab="adopt" onclick="showTab('adopt')" data-i18n="tab_adopt">领养伙伴</button>
+      <button class="active" data-tab="me" onclick="showTab('me')" data-i18n="tab_me">我的</button>
+      <button data-tab="adopt" onclick="showTab('adopt')" data-i18n="tab_adopt">领养伙伴</button>
       <button data-tab="rules" onclick="showTab('rules')" data-i18n="tab_rules">休息规则</button>
       <button data-tab="dash" onclick="showTab('dash')" data-i18n="tab_dash">看板</button>
       <button data-tab="ext" onclick="showTab('ext')" data-i18n="tab_ext">扩展</button>
       <button data-tab="plan" onclick="showTab('plan')" data-i18n="tab_plan">会员</button>
     </div>
 
-    <section class="panel active" id="tab-adopt">
+    <section class="panel active" id="tab-me">
+      <div class="me-card" id="meCard"></div>
+      <div class="me-section">
+        <h3 data-i18n="me_entitlements">会员权益</h3>
+        <div class="me-unlock-row" id="meUnlockRow"></div>
+        <ul class="me-benefits" id="meBenefits"></ul>
+        <button class="btn ghost small" onclick="showTab('adopt')" data-i18n="me_manage_char">管理角色</button>
+      </div>
+      <div class="me-section">
+        <h3 data-i18n="me_stats">我的数据</h3>
+        <div class="stats" id="meStats"></div>
+        <div class="goal-box" id="meGoal" style="margin-top:12px"></div>
+      </div>
+      <div class="me-section">
+        <h3 data-i18n="me_account">账户</h3>
+        <div class="me-account">
+          <div class="me-account-row"><span class="label" data-i18n="me_lang">界面语言</span>
+            <span class="val"><span class="lang-switch"><button data-lang="zh" onclick="setLang('zh')">中文</button><button data-lang="en" onclick="setLang('en')">EN</button></span></span></div>
+          <div class="me-account-row"><span class="label" data-i18n="me_ext_token">设备 Token</span>
+            <span class="val"><code id="meToken" class="me-token">—</code> <button class="btn ghost small" onclick="copyToken()" data-i18n="ext_copy">复制</button></span></div>
+          <div class="me-account-row"><span class="label" data-i18n="me_login_method">登录方式</span>
+            <span class="val"><svg viewBox="0 0 48 48" width="16" height="16" aria-hidden="true"><path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/><path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6.01C43.93 39.05 46.98 33.15 46.98 24.55z"/><path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/><path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6.01c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/></svg> Google</span></div>
+          <div class="me-account-row"><span class="label" data-i18n="me_account_logout">退出</span>
+            <span class="val"><button class="btn ghost small" onclick="logout()" data-i18n="acct_logout">退出登录</button></span></div>
+        </div>
+      </div>
+      <div class="me-section">
+        <h3 data-i18n="me_billing">订阅管理</h3>
+        <div id="meBilling"></div>
+      </div>
+    </section>
+
+    <section class="panel" id="tab-adopt">
       <div class="adopt-header">
         <h2 data-i18n="adopt_title">领养你的伙伴</h2>
         <p class="adopt-sub" data-i18n="adopt_sub">选择一只卡通伙伴，每次休息时它会出现陪你放松</p>
@@ -151,9 +184,11 @@ function renderApp() {
     </section>
   </div>`;
   $("who").textContent = ME.email;
+  const mt = $("meToken"); if (mt) mt.textContent = (ME.device_token || "—");
   window.applyI18n();
   loadProfile();
   loadRules();
+  loadMe();
 }
 
 /* ---------- 操作 ---------- */
@@ -166,6 +201,7 @@ function showTab(name) {
   if (name === "ext") $("tokenBox").textContent = ME.device_token || "\u2014";
   if (name === "plan") { loadPlans(); loadCharacters(); }
   if (name === "adopt") { loadCharacters(); }
+  if (name === "me") { loadMe(); }
 }
 
 async function loadProfile() {
@@ -346,6 +382,129 @@ async function selectCharacter(charId) {
 function showUpgrade() {
   showTab("plan");
   toast(t("char_need_upgrade"));
+}
+
+/* ---------- 个人中心（我的 tab） ---------- */
+function escapeHtml(s) { return String(s == null ? "" : s).replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c])); }
+function fmtDate(ms) {
+  if (!ms) return "—";
+  const d = new Date(ms);
+  return d.getFullYear() + "-" + String(d.getMonth() + 1).padStart(2, "0") + "-" + String(d.getDate()).padStart(2, "0");
+}
+function planInfo(plan) {
+  const map = {
+    free:   { name: t("me_plan_free"),   cls: "free", paid: false },
+    pro:    { name: t("me_plan_pro"),    cls: "paid", paid: true },
+    pro_y:  { name: t("me_plan_pro_y"),  cls: "paid", paid: true },
+    family: { name: t("me_plan_family"), cls: "paid", paid: true }
+  };
+  return map[plan] || map.free;
+}
+function planIntervalText(plan) {
+  if (plan === "pro_y") return t("me_cycle_year");
+  if (plan === "pro" || plan === "family") return t("me_cycle_month");
+  return "—";
+}
+function renewText(status) {
+  if (status === "ACTIVE" || status === "APPROVED") return t("me_renew_on");
+  if (status === "CANCELLED") return t("me_renew_off");
+  if (status === "PENDING") return t("me_renew_pending");
+  return "—";
+}
+function planFeaturesResolved(plan) {
+  if (plan === "free") return [t("me_benefit_free1"), t("me_benefit_free2")];
+  return planFeatures(plan === "pro_y" ? "pro" : plan);
+}
+async function loadMe() {
+  try {
+    const [me, chars, stats, rules] = await Promise.all([
+      api("GET", "/api/me"),
+      api("GET", "/api/characters"),
+      api("GET", "/api/stats"),
+      api("GET", "/api/rules")
+    ]);
+    ME = me.user;
+    const who = $("who"); if (who) who.textContent = ME.email;
+    renderMeCard(ME);
+    renderMeEntitlements(ME, chars);
+    renderMeStats(stats, rules);
+    renderMeBilling(ME);
+    const mt = $("meToken"); if (mt) mt.textContent = (ME.device_token || "—");
+    window.applyI18n();
+  } catch (e) { if (/401|expired/.test(e.message)) logout(); else toast(e.message); }
+}
+function renderMeCard(u) {
+  const card = $("meCard"); if (!card) return;
+  const info = planInfo(u.plan);
+  const status = u.subscription_status || "none";
+  const isPaid = info.paid;
+  const badge = isPaid ? (status === "CANCELLED" ? t("me_badge_cancelled") : t("me_badge_member")) : t("me_badge_free");
+  const expiry = u.plan_expires ? fmtDate(u.plan_expires) : (isPaid ? "—" : t("me_free_forever"));
+  const nextBill = (isPaid && u.plan_expires) ? fmtDate(u.plan_expires) : "—";
+  card.className = "me-card mem-" + info.cls;
+  card.innerHTML = `
+    <div class="mem-top">
+      <div class="mem-plan">${escapeHtml(info.name)}</div>
+      <div class="mem-badge">${escapeHtml(badge)}</div>
+    </div>
+    <div class="mem-meta">
+      <div class="kv"><span data-i18n="me_email">邮箱</span><b>${escapeHtml(u.email)}</b></div>
+      <div class="kv"><span data-i18n="me_valid">有效期至</span><b>${escapeHtml(expiry)}</b></div>
+      ${isPaid ? `
+      <div class="kv"><span data-i18n="me_cycle">付费周期</span><b>${escapeHtml(planIntervalText(u.plan))}</b></div>
+      <div class="kv"><span data-i18n="me_renew">自动续费</span><b>${escapeHtml(renewText(status))}</b></div>
+      <div class="kv"><span data-i18n="me_next">下次续费</span><b>${escapeHtml(nextBill)}</b></div>` : ``}
+    </div>`;
+}
+function renderMeEntitlements(u, chars) {
+  const row = $("meUnlockRow"), list = $("meBenefits");
+  if (!row || !list) return;
+  const claimed = chars.claimed_count || 0;
+  const max = chars.plan_max || 1;
+  const activeName = (chars.characters || []).find(c => c.id === chars.active_character)?.name_zh || "";
+  row.innerHTML = `<div><b>${claimed} / ${max}</b> <span class="label">${t("me_unlocked")}</span></div>
+    <div><span class="label">${t("me_active_char")}：</span><b>${escapeHtml(activeName || t("me_none"))}</b></div>`;
+  list.innerHTML = planFeaturesResolved(u.plan).map(f =>
+    `<li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg> ${escapeHtml(f)}</li>`
+  ).join("");
+}
+function renderMeStats(stats, rules) {
+  const el = $("meStats"); if (!el) return;
+  const totalMin = Math.round(stats.saved_total) || 0;
+  let saved;
+  if (totalMin >= 60) { const h = Math.floor(totalMin / 60), m = totalMin % 60; saved = h + "h" + (m > 0 ? " " + m + t("dash_unit_min") : ""); }
+  else saved = totalMin + " " + t("dash_unit_min");
+  el.innerHTML = `
+    <div class="stat"><div class="num">${stats.blocks_today}</div><div class="lab" data-i18n="dash_blocks">今日拦截</div></div>
+    <div class="stat"><div class="num">${escapeHtml(saved)}</div><div class="lab" data-i18n="dash_saved">累计省下</div></div>
+    <div class="stat"><div class="num">${stats.streak}</div><div class="lab" data-i18n="dash_streak">连续守规</div></div>`;
+  const goal = $("meGoal");
+  if (goal) goal.textContent = t("dash_goal") + "：\n" + (rules.domains.join(", ") || "—") + "\n" + rules.threshold_min + (rules.threshold_unit === "sec" ? "s" : "m") + " → " + t("dash_saved") + " " + rules.break_min + (rules.break_unit === "sec" ? "s" : "m");
+}
+function renderMeBilling(u) {
+  const el = $("meBilling"); if (!el) return;
+  const status = u.subscription_status || "none";
+  const isPaid = (u.plan || "free") !== "free";
+  if (!isPaid) {
+    el.innerHTML = `<p class="hint" data-i18n="me_upgrade_cta">升级解锁全部 5 个角色，休息陪伴随心切换</p>
+      <div class="me-billing-actions"><button class="btn" onclick="showTab('plan')" data-i18n="me_change_plan">升级会员</button></div>`;
+    return;
+  }
+  const canCancel = ["ACTIVE", "APPROVED", "PENDING"].includes(status);
+  el.innerHTML = `
+    <div class="me-account-row"><span class="label" data-i18n="me_current_plan">当前方案</span><span class="val"><b>${escapeHtml(planInfo(u.plan).name)}</b></span></div>
+    <div class="me-billing-actions">
+      <button class="btn ghost small" onclick="showTab('plan')" data-i18n="me_change_plan">切换 / 升级</button>
+      ${canCancel ? `<button class="btn ghost small me-danger" onclick="cancelSubscription()" data-i18n="me_cancel_sub">取消自动续费</button>` : ``}
+    </div>`;
+}
+async function cancelSubscription() {
+  if (!confirm(t("me_cancel_confirm"))) return;
+  try {
+    await api("POST", "/api/billing/cancel");
+    toast(t("me_cancel_done"));
+    loadMe();
+  } catch (e) { toast(e.message); }
 }
 
 async function subscribe(planKey) {

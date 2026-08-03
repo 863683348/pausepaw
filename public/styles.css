@@ -241,3 +241,36 @@ footer { text-align: center; color: var(--muted); font-size: 13px; padding: 30px
   .legal h1 { font-size: 25px; }
   .foot-links { gap: 12px; }
 }
+
+/* ---------- 个人中心（我的 tab） ---------- */
+.me-card { border-radius: var(--radius); padding: 22px 24px; margin-bottom: 22px; border: 1px solid var(--line); box-shadow: var(--shadow); }
+.me-card.mem-paid { background: linear-gradient(135deg, #FFF1E0, #FEF3C7); border-color: #FBBF24; }
+.me-card.mem-free { background: linear-gradient(135deg, var(--soft), var(--card)); }
+.mem-top { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 16px; }
+.mem-plan { font-size: 24px; font-weight: 800; color: var(--ink); }
+.mem-badge { font-size: 12px; font-weight: 800; padding: 5px 14px; border-radius: 999px; background: var(--primary); color: #fff; letter-spacing: .5px; }
+.mem-card.mem-free .mem-badge { background: var(--muted); }
+.mem-meta { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 14px; }
+.kv { display: flex; flex-direction: column; gap: 3px; }
+.kv span { font-size: 12px; color: var(--muted); }
+.kv b { font-size: 15px; color: var(--ink); font-weight: 700; }
+.me-section { margin-bottom: 24px; }
+.me-section h3 { font-size: 16px; font-weight: 800; margin: 0 0 12px; color: var(--ink); }
+.me-unlock-row { display: flex; align-items: center; justify-content: space-between; gap: 12px; background: var(--soft); border: 1px solid var(--line); border-radius: 12px; padding: 12px 16px; margin-bottom: 12px; flex-wrap: wrap; }
+.me-unlock-row .label { color: var(--muted); font-size: 13px; }
+.me-benefits { list-style: none; padding: 0; margin: 0 0 12px; display: grid; gap: 8px; }
+.me-benefits li { display: flex; align-items: center; gap: 8px; font-size: 14px; color: var(--ink); }
+.me-benefits li svg { flex: none; color: var(--primary); }
+.me-account-row { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 11px 0; border-bottom: 1px solid var(--line); }
+.me-account-row:last-child { border-bottom: 0; }
+.me-account-row .label { font-size: 14px; color: var(--muted); }
+.me-account-row .val { font-size: 14px; font-weight: 600; color: var(--ink); display: flex; align-items: center; gap: 8px; }
+.me-token { font-family: ui-monospace, Menlo, monospace; font-size: 12px; color: var(--muted); background: var(--soft); padding: 3px 8px; border-radius: 8px; word-break: break-all; max-width: 220px; display: inline-block; }
+.me-billing-actions { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 6px; }
+.btn.me-danger { background: transparent; color: #C0392B; border: 1px solid #E5B7B0; }
+.btn.me-danger:hover { background: #FCEEEC; }
+
+@media (max-width: 480px) {
+  .mem-plan { font-size: 20px; }
+  .me-token { max-width: 140px; }
+}
