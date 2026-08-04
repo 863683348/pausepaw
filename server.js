@@ -528,6 +528,7 @@ const server = http.createServer(async (req, res) => {
           const cause = e.cause ? { code: e.cause.code, message: e.cause.message, addr: e.cause.address } : null;
           console.log("[google callback] err:", e.message, cause);
           return send(res, 400, { error: e.message || "google callback failed", cause });
+        }
       }
 
       // ---------- 计费（项 6：PayPal 订阅） ----------
@@ -770,10 +771,11 @@ const server = http.createServer(async (req, res) => {
       setSecurityHeaders(res);
       const pages = ["/", "/app.html", "/extension.html", "/blog.html", "/faq.html", "/privacy.html", "/terms.html", "/contact.html"];
       const alt = (loc, lang) => `    <xhtml:link rel="alternate" hreflang="${lang}" href="${loc}"/>`;
+      const lastmod = "2026-08-04";
       const urls = pages.map(loc => {
         const zh = SITE_URL + loc;
         const en = SITE_URL + loc + "?lang=en";
-        return `  <url>\n    <loc>${zh}</loc>\n${alt(zh, "zh")}\n${alt(en, "en")}\n${alt(zh, "x-default")}\n  </url>`;
+        return `  <url>\n    <loc>${zh}</loc>\n    <lastmod>${lastmod}</lastmod>\n${alt(zh, "zh")}\n${alt(en, "en")}\n${alt(zh, "x-default")}\n  </url>`;
       }).join("\n");
       const xml = `<?xml version="1.0" encoding="UTF-8"?>\n` +
         `<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">\n${urls}\n</urlset>\n`;
@@ -797,7 +799,7 @@ const server = http.createServer(async (req, res) => {
         let html = data.toString("utf8").replace(/%%SITE_URL%%/g, SITE_URL).replace(/%%ANALYTICS%%/g, buildAnalyticsSnippet()).replace(/%%ADSENSE%%/g, buildFundingChoicesSnippet() + buildAdsenseSnippet());
         const EN_META = {
           "/index.html": { title: "PausePaw — Digital Wellness Companion", description: "A cute digital-wellness companion that gently enforces screen breaks. Free core, with Pro and Family plans.", ogTitle: "PausePaw — Digital Wellness Companion", ogDesc: "A cute digital-wellness companion that gently enforces screen breaks. Free core, with Pro and Family plans." },
-          "/blog.html": { title: "PausePaw Blog — Digital Wellbeing and Screen Time", description: "Why cute beats blocked, the 5-minute rule for mindless scrolling, and how to take back control of summer screen time.", ogTitle: "PausePaw Blog — Digital Wellbeing and Screen Time", ogDesc: "Why cute beats blocked, the 5-minute rule for mindless scrolling, and how to take back control of summer screen time." },
+          "/blog.html": { title: "PausePaw Blog — Digital Wellbeing and Screen Time", description: "2026 average screen time data, why cute beats blocked, the 5-minute rule for mindless scrolling, and how to take back control of summer screen time.", ogTitle: "PausePaw Blog — Digital Wellbeing and Screen Time", ogDesc: "2026 average screen time data, why cute beats blocked, the 5-minute rule for mindless scrolling, and how to take back control of summer screen time." },
           "/faq.html": { title: "PausePaw FAQ — Install, Safety, Refunds", description: "What PausePaw is, whether it is free, which browsers it supports, how to install, data safety and refunds.", ogTitle: "PausePaw FAQ — Install, Safety, Refunds", ogDesc: "What PausePaw is, whether it is free, which browsers it supports, how to install, data safety and refunds." },
           "/privacy.html": { title: "PausePaw Privacy Policy", description: "How PausePaw protects your data: scrypt-hashed passwords, no selling, aggregated events only.", ogTitle: "PausePaw Privacy Policy", ogDesc: "How PausePaw protects your data: scrypt-hashed passwords, no selling, aggregated events only." },
           "/terms.html": { title: "PausePaw Terms of Service", description: "The terms governing your use of PausePaw digital-wellness companion and subscription plans.", ogTitle: "PausePaw Terms of Service", ogDesc: "The terms governing your use of PausePaw digital-wellness companion and subscription plans." },
