@@ -769,7 +769,7 @@ const server = http.createServer(async (req, res) => {
     }
     if (p === "/sitemap.xml") {
       setSecurityHeaders(res);
-      const pages = ["/", "/app.html", "/extension.html", "/blog.html", "/blog/post1.html", "/blog/post2.html", "/blog/post3.html", "/blog/day001.html", "/blog/post4.html", "/blog/post5.html", "/faq.html", "/privacy.html", "/terms.html", "/contact.html"];
+      const pages = ["/", "/app.html", "/extension.html", "/blog.html", "/blog/post1.html", "/blog/post2.html", "/blog/post3.html", "/blog/day001.html", "/blog/post4.html", "/blog/post5.html", "/blog/post6.html", "/faq.html", "/privacy.html", "/terms.html", "/contact.html"];
       const alt = (loc, lang) => `    <xhtml:link rel="alternate" hreflang="${lang}" href="${loc}"/>`;
       const lastmod = "2026-08-04";
       const urls = pages.map(loc => {
