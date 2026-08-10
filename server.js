@@ -8,6 +8,7 @@ import crypto from "node:crypto";
 import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import zlib from "node:zlib";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
@@ -143,6 +144,46 @@ function setSecurityHeaders(res) {
   res.setHeader("Referrer-Policy", "strict-origin-when-cross-origin");
   res.setHeader("Strict-Transport-Security", "max-age=63072000; includeSubDomains");
   res.setHeader("Permissions-Policy", "geolocation=(), camera=(), microphone=()");
+}
+
+// ---------- 边缘缓存策略（降低 Fast Origin Transfer 源站流量）----------
+// s-maxage 供 Cloudflare 等共享缓存使用；immutable 资源长期缓存不重验证。
+const CACHE_BY_EXT = {
+  ".html": "public, max-age=300, s-maxage=3600, stale-while-revalidate=86400",
+  ".js":   "public, max-age=300, s-maxage=86400, stale-while-revalidate=604800",
+  ".css":  "public, max-age=300, s-maxage=86400, stale-while-revalidate=604800",
+  ".json": "public, max-age=300, s-maxage=3600, stale-while-revalidate=86400",
+  ".svg":  "public, max-age=86400, s-maxage=604800, immutable",
+  ".png":  "public, max-age=86400, s-maxage=604800, immutable",
+  ".jpg":  "public, max-age=86400, s-maxage=604800, immutable",
+  ".jpeg": "public, max-age=86400, s-maxage=604800, immutable",
+  ".gif":  "public, max-age=86400, s-maxage=604800, immutable",
+  ".webp": "public, max-age=86400, s-maxage=604800, immutable",
+  ".ico":  "public, max-age=86400, s-maxage=604800, immutable",
+  ".mp4":  "public, max-age=604800, s-maxage=2592000, immutable",
+  ".webm": "public, max-age=604800, s-maxage=2592000, immutable",
+  ".zip":  "public, max-age=604800, s-maxage=2592000, immutable",
+  ".woff": "public, max-age=604800, s-maxage=2592000, immutable",
+  ".woff2":"public, max-age=604800, s-maxage=2592000, immutable",
+  ".ttf":  "public, max-age=604800, s-maxage=2592000, immutable"
+};
+function setCacheHeaders(res, ext) {
+  const cc = CACHE_BY_EXT[ext.toLowerCase()] || "public, max-age=300, s-maxage=3600";
+  res.setHeader("Cache-Control", cc);
+}
+
+// 文本类响应按需 gzip 压缩（进一步降低 源站→边缘 的传输体积）
+const TEXT_CT = /^(text\/|application\/(javascript|json|xml)|image\/svg\+xml)/;
+function sendBody(req, res, body, contentType) {
+  let out = Buffer.isBuffer(body) ? body : Buffer.from(body, "utf8");
+  const ae = req.headers["accept-encoding"] || "";
+  if (TEXT_CT.test(contentType) && ae.includes("gzip") && out.length > 1024) {
+    const gz = zlib.gzipSync(out, { level: 6 });
+    if (gz.length < out.length) { res.setHeader("Content-Encoding", "gzip"); out = gz; }
+  }
+  res.setHeader("Content-Type", contentType);
+  res.setHeader("Content-Length", out.length);
+  res.end(out);
 }
 
 fs.mkdirSync(path.dirname(DB_PATH), { recursive: true });
@@ -763,12 +804,14 @@ const server = http.createServer(async (req, res) => {
     // ---- SEO ----
     if (p === "/robots.txt") {
       setSecurityHeaders(res);
+      setCacheHeaders(res, ".txt");
       res.writeHead(200, { "Content-Type": "text/plain; charset=utf-8" });
       res.end("User-agent: *\nAllow: /\nSitemap: " + SITE_URL + "/sitemap.xml\n");
       return;
     }
     if (p === "/sitemap.xml") {
       setSecurityHeaders(res);
+      setCacheHeaders(res, ".xml");
       const pages = ["/", "/app.html", "/extension.html", "/blog.html", "/blog/post1.html", "/blog/post2.html", "/blog/post3.html", "/blog/day001.html", "/blog/post4.html", "/blog/post5.html", "/blog/post6.html", "/blog/post7.html", "/faq.html", "/privacy.html", "/terms.html", "/contact.html"];
       const alt = (loc, lang) => `    <xhtml:link rel="alternate" hreflang="${lang}" href="${loc}"/>`;
       const lastmod = "2026-08-04";
@@ -793,8 +836,8 @@ const server = http.createServer(async (req, res) => {
       setSecurityHeaders(res);
       if (err) { res.writeHead(404, { "Content-Type": "text/plain" }); return res.end("404"); }
       const ext = path.extname(filePath);
-      const ct = { ".html": "text/html", ".js": "text/javascript", ".css": "text/css", ".svg": "image/svg+xml", ".json": "application/json", ".png": "image/png", ".txt": "text/plain; charset=utf-8" }[ext] || "application/octet-stream";
-      res.writeHead(200, { "Content-Type": ct });
+      const ct = { ".html": "text/html; charset=utf-8", ".js": "text/javascript", ".css": "text/css", ".svg": "image/svg+xml", ".json": "application/json", ".png": "image/png", ".txt": "text/plain; charset=utf-8" }[ext] || "application/octet-stream";
+      setCacheHeaders(res, ext);
       if (ext === ".html") {
         let html = data.toString("utf8").replace(/%%SITE_URL%%/g, SITE_URL).replace(/%%ANALYTICS%%/g, buildAnalyticsSnippet()).replace(/%%ADSENSE%%/g, buildFundingChoicesSnippet() + buildAdsenseSnippet());
         const EN_META = {
@@ -817,8 +860,8 @@ const server = http.createServer(async (req, res) => {
             .replace(/<meta property="og:title" content="[^"]*"/, '<meta property="og:title" content="' + m.ogTitle + '"')
             .replace(/<meta property="og:description" content="[^"]*"/, '<meta property="og:description" content="' + m.ogDesc + '"');
         }
-        res.end(html);
-      } else res.end(data);
+        sendBody(req, res, html, "text/html; charset=utf-8");
+      } else sendBody(req, res, data, ct);
     });
   } catch (e) {
     send(res, 401, { error: e.message || "error" });
