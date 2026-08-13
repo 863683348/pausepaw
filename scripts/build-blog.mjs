@@ -109,6 +109,7 @@ ${POSTS.map(jsonld).join(",\n")}
 function article(p) {
   return `      <article class="post" id="${p.id}">
         <h2 data-i18n="${p.titleKey}">${p.title}</h2>
+        <time datetime="${p.date}">${p.date}</time>
         <p data-i18n="${p.descKey}">${p.desc}</p>
         <div class="post-body" lang="zh">
           ${p.zhBody}
