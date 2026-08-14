@@ -1,6 +1,6 @@
 // build-blog.mjs — pause-paw 博客数据驱动生成器
 // 读取 public/blog/posts.mjs（单一数据源），全量生成：
-//   1. public/blog.html        （列表：article 块按 date 倒序 + Blog JSON-LD）
+//   1. public/blog.html        （紧凑索引：标题+日期+摘要卡片按 date 倒序，链接到详情页 + Blog JSON-LD）
 //   2. public/blog/postN.html  （每篇详情页：Article/可选 FAQPage JSON-LD）
 //   3. public/i18n.js          （注入 bl_<key>_t / bl_<key>_d 中英键）
 // 用法：node build-blog.mjs            （写回 public/）
@@ -25,7 +25,12 @@ function indent(html, n) {
   return String(html).split("\n").map((l, i) => (i === 0 ? pad + l.trim() : l)).join("\n");
 }
 
-// ---------- article 块（列表页 + 详情页共用，固定 6/8/10 缩进）----------
+// ---------- 详情页链接：postN → /blog/postN.html；day001 无独立页 → 锚点 ----------
+function detailHref(p) {
+  return p.id.startsWith("post") ? `/blog/${p.id}.html` : `/blog.html#${p.id}`;
+}
+
+// ---------- article 块（仅详情页 postN.html 使用，全文，固定 6/8/10 缩进）----------
 function articleBlock(p) {
   return `      <article class="post" id="${p.id}">
         <h2 data-i18n="${p.key}_t">${p.zh.title}</h2>
@@ -37,6 +42,19 @@ ${indent(p.zh.body, 10)}
         <div class="post-body" lang="en" hidden>
 ${indent(p.en.body, 10)}
         </div>
+      </article>`;
+}
+
+// ---------- 列表页紧凑卡片（标题 + 日期 + 摘要 + 阅读全文，链接到详情页）----------
+function listItem(p) {
+  const href = detailHref(p);
+  return `      <article class="post-preview" id="${p.id}">
+        <a class="post-link" href="${href}">
+          <h2 data-i18n="${p.key}_t">${p.zh.title}</h2>
+          <time datetime="${p.date}">${p.date}</time>
+          <p class="excerpt" data-i18n="${p.key}_d">${p.zh.desc}</p>
+          <span class="read-more" data-i18n="bl_readmore">阅读全文 →</span>
+        </a>
       </article>`;
 }
 
@@ -52,7 +70,7 @@ function blogJsonLd() {
         "author": { "@type": "Organization", "name": "PausePaw" },
         "publisher": { "@type": "Organization", "name": "PausePaw" },
         "inLanguage": "en",
-        "url": "%%SITE_URL%%/blog.html?lang=en#${p.id}"
+        "url": "%%SITE_URL%%${detailHref(p)}"
       }`
     )
     .join(",\n");
@@ -174,8 +192,8 @@ ${articleBlock(p)}
 const blogPath = path.join(PUB, "blog.html");
 let blogHtml = fs.readFileSync(path.join(ROOT, "public", "blog.html"), "utf8");
 blogHtml = blogHtml.replace(
-  /<article class="post"[\s\S]*<\/article>\s*<\/main>/,
-  posts.map(articleBlock).join("\n\n") + "\n  </main>"
+  /<article\b[\s\S]*<\/article>\s*<\/main>/,
+  posts.map(listItem).join("\n") + "\n  </main>"
 );
 blogHtml = blogHtml.replace(
   /<script type="application\/ld\+json">[\s\S]*?<\/script>/,
@@ -190,11 +208,11 @@ const zhFrag = i18nFragment("zh");
 const enFrag = i18nFragment("en");
 i18n = i18n.replace(
   /("bl_related": "相关阅读",)[\s\S]*?(\n    "co_t")/,
-  `$1\n${zhFrag}$2`
+  `$1\n${zhFrag}\n    "bl_readmore": "阅读全文 →",$2`
 );
 i18n = i18n.replace(
   /("bl_related": "Related reading",)[\s\S]*?(\n    "co_t")/,
-  `$1\n${enFrag}$2`
+  `$1\n${enFrag}\n    "bl_readmore": "Read more →",$2`
 );
 fs.writeFileSync(i18nPath, i18n, "utf8");
 

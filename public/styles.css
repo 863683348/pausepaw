@@ -205,6 +205,15 @@ footer { text-align: center; color: var(--muted); font-size: 13px; padding: 30px
 .post p { color: var(--muted); margin: 0; }
 .post time { display: block; font-size: 13px; color: var(--muted); margin: 4px 0 10px; opacity: 0.8; }
 .post time::before { content: "📅 "; font-size: 12px; }
+.post-preview { background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); padding: 18px 20px; margin: 14px 0; transition: border-color .15s, transform .15s; }
+.post-preview:hover { border-color: var(--primary); transform: translateY(-1px); }
+.post-preview .post-link { text-decoration: none; color: inherit; display: block; }
+.post-preview h2 { margin: 0 0 4px; font-size: 19px; color: var(--ink); }
+.post-preview .post-link:hover h2 { color: var(--primary); }
+.post-preview time { display: block; font-size: 13px; color: var(--muted); margin: 2px 0 8px; opacity: 0.8; }
+.post-preview time::before { content: "📅 "; font-size: 12px; }
+.post-preview .excerpt { color: var(--muted); margin: 0 0 8px; font-size: 15px; line-height: 1.5; }
+.post-preview .read-more { display: inline-block; font-size: 14px; font-weight: 600; color: var(--primary-d); }
 .contact-form { display: flex; flex-direction: column; gap: 12px; max-width: 460px; margin: 14px 0; }
 .contact-form textarea { min-height: 120px; }
 .mail { color: var(--primary-d); font-weight: 600; word-break: break-all; }
