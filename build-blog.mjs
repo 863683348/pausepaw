@@ -33,7 +33,7 @@ function detailHref(p) {
 // ---------- article 块（仅详情页 postN.html 使用，全文，固定 6/8/10 缩进）----------
 function articleBlock(p) {
   return `      <article class="post" id="${p.id}">
-        <h2 data-i18n="${p.key}_t">${p.zh.title}</h2>
+        <h1 data-i18n="${p.key}_t">${p.zh.title}</h1>
         <time datetime="${p.date}">${p.date}</time>
         <p data-i18n="${p.key}_d">${p.zh.desc}</p>
         <div class="post-body" lang="zh">
@@ -140,6 +140,9 @@ function detailPage(p) {
   <meta property="og:title" content="${p.zh.title} / ${p.en.title}" />
   <meta property="og:description" content="${p.zh.desc.replace(/"/g, "&quot;")}" />
   <meta property="og:url" content="%%SITE_URL%%/blog/${p.id}.html" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="${p.zh.title} / ${p.en.title}" />
+  <meta name="twitter:description" content="${p.zh.desc.replace(/"/g, "&quot;")}" />
   <link rel="stylesheet" href="../styles.css" />
   <link rel="icon" href="../mascot.svg" />
   <script type="application/ld+json">

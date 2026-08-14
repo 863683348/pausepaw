@@ -812,9 +812,9 @@ const server = http.createServer(async (req, res) => {
     if (p === "/sitemap.xml") {
       setSecurityHeaders(res);
       setCacheHeaders(res, ".xml");
-      const pages = ["/", "/app.html", "/extension.html", "/blog.html", "/blog/post1.html", "/blog/post2.html", "/blog/post3.html", "/blog/day001.html", "/blog/post4.html", "/blog/post5.html", "/blog/post6.html", "/blog/post7.html", "/faq.html", "/privacy.html", "/terms.html", "/contact.html"];
+      const pages = ["/", "/app.html", "/extension.html", "/blog.html", "/blog/post1.html", "/blog/post2.html", "/blog/post3.html", "/blog/post4.html", "/blog/post5.html", "/blog/post6.html", "/blog/post7.html", "/blog/post8.html", "/blog/post9.html", "/blog/post10.html", "/blog/post11.html", "/blog/post12.html", "/blog/post13.html", "/faq.html", "/privacy.html", "/terms.html", "/contact.html", "/ext-done.html"];
       const alt = (loc, lang) => `    <xhtml:link rel="alternate" hreflang="${lang}" href="${loc}"/>`;
-      const lastmod = "2026-08-04";
+      const lastmod = "2026-08-14";
       const urls = pages.map(loc => {
         const zh = SITE_URL + loc;
         const en = SITE_URL + loc + "?lang=en";
