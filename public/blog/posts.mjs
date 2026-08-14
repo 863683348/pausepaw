@@ -2,6 +2,52 @@
 // 新增文章：在数组顶部 push 一条（按 date 倒序），然后跑 build.mjs。
 export const posts = [
   {
+    id: "post14",
+    key: "bl_post14",
+    day: 12,
+    date: "2026-08-15",
+    zh: {
+      title: `为什么一无聊就想摸手机？科学解释 + 两周替换计划`,
+      desc: `无聊不是意志力问题，是大脑的刺激寻求回路在作怪。这篇讲清 boredom phone use 的机制，再给你一套两周就能落地的替换计划。`,
+      body: `<p>先承认一件事：我自己也没逃过。写稿卡壳，手就不自觉地伸向手机，解锁，滑两下，又锁屏。你问我看到了什么？什么都没记住。这就是 boredom phone use 最典型的场景——不是你想用手机，是无聊让你伸手。</p>
+          <h3>无聊的时候，脑子里发生了什么</h3>
+          <p>心理学上，无聊是一种「刺激寻求失败」的状态。大脑想找点新东西，现实环境又给不了，于是冒出一股难受的驱动力。这时候刷手机之所以难忍，是因为它同时满足了三件事：刺激寻求（短视频每十几秒换一个画面，比发呆刺激得多）、多巴胺缺口（一条新消息提示就够让大脑续一口）、逃避负性情绪（无聊会放大烦躁和空虚，刷手机能让它们暂时闭嘴）。</p>
+          <h3>为什么越刷越无聊</h3>
+          <p>滑了二十分钟你会发现，自己比之前更空虚。原因是对比基准被抬高了：刚看完别人的旅行大片，再回到工位发呆，落差感反而更大。短视频把刺激阈值拉得越高，普通生活就越乏味，于是你又想刷。越刷越无聊，越无聊越刷，循环就这么转起来。</p>
+          <h3>这个循环是怎么变成自动回路的</h3>
+          <p>大脑爱省电。同一个动作重复几十次之后，它就不再走「思考」这条回路，直接走「条件反射」。无聊 → 掏手机 → 解锁 → 下滑，变成一条肌肉记忆。这就是为什么「我明明不想刷」却一直在刷。</p>
+          <h3>两周替换计划：把无聊还给生活</h3>
+          <p>破局不需要意志力，需要换环境。这套计划亲测有效：第一周察觉无聊信号（无聊出现时先别伸手，在心里说一句「哦，无聊来了」），并把手机放远（放到另一个房间或锁进抽屉，物理距离每远一米，掏出来的概率就掉一截）；第二周预备替代行为清单（喝水、拉伸、翻纸质书、给朋友发条消息），并用 PausePaw 设置敏感时段（把晚饭后到睡前设成拦截时段）。为什么从「察觉」开始？因为无聊信号是唯一的入口。你拦不住无聊本身，但你能在无聊出现和伸手之间，插入一个停顿。</p>
+          <h3>PausePaw 能帮你做哪部分</h3>
+          <p>PausePaw 管不了你的潜意识，但它能把环境变干净：敏感时段自动拦截、刷够时长强制休息。拦截界面特意做得可爱一点，被打断时不是恼火，而是会心一笑。更早的屏幕习惯分析，看 <a href="/blog/post13.html">Day 11</a> 那篇。</p>
+          <h3>FAQ</h3>
+          <p>问：无聊和刷手机，谁是因谁是果？答：因果是互相的。无聊触发刷手机，刷多了又让生活显得更无聊，所以两边的开关都要动。</p>
+          <p>问：为什么我把手机放远了还是会想刷？答：因为自动回路还在。物理隔离只切断「掏」的动作，意识层面的察觉和替代行为清单，才是真正换掉回路的部分。</p>
+          <p>问：两周真的够吗？答：够让回路松动，不保证彻底消失。关键是两周后你自动伸手的频率明显下降，那就成功了。</p>
+          <p>不用等到下周。今晚吃完饭，就把手机放到客厅去。无聊不是敌人，它是信号，提醒你生活里缺了点什么。PausePaw 帮你把路拦好，剩下的交给你自己——去 <a href="https://pause-paw.shop">pause-paw.shop</a> 就能开始。</p>`,
+    },
+    en: {
+      title: `Why You Reach for Your Phone When You're Bored`,
+      desc: `Boredom isn't a willpower problem — it's a stimulus-seeking loop in your brain. Here's the science of boredom phone use, plus a two-week replacement plan that works.`,
+      body: `<p>I'll admit it, I haven't escaped this myself. Mid-sentence in an article, my hand wanders to the phone. Unlock. Scroll. Lock. What did I see? I couldn't tell you. That's the classic boredom phone use scene. It's not that you want the phone. It's that boredom makes your hand move.</p>
+          <h3>What's going on in your head when you're bored</h3>
+          <p>In psychology terms, boredom is a failed attempt at stimulus seeking. The brain wants something new, the environment provides nothing, and that gap creates a driving urge. Scrolling feels irresistible because it covers three things at once: stimulus seeking (a short video changes frames every fifteen seconds, far more exciting than staring at a wall), the dopamine gap (one little notification is enough to keep the brain fed), and escaping bad feelings (boredom amplifies restlessness and emptiness, and scrolling makes them shut up for a while).</p>
+          <h3>Why scrolling makes you more bored</h3>
+          <p>Scrolling only numbs the pain. Twenty minutes in, you realize you feel emptier than before. The comparison bar got raised: you just watched someone's travel montage, then you return to your desk, and the gap feels bigger. The higher the stimulation threshold gets, the flatter ordinary life looks. So you scroll again. The loop feeds itself.</p>
+          <h3>How the loop became an autopilot circuit</h3>
+          <p>The brain is lazy about power. After the same action repeats a few dozen times, it stops routing through "thinking" and uses a reflex path instead. Bored, reach, unlock, swipe. It becomes muscle memory. You don't even notice the phone is already in your hand. That's why you "don't want to scroll" yet can't stop.</p>
+          <h3>A two-week replacement plan</h3>
+          <p>You don't break this with willpower. You break it by changing the environment. Week one: notice the boredom signal (when boredom shows up, don't reach — say to yourself, "oh, boredom is here"), and put the phone far away (another room or a drawer; every extra meter of distance drops the probability of grabbing it). Week two: build a replacement list (drink water, stretch, open a paper book, text a friend), and set sensitive hours in PausePaw (block the window from after dinner to bedtime). Why start with awareness? Because the boredom signal is the only entry point. You can't stop boredom itself, but you can insert a pause between "boredom arrives" and "hand reaches."</p>
+          <h3>What PausePaw handles for you</h3>
+          <p>PausePaw can't control your subconscious. What it can do is clean the environment: auto-block sensitive hours, force a rest after the scrolling budget is used up. The block screen is deliberately cute, so when you get interrupted you smile instead of getting angry. For the earlier screen-habit analysis, check the <a href="/blog/post13.html">Day 11</a> post.</p>
+          <h3>FAQ</h3>
+          <p>Q: Which comes first, boredom or the phone? A: Both directions. Boredom triggers the phone, and heavy use makes life feel flatter. Touch both switches.</p>
+          <p>Q: Why do I still reach even with the phone far away? A: The loop is still wired. Distance only cuts the grabbing action. Awareness and the replacement list are what actually rebuild the loop.</p>
+          <p>Q: Is two weeks really enough? A: Enough to loosen the loop, not to erase it. If your automatic picks drop clearly after two weeks, it's working.</p>
+          <p>No need to wait until Monday. Tonight, after dinner, leave the phone in the living room. Boredom isn't the enemy — it's a signal that life is missing something. PausePaw clears the road, the rest is up to you. Head to <a href="https://pause-paw.shop">pause-paw.shop</a> to get started.</p>`,
+    },
+  },
+  {
     id: "post13",
     key: "bl_post13",
     day: 11,
