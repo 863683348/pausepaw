@@ -3,6 +3,11 @@ window.I18N = {
   zh: {
     "brand": "暂停爪 PausePaw",
     "nav_home": "首页", "nav_features": "功能", "nav_how": "怎么用", "nav_blog": "博客", "nav_faq": "常见问题", "nav_download": "下载插件",
+    "feat_page_intro": "PausePaw 用一只萌系伙伴，在你刷太久时温柔地强制休息——可爱不羞辱、不可规避、规则云端同步。",
+    "how_page_intro": "三步上手：领养伙伴、设置休息规则、把 Token 贴进插件开启云端同步。",
+    "how_adopt_d": "选一只卡通伙伴，每次休息时它会陪你放松。",
+    "how_rules_d": "添加要管住的网站与单次可刷时长，保存后立即云端生效。",
+    "how_ext_d": "把控制台生成的设备 Token 粘贴进浏览器插件，规则与拦截数据自动同步。",
     "cta_start": "开始使用", "cta_install": "安装插件",
     "demo_title": "休息效果预览", "demo_sub": "点击下方按钮，体验 PausePaw 触发休息时的真实效果", "demo_btn": "试看 10 秒休息效果", "demo_bar": "演示模式 — 这是休息时的真实效果",
     "hero_title": "一只让你主动休息的萌系伙伴",
@@ -171,6 +176,11 @@ window.I18N = {
   en: {
     "brand": "PausePaw",
     "nav_home": "Home", "nav_features": "Features", "nav_how": "How it works", "nav_blog": "Blog", "nav_faq": "FAQ", "nav_download": "Download",
+    "feat_page_intro": "PausePaw uses a cute companion that gently enforces a break when you've scrolled too long — cute not shaming, can't be skipped, rules synced from the cloud.",
+    "how_page_intro": "Three steps to start: adopt a buddy, set your break rules, and paste the token into the extension to enable cloud sync.",
+    "how_adopt_d": "Pick a cartoon buddy who keeps you company during each break.",
+    "how_rules_d": "Add the sites to manage and a max session time; changes take effect in the cloud instantly.",
+    "how_ext_d": "Paste the device token from the console into the browser extension — rules and block data sync automatically.",
     "cta_start": "Get started", "cta_install": "Install extension",
     "demo_title": "Break Effect Preview", "demo_sub": "Click below to experience what a PausePaw break looks like in real time", "demo_btn": "Try 10-second break demo", "demo_bar": "Demo mode — this is the actual break experience",
     "hero_title": "A cute companion that makes you take a break",

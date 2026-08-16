@@ -3,28 +3,21 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title data-i18n="co_t">联系我们</title>
-  <meta name="description" content="PausePaw 联系我们：邮箱与留言表单，欢迎问题、建议与隐私请求。" />
+  <title data-i18n="nav_how">怎么用</title>
+  <meta name="description" content="PausePaw 使用三步：领养萌系伙伴、设置休息规则、把设备 Token 贴进浏览器插件开启云端同步。一分钟上手，温柔强制休息。" />
   <meta name="robots" content="index,follow" />
-  <link rel="canonical" href="%%SITE_URL%%/contact.html" />
-  <link rel="alternate" hreflang="zh" href="%%SITE_URL%%/contact.html" />
-  <link rel="alternate" hreflang="en" href="%%SITE_URL%%/contact.html?lang=en" />
-  <link rel="alternate" hreflang="x-default" href="%%SITE_URL%%/contact.html" />
+  <link rel="canonical" href="%%SITE_URL%%/how.html" />
+  <link rel="alternate" hreflang="zh" href="%%SITE_URL%%/how.html" />
+  <link rel="alternate" hreflang="en" href="%%SITE_URL%%/how.html?lang=en" />
+  <link rel="alternate" hreflang="x-default" href="%%SITE_URL%%/how.html" />
   <meta property="og:type" content="article" />
-  <meta property="og:title" content="PausePaw 联系我们" />
-  <meta property="og:url" content="%%SITE_URL%%/contact.html" />
+  <meta property="og:title" content="PausePaw 怎么用 — 三步上手" />
+  <meta property="og:description" content="领养伙伴、设置休息规则、连接浏览器插件（粘贴 Token），规则与拦截数据自动云端同步。" />
+  <meta property="og:url" content="%%SITE_URL%%/how.html" />
   <link rel="stylesheet" href="styles.css" />
   <link rel="icon" href="mascot.svg" />
   <script>
     (function () { try { var t = localStorage.getItem("pp_theme") || (window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light"); document.documentElement.setAttribute("data-theme", t); } catch (e) {} })();
-    function openMail(e) {
-      e.preventDefault();
-      var n = document.getElementById("cname").value.trim();
-      var m = document.getElementById("cmsg").value.trim();
-      var body = "称呼: " + n + "\n\n" + m;
-      window.location.href = "mailto:ahmedlzany423@gmail.com?subject=" + encodeURIComponent("PausePaw 联系") + "&body=" + encodeURIComponent(body);
-      return false;
-    }
   </script>
   %%ADSENSE%%
   %%ANALYTICS%%
@@ -50,19 +43,27 @@
     </header>
     <main class="legal">
       <a class="back" href="/" data-i18n="pg_back">返回首页</a>
-      <h1 data-i18n="co_t">联系我们</h1>
-      <p data-i18n="co_intro"></p>
-      <h2 data-i18n="co_email_h"></h2>
-      <p><a class="mail" href="mailto:ahmedlzany423@gmail.com" data-i18n="co_email">ahmedlzany423@gmail.com</a></p>
-      <h2 data-i18n="co_form_h"></h2>
-      <form class="contact-form" onsubmit="return openMail(event)">
-        <input id="cname" type="text" data-i18n-ph="co_name_ph" placeholder="你的称呼" required />
-        <textarea id="cmsg" rows="5" data-i18n-ph="co_msg_ph" placeholder="想说点什么…" required></textarea>
-        <button class="btn" type="submit" data-i18n="co_send">发送</button>
-      </form>
-      <p class="note" data-i18n="co_note"></p>
+      <h1 data-i18n="nav_how">怎么用</h1>
+      <p class="lead" data-i18n="how_page_intro">三步上手：领养伙伴、设置休息规则、把 Token 贴进插件开启云端同步。</p>
+
+      <section class="cards">
+        <div class="card"><div class="emoji">1</div><h3 data-i18n="tab_adopt">领养伙伴</h3><p data-i18n="how_adopt_d">选一只卡通伙伴，每次休息时它会陪你放松。</p></div>
+        <div class="card"><div class="emoji">2</div><h3 data-i18n="tab_rules">休息规则</h3><p data-i18n="how_rules_d">添加要管住的网站与单次可刷时长，保存后立即云端生效。</p></div>
+        <div class="card"><div class="emoji">3</div><h3 data-i18n="tab_ext">扩展</h3><p data-i18n="how_ext_d">把控制台生成的设备 Token 粘贴进浏览器插件，规则与拦截数据自动同步。</p></div>
+      </section>
+
+      <section class="related">
+        <h3 data-i18n="bl_related">相关阅读</h3>
+        <ul>
+          <li><a href="extension.html" data-i18n="nav_download">下载插件 — 安装步骤</a></li>
+          <li><a href="features.html" data-i18n="nav_features">功能 — 看看能做什么</a></li>
+          <li><a href="faq.html" data-i18n="nav_faq">常见问题</a></li>
+          <li><a href="app.html" data-i18n="cta_start">立即免费开始</a></li>
+        </ul>
+      </section>
     </main>
   </div>
+
   <footer class="site-footer">
     <nav class="foot-links">
       <a href="privacy.html" data-i18n="f_privacy">隐私政策</a>
@@ -71,6 +72,7 @@
     </nav>
     <p class="copy" data-i18n="footer">PausePaw · 数字健康陪伴</p>
   </footer>
+
   <script src="i18n.js"></script>
   <script>window.applyI18n();</script>
 </body>

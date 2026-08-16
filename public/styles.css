@@ -41,6 +41,11 @@ header.bar { display: flex; align-items: center; justify-content: space-between;
 .card p { margin: 0; color: var(--muted); font-size: 14px; }
 .card .emoji { font-size: 30px; }
 .card ol { color: var(--muted); font-size: 14px; padding-left: 20px; margin: 8px 0 0; }
+.home-teasers { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 30px 0 20px; }
+.home-teasers .teaser { display: block; background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); padding: 22px; box-shadow: var(--shadow); text-decoration: none; color: inherit; transition: border-color .2s, transform .2s; }
+.home-teasers .teaser:hover { border-color: var(--primary); transform: translateY(-2px); }
+.home-teasers .teaser h3 { margin: 0 0 8px; font-size: 18px; }
+.home-teasers .teaser p { margin: 0; color: var(--muted); font-size: 14px; }
 .appwrap { padding: 24px 0 60px; }
 .tabs { display: flex; gap: 8px; margin-bottom: 20px; flex-wrap: wrap; }
 .tabs button { border: 1px solid var(--line); background: var(--card); border-radius: 999px; padding: 9px 16px; cursor: pointer; font-size: 14px; color: var(--muted); font-weight: 600; }
@@ -228,6 +233,7 @@ footer { text-align: center; color: var(--muted); font-size: 13px; padding: 30px
 /* ---------- 响应式 / 移动端 ---------- */
 @media (max-width: 720px) {
   .cards, .stats { grid-template-columns: 1fr; }
+  .home-teasers { grid-template-columns: 1fr; }
   .hero { padding: 40px 0 28px; }
   .hero h1 { font-size: 30px; }
   .row { flex-direction: column; align-items: stretch; }
