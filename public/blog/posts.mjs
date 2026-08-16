@@ -802,4 +802,56 @@ export const posts = [
           <p>If the experiment collapses on day 3, don't beat yourself up. That's the signal: you need a tool, not willpower. PausePaw's <strong>gentle interruption mode</strong> was built exactly for this — no blocking, no punishment. A buddy takes over the screen when you hit your threshold and keeps you company through the hardest minutes. <a href="app.html?lang=en" data-i18n="f_app">See how it works</a>, or head back to the <a href="index.html?lang=en" data-i18n="nav_home">homepage</a> to learn more.</p>`,
     },
   },
-];
+
+  {
+    id: "post16",
+    key: "bl_post16",
+    day: 14,
+    date: "2026-08-17",
+    zh: {
+      title: `多巴胺戒断：哪些有效，哪些是噱头`,
+      desc: `多巴胺戒断近年被炒成了万能药，但真正有效的部分和营销号说的差很远。这篇从行为科学角度拆开：哪些做法有实证、哪些纯属噱头、你自己可以怎么做一个不极端的版本。`,
+      body: `<p>"多巴胺戒断"大概是近几年被用得最滥的心理学概念之一。网上版本通常长这样：关掉所有电子设备，戒断 24 小时，你的大脑就会"重置"，从此欲望变少、专注变强。听起来很诱人，但行为科学对它的评价要冷静得多——<strong>这个概念被营销绑架了，但里面确实藏着一个有用的内核</strong>。</p>
+          <h2>先说结论：真有用的部分是什么</h2>
+          <p>研究真正支持的不是"戒断多巴胺"（你做不到，也不需要），而是<strong>减少高刺激输入、让大脑恢复对低刺激活动的敏感度</strong>。刷短视频、切应用、刷信息流，这套高频率刺激会让普通活动——看书、散步、发呆——显得无聊。停几天高刺激输入，无聊感会下降，普通活动重新变得可忍受。这才是"戒断"真正起效的机制。</p>
+          <h2>噱头部分：什么是不靠谱的</h2>
+          <ul>
+          <li><strong>"重置大脑"是伪科学。</strong>没有证据表明 24 小时戒断能改变多巴胺系统，多巴胺是持续分泌的，不是开关。</li>
+          <li><strong>一刀切全戒没必要。</strong>连音乐、运动和社交都戒掉，属于自我惩罚，研究不支持。</li>
+          <li><strong>把戒断当一劳永逸。</strong>真正的问题不是一天的刺激量，是长期的高刺激环境。戒一天，回来继续刷，等于没做。</li>
+          </ul>
+          <h2>一个不极端的可行版本</h2>
+          <p>不用把生活翻过来，试试这个温和版本：</p>
+          <ul>
+          <li><strong>挑一段固定的"低刺激窗口"。</strong>比如每天晚饭后一小时，关掉信息流类应用，只做一件事：散步、看书或纯发呆。</li>
+          <li><strong>把触发源移出视线。</strong>手机放另一个房间，比"靠意志力不刷"可靠十倍。</li>
+          <li><strong>观察你的无聊感。</strong>前三天会觉得难熬，这恰恰是信号：你的大脑正在适应低刺激。撑过去，普通事会重新有味道。</li>
+          </ul>
+          <h2>和手机的关系：戒断不如设闸</h2>
+          <p>极端的"戒断"适合偶尔来一次清空，但日常维护靠的是闸门，不是绝食。把高刺激应用设个使用上限，到点由系统拦一下，比每隔几天忏悔一次更可持续。</p>
+          <p>PausePaw 就是按这个思路做的：不封禁、不惩罚，只在你滑到阈值时用一只小伙伴接管屏幕，陪你度过最难的那几分钟。<a href="app.html" data-i18n="f_app">看看它是怎么工作的</a>，或者先回<a href="index.html" data-i18n="nav_home">首页</a>了解更多。</p>`,
+    },
+    en: {
+      title: `The Dopamine Detox: What Works, What Doesn't`,
+      desc: `"Dopamine detox" is one of the most overused psychology terms online. A behavior-science look at which parts are real, which parts are marketing, and how to run a version that actually fits a normal life.`,
+      body: `<p>"Dopamine detox" might be the most abused psychology concept of the decade. The internet version usually goes like this: switch off every device, abstain for 24 hours, and your brain will "reset", cravings drop, focus returns. It sounds great. Behavioral science is far more measured — <strong>the concept got hijacked by marketing, but there is a real, useful kernel inside it</strong>.</p>
+          <h2>The useful part, first</h2>
+          <p>What research actually supports is not "detoxing from dopamine" (you can't, and you don't need to), but <strong>cutting high-stimulation input so your brain regains sensitivity to low-stimulation activities</strong>. Short videos, app hopping, feed scrolling — this high-frequency stimulation makes ordinary activities — reading, walking, staring out a window — feel boring. A few days of low-stimulation input and the boredom fades; ordinary things become tolerable again. That is the real mechanism.</p>
+          <h2>The marketing parts</h2>
+          <ul>
+          <li><strong>"Resetting your brain" is pseudoscience.</strong> No evidence that 24 hours of abstinence rewires your dopamine system. Dopamine is constantly secreted; it is not a switch.</li>
+          <li><strong>Abstaining from everything is unnecessary.</strong> Cutting music, exercise, and social contact too is self-punishment, and the research doesn't support it.</li>
+          <li><strong>Treating detox as a one-and-done.</strong> The real problem is not one day's stimulation, it is a long-term high-stimulation environment. Detox for a day, then go back to scrolling — that's doing nothing.</li>
+          </ul>
+          <h2>A workable, non-extreme version</h2>
+          <p>You don't have to turn your life upside down. Try this gentler version:</p>
+          <ul>
+          <li><strong>Pick a fixed "low-stimulation window".</strong> An hour after dinner, for example: feed apps off, one activity only — walk, read, or stare at nothing.</li>
+          <li><strong>Move the trigger out of sight.</strong> Phone in another room beats "relying on willpower not to scroll" ten times over.</li>
+          <li><strong>Watch your boredom.</strong> The first three days feel hard, and that is the signal: your brain is adapting to low stimulation. Push through, and ordinary things taste good again.</li>
+          </ul>
+          <h2>Phones: a gate beats a fast</h2>
+          <p>Extreme "detox" works as an occasional reset, but daily maintenance is about gates, not fasting. Set a usage cap on high-stimulation apps and let the system block you at the limit. That is far more sustainable than repenting every few days.</p>
+          <p>That is exactly how PausePaw is built: no blocking, no punishment. A buddy takes over the screen when you hit your threshold and keeps you company through the hardest minutes. <a href="app.html?lang=en" data-i18n="f_app">See how it works</a>, or head back to the <a href="index.html?lang=en" data-i18n="nav_home">homepage</a> to learn more.</p>`,
+    },
+  },];
