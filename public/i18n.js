@@ -2,7 +2,7 @@
 window.I18N = {
   zh: {
     "brand": "暂停爪 PausePaw",
-    "nav_features": "功能", "nav_how": "怎么用", "nav_blog": "博客",
+    "nav_home": "首页", "nav_features": "功能", "nav_how": "怎么用", "nav_blog": "博客", "nav_faq": "常见问题", "nav_download": "下载插件",
     "cta_start": "开始使用", "cta_install": "安装插件",
     "demo_title": "休息效果预览", "demo_sub": "点击下方按钮，体验 PausePaw 触发休息时的真实效果", "demo_btn": "试看 10 秒休息效果", "demo_bar": "演示模式 — 这是休息时的真实效果",
     "hero_title": "一只让你主动休息的萌系伙伴",
@@ -170,7 +170,7 @@ window.I18N = {
   },
   en: {
     "brand": "PausePaw",
-    "nav_features": "Features", "nav_how": "How it works", "nav_blog": "Blog",
+    "nav_home": "Home", "nav_features": "Features", "nav_how": "How it works", "nav_blog": "Blog", "nav_faq": "FAQ", "nav_download": "Download",
     "cta_start": "Get started", "cta_install": "Install extension",
     "demo_title": "Break Effect Preview", "demo_sub": "Click below to experience what a PausePaw break looks like in real time", "demo_btn": "Try 10-second break demo", "demo_bar": "Demo mode — this is the actual break experience",
     "hero_title": "A cute companion that makes you take a break",
