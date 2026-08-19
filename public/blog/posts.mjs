@@ -1015,3 +1015,76 @@ export const posts = [
     ],
   },
 ];
+  ,
+  {
+    id: "post19",
+    key: "bl_post19",
+    day: 17,
+    date: "2026-08-20",
+    zh: {
+      title: `意志力为什么赢不了手机成瘾（以及真正有效的办法）`,
+      desc: `靠意志力戒手机是一个坏策略——不是因为你不够坚强，而是因为策略本身反人性。这篇讲清楚意志力为什么失效，以及什么真正有效。`,
+      body: `<p>先说一个反直觉的事实：意志力不是你的问题，是策略的问题。你试过去掉手机成瘾靠"少刷一点"，试了很多次，每次都在第三天崩溃。不是你不够坚强，是你在用错误的方式对抗一个精心设计的系统。</p>
+<p><h2>为什么意志力总是输</h2>
+<p>手机成瘾不是习惯问题，是设计问题。每个推送、每刷一条新内容、每次下拉刷新，都是有人在实验室里验证过能触发多巴胺的机制。你对抗的不是一时冲动，是一个由行为心理学家、神经科学家和顶级工程师团队设计的奖励系统。意志力在这种系统面前，从来没有赢过。</p>
+<p>意志力之所以输，是因为它依赖持续决策。每次你忍住不刷手机，你都在做一次决策："要不要看？"而这个系统设计的核心，就是让每次决策都变得极难拒绝。它用即时奖励对抗你的长期目标，用不确定奖励（下一条会不会有趣？）对抗你的理性判断。</p>
+<p>更糟的是，意志力是有限资源。你用它在早上忍住不看手机，到了晚上就耗尽了。这时候你刷得最狠，因为你的决策肌肉已经疲劳。</p>
+<p><h2>真正有效的办法：不靠意志力</h2>
+<p>既然意志力是错误策略，什么是对的？答案是：改变环境，而不是增强意志。</p>
+<p>最有效的策略叫"承诺设备"——在未来某个时刻，让某个对你现在来说不可接受的行为变得不可能或极难发生。具体例子：</p>
+<ul>
+<li>把社交 app 从主屏幕移到文件夹深处，增加 3 次点击才能打开</li>
+<li>睡前把手机放在另一个房间充电，而不是床头</li>
+<li>用 PausePaw 设置"工作时间锁"，到点自动接管屏幕</li>
+<li>取消所有非必要的推送通知，只保留电话和短信</li>
+</ul>
+<p>这些策略的共同点是：你在清醒、理智的状态下做决定，然后在需要意志力的时刻，系统已经替你做了选择。</p>
+<p><h2>PausePaw 的设计哲学</h2>
+<p>PausePaw 不靠意志力，它靠的是在你即将滑入无意识刷手机的那一瞬间，用一个小伙伴接管屏幕。你不是被"惩罚"了，而是被"打断"了——打断那个自动化的伸手动作，让你回到有意识的选择。</p>
+<p>这个方法之所以有效，是因为它绕过了意志力的对抗。你不需要忍住不刷，你只需要在被打断的那几秒里，重新选择。</p>
+<p><h2>常见问题</h2>
+<h3>意志力真的完全没用吗？</h3>
+<p>不是完全没用，是效率极低。意志力适合短期、小规模的改变，不适合对抗精心设计的成瘾系统。长期戒手机，环境设计比意志力可靠得多。</p>
+<h3>如果我偶尔失控了，是不是失败了？</h3>
+<p>不是。失控是过程的一部分，不是终点。关键不是"永不失控"，而是"失控后回到策略"。每次失控后重新检查你的环境设置，比责怪自己更有效。</p>
+<h3>PausePaw 和屏蔽类 app 有什么区别？</h3>
+<p>屏蔽类 app 靠强制封锁，容易引发逆反心理。PausePaw 靠的是打断和陪伴——在你即将滑入无意识刷手机时，用一个小伙伴接管屏幕，陪你度过最难的那几分钟。它不惩罚你，它只是帮你回到有意识的选择。</p>
+<p>想试试不靠意志力的办法？打开 <a href="app.html" data-i18n="f_app">PausePaw 应用</a>，或回 <a href="index.html" data-i18n="nav_home">首页</a>了解更多。</p>`
+    },
+    en: {
+      title: `Why Willpower Fails Against Phone Addiction (And What Works)`,
+      desc: `Relying on willpower to quit phone addiction is a bad strategy — not because you are weak, but because the strategy itself is anti-human. Here is why willpower always loses, and what actually works.`,
+      body: `<p>Here is a counterintuitive fact: willpower is not your problem, it is the strategy's problem. You have tried cutting back on phone use by "willpower alone," failed multiple times, collapsed by day three. It is not that you lack strength. It is that you are fighting a system designed to win.</p>
+<p><h2>Why willpower always loses</h2>
+<p>Phone addiction is not a habit problem, it is a design problem. Every notification, every infinite scroll, every pull-to-refresh is a mechanism validated in a lab to trigger dopamine. You are not fighting a momentary impulse. You are fighting a reward system designed by behavioral psychologists, neuroscientists, and top engineers. Willpower has never won against that.</p>
+<p>Willpower loses because it depends on continuous decision-making. Every time you resist checking your phone, you make a choice: "Should I look?" And the system is designed to make that choice nearly impossible to refuse. It uses immediate rewards against your long-term goals and variable rewards (will the next post be interesting?) against your rational judgment.</p>
+<p>Worse, willpower is a finite resource. You use it in the morning to resist, and by evening it is depleted. That is when you scroll the hardest, because your decision muscle is exhausted.</p>
+<p><h2>What actually works: change the environment, not the will</h2>
+<p>If willpower is the wrong strategy, what is the right one? The answer: change the environment, not strengthen the will.</p>
+<p>The most effective strategy is a "commitment device" — making an action impossible or extremely difficult at the moment you need it, while you are still in a rational state. Concrete examples:</p>
+<ul>
+<li>Move social apps off the home screen into a deep folder, adding 3 taps to open</li>
+<li>Charge the phone in another room at night, not on the nightstand</li>
+<li>Use PausePaw to set a "worktime lock" that takes over the screen at the limit</li>
+<li>Turn off all non-essential push notifications, keep only calls and texts</li>
+</ul>
+<p>These strategies share one thing: you decide in a清醒 state, and when you need willpower, the system has already chosen for you.</p>
+<p><h2>The design philosophy behind PausePaw</h2>
+<p>PausePaw does not rely on willpower. It relies on interrupting you at the exact moment you are about to slide into mindless scrolling. A little buddy takes over the screen. You are not being "punished." You are being打断 —打断那个自动化的伸手动作，让你回到有意识的选择。</p>
+<p>This works because it bypasses the willpower confrontation entirely. You do not need to resist. You just need to make a conscious choice in the few seconds after the interruption.</p>
+<p><h2>Frequently asked questions</h2>
+<h3>Is willpower completely useless?</h3>
+<p>Not completely. It is extremely inefficient. Willpower works for short-term, small-scale changes, not for fighting a purpose-built addiction system. For long-term phone moderation, environment design is far more reliable.</p>
+<h3>If I slip up occasionally, does that mean I failed?</h3>
+<p>No. Slipping up is part of the process, not the endpoint. The key is not "never slip," it is "return to the strategy after slipping." Each time you slip, check your environment settings instead of blaming yourself.</p>
+<h3>How is PausePaw different from blocking apps?</h3>
+<p>Blocking apps rely on forceful restrictions, which often trigger rebellion. PausePaw uses interruption and companionship — a buddy takes over the screen when you hit your limit, keeping you company through the hardest minutes. It does not punish you. It helps you return to a conscious choice.</p>
+<p>Want to try a strategy that does not rely on willpower? Open the <a href="app.html?lang=en" data-i18n="f_app">PausePaw app</a>, or head back to the <a href="index.html?lang=en" data-i18n="nav_home">homepage</a>.</p>`
+    },
+    faq: [
+      { q: `意志力真的完全没用吗？`, a: `不是完全没用，是效率极低。意志力适合短期、小规模的改变，不适合对抗精心设计的成瘾系统。长期戒手机，环境设计比意志力可靠得多。` },
+      { q: `偶尔失控是不是失败了？`, a: `不是。失控是过程的一部分。关键不是"永不失控"，而是"失控后回到策略"。每次失控后检查环境设置，比责怪自己更有效。` },
+      { q: `PausePaw 和屏蔽类 app 有什么区别？`, a: `屏蔽类 app 靠强制封锁，容易引发逆反心理。PausePaw 靠打断和陪伴——到点用小伙伴接管屏幕，帮你回到有意识的选择，不惩罚你。` },
+    ],
+  },
+];
