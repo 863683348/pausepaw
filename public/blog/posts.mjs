@@ -1087,4 +1087,97 @@ export const posts = [
       { q: `PausePaw 和屏蔽类 app 有什么区别？`, a: `屏蔽类 app 靠强制封锁，容易引发逆反心理。PausePaw 靠打断和陪伴——到点用小伙伴接管屏幕，帮你回到有意识的选择，不惩罚你。` },
     ],
   },
+  {
+    id: "post20",
+    key: "bl_post20",
+    day: 18,
+    date: "2026-08-21",
+    zh: {
+      title: "手机成瘾恢复：现实点的 30 天计划",
+      desc: "不是彻底戒断，而是循序渐进。第 1 周减少使用，第 2 周重建习惯，第 3 周巩固成果，第 4 周找到平衡。",
+      body: `<p>很多人问我："怎么戒掉手机？"我的回答是：不要想着"戒掉"，想着"恢复"。成瘾的对面不是节制，而是生活有其他意义。</p>
+<p>这篇文章给你一份 30 天计划。不极端，不痛苦，只是每天做一点改变。</p>
+<h2>第 1 周：观察而不是改变</h2>
+<p>第一天，不要试图戒手机。只是观察。</p>
+<ul>
+<li>你每天解锁多少次？</li>
+<li>什么时间解锁最多？</li>
+<li>什么情绪下最想看手机？</li>
+</ul>
+<p>记录下来。不需要改变，只是看。</p>
+<h2>第 2 周：建立一个小仪式</h2>
+<p>选一个场景，每天固定时间做。比如：</p>
+<ul>
+<li>早上起床后，先看窗外 5 分钟，再看手机</li>
+<li>晚饭后，手机放另一个房间 30 分钟</li>
+<li>睡前 1 小时，手机充电放在客厅</li>
+</ul>
+<p>选一个，坚持 7 天。成功了再选下一个。</p>
+<h2>第 3 周：找一个替代品</h2>
+<p>手机成瘾往往是因为无聊或焦虑。找到替代品：</p>
+<ul>
+<li>无聊时：翻一本书，而不是刷社交媒体</li>
+<li>焦虑时：做 5 次深呼吸，而不是看手机</li>
+<li>等待时：观察周围，而不是解锁屏幕</li>
+</ul>
+<p>不需要完美，只需要比刷手机多做一点。</p>
+<h2>第 4 周：找到你的"为什么"</h2>
+<p>最后这周，问自己：我想减少手机使用，是为了什么？</p>
+<ul>
+<li>为了陪孩子更多时间？</li>
+<li>为了睡眠质量更好？</li>
+<li>为了专注工作？</li>
+</ul>
+<p>找到你的"为什么"，它比任何 APP 都管用。</p>
+<h2>关于 PausePaw</h2>
+<p>PausePaw 不是用来"戒手机"的，它是帮你回到有意识的选择的工具。当你的注意力被刷短视频带走时，PausePaw 的小家伙会温柔地接管屏幕。这不是惩罚，是提醒你：此刻，你在做什么？</p>
+<p>试试 <a href="app.html?lang=zh" data-i18n="f_app">PausePaw</a>，或者回到 <a href="index.html?lang=zh" data-i18n="nav_home">首页</a>。</p>`,
+    },
+    en: {
+      title: "Phone Addiction Recovery: A Realistic 30-Day Plan",
+      desc: "Not about quitting cold turkey, but gradual change. Week 1: observe. Week 2: build one ritual. Week 3: find alternatives. Week 4: discover your why.",
+      body: `<p>People often ask me: "How do I quit my phone?" My answer: don't think about quitting. Think about recovering. The opposite of addiction is not moderation — it's having other meanings in life.</p>
+<p>This article gives you a 30-day plan. Not extreme, not painful. Just small changes every day.</p>
+<h2>Week 1: Observe Without Changing</h2>
+<p>Day one: don't try to quit your phone. Just observe.</p>
+<ul>
+<li>How many times do you unlock your phone daily?</li>
+<li>What time do you use it the most?</li>
+<li>What emotions trigger the strongest urge to check your phone?</li>
+</ul>
+<p>Write it down. No need to change. Just watch.</p>
+<h2>Week 2: Build One Small Ritual</h2>
+<p>Pick one scenario and do it at a fixed time every day. For example:</p>
+<ul>
+<li>After waking up, look out the window for 5 minutes before checking your phone</li>
+<li>After dinner, leave your phone in another room for 30 minutes</li>
+<li>One hour before bed, charge your phone in the living room</li>
+</ul>
+<p>Pick one. Stick with it for 7 days. Once successful, pick another.</p>
+<h2>Week 3: Find a Replacement</h2>
+<p>Phone addiction often comes from boredom or anxiety. Find replacements:</p>
+<ul>
+<li>Bored? Read a book instead of scrolling social media</li>
+<li>Anxious? Take 5 deep breaths instead of checking your phone</li>
+<li>Waiting? Observe your surroundings instead of unlocking your screen</li>
+</ul>
+<p>You don't need to be perfect. Just do a little more than scrolling.</p>
+<h2>Week 4: Find Your "Why"</h2>
+<p>In the final week, ask yourself: why do I want to reduce phone use?</p>
+<ul>
+<li>More time with my kids?</li>
+<li>Better sleep quality?</li>
+<li>Focus on work?</li>
+</ul>
+<p>Find your "why". It works better than any app.</p>
+<h2>About PausePaw</h2>
+<p>PausePaw is not about "quitting" your phone. It's a tool to help you return to conscious choices. When your attention is taken away by mindless scrolling, PausePaw's little buddy gently takes over the screen. This isn't punishment — it's a reminder: what are you doing right now?</p>
+<p>Try the <a href="app.html?lang=en" data-i18n="f_app">PausePaw app</a>, or head back to the <a href="index.html?lang=en" data-i18n="nav_home">homepage</a>.</p>`,
+    },
+    faq: [
+      { q: `30 天计划真的有效吗？`, a: `它不承诺奇迹。但它提供一个结构化的方式，让你每天做一点改变。30 天后，大多数人会发现自己的使用模式已经不同。` },
+      { q: `我如果第 2 周失败了怎么办？`, a: `没关系。第 1 周只是观察，第 2 周只是建立一个仪式。如果失败了，回到第 1 周，重新开始。重要的是不放弃。` },
+      { q: `PausePaw 能帮助我完成这个计划吗？`, a: `可以。PausePaw 的设计就是帮你建立仪式和找到替代行为。它不会惩罚你，只是在你即将滑入无意识刷手机时，温柔地提醒你。` },
+    ],
+  },
 ];
