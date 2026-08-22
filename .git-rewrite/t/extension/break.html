@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>PausePaw — Rest Time</title>
+<style>
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html,body{
+    width:100%;height:100%;overflow:hidden;
+    background:#000;
+    font-family:system-ui,-apple-system,"PingFang SC","Noto Sans SC",sans-serif;
+    color:#fff;user-select:none;-webkit-user-select:none;
+    cursor:default;
+  }
+  .stage{
+    position:fixed;inset:0;z-index:1;
+    display:flex;align-items:center;justify-content:center;
+    background:#000;
+  }
+  /* 真猫视频 — 全屏铺满，自动播放循环静音 */
+  .cat-video{
+    position:absolute;inset:0;width:100%;height:100%;
+    object-fit:cover;object-position:center;
+    animation:videoIn .8s ease-out;
+  }
+  @keyframes videoIn{from{opacity:0;transform:scale(1.04)}to{opacity:1;transform:scale(1)}}
+
+  /* 左上角倒计时 — 对标参考截图：暗色圆角大字 */
+  .timer-box{
+    position:absolute;top:24px;left:24px;z-index:10;
+    background:rgba(0,0,0,0.65);
+    backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);
+    border-radius:20px;padding:18px 28px;
+    display:flex;align-items:center;gap:16px;
+    animation:timerIn .4s ease-out .2s backwards;
+    box-shadow:0 12px 40px rgba(0,0,0,.5);
+    border:1px solid rgba(255,255,255,.1);
+  }
+  @keyframes timerIn{from{opacity:0;transform:translateY(-16px)}to{opacity:1;transform:translateY(0)}}
+  #count{
+    font-size:clamp(52px,12vw,110px);
+    font-weight:800;line-height:1;letter-spacing:-.03em;color:#fff;
+    font-variant-numeric:tabular-nums;
+    min-width:180px;text-align:center;
+    transition:color .3s, transform .15s;
+  }
+  #count.warn{color:#fbbf24;}
+  #count.danger{color:#f87171;animation:pulse .5s ease-in-out infinite;}
+  @keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.06)}}
+
+  /* 确认完成按钮 — 对标截图右下区域 */
+  .confirm-btn{
+    position:absolute;bottom:80px;right:32px;z-index:10;
+    background:rgba(0,0,0,0.6);
+    backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);
+    border:1px solid rgba(255,255,255,.12);
+    border-radius:14px;padding:14px 22px;
+    display:flex;align-items:center;gap:10px;
+    color:#ccc;font-size:14px;cursor:default;
+    opacity:0;pointer-events:none;
+    transition:opacity .4s, background .2s, color .2s;
+    animation:confirmIn .4s ease-out;
+  }
+  .confirm-btn.visible{opacity:1;pointer-events:auto;}
+  .confirm-btn:hover{background:rgba(255,255,255,.1);color:#fff;}
+  .confirm-btn .check{
+    width:22px;height:22px;border-radius:50%;
+    background:rgba(74,222,128,.2);color:#4ade80;
+    display:flex;align-items:center;justify-content:center;
+    font-size:14px;flex-shrink:0;
+  }
+  @keyframes confirmIn{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
+
+  /* 底部状态条 */
+  .bar{
+    position:absolute;bottom:0;left:0;right:0;z-index:10;
+    background:rgba(0,0,0,.5);backdrop-filter:blur(10px);
+    -webkit-backdrop-filter:blur(10px);
+    padding:14px 28px;display:flex;align-items:center;justify-content:center;
+    gap:8px;border-top:1px solid rgba(255,255,255,.08);
+    animation:barIn .5s ease-out .3s backwards;
+  }
+  @keyframes barIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+  .bar span{font-size:13px;color:#aaa;display:flex;align-items:center;gap:6px;}
+  .dot{width:7px;height:7px;border-radius:50%;background:#4ade80;
+    display:inline-block;animation:blink 1.6s ease-in-out infinite;}
+  @keyframes blink{50%opacity:.25}
+
+  @media(max-width:768px){
+    .timer-box{top:14px;left:14px;padding:12px 18px;border-radius:14px;gap:12px;}
+    #count{font-size:clamp(40px,16vw,72px);min-width:120px;}
+    .confirm-btn{bottom:60px;right:16px;padding:10px 16px;font-size:13px;}
+    .bar{padding:10px 16px;}
+    .bar span{font-size:11px;}
+  }
+</style>
+</head>
+<body>
+
+<div class="stage">
+  <!-- 真猫视频 — 自动播放、循环、静音（浏览器策略要求） -->
+  <video class="cat-video"
+    id="catVid"
+    autoplay loop muted playsinline
+    poster="cat-still.jpg"
+  >
+    <!-- 自托管猫视频（Coverr 免费商用） -->
+    <source src="cat-break.mp4" type="video/mp4" />
+  </video>
+
+  <!-- 左上角倒计时框 -->
+  <div class="timer-box">
+    <div id="count">--:--</div>
+  </div>
+
+  <!-- 确认完成按钮（倒计时结束后可见） -->
+  <button class="confirm-btn" id="confirmBtn">
+    <span class="check">&#10003;</span>
+    <span id="confirmText">确认完成休息</span>
+  </button>
+
+  <!-- 底部状态 -->
+  <div class="bar">
+    <span><i class="dot"></i> <span id="barText"></span></span>
+  </div>
+</div>
+
+<script src="break.js"></script>
+</body>
+</html>

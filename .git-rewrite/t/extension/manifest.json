@@ -1,0 +1,28 @@
+{
+  "manifest_version": 3,
+  "name": "PausePaw - Focus Guardian",
+  "version": "0.2.0",
+  "description": "强制休息守护：连续累计屏幕时长，到阈值整屏锁死强制休息。自我管理陪伴工具，非家长控制锁。",
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "PausePaw"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "permissions": ["storage", "tabs", "alarms", "webNavigation", "scripting", "identity"],
+  "host_permissions": ["<all_urls>"],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "incognito": "spanning"
+}

@@ -2,14 +2,18 @@
   "version": 2,
   "builds": [
     {
-      "src": "package.json",
+      "src": "server.js",
       "use": "@vercel/node"
+    },
+    {
+      "src": "public/**",
+      "use": "@vercel/static"
     }
   ],
   "routes": [
     {
       "src": "/api/(.*)",
-      "dest": "/api/$1/route.js"
+      "dest": "/server.js"
     },
     {
       "src": "/(.*)",
@@ -17,21 +21,8 @@
     }
   ],
   "env": {
-    "SITE_URL": "@site_url",
+    "SITE_URL": "https://pause-paw.shop",
     "NODE_ENV": "production",
-    "JWT_SECRET": "@jwt_secret",
-    "TURSO_DATABASE_URL": "@turso_database_url",
-    "TURSO_AUTH_TOKEN": "@turso_auth_token",
-    "ADSENSE_CLIENT_ID": "@adsense_client_id",
-    "GA4_MEASUREMENT_ID": "@ga4_measurement_id",
-    "CLARITY_ID": "@clarity_id",
-    "GOOGLE_CLIENT_ID": "@google_client_id",
-    "GOOGLE_CLIENT_SECRET": "@google_client_secret",
-    "PAYPAL_CLIENT_ID": "@paypal_client_id",
-    "PAYPAL_CLIENT_SECRET": "@paypal_client_secret",
-    "PAYPAL_MODE": "@paypal_mode",
-    "PAYPAL_PLAN_PRO": "@paypal_plan_pro",
-    "PAYPAL_PLAN_PRO_YEAR": "@paypal_plan_pro_year",
-    "PAYPAL_PLAN_FAMILY": "@paypal_plan_family"
+    "JWT_SECRET": "vercel-jwt-secret-pausepaw-2026-secure"
   }
 }
