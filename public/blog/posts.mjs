@@ -1014,8 +1014,6 @@ export const posts = [
       { q: `用 app 帮我戒，不是又多一块屏幕吗？`, a: `如果 app 只是给你另一个刷的地方，是的。但 PausePaw 这类是反方向：它到点接管屏幕、拦一下，不是喂你更多。工具用对了，是减法。` },
     ],
   },
-];
-  ,
   {
     id: "post19",
     key: "bl_post19",
@@ -1180,4 +1178,80 @@ export const posts = [
       { q: `PausePaw 能帮助我完成这个计划吗？`, a: `可以。PausePaw 的设计就是帮你建立仪式和找到替代行为。它不会惩罚你，只是在你即将滑入无意识刷手机时，温柔地提醒你。` },
     ],
   },
+  {
+    id: "post21",
+    key: "bl_post21",
+    day: 19,
+    date: "2026-08-22",
+    zh: {
+      title: "社交媒体成瘾 ≠ 手机成瘾",
+      desc: "社交媒体成瘾和手机成瘾经常被混为一谈，但它们不是同一回事。理解区别是解决问题的第一步。",
+      body: `<p>社交媒体成瘾和手机成瘾经常被混为一谈，但它们不是同一回事。理解区别是解决问题的第一步。</p>
+<h2>什么是社交媒体成瘾？</h2>
+<p>社交媒体成瘾是一种对 Instagram、TikTok、Twitter 或 Facebook 等平台的强迫性行为。强迫性行为包括检查、发布、浏览，并通过点赞和评论寻求认可。</p>
+<p>吸引力在于可变奖励。你不知道下一条帖子是否有趣、搞笑或令人满意。这种不确定性触发多巴胺，产生类似老虎机的反馈循环。</p>
+<p>社交媒体成瘾是特定于平台的。你可以不使用社交媒体而使用手机。你可以对社交媒体上瘾，而不一定对手机上瘾。</p>
+<h2>什么是手机成瘾？</h2>
+<p>手机成瘾是一种更广泛的行为模式，以设备本身为中心。包括：</p>
+<ul>
+<li>即使什么都没发生也频繁检查</li>
+<li>手机不在身边时的焦虑</li>
+<li>用手机逃避无聊、不适或社交互动</li>
+<li>睡觉时手机放在床边</li>
+<li>幻触综合征</li>
+</ul>
+<p>手机成瘾可以包括社交媒体，但也包括游戏、消息、浏览和强迫性应用检查。</p>
+<h2>关键区别</h2>
+<p>社交媒体成瘾关乎内容和认可循环。手机成瘾关乎设备和检查习惯。</p>
+<p>你可以是一个只在电脑上检查应用的社交媒体成瘾者。你也可以是一个从不碰社交媒体但每 5 分钟检查邮件、消息和天气的手机成瘾者。</p>
+<h2>这对康复意味着什么</h2>
+<p>如果你试图戒除社交媒体，但手机成瘾仍然存在，你会用一种强迫行为替代另一种。你只是从刷 Instagram 变成检查邮件。</p>
+<p>如果你在不碰社交媒体的情况下解决手机成瘾，你可能会发现自己认为已控制的平台上无休止地浏览。</p>
+<p>最有效的方法同时解决两者：减少与设备的总时间，并有意识地选择哪些应用服务于你的生活。</p>
+<h2>PausePaw 如何帮助</h2>
+<p>PausePaw 不区分社交媒体成瘾和手机成瘾，因为它们有相同的根源：无意识的手机检查。该工具打断了对设备的自动伸手，让你有机会有意识地选择。</p>
+<p>无论你是打开 Instagram 还是只是查看时间，PausePaw 创造了一个打断自动化的停顿。</p>
+<h2>常见问题</h2>
+<p><strong>Q: 我可以对社交媒体上瘾但对手机不上瘾吗？</strong><br>A: 是的。有些人在电脑上强迫性检查平台，但不大量使用手机。</p>
+<p><strong>Q: 手机成瘾比社交媒体成瘾更严重吗？</strong><br>A: 它们不同。手机成瘾更广泛，更难解决，因为设备是工作和生活的必需品。</p>
+<p><strong>Q: 我应该先戒除社交媒体还是先减少手机使用？</strong><br>A: 取决于哪个造成更多干扰。对大多数人来说，减少总体手机时间可以为随后专门解决社交媒体创造空间。</p>
+<p><strong>Q: 我可以只使用 PausePaw 解决社交媒体成瘾吗？</strong><br>A: PausePaw 适用于任何强迫性手机行为。你可以在工具内为社交媒体应用设置特定时间限制。</p>
+<p>想试试不靠意志力的办法？打开 <a href="app.html" data-i18n="f_app">PausePaw 应用</a>，或回 <a href="index.html" data-i18n="nav_home">首页</a>了解更多。</p>`
+    },
+    en: {
+      title: "Social Media Addiction vs. Phone Addiction: Not the Same Thing",
+      desc: "Social media addiction and phone addiction are often used interchangeably, but they're not the same thing. Understanding the difference is the first step to fixing whichever one you actually have.",
+      body: `<p>Social media addiction and phone addiction are often used interchangeably, but they're not the same thing. Understanding the difference is the first step to fixing whichever one you actually have.</p>
+<h2>What is social media addiction?</h2>
+<p>Social media addiction is a behavioral addiction to platforms like Instagram, TikTok, Twitter, or Facebook. The compulsive behavior is checking, posting, scrolling, and seeking validation through likes and comments.</p>
+<p>The hook is variable rewards. You don't know if the next post will be interesting, funny, or validating. That uncertainty triggers dopamine, creating a feedback loop similar to slot machines.</p>
+<p>Social media addiction is platform-specific. You can use your phone without social media. You can be addicted to social media without being addicted to your phone.</p>
+<h2>What is phone addiction?</h2>
+<p>Phone addiction is a broader behavioral pattern centered around the device itself. It includes:</p>
+<ul>
+<li>Constant checking even when nothing happened</li>
+<li>Anxiety when the phone is out of reach</li>
+<li>Using the phone to avoid boredom, discomfort, or social interaction</li>
+<li>Sleeping with the phone next to the bed</li>
+<li>Phantom vibration syndrome</li>
+</ul>
+<p>Phone addiction can include social media, but it also includes games, messaging, browsing, and compulsive app checking.</p>
+<h2>The key difference</h2>
+<p>Social media addiction is about the content and the validation loop. Phone addiction is about the device and the habit of checking.</p>
+<p>You can be a social media addict who only checks apps on a computer. You can be a phone addict who never touches social media but checks email, messages, and weather every 5 minutes.</p>
+<h2>Why this matters for recovery</h2>
+<p>If you try to quit social media but your phone addiction remains untouched, you'll replace one compulsive behavior with another. You'll just be checking email instead of Instagram.</p>
+<p>If you address phone addiction without touching social media, you might find yourself scrolling endlessly on platforms you thought were under control.</p>
+<p>The most effective approach addresses both: reduce the overall time with the device and be intentional about which apps serve your life.</p>
+<h2>How PausePaw helps</h2>
+<p>PausePaw doesn't distinguish between social media and phone addiction because both share the same root: unconscious phone checking. The tool interrupts the automatic reach for your device, giving you a moment to choose consciously.</p>
+<p>Whether you're opening Instagram or just checking the time, PausePaw creates the pause that breaks the autopilot.</p>
+<h2>FAQ</h2>
+<p><strong>Can I be addicted to social media but not my phone?</strong><br>Yes. Some people compulsively check platforms on their computers but don't touch their phones excessively.</p>
+<p><strong>Is phone addiction worse than social media addiction?</strong><br>They're different. Phone addiction is broader and harder to address because the device is necessary for work and life.</p>
+<p><strong>Should I quit social media first or reduce phone use first?</strong><br>It depends on which is causing more disruption. For most people, reducing overall phone time creates space to then address social media specifically.</p>
+<p><strong>Can I use PausePaw for social media specifically?</strong><br>PausePaw works for any compulsive phone behavior. You can set specific time limits for social media apps within the tool.</p>
+<p>想试试不靠意志力的办法？打开 <a href="app.html" data-i18n="f_app">PausePaw 应用</a>，或回 <a href="index.html" data-i18n="nav_home">首页</a>了解更多。</p>`
+    },
+  }
 ];
