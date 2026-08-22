@@ -19,7 +19,7 @@ a { color: inherit; text-decoration: none; }
 header.bar { display: flex; align-items: center; justify-content: space-between; padding: 16px 0; gap: 12px; }
 .logo { font-weight: 800; font-size: 20px; display: flex; align-items: center; gap: 8px; white-space: nowrap; }
 .logo .dot { width: 28px; height: 28px; border-radius: 50%; background: var(--primary); display: inline-block; flex: none; }
-.nav { display: flex; gap: 22px; align-items: center; flex-wrap: wrap; justify-content: flex-end; }
+.nav { display: flex; gap: 22px; align-items: center; flex-wrap: nowrap; justify-content: flex-end; }
 .nav a { color: var(--muted); font-size: 14px; white-space: nowrap; }
 .lang-switch { display: flex; border: 1px solid var(--line); border-radius: 999px; overflow: hidden; }
 .lang-switch button { border: 0; background: transparent; padding: 6px 12px; cursor: pointer; font-size: 13px; color: var(--muted); }
