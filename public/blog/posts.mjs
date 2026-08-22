@@ -1254,4 +1254,14 @@ export const posts = [
 <p>想试试不靠意志力的办法？打开 <a href="app.html" data-i18n="f_app">PausePaw 应用</a>，或回 <a href="index.html" data-i18n="nav_home">首页</a>了解更多。</p>`
     },
   }
+
+  {
+    id: 21,
+    slug: "quit-social-media-30-days-brain",
+    title: { zh: "30 天不刷社交媒体，大脑会怎样", en: "What Happens to Your Brain When You Quit Social Media for 30 Days" },
+    date: "2026-08-23",
+    category: "brain-health",
+    excerpt: { zh: "30 天不刷社交媒体后，你的注意力、睡眠和情绪会如何变化？", en: "Your attention span, sleep quality, and mood all shift after 30 days without social media." },
+    content: { en: "30 days without scrolling. Week 1 is withdrawal. Week 2 the reset begins. Week 3-4 new normal. Sleep improves, mood stabilizes.", zh: "30 天不刷。第一周戒断，第二周重置开始，第三四周新常态。睡眠改善，情绪稳定。" }
+  },
 ];
