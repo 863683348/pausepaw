@@ -389,7 +389,39 @@ module.exports = [
           <p>Want to use small interruptions in daily life? Read our <a href="blog.html?lang=en#post2" data-i18n="bl_post2_t">5-minute rule</a>, or head to the <a href="faq.html?lang=en" data-i18n="f_faq">FAQ</a> to learn how to install.</p>`,
   },
 
+  , {
+    id: 'post21',
+    titleKey: 'bl_post21_t',
+    title: "30 天不刷社交媒体，大脑会怎样",
+    enTitle: "What Happens to Your Brain When You Quit Social Media for 30 Days",
+    descKey: 'bl_post21_d',
+    desc: "30 天不刷社交媒体后，你的注意力、睡眠和情绪会如何变化？科学解释 + 我的亲身经历。",
+    date: '2026-08-24',
+    zhBody: `<p>三周前，我从手机里删掉了 Instagram、Twitter 和 TikTok。不是因为我讨厌它们——我爱它们。我爱那种无尽的滚动，那些通知，那种感觉自己与某个比我周围更大的世界相连的感觉。</p>
+          <p>但有什么不对劲。我每天查看手机 87 次。我的注意力持续时间缩短到了大约 8 秒——比金鱼还短。我无法读完一本书而不伸手去拿手机。我的睡眠很糟糕。我无法解释为什么。</p>
+          <h3>第一周：戒断</h3>
+          <p>前三天很残酷。我醒来习惯性地去拿手机。我的拇指在 Instagram 曾经存在的空空间中滚动。我感到焦虑、无聊，与这个世界奇怪地脱节。</p>
+          <h3>第二周：重置</h3>
+          <p>到了第五天，焦虑开始消退。我注意到我睡得更好了。我的头痛消失了。我在对话中更加在场。</p>
+          <h3>第三四周：新常态</h3>
+          <p>到第三周，我不再想念社交媒体。查看的冲动消退到了低语。我用更健康的东西替换了这个习惯：晨走、阅读、面对面交谈。</p>
+          <h3>科学怎么说</h3>
+          <p>宾夕法尼亚大学的一项研究发现，将社交媒体使用限制在每天 30 分钟显著减少了孤独感和抑郁。</p>
+          <p><a href="app.html">PausePaw</a> 帮助你建立更健康的关系——不是通过封锁，而是通过温柔的中断。</p>`,
+    enBody: `<p>Three weeks ago, I deleted Instagram, Twitter, and TikTok from my phone. Not because I hated them — I loved them. I loved the endless scroll, the notifications, the sense that I was connected to something bigger than my immediate surroundings.</p>
+          <p>But something felt off. I was checking my phone 87 times a day. My attention span had shrunk to about 8 seconds — less than a goldfish. I couldn't read a book without reaching for my phone. My sleep was terrible. And I couldn't explain why.</p>
+          <h3>Week 1: The Withdrawal</h3>
+          <p>The first three days were brutal. I woke up and reached for my phone out of habit. My thumb scrolled through empty space where Instagram used to be. I felt anxious, bored, and strangely disconnected from the world.</p>
+          <h3>Week 2: The Reset</h3>
+          <p>By day 5, the anxiety started to fade. I noticed I was sleeping better. My headaches disappeared. I was more present in conversations. But I still felt like something was missing.</p>
+          <h3>Week 3-4: The New Normal</h3>
+          <p>By the third week, I didn't miss social media. The urge to check had faded to a whisper. I had replaced the habit with something healthier: morning walks, reading, face-to-face conversations.</p>
+          <h3>What the Science Says</h3>
+          <p>A study from the University of Pennsylvania found that limiting social media use to 30 minutes per day significantly reduced loneliness and depression.</p>
+          <p><a href="app.html?lang=en">PausePaw</a> helps you build a healthier relationship — not by blocking, but by gentle interruptions.</p>`,
+  }
 ];
+
 
 
 // 顺序：显示时最新在前（倒序）
