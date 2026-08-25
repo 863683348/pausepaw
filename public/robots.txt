@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://pause-paw.shop/sitemap.xml
