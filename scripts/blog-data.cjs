@@ -419,6 +419,39 @@ module.exports = [
           <h3>What the Science Says</h3>
           <p>A study from the University of Pennsylvania found that limiting social media use to 30 minutes per day significantly reduced loneliness and depression.</p>
           <p><a href="app.html?lang=en">PausePaw</a> helps you build a healthier relationship — not by blocking, but by gentle interruptions.</p>`,
+  },
+  {
+    id: 'post22',
+    titleKey: 'bl_post22_t',
+    title: "iPhone 屏幕时间限制设置教程",
+    enTitle: "How to Set Screen Time Limits on iPhone",
+    descKey: 'bl_post22_d',
+    desc: "每个家长都应该收藏的 10 分钟教程。iPhone 屏幕时间限制的完整设置指南：应用限额、停用时间、内容限制，以及如何用家人共享远程管理孩子的屏幕时间。",
+    date: '2026-08-25',
+    zhBody: `<p>iPhone 的「屏幕时间」功能是管理数字健康的第一步。无论你是想给自己设限，还是管理孩子的设备，设置都在同一个地方：设置 → 屏幕时间。这篇用 10 分钟带你走完整个流程。</p>
+          <h3>打开屏幕时间并设置密码</h3>
+          <p>打开「设置」→「屏幕时间」，点击「打开屏幕时间」。这里一定要设置一个屏幕时间密码——如果管理的是孩子的设备，这个密码会防止他们自己绕过限制。密码务必记好，忘了解除很麻烦。</p>
+          <h3>设置应用限额</h3>
+          <p>进入「屏幕时间」→「应用限额」→「添加限额」，选择要限制的应用类别（或单个 App），再设置每日时间预算。到时间后 App 会被锁定，直到第二天重置。家长可以点「批准更多使用时间」远程放行。</p>
+          <h3>设置停用时间</h3>
+          <p>「停用时间」可以设定一整段不使用屏幕的时间段，比如晚上 22:00 到早上 7:00。停用时间内，只有你允许的应用和电话可以用。这是保证睡眠质量的利器。</p>
+          <h3>内容与隐私限制</h3>
+          <p>「内容与隐私限制」可以限制网页内容、App 下载、购买项目等。对孩子的设备，建议打开「App Store 购买项目」里的密码要求，防止不经同意购买。</p>
+          <h3>用家人共享远程管理</h3>
+          <p>如果你的家庭已经开启「家人共享」，可以在自己的 iPhone 上为孩子的设备设置屏幕时间，孩子设备上的「批准更多使用时间」请求会直接发到你这里。无需碰孩子的手机就能管理。</p>
+          <p>屏幕时间限制不是万能药，但它把「每次想刷就刷」变成了「到点就停」。配合 <a href="app.html">PausePaw</a> 这样的工具，效果更好。</p>`,
+    enBody: `<p>iPhone's Screen Time feature is your first step toward managing digital wellbeing. Whether you want to limit yourself or manage a child's device, everything lives in one place: Settings → Screen Time. This walkthrough takes about 10 minutes.</p>
+          <h3>Turn on Screen Time and set a passcode</h3>
+          <p>Open Settings → Screen Time and tap "Turn On Screen Time". Set a Screen Time passcode — if you're managing a child's device, this passcode stops them from overriding the limits themselves. Store it somewhere safe; recovering a forgotten passcode is painful.</p>
+          <h3>Set app limits</h3>
+          <p>Go to Screen Time → App Limits → Add Limit, pick the app categories (or individual apps) to restrict, then set a daily time budget. When the limit is reached, the apps lock until the next day. Parents can tap "Approve More Time" to allow extra usage remotely.</p>
+          <h3>Set downtime</h3>
+          <p>Downtime schedules a block of screen-free time, for example 10:00 PM to 7:00 AM. During downtime only the apps you allow and phone calls are available. It's a powerful tool for protecting sleep.</p>
+          <h3>Content and privacy restrictions</h3>
+          <p>Content & Privacy Restrictions let you limit web content, app downloads, and purchases. On a child's device, turn on "Require Password" for iTunes & App Store Purchases to prevent accidental buying.</p>
+          <h3>Manage remotely with Family Sharing</h3>
+          <p>If your family uses Family Sharing, you can set up Screen Time for your child's device from your own iPhone, and "Ask to Buy" / "Approve More Time" requests land on your screen. No need to touch your child's phone.</p>
+          <p>Screen Time limits aren't a cure-all, but they turn "I can scroll whenever" into "it stops at the limit." Pair it with a tool like <a href="app.html?lang=en">PausePaw</a> for even better results.</p>`,
   }
 ];
 
