@@ -2,20 +2,24 @@
 
 ## 迁移时间线
 - 2026-08-22 15:24 开始迁移到 Vercel
+- 2026-08-25 22:26 迁移完成，Railway 已停用
 
 ## 当前状态
-- 从 Railway 迁移到 Vercel
-- 前端：静态文件 (public/)
-- 后端：Vercel Serverless Functions (api/)
-- 数据库：Turso (libSQL)
+- ✅ 已从 Railway 迁移到 Vercel
+- ✅ 前端：静态文件 (public/)
+- ✅ 后端：Vercel Serverless Functions (api/)
+- ✅ 数据库：Turso (libSQL)
+- ✅ 域名：pause-paw.shop (Vercel)
 
-## 迁移步骤
+## 已完成
 1. ✅ 创建 API 目录结构
-2. 🔄 提取 API 路由到各 route.js
-3. ⏳ 安装 Turso 客户端
-4. ⏳ 创建构建脚本
-5. ⏳ 创建 vercel.json
-6. ⏳ 部署到 Vercel
+2. ✅ 提取 API 路由到各 route.js
+3. ✅ 安装 Turso 客户端
+4. ✅ 创建构建脚本
+5. ✅ 创建 vercel.json
+6. ✅ 部署到 Vercel
+7. ✅ 添加 robots.txt 和 sitemap.xml
+8. ✅ 删除 Railway 配置文件
 
 ## 环境变量清单
 - SITE_URL

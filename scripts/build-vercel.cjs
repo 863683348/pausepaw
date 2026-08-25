@@ -11,7 +11,7 @@
 const fs = require('fs');
 const path = require('path');
 
-const PROJECT_ROOT = __dirname;
+const PROJECT_ROOT = path.join(__dirname, '..');
 const PUBLIC_DIR = path.join(PROJECT_ROOT, 'public');
 const OUTPUT_DIR = path.join(PROJECT_ROOT, '.vercel', 'output');
 
@@ -30,16 +30,12 @@ function copyDir(src, dest) {
       copyDir(srcPath, destPath);
     } else {
       let content = fs.readFileSync(srcPath, 'utf8');
-      // 替换占位符
+      // 替换占位符（无条件替换：env 未配置时替换为空串，避免模板原文暴露）
       if (process.env.SITE_URL) {
         content = content.replace(/%%SITE_URL%%/g, process.env.SITE_URL);
       }
-      if (process.env.GA4_MEASUREMENT_ID) {
-        content = content.replace(/%%GA4%%/g, buildAnalyticsSnippet(process.env.GA4_MEASUREMENT_ID));
-      }
-      if (process.env.ADSENSE_CLIENT_ID) {
-        content = content.replace(/%%ADSENSE%%/g, buildAdsenseSnippet(process.env.ADSENSE_CLIENT_ID));
-      }
+      content = content.replace(/%%ANALYTICS%%/g, process.env.GA4_MEASUREMENT_ID ? buildAnalyticsSnippet(process.env.GA4_MEASUREMENT_ID) : '');
+      content = content.replace(/%%ADSENSE%%/g, process.env.ADSENSE_CLIENT_ID ? buildAdsenseSnippet(process.env.ADSENSE_CLIENT_ID) : '');
       fs.writeFileSync(destPath, content);
     }
   }
@@ -51,7 +47,7 @@ function buildAnalyticsSnippet(ga4Id) {
 }
 
 function buildAdsenseSnippet(clientId) {
-  return `<script async src="https://pagead2.googletagmanager.com/gtag/js?id=${clientId}"></script>
+  return `<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${clientId}" crossorigin="anonymous"></script>
 <script>(adsbygoogle=window.adsbygoogle||[]).push({google_ad_client:"${clientId}",enable_page_level_ads:true});</script>`;
 }
 
