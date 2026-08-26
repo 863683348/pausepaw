@@ -452,6 +452,71 @@ module.exports = [
           <h3>Manage remotely with Family Sharing</h3>
           <p>If your family uses Family Sharing, you can set up Screen Time for your child's device from your own iPhone, and "Ask to Buy" / "Approve More Time" requests land on your screen. No need to touch your child's phone.</p>
           <p>Screen Time limits aren't a cure-all, but they turn "I can scroll whenever" into "it stops at the limit." Pair it with a tool like <a href="app.html?lang=en">PausePaw</a> for even better results.</p>`,
+  },
+  {
+    id: 'post23',
+    titleKey: 'bl_post23_t',
+    title: "Android 家长控制设置教程",
+    enTitle: "How to Set Parental Controls on Android",
+    descKey: 'bl_post23_d',
+    desc: "原生 Android、Samsung 和 Pixel 的家长控制设置步骤不同。这篇给你完整指南。",
+    date: '2026-08-26',
+    zhBody: `<p>Android 家长控制在近年来有了显著改进。Google 的数字健康套件为家长提供了管理屏幕时间、设置应用限制和过滤内容的工具。但体验因设备而异。</p>
+          <h3>原生 Android（Pixel、Motorola、Sony）</h3>
+          <ol>
+            <li>打开设置 → 数字健康与家长控制</li>
+            <li>设置家长账户或链接您的 Google 账户</li>
+            <li>选择孩子的资料</li>
+            <li>设置每日屏幕时间限制</li>
+            <li>为特定应用配置应用计时器</li>
+            <li>在 Google Play 中启用内容过滤</li>
+          </ol>
+          <p>家长控制同步到同一家庭组登录的所有设备。</p>
+          <h3>Samsung Galaxy 设备</h3>
+          <ol>
+            <li>打开设置 → 阻止内容</li>
+            <li>设置儿童之家资料或链接孩子的 Samsung 账户</li>
+            <li>对年幼儿童使用儿童之家（沙盒环境）</li>
+            <li>对年长儿童使用数字健康</li>
+            <li>Samsung 的内容过滤器比原生 Android 更严格</li>
+          </ol>
+          <h3>成功技巧</h3>
+          <ul>
+            <li>设置控制之前先制定明确规则</li>
+            <li>向孩子解释限制存在的原因</li>
+            <li>每周审查使用报告</li>
+            <li>随着孩子展示责任感调整限制</li>
+            <li>将 PausePaw 与 Android 控制结合使用以实现社交媒体休息</li>
+          </ul>
+          <p>目标不是监控。是培养在家长控制阶段之外持续的健康习惯。</p>`,
+    enBody: `<p>Android parental controls have improved significantly in recent years. Google's Digital Wellbeing suite gives parents tools to manage screen time, set app limits, and filter content. But the experience varies depending on the device.</p>
+          <h3>Stock Android (Pixel, Motorola, Sony)</h3>
+          <ol>
+            <li>Open Settings → Digital Wellbeing & parental controls</li>
+            <li>Set up a parent account or link your Google account</li>
+            <li>Choose the child's profile</li>
+            <li>Set daily screen time limits</li>
+            <li>Configure app timers for specific apps</li>
+            <li>Enable content filtering in Google Play</li>
+          </ol>
+          <p>The parental controls sync across all devices logged into the same family group.</p>
+          <h3>Samsung Galaxy Devices</h3>
+          <ol>
+            <li>Open Settings → Block contents</li>
+            <li>Set up a Kids Home profile or link a child's Samsung account</li>
+            <li>Use Kids Home for younger children (sandboxed environment)</li>
+            <li>Use Digital Wellbeing for older children</li>
+            <li>Samsung's content filter is more aggressive than stock Android</li>
+          </ol>
+          <h3>Tips for Success</h3>
+          <ul>
+            <li>Start with clear rules before setting up controls</li>
+            <li>Explain to your child why the limits exist</li>
+            <li>Review usage reports weekly</li>
+            <li>Adjust limits as your child demonstrates responsibility</li>
+            <li>Use PausePaw alongside Android controls for social media breaks</li>
+          </ul>
+          <p>The goal is not surveillance. It is teaching healthy habits that last beyond the parental control phase.</p>`,
   }
 ];
 
