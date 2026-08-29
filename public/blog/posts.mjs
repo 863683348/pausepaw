@@ -1222,4 +1222,38 @@ export const posts = [
       body: "<h2>Why TikTok safety settings matter for kids</h2><p>TikTok is designed for users 13 and older, but the app's appeal cuts across age groups. A child can create an account in seconds — no identity verification, no parent consent gate. That's why understanding TikTok's built-in safety tools isn't optional for parents. It's the first line of defense.</p><h2>Restrictive Mode: the basics</h2><p>Restricted Mode limits content that may be inappropriate for younger viewers. It doesn't block everything — it works with an algorithm that filters videos flagged as sensitive. Enable it in: Settings and Privacy → Content Preferences → Restricted Mode.</p><p>Restricted Mode alone isn't enough. It's a filter, not a wall. Pair it with additional controls.</p><h2>Family Pairing: your remote control</h2><p>Family Pairing links your TikTok account to your child's. Once connected, you can:</p><ul><li>Set Direct Message restrictions (nobody, friends only, or disabled entirely)</li><li>Set screen time limits (40 min, 60 min, 90 min, or 120 min per day)</li><li>Control Restricted Mode remotely</li><li>Limit what your child can search for</li></ul><p>Go to your child's Settings and Privacy → Family Pairing to set this up.</p><h2>Screen Time Management</h2><p>Kids don't self-regulate on TikTok. The algorithm is designed to keep them scrolling. Set a daily limit through Family Pairing, and your child will see a prompt when they hit it. The prompt includes a passcode — only you know it.</p><h2>Comment and live streaming restrictions</h2><p>Comments can expose kids to harassment or manipulation. Disable comments for younger users, or restrict them to followers only. Live streaming should be disabled until your child is old enough to handle real-time interaction with strangers.</p><h2>Privacy settings: keep their life private</h2><ul><li>Set account to Private: only approved followers can see their videos</li><li>Disable \"Suggest your account to others\": stops TikTok from sharing their profile</li><li>Turn off Location Services: prevents your child's location from being attached to videos</li><li>Review who can duet/stitch with them: restrict to \"Friends\" or \"Nobody\"</li></ul><h2>What these settings can't do</h2><p>No settings block content that's algorithmically served based on watch history. No settings prevent a determined child from making a second account. No settings replace talking to your child about what they see online.</p><p>Settings are a safety net, not a substitute for conversation. Talk to your kid about what they watch, who they follow, and how the app makes them feel.</p><h2>FAQ</h2><ul><li><strong>What's the minimum age for TikTok?</strong> 13 years, per COPPA and TikTok's own terms.</li><li><strong>Can I see my child's messages?</strong> Not directly — but you can disable DMs through Family Pairing.</li><li><strong>Does Restricted Mode block all bad content?</strong> No. It's a filter, not a wall. Watch the content yourself when possible.</li><li><strong>What if my child is under 13?</strong> The app isn't designed for them. If they're already on it, use Family Pairing and maximize restrictions.</li></ul>",
     }
   },
+,
+  {
+    id: "post26",
+    key: "bl_post26",
+    day: 27,
+    date: "2026-08-30",
+    zh: {
+      title: "YouTube Kids vs YouTube - 哪个更安全?",
+      desc: "YouTube Kids 真的比普通 YouTube 更安全吗?",
+      body: "<h2>YouTube Kids 声称的安全保障</h2><p>YouTube Kids 被设计为儿童的过滤版 YouTube。</p><h2>现实检验</h2><p><strong>1. 过滤了，但不防过滤</strong></p><p>YouTube Kids 使用算法和人工审核员来筛选内容。</p><h2>结论：两者都有风险</h2><p>没有一个平台完全安全。</p><h2>家长应该做什么</h2><p><strong>1. 积极监督</strong></p><p>不要假设任何一个平台是安全的而不加监控。</p><h2>底线</h2><p>YouTube Kids 是朝着正确方向迈出的步伐，但不是魔法解决方案。</p>",
+    },
+    en: {
+      title: "YouTube Kids vs Regular YouTube: What is Actually Safer?",
+      desc: "Is YouTube Kids actually safer than regular YouTube?",
+      body: "<h2>What YouTube Kids Claims to Offer</h2><p>YouTube Kids was designed as a filtered version of YouTube for children.</p><h2>The Reality Check</h2><p><strong>1. Filtered, Not Filter-Proof</strong></p><p>YouTube Kids uses algorithms and human reviewers to filter content.</p><h2>The Verdict: Both Have Risks</h2><p>Neither platform is completely safe.</p><h2>What Parents Should Do</h2><p><strong>1. Use Both Platforms with Active Supervision</strong></p><p>Do not assume either platform is safe without monitoring.</p><h2>The Bottom Line</h2><p>YouTube Kids is a step in the right direction, but it is not a magic solution.</p>",
+    }
+  },
+,
+  {
+    id: "post26",
+    key: "bl_post26",
+    day: 27,
+    date: "2026-08-30",
+    zh: {
+      title: "YouTube Kids vs YouTube - 哪个更安全?",
+      desc: "YouTube Kids 真的比普通 YouTube 更安全吗?",
+      body: "YouTube Kids 被设计为儿童的过滤版 YouTube。但研究表明，不适当内容仍然会漏过。家长需要积极监督两个平台。"
+    },
+    en: {
+      title: "YouTube Kids vs Regular YouTube: What is Actually Safer?",
+      desc: "Is YouTube Kids actually safer than regular YouTube?",
+      body: "YouTube Kids was designed as a filtered version of YouTube for children. But studies show inappropriate content still slips through. Active parental supervision is needed."
+    }
+  },
 ];
