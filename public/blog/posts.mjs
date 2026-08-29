@@ -1231,23 +1231,6 @@ export const posts = [
     zh: {
       title: "YouTube Kids vs YouTube - 哪个更安全?",
       desc: "YouTube Kids 真的比普通 YouTube 更安全吗?",
-      body: "<h2>YouTube Kids 声称的安全保障</h2><p>YouTube Kids 被设计为儿童的过滤版 YouTube。</p><h2>现实检验</h2><p><strong>1. 过滤了，但不防过滤</strong></p><p>YouTube Kids 使用算法和人工审核员来筛选内容。</p><h2>结论：两者都有风险</h2><p>没有一个平台完全安全。</p><h2>家长应该做什么</h2><p><strong>1. 积极监督</strong></p><p>不要假设任何一个平台是安全的而不加监控。</p><h2>底线</h2><p>YouTube Kids 是朝着正确方向迈出的步伐，但不是魔法解决方案。</p>",
-    },
-    en: {
-      title: "YouTube Kids vs Regular YouTube: What is Actually Safer?",
-      desc: "Is YouTube Kids actually safer than regular YouTube?",
-      body: "<h2>What YouTube Kids Claims to Offer</h2><p>YouTube Kids was designed as a filtered version of YouTube for children.</p><h2>The Reality Check</h2><p><strong>1. Filtered, Not Filter-Proof</strong></p><p>YouTube Kids uses algorithms and human reviewers to filter content.</p><h2>The Verdict: Both Have Risks</h2><p>Neither platform is completely safe.</p><h2>What Parents Should Do</h2><p><strong>1. Use Both Platforms with Active Supervision</strong></p><p>Do not assume either platform is safe without monitoring.</p><h2>The Bottom Line</h2><p>YouTube Kids is a step in the right direction, but it is not a magic solution.</p>",
-    }
-  },
-,
-  {
-    id: "post26",
-    key: "bl_post26",
-    day: 27,
-    date: "2026-08-30",
-    zh: {
-      title: "YouTube Kids vs YouTube - 哪个更安全?",
-      desc: "YouTube Kids 真的比普通 YouTube 更安全吗?",
       body: "YouTube Kids 被设计为儿童的过滤版 YouTube。但研究表明，不适当内容仍然会漏过。家长需要积极监督两个平台。"
     },
     en: {
