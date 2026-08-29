@@ -25,3 +25,6 @@ Thumbs.db
 
 # 早期/非部署目录（stale 副本）
 website/
+
+# Vercel 构建产物（Build Output API 目录；误入库会导致 "config.json not found" 构建失败）
+.vercel/
