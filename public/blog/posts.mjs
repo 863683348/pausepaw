@@ -1,86 +1,6 @@
 // 自动生成的数据源（由 extract-pausepaw.mjs 从现有博客反抽）。
 // 新增文章：在数组顶部 push 一条（按 date 倒序），然后跑 build.mjs。
 export const posts = [
-  {
-    id: "post14",
-    key: "bl_post14",
-    day: 12,
-    date: "2026-08-15",
-    zh: {
-      title: `为什么一无聊就想摸手机？科学解释 + 两周替换计划`,
-      desc: `先承认一件事：我自己也没逃过。写稿卡壳，手就不自觉地伸向手机，解锁，滑两下，又锁屏。你问我看到了什么？什么都没记住。这就是 boredom phone use 最典型的场景——不是你想用手机，是无聊让你伸手。`,
-      body: `<p><h2>无聊的时候，脑子里发生了什么</h2></p>
-<p>心理学上，无聊是一种"刺激寻求失败"的状态。大脑想找点新东西，现实环境又给不了，于是冒出一股难受的驱动力。这时候刷手机之所以难忍，是因为它同时满足了三件事：</p>
-<ul>
-<li>刺激寻求：短视频每十几秒换一个画面，比发呆刺激得多</li>
-<li>多巴胺缺口：一条新消息提示，就够让大脑续一口</li>
-<li>逃避负性情绪：无聊本身不痛不痒，但它会放大烦躁、空虚这类情绪，刷手机能让它们暂时闭嘴</li>
-</ul>
-<p><h3>为什么越刷越无聊</h3></p>
-<p>滑了二十分钟你会发现，自己比之前更空虚。原因是对比基准被抬高了。刚看完别人的旅行大片，再回到工位发呆，落差感反而更大。短视频把刺激阈值拉得越高，普通生活就越乏味，于是你又想刷。越刷越无聊，越无聊越刷，循环就这么转起来。</p>
-<p><h3>这个循环是怎么变成自动回路的</h3></p>
-<p>大脑爱省电。同一个动作重复几十次之后，它就不再走"思考"这条回路，直接走"条件反射"。无聊 → 掏手机 → 解锁 → 下滑，变成一条肌肉记忆。这就是为什么"我明明不想刷"却一直在刷。</p>
-<p><h2>两周替换计划：把无聊还给生活</h2></p>
-<p>破局不需要意志力，需要换环境。这套计划亲测有效：</p>
-<ul>
-<li>第一周：察觉无聊信号。无聊出现时先别伸手，在心里说一句"哦，无聊来了"。光有察觉，就已经打断了一部分自动回路</li>
-<li>第一周：把手机放远。放到另一个房间，或者锁进抽屉。物理距离每远一米，掏出来的概率就掉一截</li>
-<li>第二周：预备替代行为清单。写一张"无聊时可以做的事"：喝水、拉伸、翻纸质书、给朋友发条消息。无聊一来，从清单里挑一样</li>
-<li>第二周：用 PausePaw 设置敏感时段。把晚饭后到睡前设成拦截时段，无聊刷手机直接被可爱拦截挡住</li>
-</ul>
-<p>为什么从"察觉"开始？因为无聊信号是唯一的入口。你拦不住无聊本身，但你能在无聊出现和伸手之间，插入一个停顿。</p>
-<p><h3>PausePaw 能帮你做哪部分</h3></p>
-<p>PausePaw 管不了你的潜意识，但它能把环境变干净：敏感时段自动拦截、刷够时长强制休息。拦截界面特意做得可爱一点，被打断时不是恼火，而是会心一笑。更早的屏幕习惯分析看 <a href="/blog.html#post13">Day 11</a>；下一篇 <a href="/blog.html#post15">Day 13</a> 聊"强制休息到底有没有用"。</p>
-<p><h2>FAQ</h2></p>
-<p><h3>无聊和刷手机，谁是因谁是果？</h3></p>
-<p>因果是互相的。无聊触发刷手机，刷多了又让生活显得更无聊，所以两边的开关都要动。</p>
-<p>Which comes first, boredom or the phone? Both. Boredom triggers the phone, and heavy scrolling makes life feel flatter.</p>
-<p><h3>为什么我把手机放远了还是会想刷？</h3></p>
-<p>因为自动回路还在。物理隔离只切断"掏"的动作，意识层面的察觉和替代行为清单，才是真正换掉回路的部分。</p>
-<p>Why do I still reach even with the phone far away? The loop is still there. Distance cuts the grabbing action; awareness and replacement activities rebuild the loop.</p>
-<p><h3>两周真的够吗？</h3></p>
-<p>够让回路松动，不保证彻底消失。关键是两周后你自动伸手的频率明显下降，那就成功了。</p>
-<p>Is two weeks really enough? Enough to loosen the loop, not to erase it. If your automatic picks drop noticeably, it's working.</p>
-<p><h2>今天就开始</h2></p>
-<p>不用等到下周。今晚吃完饭，就把手机放到客厅去。无聊不是敌人，它是信号，提醒你生活里缺了点什么。PausePaw 帮你把路拦好，剩下的交给你自己。</p>`,
-    },
-    en: {
-      title: `Why You Reach for Your Phone When You're Bored`,
-      desc: `I'll admit it, I haven't escaped this myself. Mid-sentence in an article, my hand wanders to the phone. Unlock. Scroll. Lock. What did I see? I couldn't tell you. That's the classic boredom phone use scene. It's not that you want the phone. It's that boredom makes your hand move.`,
-      body: `<p><h2>What's going on in your head when you're bored</h2></p>
-<p>In psychology terms, boredom is a failed attempt at stimulus seeking. The brain wants something new, the environment provides nothing, and that gap creates a driving urge. Scrolling feels irresistible because it covers three things at once:</p>
-<ul>
-<li>stimulus seeking: a short video changes frames every fifteen seconds, far more exciting than staring at a wall</li>
-<li>the dopamine gap: one little notification is enough to keep the brain fed</li>
-<li>escaping bad feelings: boredom itself is mild, but it amplifies restlessness and emptiness, and scrolling makes them shut up for a while</li>
-</ul>
-<p><h3>Why scrolling makes you more bored</h3></p>
-<p>Scrolling only numbs the pain. Twenty minutes in, you realize you feel emptier than before. The comparison bar got raised. You just watched someone's travel montage, then you return to your desk, and the gap feels bigger. The higher the stimulation threshold gets, the flatter ordinary life looks. So you scroll again. The loop feeds itself.</p>
-<p><h3>How the loop became an autopilot circuit</h3></p>
-<p>The brain is lazy about power. After the same action repeats a few dozen times, it stops routing through "thinking" and uses a reflex path instead. Bored, reach, unlock, swipe. It becomes muscle memory. You don't even notice the phone is already in your hand. That's why you "don't want to scroll" yet can't stop.</p>
-<p><h2>A two-week replacement plan</h2></p>
-<p>You don't break this with willpower. You break it by changing the environment. This plan has worked for me:</p>
-<ul>
-<li>Week one: notice the boredom signal. When boredom shows up, don't reach. Say to yourself, "oh, boredom is here." This is the hardest step and the most important. Awareness alone breaks part of the autopilot.</li>
-<li>Week one: put the phone far away. Another room, or a drawer. Every extra meter of distance drops the probability of grabbing it.</li>
-<li>Week two: build a replacement list. Write down things to do when bored: drink water, stretch, open a paper book, text a friend. When boredom hits, pick one from the list.</li>
-<li>Week two: set sensitive hours in PausePaw. Block the window from after dinner to bedtime. The cute blocker intercepts the scroll, and forces a break at the same time.</li>
-</ul>
-<p>Why start with awareness? Because the boredom signal is the only entry point. You can't stop boredom itself, but you can insert a pause between "boredom arrives" and "hand reaches."</p>
-<p><h3>What PausePaw handles for you</h3></p>
-<p>PausePaw can't control your subconscious. What it can do is clean the environment: auto-block sensitive hours, force a rest after the scrolling budget is used up. The block screen is deliberately cute, so when you get interrupted you smile instead of getting angry, and you remember "right, I was going to do that thing."</p>
-<p><h2>FAQ</h2></p>
-<p><h3>Which comes first, boredom or the phone?</h3></p>
-<p>Both directions. Boredom triggers the phone, and heavy use makes life feel flatter. Touch both switches. 无聊和刷手机谁是因谁是果？互相的，两个开关都要动。</p>
-<p><h3>Why do I still reach even with the phone far away?</h3></p>
-<p>The loop is still wired. Distance only cuts the grabbing action. Awareness and the replacement list are what actually rebuild the loop. 手机放远了还是想刷？因为自动回路还在，物理隔离只切掉"掏"的动作。</p>
-<p><h3>Is two weeks really enough?</h3></p>
-<p>Enough to loosen the loop, not to erase it. If your automatic picks drop clearly after two weeks, it's working. 两周真的够吗？够让回路松动，关键是自动伸手的频率明显下降。</p>
-<p><h2>Start today</h2></p>
-<p>No need to wait until Monday. Tonight, after dinner, leave the phone in the living room. Boredom isn't the enemy. It's a signal that life is missing something. PausePaw clears the road, the rest is up to you.</p>
-<p>For the earlier screen-habit analysis, check <a href="/blog.html?lang=en#post13">Day 11</a>. <a href="/blog.html?lang=en#post15">Day 13</a> will cover whether forced breaks actually work.</p>`,
-    },
-  },
 
   {
     id: "post14",
@@ -126,6 +46,22 @@ export const posts = [
           <p>Q: Why do I still reach even with the phone far away? A: The loop is still wired. Distance only cuts the grabbing action. Awareness and the replacement list are what actually rebuild the loop.</p>
           <p>Q: Is two weeks really enough? A: Enough to loosen the loop, not to erase it. If your automatic picks drop clearly after two weeks, it's working.</p>
           <p>No need to wait until Monday. Tonight, after dinner, leave the phone in the living room. Boredom isn't the enemy — it's a signal that life is missing something. PausePaw clears the road, the rest is up to you. Head to <a href="https://pause-paw.shop">pause-paw.shop</a> to get started.</p>`,
+    },
+  },
+  {
+    id: "post23",
+    key: "bl_post23",
+    day: 24,
+    date: "2026-08-27",
+    zh: {
+      title: "要不要监控青少年的手机？",
+      desc: "监控teen手机是隐私还是保护？本文探讨平衡之道，给出实用建议。",
+      body: "<p><h2>监控 vs 信任：家庭的永恒难题</h2></p><p>孩子长大了，手机成了他们与世界连接的桥梁。作为家长，你担心什么？网络霸凌？不良内容？还是他们正在接触的人？</p><p>监控 teen 手机是一个敏感话题。一方面，保护是 parental responsibility；另一方面，过度监控可能破坏 trust。</p><p><h2>什么时候监控是合理的？</h2></p><p>以下是一些建议监控的情况：</p><ul><li>孩子未满 13 岁（COPPA 限制）</li><li>有网络霸凌的历史或担忧</li><li>孩子表现出焦虑或抑郁迹象</li><li>首次拥有智能手机</li></ul><p><h2>如何平衡隐私与安全</h2></p><p>与其偷偷监控，不如 open conversation：</p><ul><li>设定 clear expectations</li><li>使用 parental controls 透明地</li><li>定期 review 而不是 real-time spying</li><li>随着孩子成熟，逐渐放权</li></ul><p><h2>工具推荐</h2></p><p>一些好的 parental control 工具：PausePaw（专注时间管理）、Qustodio（内容过滤）、Family Link（Google 官方）。</p><p><h2>FAQ</h2></p><p><strong>监控 teen 手机违法吗？</strong> 不违法，但可能破坏信任关系。</p><p><strong>什么时候应该停止监控？</strong> 当孩子证明 responsible 时，通常在 16-17 岁。</p><p><strong>发现孩子有问题怎么办？</strong> 先对话，再考虑限制。惩罚可能适得其反。</p>"
+    },
+    en: {
+      title: "Should You Monitor Your Teen's Phone?",
+      desc: "Is monitoring your teen's phone privacy invasion or protection? This article explores the balance and practical advice.",
+      body: "<p><h2>Monitoring vs Trust: The Eternal Family Dilemma</h2></p><p>Kids grow up, and phones become their bridge to the world. As a parent, what are you worried about? Cyberbullying? Inappropriate content? Or the people they're talking to?</p><p>Monitoring teen phone is a sensitive topic. On one hand, protection is a parental responsibility; on the other, over-monitoring can break trust.</p><p><h2>When Is Monitoring Reasonable?</h2></p><p>Here are situations where monitoring makes sense:</p><ul><li>Child under 13 (COPPA restrictions)</li><li>History or concern about cyberbullying</li><li>Child shows signs of anxiety or depression</li><li>First smartphone ownership</li></ul><p><h2>Balancing Privacy and Safety</h2></p><p>Rather than secret monitoring, try open conversation:</p><ul><li>Set clear expectations</li><li>Use parental controls transparently</li><li>Review periodically, not real-time spying</li><li>Gradually give more freedom as they mature</li></ul><p><h2>Tool Recommendations</h2></p><p>Some good parental control tools: PausePaw (focus/time management), Qustodio (content filtering), Family Link (Google official).</p><p><h2>FAQ</h2></p><p><strong>Is monitoring teen phone illegal?</strong> Not illegal, but may damage trust relationships.</p><p><strong>When should I stop monitoring?</strong> When they prove responsible, usually around 16-17.</p><p><strong>What if I find something concerning?</strong> Talk first, then consider restrictions. Punishment may backfire.</p>"
     },
   },
   {
@@ -1255,24 +1191,35 @@ export const posts = [
     },
   },
   {
-    id: 21,
-    slug: "quit-social-media-30-days-brain",
-    title: { zh: "30 天不刷社交媒体，大脑会怎样", en: "What Happens to Your Brain When You Quit Social Media for 30 Days" },
+    id: "post24",
+    key: "bl_post24",
+    day: 20,
     date: "2026-08-23",
-    category: "brain-health",
-    excerpt: { zh: "30 天不刷社交媒体后，你的注意力、睡眠和情绪会如何变化？", en: "Your attention span, sleep quality, and mood all shift after 30 days without social media." },
-    content: { en: "30 days without scrolling. Week 1 is withdrawal. Week 2 the reset begins. Week 3-4 new normal. Sleep improves, mood stabilizes.", zh: "30 天不刷。第一周戒断，第二周重置开始，第三四周新常态。睡眠改善，情绪稳定。" }
+    zh: {
+      title: "30 天不刷社交媒体，大脑会怎样",
+      desc: "30 天不刷社交媒体后，你的注意力、睡眠和情绪会如何变化？",
+      body: "30 天不刷。第一周戒断，第二周重置开始，第三四周新常态。睡眠改善，情绪稳定。",
+    },
+    en: {
+      title: "What Happens to Your Brain When You Quit Social Media for 30 Days",
+      desc: "Your attention span, sleep quality, and mood all shift after 30 days without social media.",
+      body: "30 days without scrolling. Week 1 is withdrawal. Week 2 the reset begins. Week 3-4 new normal. Sleep improves, mood stabilizes.",
+    }
   },
   {
-    id: 22,
-    slug: "tiktok-kids-safe-settings",
-    title: { zh: "TikTok 儿童安全设置：家长必知", en: "TikTok for Kids: Safe Settings Every Parent Should Know" },
+    id: "post25",
+    key: "bl_post25",
+    day: 26,
     date: "2026-08-29",
-    category: "safety",
-    excerpt: { zh: "TikTok 的年龄限制是 13 岁，但 millions 的孩子仍在用。这篇讲清楚家长必须知道的安全设置，从限制模式到屏幕时间管理。", en: "TikTok's age limit is 13, yet millions of kids are on it anyway. Here are the safety settings every parent should know about — from Restricted Mode to screen time controls." },
-    content: {
-      en: `<h2>Why TikTok safety settings matter for kids</h2><p>TikTok is designed for users 13 and older, but the app's appeal cuts across age groups. A child can create an account in seconds — no identity verification, no parent consent gate. That's why understanding TikTok's built-in safety tools isn't optional for parents. It's the first line of defense.</p><h2>Restrictive Mode: the basics</h2><p>Restricted Mode limits content that may be inappropriate for younger viewers. It doesn't block everything — it works with an algorithm that filters videos flagged as sensitive. Enable it in: Settings and Privacy → Content Preferences → Restricted Mode.</p><p>Restricted Mode alone isn't enough. It's a filter, not a wall. Pair it with additional controls.</p><h2>Family Pairing: your remote control</h2><p>Family Pairing links your TikTok account to your child's. Once connected, you can:</p><ul><li>Set Direct Message restrictions (nobody, friends only, or disabled entirely)</li><li>Set screen time limits (40 min, 60 min, 90 min, or 120 min per day)</li><li>Control Restricted Mode remotely</li><li>Limit what your child can search for</li></ul><p>Go to your child's Settings and Privacy → Family Pairing to set this up.</p><h2>Screen Time Management</h2><p>Kids don't self-regulate on TikTok. The algorithm is designed to keep them scrolling. Set a daily limit through Family Pairing, and your child will see a prompt when they hit it. The prompt includes a passcode — only you know it.</p><h2>Comment and live streaming restrictions</h2><p>Comments can expose kids to harassment or manipulation. Disable comments for younger users, or restrict them to followers only. Live streaming should be disabled until your child is old enough to handle real-time interaction with strangers.</p><h2>Privacy settings: keep their life private</h2><ul><li>Set account to Private: only approved followers can see their videos</li><li>Disable "Suggest your account to others": stops TikTok from sharing their profile</li><li>Turn off Location Services: prevents your child's location from being attached to videos</li><li>Review who can duet/stitch with them: restrict to "Friends" or "Nobody"</li></ul><h2>What these settings can't do</h2><p>No settings block content that's algorithmically served based on watch history. No settings prevent a determined child from making a second account. No settings replace talking to your child about what they see online.</p><p>Settings are a safety net, not a substitute for conversation. Talk to your kid about what they watch, who they follow, and how the app makes them feel.</p><h2>FAQ</h2><ul><li><strong>What's the minimum age for TikTok?</strong> 13 years, per COPPA and TikTok's own terms.</li><li><strong>Can I see my child's messages?</strong> Not directly — but you can disable DMs through Family Pairing.</li><li><strong>Does Restricted Mode block all bad content?</strong> No. It's a filter, not a wall. Watch the content yourself when possible.</li><li><strong>What if my child is under 13?</strong> The app isn't designed for them. If they're already on it, use Family Pairing and maximize restrictions.</li></ul>`,
-      zh: `<h2>为什么 TikTok 儿童安全设置很重要</h2><p>TikTok 的年龄限制是 13 岁，但数百万孩子仍在用它。孩子可以几秒钟就注册账号——没有身份验证，没有家长同意门槛。这就是为什么了解 TikTok 内置安全工具不是可选项，而是第一道防线。</p><h2>限制模式：基础用法</h2><p>限制模式会过滤可能不适合未成年观众的内容。它不是完全屏蔽——而是通过算法过滤被标记为敏感的视频。开启路径：设置与隐私 → 内容偏好 → 限制模式。</p><p>仅靠限制模式不够。它是过滤器，不是防火墙。要配合其他设置一起使用。</p><h2>家庭配对：你的远程管控</h2><p>家庭配对把你的 TikTok 账号和孩子账号绑定。连接后你可以：</p><ul><li>设置私信限制（仅好友/禁止）</li><li>设置每天屏幕时间上限（40/60/90/120 分钟）</li><li>远程控制限制模式</li><li>限制孩子的搜索内容</li></ul><p>在孩子的设置与隐私 → 家庭配对里设置。</p><h2>屏幕时间管理</h2><p>孩子在 TikTok 上无法自我节制。算法就是设计来让他们不停刷的。通过家庭配对设置每日上限，孩子到时间会看到提示，需要密码才能继续——密码只有你知道。</p><h2>评论和直播限制</h2><p>评论可能让孩子暴露于骚扰或操控之下。对年幼用户直接关闭评论，或限制为仅关注者可评论。直播功能应等到孩子足够成熟能应对陌生人实时互动再开启。</p><h2>隐私设置：保护孩子的隐私</h2><ul><li>设为私密账号：只有审批后的粉丝才能看到视频</li><li>关闭"向他人推荐我的账号"：阻止 TikTok 分享你的孩子档案</li><li>关闭定位服务：防止视频附带位置信息</li><li>限制谁可以合拍/二创：设为"仅好友"或"所有人禁止"</li></ul><h2>这些设置做不到的事</h2><p>任何设置都无法阻止基于观看历史的算法推荐。没有设置能阻止意志坚定的孩子开第二个账号。任何设置都不能替代和孩子谈一谈——谈谈他们看到了什么、关注了谁、以及这个应用让他们感觉如何。</p><p>设置是安全网，不是对话的替代品。</p><h2>常见问题</h2><ul><li><strong>TikTok 最低年龄是多少？</strong> 13 岁，根据 COPPA 和 TikTok 自己的条款。</li><li><strong>我能看孩子的私信吗？</strong> 不能直接看——但可以通过家庭配对禁用私信。</li><li><strong>限制模式能屏蔽所有不良内容吗？</strong> 不能。它是过滤器不是墙，有条件的话自己看看内容。</li><li><strong>如果孩子不到 13 岁怎么办？</strong> 这个应用不是为他们设计的。如果已经在用，用家庭配对并把所有限制开到最大。</li></ul>`
+    zh: {
+      title: "TikTok 儿童安全设置：家长必知",
+      desc: "TikTok 的年龄限制是 13 岁，但 millions 的孩子仍在用。这篇讲清楚家长必须知道的安全设置，从限制模式到屏幕时间管理。",
+      body: "<h2>为什么 TikTok 儿童安全设置很重要</h2><p>TikTok 的年龄限制是 13 岁，但数百万孩子仍在用它。孩子可以几秒钟就注册账号——没有身份验证，没有家长同意门槛。这就是为什么了解 TikTok 内置安全工具不是可选项，而是第一道防线。</p><h2>限制模式：基础用法</h2><p>限制模式会过滤可能不适合未成年观众的内容。它不是完全屏蔽——而是通过算法过滤被标记为敏感的视频。开启路径：设置与隐私 → 内容偏好 → 限制模式。</p><p>仅靠限制模式不够。它是过滤器，不是防火墙。要配合其他设置一起使用。</p><h2>家庭配对：你的远程管控</h2><p>家庭配对把你的 TikTok 账号和孩子账号绑定。连接后你可以：</p><ul><li>设置私信限制（仅好友/禁止）</li><li>设置每天屏幕时间上限（40/60/90/120 分钟）</li><li>远程控制限制模式</li><li>限制孩子的搜索内容</li></ul><p>在孩子的设置与隐私 → 家庭配对里设置。</p><h2>屏幕时间管理</h2><p>孩子在 TikTok 上无法自我节制。算法就是设计来让他们不停刷的。通过家庭配对设置每日上限，孩子到时间会看到提示，需要密码才能继续——密码只有你知道。</p><h2>评论和直播限制</h2><p>评论可能让孩子暴露于骚扰或操控之下。对年幼用户直接关闭评论，或限制为仅关注者可评论。直播功能应等到孩子足够成熟能应对陌生人实时互动再开启。</p><h2>隐私设置：保护孩子的隐私</h2><ul><li>设为私密账号：只有审批后的粉丝才能看到视频</li><li>关闭\"向他人推荐我的账号\"：阻止 TikTok 分享你的孩子档案</li><li>关闭定位服务：防止视频附带位置信息</li><li>限制谁可以合拍/二创：设为\"仅好友\"或\"所有人禁止\"</li></ul><h2>这些设置做不到的事</h2><p>任何设置都无法阻止基于观看历史的算法推荐。没有设置能阻止意志坚定的孩子开第二个账号。任何设置都不能替代和孩子谈一谈——谈谈他们看到了什么、关注了谁、以及这个应用让他们感觉如何。</p><p>设置是安全网，不是对话的替代品。</p><h2>常见问题</h2><ul><li><strong>TikTok 最低年龄是多少？</strong> 13 岁，根据 COPPA 和 TikTok 自己的条款。</li><li><strong>我能看孩子的私信吗？</strong> 不能直接看——但可以通过家庭配对禁用私信。</li><li><strong>限制模式能屏蔽所有不良内容吗？</strong> 不能。它是过滤器不是墙，有条件的话自己看看内容。</li><li><strong>如果孩子不到 13 岁怎么办？</strong> 这个应用不是为他们设计的。如果已经在用，用家庭配对并把所有限制开到最大。</li></ul>",
+    },
+    en: {
+      title: "TikTok for Kids: Safe Settings Every Parent Should Know",
+      desc: "TikTok's age limit is 13, yet millions of kids are on it anyway. Here are the safety settings every parent should know about — from Restricted Mode to screen time controls.",
+      body: "<h2>Why TikTok safety settings matter for kids</h2><p>TikTok is designed for users 13 and older, but the app's appeal cuts across age groups. A child can create an account in seconds — no identity verification, no parent consent gate. That's why understanding TikTok's built-in safety tools isn't optional for parents. It's the first line of defense.</p><h2>Restrictive Mode: the basics</h2><p>Restricted Mode limits content that may be inappropriate for younger viewers. It doesn't block everything — it works with an algorithm that filters videos flagged as sensitive. Enable it in: Settings and Privacy → Content Preferences → Restricted Mode.</p><p>Restricted Mode alone isn't enough. It's a filter, not a wall. Pair it with additional controls.</p><h2>Family Pairing: your remote control</h2><p>Family Pairing links your TikTok account to your child's. Once connected, you can:</p><ul><li>Set Direct Message restrictions (nobody, friends only, or disabled entirely)</li><li>Set screen time limits (40 min, 60 min, 90 min, or 120 min per day)</li><li>Control Restricted Mode remotely</li><li>Limit what your child can search for</li></ul><p>Go to your child's Settings and Privacy → Family Pairing to set this up.</p><h2>Screen Time Management</h2><p>Kids don't self-regulate on TikTok. The algorithm is designed to keep them scrolling. Set a daily limit through Family Pairing, and your child will see a prompt when they hit it. The prompt includes a passcode — only you know it.</p><h2>Comment and live streaming restrictions</h2><p>Comments can expose kids to harassment or manipulation. Disable comments for younger users, or restrict them to followers only. Live streaming should be disabled until your child is old enough to handle real-time interaction with strangers.</p><h2>Privacy settings: keep their life private</h2><ul><li>Set account to Private: only approved followers can see their videos</li><li>Disable \"Suggest your account to others\": stops TikTok from sharing their profile</li><li>Turn off Location Services: prevents your child's location from being attached to videos</li><li>Review who can duet/stitch with them: restrict to \"Friends\" or \"Nobody\"</li></ul><h2>What these settings can't do</h2><p>No settings block content that's algorithmically served based on watch history. No settings prevent a determined child from making a second account. No settings replace talking to your child about what they see online.</p><p>Settings are a safety net, not a substitute for conversation. Talk to your kid about what they watch, who they follow, and how the app makes them feel.</p><h2>FAQ</h2><ul><li><strong>What's the minimum age for TikTok?</strong> 13 years, per COPPA and TikTok's own terms.</li><li><strong>Can I see my child's messages?</strong> Not directly — but you can disable DMs through Family Pairing.</li><li><strong>Does Restricted Mode block all bad content?</strong> No. It's a filter, not a wall. Watch the content yourself when possible.</li><li><strong>What if my child is under 13?</strong> The app isn't designed for them. If they're already on it, use Family Pairing and maximize restrictions.</li></ul>",
     }
   },
 ];
