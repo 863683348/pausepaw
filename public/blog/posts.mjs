@@ -1222,7 +1222,6 @@ export const posts = [
       body: "<h2>Why TikTok safety settings matter for kids</h2><p>TikTok is designed for users 13 and older, but the app's appeal cuts across age groups. A child can create an account in seconds — no identity verification, no parent consent gate. That's why understanding TikTok's built-in safety tools isn't optional for parents. It's the first line of defense.</p><h2>Restrictive Mode: the basics</h2><p>Restricted Mode limits content that may be inappropriate for younger viewers. It doesn't block everything — it works with an algorithm that filters videos flagged as sensitive. Enable it in: Settings and Privacy → Content Preferences → Restricted Mode.</p><p>Restricted Mode alone isn't enough. It's a filter, not a wall. Pair it with additional controls.</p><h2>Family Pairing: your remote control</h2><p>Family Pairing links your TikTok account to your child's. Once connected, you can:</p><ul><li>Set Direct Message restrictions (nobody, friends only, or disabled entirely)</li><li>Set screen time limits (40 min, 60 min, 90 min, or 120 min per day)</li><li>Control Restricted Mode remotely</li><li>Limit what your child can search for</li></ul><p>Go to your child's Settings and Privacy → Family Pairing to set this up.</p><h2>Screen Time Management</h2><p>Kids don't self-regulate on TikTok. The algorithm is designed to keep them scrolling. Set a daily limit through Family Pairing, and your child will see a prompt when they hit it. The prompt includes a passcode — only you know it.</p><h2>Comment and live streaming restrictions</h2><p>Comments can expose kids to harassment or manipulation. Disable comments for younger users, or restrict them to followers only. Live streaming should be disabled until your child is old enough to handle real-time interaction with strangers.</p><h2>Privacy settings: keep their life private</h2><ul><li>Set account to Private: only approved followers can see their videos</li><li>Disable \"Suggest your account to others\": stops TikTok from sharing their profile</li><li>Turn off Location Services: prevents your child's location from being attached to videos</li><li>Review who can duet/stitch with them: restrict to \"Friends\" or \"Nobody\"</li></ul><h2>What these settings can't do</h2><p>No settings block content that's algorithmically served based on watch history. No settings prevent a determined child from making a second account. No settings replace talking to your child about what they see online.</p><p>Settings are a safety net, not a substitute for conversation. Talk to your kid about what they watch, who they follow, and how the app makes them feel.</p><h2>FAQ</h2><ul><li><strong>What's the minimum age for TikTok?</strong> 13 years, per COPPA and TikTok's own terms.</li><li><strong>Can I see my child's messages?</strong> Not directly — but you can disable DMs through Family Pairing.</li><li><strong>Does Restricted Mode block all bad content?</strong> No. It's a filter, not a wall. Watch the content yourself when possible.</li><li><strong>What if my child is under 13?</strong> The app isn't designed for them. If they're already on it, use Family Pairing and maximize restrictions.</li></ul>",
     }
   },
-,
   {
     id: "post26",
     key: "bl_post26",
@@ -1238,5 +1237,126 @@ export const posts = [
       desc: "Is YouTube Kids actually safer than regular YouTube?",
       body: "YouTube Kids was designed as a filtered version of YouTube for children. But studies show inappropriate content still slips through. Active parental supervision is needed."
     }
+  },
+  {
+    id: "post30",
+    key: "bl_post30",
+    day: 28,
+    date: "2026-08-31",
+    zh: {
+      title: "工作号与生活号：不同的清理规则",
+      desc: "职业账号和个人账号需要不同的清理策略。",
+      body: "大多数人至少有两个数字身份：职业身份和个人身份。但清理数字足迹时，这两个账户往往被同等对待——尽管不应该。"
+    },
+    en: {
+      title: "Work vs Life Accounts: Different Cleaning Rules",
+      desc: "Professional and personal accounts need different cleaning strategies.",
+      body: "Most people have at least two digital identities: a professional one and a personal one. But when it comes to cleaning up your digital footprint, these two accounts often get treated the same — when they shouldn't."
+    }
+  },
+  {
+    id: "post32",
+    key: "bl_post32",
+    day: 30,
+    date: "2026-09-02",
+    slug: "phone-contract-teen",
+    zh: {
+      title: `给青少年第一部手机：一份不失败的手机合约`,
+      desc: `手机合约能把潜在的亲子冲突变成清晰、相互的协议。本文讲清为什么需要它、该包含什么，以及如何让它真正落地。`,
+      body: `<p>给青少年第一部智能手机是一个里程碑。但那种自由伴随着责任——有时是冲突。</p>
+<h2>为什么需要手机合约？</h2>
+<p>青少年不读规则。但他们尊重他们帮助创建的协议。手机合约：</p>
+<ul>
+<li>设定明确期望</li>
+<li>让青少年在过程中有发言权</li>
+<li>提供问题出现时的参考点</li>
+<li>教授谈判和妥协</li>
+</ul>
+<h2>应该包含什么</h2>
+<h3>1. 使用限制</h3>
+<ul>
+<li>屏幕时间边界</li>
+<li>安静时间（用餐时、睡前不使用手机）</li>
+<li>做作业和家务后才能玩</li>
+</ul>
+<h3>2. 内容规则</h3>
+<ul>
+<li>允许的应用程序</li>
+<li>社交媒体指南</li>
+<li>隐私设置和分享规则</li>
+</ul>
+<h3>3. 责任条款</h3>
+<ul>
+<li>保持手机充电和安全</li>
+<li>立即报告丢失或损坏</li>
+<li>为较年长的青少年贡献手机费用</li>
+</ul>
+<h3>4. 后果</h3>
+<ul>
+<li>规则被违反时会发生什么</li>
+<li>特权暂停多长时间</li>
+<li>重新赢得信任的途径</li>
+</ul>
+<h3>5. 审查计划</h3>
+<ul>
+<li>何时重新审视合约</li>
+<li>如何做出调整</li>
+<li>工作迹象（或不工作）</li>
+</ul>
+<h2>让它发挥作用</h2>
+<p>关键是参与。和您的青少年坐下来一起起草合约。让他们建议规则并协商条款。当他们拥有所有权时，他们更有可能遵守。</p>
+<p>每隔几个月审查一次合约。随着你的青少年成熟，规则也应该演变。</p>
+<p>手机合约不是关于控制。它是关于准备你的青少年负责任地使用技术——一项他们终生需要的技能。</p>
+<p>想了解更多手机习惯建议？在 <a href="https://pause-paw.shop">pause-paw.shop</a> 查看 <a href="/blog.html#day30">更多手机习惯建议</a> 或 <a href="/blog.html#day25">屏幕时间策略</a>。</p>`
+    },
+    en: {
+      title: `A Phone Contract for Your Teen: Make It Actually Work`,
+      desc: `A phone contract can turn potential parent-teen conflict into a clear, mutual agreement. Here is why you need one, what to include, and how to make it stick.`,
+      body: `<p>Giving a teenager their first smartphone is a milestone. But with that freedom comes responsibility — and sometimes, conflict.</p>
+<h2>Why a Phone Contract?</h2>
+<p>Teenagers don't read rules. But they do respect agreements they helped create. A phone contract:</p>
+<ul>
+<li>Sets clear expectations</li>
+<li>Gives teens a voice in the process</li>
+<li>Provides a reference point when issues arise</li>
+<li>Teaches negotiation and compromise</li>
+</ul>
+<h2>What to Include</h2>
+<h3>1. Usage Limits</h3>
+<ul>
+<li>Screen time boundaries</li>
+<li>Quiet hours (no phones at dinner, before bed)</li>
+<li>Chores and homework before play time</li>
+</ul>
+<h3>2. Content Rules</h3>
+<ul>
+<li>What apps are allowed</li>
+<li>Social media guidelines</li>
+<li>Privacy settings and sharing rules</li>
+</ul>
+<h3>3. Responsibility Clauses</h3>
+<ul>
+<li>Keeping the phone charged and safe</li>
+<li>Reporting losses or damage immediately</li>
+<li>Contributing to phone bill (for older teens)</li>
+</ul>
+<h3>4. Consequences</h3>
+<ul>
+<li>What happens when rules are broken</li>
+<li>How long privileges are suspended</li>
+<li>Path to earning trust back</li>
+</ul>
+<h3>5. Review Schedule</h3>
+<ul>
+<li>When to revisit the contract</li>
+<li>How to make adjustments</li>
+<li>Signs it's working (or not)</li>
+</ul>
+<h2>Making It Work</h2>
+<p>The key is involvement. Sit down with your teen and draft the contract together. Let them suggest rules and negotiate terms. When they have ownership, they're more likely to follow through.</p>
+<p>Review the contract every few months. As your teen matures, the rules should evolve too.</p>
+<p>A phone contract isn't about control. It's about preparing your teen for responsible technology use — a skill they'll need for life.</p>
+<p>Want more phone-habit tips? Visit <a href="https://pause-paw.shop">pause-paw.shop</a> for <a href="/blog.html#day30">more phone-habit tips</a> or <a href="/blog.html#day25">screen-time strategies</a>.</p>`
+    },
   },
 ];
