@@ -1420,4 +1420,60 @@ export const posts = [
 <p>None of this needs an app, but a tool that locks distractions during the block removes the main failure point: you. That is what we built PausePaw for — start a focus session and your phone stays quiet until you finish. Try it at <a href="https://pause-paw.shop">pause-paw.shop</a>, set it up on the <a href="/app.html">app page</a>, and read <a href="/blog/post7.html">how screen time rewires the dopamine loop</a> to see why those tiny interruptions cost so much.</p>`
     },
   },
+  {
+    id: "post34",
+    key: "bl_post34",
+    day: 32,
+    date: "2026-09-04",
+    zh: {
+      title: `深度工作 vs 浅层工作：两者都需要`,
+      desc: `深度工作不是越多越好，浅层工作也不是敌人。用 Cal Newport 的框架，给你一份 2026 年能直接套用的日程模板。`,
+      body: `<p>「深度工作」这个词是 Cal Newport 带火的，但我越来越觉得它被神化了。很多人以为，只要把日历填满深度工作块，生产力就会起飞。现实不是这样。我自己试过连续三周只排深度任务，结果邮件堆成山、协作全断、反而更焦虑。这篇想说清楚：深度工作和浅层工作不是敌人，你需要的是两者搭配，而不是二选一。</p>
+<h2>什么是深度工作，什么是浅层工作</h2>
+<p>深度工作（deep work）= 需要高度专注、产出难以复制的认知成果的事：写方案、写代码、做设计、准备演讲。浅层工作（shallow work）= 容易被打断、价值低但必须做的运营性事务：回邮件、排会、填表、处理后台消息。区分两者的关键不是「难不难」，而是「被打断后能不能快速接上」。</p>
+<h2>为什么只做深度工作会翻车</h2>
+<p>把一周排满深度块，听起来很爽，但三个问题会找上门：协作窒息——别人找不到你，小事变急事；行政雪崩——浅层事务不会消失，只会积压；精力误判——人的专注额度有限，强排 6 小时深度往往第 3 小时就空了。我后来改成「保护一段，而非填满一天」。</p>
+<h2>2026 年可直接套用的日程模板</h2>
+<p>下面是我自己在用的分配，你可以照抄再微调：</p>
+<ul>
+<li><strong>上午 9:00–11:00 深度块</strong>：手机放另一个房间，通知全关，只做当天最重要的一件事。</li>
+<li><strong>11:00–11:30 浅层缓冲</strong>：批量回消息、清邮件，别让它们渗透到深度时间里。</li>
+<li><strong>下午 14:00–15:30 第二深度块</strong>：留给需要连贯思考的任务。</li>
+<li><strong>其余时间 = 浅层时间</strong>：会议、沟通、杂事，集中处理。</li>
+</ul>
+<h2>深度工作 浅层工作 怎么分配比例</h2>
+<p>多数人适合「40% 深度 / 60% 浅层」的务实比例，而不是追求 80% 深度。你可以用一周记录每块时间的真实产出，再调整。相关方法见 <a href="/blog.html#day34">怎么搭无手机深度工作环境</a> 和 <a href="/blog.html#day39">为什么你专注不了（不是意志力问题）</a>。</p>
+<h2>用工具锁住深度时间</h2>
+<p>光靠自律不够。PausePaw 的专注会话能在你工作时把手机静音到结束——最大的干扰源（你自己）被挡掉了。在 <a href="/app.html">应用页</a> 设一个会话，再读读 <a href="/blog/post7.html">屏幕时间如何改写多巴胺回路</a>，你会理解那些小打断为什么这么贵。</p>
+<h2>常见问题</h2>
+<p>问：深度工作一定要 90 分钟吗？答：不一定。15 分钟真实专注也好过从未开始的完美计划。从你能坚持的长度开始。</p>
+<p>问：浅层工作能不能完全外包或删掉？答：大部分能精简，但完全删掉不现实。重点是「集中处理」而非「消灭」。</p>
+<p>问：远程办公怎么防止浅层事务入侵深度时间？答：把沟通和会议钉在固定时段，深度块期间退出所有群聊通知。</p>`,
+    },
+    en: {
+      title: `Deep Work vs. Shallow Work: Why You Need Both`,
+      desc: `Cal Newport's framework updated for 2026 — with a practical schedule template.`,
+      body: `<p>"Deep work" is a phrase Cal Newport popularized, but I think it's been over-glorified. Plenty of people assume that if they just fill their calendar with deep-work blocks, productivity will take off. It doesn't work that way. I spent three straight weeks scheduling only deep tasks and ended up with a buried inbox, broken collaboration, and more anxiety. This post is the correction: deep work and shallow work are not enemies. You need both, in the right ratio, not one instead of the other.</p>
+<h2>What deep work actually is (and what isn't)</h2>
+<p>Deep work = cognitively demanding tasks that create hard-to-replicate output: writing a proposal, coding, designing, preparing a talk. Shallow work = logistical, low-value-but-necessary tasks: replying to email, scheduling, form-filling, triaging notifications. The split isn't "hard vs easy" — it's "can you pick it back up quickly after an interruption."</p>
+<h2>Why an all-deep schedule backfires</h2>
+<p>Stacking a week with deep blocks sounds great until three problems hit: collaboration suffocates — nobody can reach you and small things turn urgent; admin avalanches — shallow tasks don't vanish, they pile; focus budgeting fails — your attention is finite, and forcing six hours of depth usually empties out by hour three. I switched to "protect one block, don't fill the day."</p>
+<h2>A schedule template you can use in 2026</h2>
+<p>Here's the split I actually run. Steal it, then tweak:</p>
+<ul>
+<li><strong>9:00–11:00 deep block</strong>: phone in another room, notifications off, one important task only.</li>
+<li><strong>11:00–11:30 shallow buffer</strong>: batch replies and clear email so they don't leak into deep time.</li>
+<li><strong>14:00–15:30 second deep block</strong>: for tasks that need sustained thinking.</li>
+<li><strong>everything else = shallow time</strong>: meetings, comms, chores, handled in a batch.</li>
+</ul>
+<h2>Deep work vs shallow work: the ratio that works</h2>
+<p>Most people do better at a pragmatic "40% deep / 60% shallow" than chasing 80% depth. Track one week of real output per block, then adjust. See <a href="/blog.html#day34">how to build a phone-free deep work setup</a> and <a href="/blog.html#day39">why you can't focus (and it's not willpower)</a> for the supporting methods.</p>
+<h2>Lock the deep time with a tool</h2>
+<p>Discipline alone won't hold. A PausePaw focus session keeps your phone silent until you finish — removing the biggest disruptor, which is you. Set one up on the <a href="/app.html">app page</a>, and read <a href="/blog/post7.html">how screen time rewires the dopamine loop</a> to see why those tiny interruptions cost so much.</p>
+<h2>FAQ</h2>
+<p>Q: Does deep work have to be 90 minutes? A: No. Fifteen minutes of real focus beats a perfect plan you never start. Begin at a length you'll actually keep.</p>
+<p>Q: Can shallow work be fully deleted or outsourced? A: Much of it can be trimmed, but not eliminated. The goal is batching, not eradication.</p>
+<p>Q: How do I stop shallow tasks invading deep time while remote? A: Pin comms and meetings to fixed windows, and mute all group-chat notifications during deep blocks.</p>`,
+    },
+  },
 ];
