@@ -1539,6 +1539,7 @@ export const posts = [
 <p>Q: What if something urgent comes up while notifications are off? A: Keep one agreed channel (a call, say) and tell collaborators your deep hours in advance.</p>
 <p>Q: Can PausePaw manage laptop notifications too? A: It mainly handles the phone side; laptop notifications need the system focus mode. Run both and the environment stays clean. Head to <a href="/">pause-paw.shop</a> for the full picture.</p>`,
     },
+  },
 
   {
     id: "post37",
@@ -1613,6 +1614,7 @@ export const posts = [
 <h2>FAQ</h2>
 <p>Q: Will wearing headphones affect others?<br>A: Use open-back headphones or set volume low in shared workspaces. Working from home gives you more flexibility.</p>
 <p>Q: Can white noise damage hearing?<br>A: Not with normal use. Keep volume below 60 decibels and take 10-minute breaks every hour to protect your hearing.</p>
-<p>Q: What sounds suit what tasks?<br>A: Creative writing suits richer soundscapes (like Lo-fi), while data analysis benefits from simple white noise or silence.</p>`,
+<p>Q: What sounds suit what tasks?<br>A: Creative writing suits richer soundscapes (like Lo-fi),     while data analysis benefits from simple white noise or silence.</p>`,
     },
   },
+];
