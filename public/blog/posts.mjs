@@ -1667,4 +1667,58 @@ export const posts = [
 <p>PausePaw handles the first layer for you: automatic blocking during sensitive hours and forced breaks once you hit a time limit. The other two layers are yours. Start at <a href="https://pause-paw.shop">pause-paw.shop</a>.</p>`,
     },
   },
+  {
+    id: "post42",
+    key: "bl_post42",
+    day: 40,
+    date: "2026-09-12",
+    zh: {
+      title: `90 分钟超昼夜节律与手机`,
+      desc: `大脑不是为全天候运转设计的。这篇讲 90 分钟超昼夜节律（ultradian rhythm productivity）怎么运作，以及手机为什么恰好毁掉每一个周期。`,
+      body: `<p>睡眠以 90 分钟为一个循环，你清醒时的白天也一样。生理学家 Nathaniel Kleitman 发现，人的警觉度在一天里以 90 分钟左右的波幅上下摆动，后来关于 ultradian rhythm productivity 的研究在普通办公场景里也验证了这个规律。每轮大约有 60 到 80 分钟的注意力上行段，之后是 10 到 20 分钟的低谷。手机的问题不在于它在峰值时打扰你，而在于它把低谷填满了。</p>
+<h2>90 分钟是大脑的自然节拍</h2>
+<p>当你开始一件需要动脑的任务，超昼夜节律的专注窗口就打开了。注意力爬升大约一小时，维持一会儿，然后下滑。身体比你先知道：打哈欠、坐不住、眼睛发涩、想站起来。这些信号不是失败，它是低谷在报到，存在的意义就是让你在下一轮爬升前先歇一下。</p>
+<p>多数人从没感觉到低谷到来，因为那时候手机已经在手里了。</p>
+<h2>手机如何打断每一个周期</h2>
+<p>通知不会挑时间，它落在波形的哪个位置就是哪个位置。落在爬升段中段，你丢掉的是连贯性，还要花好几分钟把刚才的上下文重新加载一遍。落在低谷段，代价更隐蔽：低谷被高刺激输入替换掉了，恢复窗口直接消失。</p>
+<p>这种损失是渐进的，所以不容易被发现。连续几天用信息流填低谷，你会开始说自己「忙了一整天」，同时又觉得什么都没推进。这不是懒，是你把身体安排的每一次恢复窗口都跳过了。</p>
+<h2>把周期用回来的三步</h2>
+<ul>
+<li><strong>先记录一个上午</strong>：什么都不改，只记下注意力最好和最差的时段。开始找规律之后，多数人会在 90 分钟附近看到它。</li>
+<li><strong>守住爬升段</strong>：把 60 到 80 分钟划成不可打断区，手机放到视线之外。靠关掉通知，别靠自控力。</li>
+<li><strong>在低谷真的休息</strong>：花 5 到 15 分钟离开屏幕，走动或看看远处。任何带信息流的应用都不算休息，哪怕它感觉像。</li>
+</ul>
+<h2>为什么「少刷一会儿」没用</h2>
+<p>问题出在时机，不在总时长。低谷里刷十分钟手机，看起来成本很低，实际花掉的是整个恢复窗口，下一轮周期会从更低的起点开始。这解释了一个很多人报告过的现象：刷得比以前少了，一天下来的产出反而更差。总屏幕时间降了，对节律的干扰升了。</p>
+<h2>常见问题</h2>
+<p>问：每个人的周期都是 90 分钟吗？<br>答：不是。区间大致在 70 到 120 分钟，个体差异很大，记录自己的节律比套用数字有用。</p>
+<p>问：工作日排不出完整周期怎么办？<br>答：至少保住一个完整的爬升段，通常是上午的头 90 分钟。一个完整周期比三个被打断的周期值钱。</p>
+<p>问：低谷来了很想刷手机怎么办？<br>答：把低谷当成一件任务来做。设定 10 分钟，明确挑一件不动脑的事。手上有了安排，伸手的冲动会弱很多。</p>
+<p>PausePaw 能帮你守住爬升段：敏感时段自动拦截，刷够时长强制休息。想先看清自己的屏幕习惯，可以读 <a href="/blog/post33.html">Day 31</a> 和 <a href="/blog/post34.html">Day 32</a> 两篇，其余内容从 <a href="/blog.html">博客首页</a> 慢慢翻。准备好开始，就来 pause-paw.shop。</p>`,
+    },
+    en: {
+      title: `The 90-Minute Ultradian Rhythm and Your Phone`,
+      desc: `Your brain was not built to run all day. Here is how the 90-minute ultradian rhythm works, and why your phone breaks every single cycle of it.`,
+      body: `<p>Sleep runs in 90-minute cycles, and so does your waking day. The physiologist Nathaniel Kleitman found that alertness rises and falls in roughly 90-minute waves around the clock, and later work on ultradian rhythm productivity found the same pattern in ordinary desk work. Each wave gives you 60 to 80 minutes of rising attention, then a 10 to 20 minute trough. The phone problem is not that it interrupts the peak. It is that it fills the trough.</p>
+<h2>Ninety minutes is a natural beat</h2>
+<p>An ultradian rhythm focus window opens the moment you start a demanding task. Attention climbs for about an hour, holds, then slides. Your body signals the slide before you notice it: yawning, restlessness, dry eyes, the urge to stand up. Those signals are not a failure. They are the trough announcing itself, and they exist so you will rest before the next climb.</p>
+<p>Most people never feel the trough arrive, because a phone is already in their hand by then. Think of the wave less as a productivity trick and more as a load limit. It does not care whether your calendar has back-to-back meetings in it.</p>
+<h2>How your phone breaks every cycle</h2>
+<p>A notification does not wait for a convenient moment. It lands wherever you happen to be in the wave. If it lands mid-climb, you lose continuity and spend several minutes rebuilding the mental model you were holding. If it lands in the trough, something worse happens: the trough is replaced with high-stimulation input, and the recovery window disappears.</p>
+<p>The loss is gradual, which is why it hides so well. Fill your troughs with a feed for a few days and you start describing yourself as busy while noticing that nothing moved. You were not lazy. You skipped every recovery window your body had scheduled. Recovery is not a reward you earn after finishing. It is part of the cycle, and the next climb depends on it. Skip it often enough and the waves flatten: peaks get lower and the whole day starts to feel like one long trough.</p>
+<h2>Three steps to use the cycle again</h2>
+<ul>
+<li><strong>Log one morning</strong>: change nothing, just note when attention is best and worst. Most people spot a pattern near the 90-minute mark once they start looking.</li>
+<li><strong>Protect the climb</strong>: mark 60 to 80 minutes as uninterruptible, put the phone out of sight, and silence notifications rather than trusting self-control.</li>
+<li><strong>Actually rest in the trough</strong>: take 5 to 15 minutes away from screens to walk or look at something far away. Any app with a feed is not a rest, even when it feels like one.</li>
+</ul>
+<h2>Why scrolling a little less does not help</h2>
+<p>The issue is timing, not total minutes. Ten minutes of scrolling in a trough looks cheap. It costs the entire recovery window, so the next cycle starts from a lower baseline. That explains a pattern plenty of people report: they scroll less than they used to, yet finish the day with less output than before. Total screen time went down. Interference with the rhythm went up. There is a second effect too. A feed is built to keep you past the trough, so ten minutes rarely stays ten. The trough ends, the next climb starts, and you are still scrolling while the wave is already moving. By the time you put the phone down, you are starting that climb late and from a worse position.</p>
+<h2>FAQ</h2>
+<p>Q: Is everyone on a 90-minute cycle?<br>A: No. The range runs closer to 70 to 120 minutes, and individual differences are large. Logging your own rhythm beats copying a number.</p>
+<p>Q: What if my workday cannot fit a full cycle?<br>A: Protect at least one complete climb, usually the first 90 minutes of the morning. One full cycle is worth more than three interrupted ones.</p>
+<p>Q: What do I do when the trough hits and I want to scroll?<br>A: Treat the trough as a task. Set 10 minutes and pick one thing that needs no thinking. When your hands have a plan, the urge to reach gets much weaker.</p>
+<p>PausePaw helps you hold the climb: automatic blocking during sensitive hours, and a forced break once you hit your time limit. To see your own screen habits first, read the <a href="/blog/post33.html">Day 31</a> and <a href="/blog/post34.html">Day 32</a> posts, and browse the rest from the <a href="/blog.html">blog index</a>. When you are ready to start, head to pause-paw.shop.</p>`,
+    },
+  },
 ];
