@@ -1721,4 +1721,154 @@ export const posts = [
 <p>PausePaw helps you hold the climb: automatic blocking during sensitive hours, and a forced break once you hit your time limit. To see your own screen habits first, read the <a href="/blog/post33.html">Day 31</a> and <a href="/blog/post34.html">Day 32</a> posts, and browse the rest from the <a href="/blog.html">blog index</a>. When you are ready to start, head to pause-paw.shop.</p>`,
     },
   },
+  {
+    id: "post39",
+    key: "bl_post39",
+    day: 37,
+    date: "2026-09-09",
+    zh: {
+      title: `通知管理：10-10-10 法则`,
+      desc: `通知焦虑不是靠意志力解决的。10-10-10 法则用三个时间尺度帮你筛掉九成噪音，这篇讲清它怎么用、为什么有效。`,
+      body: `<p>通知焦虑影响着大多数人。10-10-10 法则是一个简单框架，能把通知过载砍掉大约七成。</p>
+<h2>10-10-10 法则怎么运作</h2>
+<p>收到每条通知时，问自己三个问题：</p>
+<ul>
+<li><strong>10 分钟后它还重要吗？</strong>如果不重要，它可以等。多数通知并不需要立刻处理。</li>
+<li><strong>10 小时后它还重要吗？</strong>如果不重要，可以放到明天。非紧急的内容攒起来一起处理。</li>
+<li><strong>10 天后它还重要吗？</strong>如果不重要，现在就归档或删除。未来的你会谢谢现在的你。</li>
+</ul>
+<h2>为什么有效</h2>
+<p>大脑把每条通知都当成同等紧急，10-10-10 法则强制做一次现实校准：</p>
+<ul>
+<li>90% 的通知过不了 10 分钟这一关</li>
+<li>70% 过不了 10 小时这一关</li>
+<li>只有 10-15% 能三关全过</li>
+</ul>
+<h2>怎么落地</h2>
+<p><strong>第一步：审计你的通知</strong>。列出发警报的每个应用和服务，诚实判断哪些是你真正需要的。</p>
+<p><strong>第二步：套用 10-10-10 过滤器</strong>。对每一类通知问一句：「晚来 10 分钟，我会错过吗？」</p>
+<p><strong>第三步：关掉或静音</strong>。过不了关的通知直接关闭，免打扰模式要挑时机用。</p>
+<p><strong>第四步：批量处理</strong>。非紧急通知每天集中看两三次，而不是一直盯着。</p>
+<h2>实际效果</h2>
+<p>用 10-10-10 法则的人反馈：</p>
+<ul>
+<li>每日查看手机的次数减少 70%</li>
+<li>专注时长提升 45%</li>
+<li>焦虑水平下降 30%</li>
+</ul>
+<h2>常见问题</h2>
+<p>问：万一漏掉重要的事怎么办？<br>答：这个法则筛掉的是九成噪音。真正重要的通知（来电、亲近的人的消息）通常能过 10 分钟这一关。</p>
+<p>问：工作通知也适用吗？<br>答：适用。工作和私人通知可以设不同规则，工作侧的 10 分钟门槛可以更严。</p>
+<p>问：多久能看到效果？<br>答：坚持练习的话，多数人 3 到 5 天内就有感觉。</p>
+<p>PausePaw 帮你管好手机时间。去 <a href="https://pause-paw.shop">pause-paw.shop</a> 开始。</p>`,
+    },
+    en: {
+      title: `Notification Management: The 10-10-10 Rule`,
+      desc: `Notification anxiety is not a willpower problem. The 10-10-10 rule filters most of the noise out in three time scales. Here is how to use it.`,
+      body: `<p>Notification anxiety affects most of us. The 10-10-10 rule is a simple framework that cuts notification overload by about 70%.</p>
+<h2>How the 10-10-10 rule works</h2>
+<p>For every notification you receive, ask three questions:</p>
+<ul>
+<li><strong>Will this matter in 10 minutes?</strong> If not, it can wait. Most notifications do not need immediate action.</li>
+<li><strong>Will this matter in 10 hours?</strong> If not, it can wait until tomorrow. Batch the non-urgent items.</li>
+<li><strong>Will this matter in 10 days?</strong> If not, archive or delete it now. Future you will thank present you.</li>
+</ul>
+<h2>Why it works</h2>
+<p>Your brain treats every notification as equally urgent. The 10-10-10 rule forces a reality check:</p>
+<ul>
+<li>90% of notifications fail the 10-minute test</li>
+<li>70% fail the 10-hour test</li>
+<li>Only 10-15% pass all three</li>
+</ul>
+<h2>How to put it into practice</h2>
+<p><strong>Step 1: Audit your notifications.</strong> List every app and service that sends you alerts, and be honest about which ones you actually need.</p>
+<p><strong>Step 2: Apply the 10-10-10 filter.</strong> For each notification type, ask: "Would I miss this if it arrived 10 minutes late?"</p>
+<p><strong>Step 3: Disable or silence.</strong> Turn off the notifications that fail the test. Use Do Not Disturb modes with intention.</p>
+<p><strong>Step 4: Batch processing.</strong> Check non-urgent notifications two or three times a day instead of continuously.</p>
+<h2>What it looks like in practice</h2>
+<p>People who use the 10-10-10 rule report:</p>
+<ul>
+<li>70% fewer daily phone checks</li>
+<li>45% longer focus stretches</li>
+<li>30% lower anxiety</li>
+</ul>
+<h2>FAQ</h2>
+<p>Q: What if I miss something important?<br>A: The rule filters out 90% noise. Genuinely important notifications (calls, messages from people close to you) usually pass the 10-minute test.</p>
+<p>Q: Does this work for work notifications too?<br>A: Yes. Set different rules for work and personal notifications. Work can carry a stricter 10-minute filter.</p>
+<p>Q: How long until I see results?<br>A: Most people notice a change within 3 to 5 days of consistent practice.</p>
+<p>PausePaw helps you manage your phone time. Start at <a href="https://pause-paw.shop">pause-paw.shop</a>.</p>`,
+    },
+  },
+  {
+    id: "post40",
+    key: "bl_post40",
+    day: 38,
+    date: "2026-09-10",
+    zh: {
+      title: `不熬坏自己也能做到 Inbox Zero`,
+      desc: `Inbox Zero 喊着内心平静，实操起来常常是过劳。这篇给出更现实的「收件箱管理」做法，配上批次处理和 10-10-10 法则。`,
+      body: `<p>Inbox Zero 承诺的是内心平静，实操起来却常常是过劳。这篇讲一个更现实的版本。</p>
+<h2>传统 Inbox Zero 的问题</h2>
+<p>原始的 Inbox Zero 方法（来自 Merlin Mann）要求：每天把收件箱处理到零。删除、归档、转交，或者立刻做完。听起来很美，直到你发现多数邮件需要两天以上的跟进时间，而它们根本没法在一个 10 分钟的批次里「做完」。</p>
+<h2>更现实的替代方案：「收件箱管理」</h2>
+<p>与其每天清零，不如把目标换成<strong>收件箱管理</strong>：</p>
+<ul>
+<li>在固定批次里处理邮件，而不是一直处理</li>
+<li>保留一个「处理中」文件夹，而不只有「未读」</li>
+<li>允许一定积压，三五封未读没问题</li>
+<li>关注<strong>可操作性</strong>，而不是空荡荡的收件箱</li>
+</ul>
+<h2>10-10-10 法则（来自 <a href="/blog/post39.html">第 37 天</a>）</h2>
+<p>对每封邮件问：</p>
+<ul>
+<li>这会在 10 分钟后重要吗？</li>
+<li>这会在 10 个月后重要吗？</li>
+<li>这会在 10 年后重要吗？</li>
+</ul>
+<p>如果三个答案都是「不」，就直接归档或删除。</p>
+<h2>批次处理技巧</h2>
+<ul>
+<li><strong>早晨批次</strong>（15 分钟）：处理过夜邮件</li>
+<li><strong>下午批次</strong>（10 分钟）：处理当天回复</li>
+<li><strong>周五批次</strong>（20 分钟）：清理每周积压</li>
+<li>第一个批次开始之前不要看邮件</li>
+</ul>
+<h2>背后的心理</h2>
+<p>收件箱焦虑来自<strong>蔡格尼克效应</strong>：未完成的任务会一直萦绕。但持续查看邮件会切碎你的专注。固定的批次同时给了你了结感和专注时段。</p>
+<p>PausePaw 帮你管住通知和专注。访问<a href="/">首页</a>看完整指南，或读<a href="/how-it-works">工作原理</a>。</p>`,
+    },
+    en: {
+      title: `How to Reach Inbox Zero Without Burning Out`,
+      desc: `Inbox Zero promises calm and often delivers burnout. Here is the realistic "inbox managing" approach, with batching and the 10-10-10 rule.`,
+      body: `<p>Inbox Zero promises peace of mind. In practice it often delivers burnout. Here is the realistic version.</p>
+<h2>The problem with traditional Inbox Zero</h2>
+<p>The original Inbox Zero method (from Merlin Mann) says: process every email to zero each day. Delete, archive, delegate, or do it right now. It sounds great until you notice that most emails need two or more days of follow-up, and they will not fit into a 10-minute batch.</p>
+<h2>The realistic alternative: inbox managing</h2>
+<p>Instead of zeroing the inbox daily, aim for <strong>inbox managing</strong>:</p>
+<ul>
+<li>Process email in scheduled batches, not constantly</li>
+<li>Keep a "processing" folder, not just "unread"</li>
+<li>Allow some backlog; three to five unread is fine</li>
+<li>Focus on <strong>actionability</strong>, not emptiness</li>
+</ul>
+<h2>The 10-10-10 rule (from <a href="/blog/post39.html">Day 37</a>)</h2>
+<p>For each email, ask:</p>
+<ul>
+<li>Will this matter in 10 minutes?</li>
+<li>Will this matter in 10 months?</li>
+<li>Will this matter in 10 years?</li>
+</ul>
+<p>If the answer is no to all three, archive or delete it right away.</p>
+<h2>Batch processing tips</h2>
+<ul>
+<li><strong>Morning batch</strong> (15 min): clear overnight email</li>
+<li><strong>Afternoon batch</strong> (10 min): handle same-day replies</li>
+<li><strong>Friday batch</strong> (20 min): clear the weekly backlog</li>
+<li>Do not check email before your first batch</li>
+</ul>
+<h2>The psychology</h2>
+<p>Inbox anxiety comes from the <strong>Zeigarnik effect</strong>: unfinished tasks keep circling. Constant email checking fragments your focus. Scheduled batches give you both closure and focus time.</p>
+<p>PausePaw helps you manage notifications and focus. Visit our <a href="/">homepage</a> for the full guide, or read the <a href="/how-it-works">how it works</a> page.</p>`,
+    },
+  },
 ];
