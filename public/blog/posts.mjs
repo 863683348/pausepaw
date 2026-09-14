@@ -1,6 +1,22 @@
 // 自动生成的数据源（由 extract-pausepaw.mjs 从现有博客反抽）。
 // 新增文章：在数组顶部 push 一条（按 date 倒序），然后跑 build.mjs。
 export const posts = [
+  {
+    id: "post44",
+    key: "bl_post44",
+    day: 42,
+    date: "2026-09-14",
+    en: {
+      title: "YouTube Shorts Addiction: Why It Is Different from TV",
+      desc: "Shorts removed the pauses that TV left for you. Here is why the loop holds so well, and four changes that actually helped.",
+      body: "<p>TV was built for passive consumption. You sit down, you watch a show, you get up for snacks. YouTube Shorts do not work like that. Each clip is under a minute and the next one is already queued before you have finished reacting to the last.</p>\n<h2>Why the loop is different</h2>\n<p>Television has natural stopping points. Ad breaks, episode endings, scene changes. Those pauses are where you decide whether to keep watching. Shorts removed them. There is no gap wide enough to make a decision in, so the decision never gets made.</p>\n<p>The reward schedule does the rest. Every swipe is a small hit of novelty, and the swipe is the only action required. Your thumb learns the pattern faster than your judgement can interrupt it.</p>\n<h2>Four changes that actually helped</h2>\n<ul>\n<li><strong>Set a hard timer before you open the app.</strong> Ten minutes, and the timer runs whether you are watching or not.</li>\n<li><strong>Turn autoplay off.</strong> It sounds trivial. It is not, because it turns every next video into a deliberate choice.</li>\n<li><strong>Move the app off your home screen.</strong> You do not have to delete it. Distance is usually enough.</li>\n<li><strong>Give the bored moment somewhere else to go.</strong> A short-form habit fills a gap that something else has to fill.</li>\n</ul>\n<p>The goal is not to quit Shorts. It is to decide when you open them, instead of finding out that you already did.</p>",
+    },
+    zh: {
+      title: "YouTube Shorts 上瘾：为什么它和电视不一样",
+      desc: "电视留下的那些停顿，被 Shorts 拿掉了。这篇讲清循环为什么这么牢，以及四个真正有用的改变。",
+      body: "<p>电视是为\"被动消费\"设计的。你坐下、看节目、中途起身拿点零食。YouTube Shorts 不是这套逻辑：每条不到一分钟，上一条还没消化，下一条已经排好了。</p>\n<h2>循环为什么不一样</h2>\n<p>电视有天然的停顿点：广告、剧集结束、场景切换。这些停顿就是你决定要不要继续看的地方。Shorts 把这些停顿拿掉了。没有足够宽的缝隙让你做决定，决定就一直没做。</p>\n<p>剩下的交给奖励节奏。每一次滑动都是一小份新鲜感，而滑动是唯一需要的动作。你的拇指学会这个节奏，比你的判断力打断它要快得多。</p>\n<h2>四个真起作用的变化</h2>\n<ul>\n<li><strong>打开之前先设一个硬定时器。</strong>十分钟，而且不管你看没看，计时都在走。</li>\n<li><strong>关掉自动播放。</strong>听起来是小事，其实不是——它把\"下一条\"变成了一次需要主动做的选择。</li>\n<li><strong>把 App 从主屏挪走。</strong>不必删除，拉开一点距离通常就够了。</li>\n<li><strong>给\"无聊那一刻\"找别的去处。</strong>短内容习惯填的那个空档，得有别的东西接手。</li>\n</ul>\n<p>目标不是戒掉 Shorts，而是由你来决定什么时候打开，而不是发现自己早就打开了。</p>",
+    },
+  },
 
   {
     id: "post14",
