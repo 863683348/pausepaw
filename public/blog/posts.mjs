@@ -1935,4 +1935,42 @@ export const posts = [
 <p>Start with the data. Record a week using the method on the <a href="/blog.html">blog</a>, then look at the focus tools on the <a href="/">home page</a>.</p>`,
     },
   },
+  {
+    id: 'post43',
+    key: 'bl_post43',
+    day: 41,
+    date: '2026-09-13',
+    zh: {
+      title: `TikTok 屏幕时间：这周砍掉一半`,
+      desc: `目标不是戒掉，是把消耗减半。这篇给出一个七天可执行的做法，以及为什么大部分时间限制设置都失效。`,
+      body: `<p><h2>为什么时间限制不管用</h2></p>
+<p>多数人第一步是去设置里加一个时间限制。两周后限制还在，时间没变。原因很直接：提示可以被跳过，而被跳过的提示不会改变行为，只会让你对自己的执行力下错结论。</p>
+<p>真正能减半的做法不是设一个上限，而是改掉自动播放和入口位置这两件事。</p>
+<h2>先拿到真实数字</h2>
+<p>打开系统的屏幕使用报告，看最近七天的日均值，不要看印象。多数人会发现自己对两个应用的排序猜错了。把这两个数字写在便签上，一周后要对比。</p>
+<h2>七天怎么做</h2>
+<ul><li>第一天：关闭 TikTok 的通知，全部关闭，包括私信。</li><li>第二天：把图标从首屏移到第二屏的文件夹里。增加一步打开成本。</li><li>第三天：设定一个不常看的时间段，只在那一个时间段允许自己刷。</li><li>第四到六天：把原来刷视频的时段填上另一件具体的事，散步、洗碗、拉伸都行，关键是具体。</li><li>第七天：回到屏幕使用报告，看两个数字的变化，然后决定下一周只保留哪一条规则。</li></ul>
+<h2>为什么只保留一条规则</h2>
+<p>七条规则同时上，通常撑不过三天。留下对你影响最大的那一条，坚持一个月，效果远好过七条规则轮流崩掉。对多数人来说，那一条是关掉自动播放，或者移动图标位置。</p>
+<h2>常见问题</h2>
+<ul><li><strong>完全删掉一个应用是不是更好？</strong> 不一定。如果两个应用都吃时间，删掉一个往往只是把时间转移到另一个。</li><li><strong>时间限制真的没用吗？</strong> 需要密码才能跳过的那种有用。随手能跳过的那种，作用接近于零。</li><li><strong>失败一次要不要重来？</strong> 不用。看周均值，不看单日。</li></ul>
+<p>先从数据开始。在<a href="/blog.html">博客</a>里找到记录方法，然后看<a href="/">首页</a>的专注工具。</p>`,
+    },
+    en: {
+      title: `undefined`,
+      desc: `undefined`,
+      body: `<p><h2>Why time limits do not work</h2></p>
+<p>The first move most people make is adding a screen time limit in settings. Two weeks later the limit is still there and the number has not moved. The reason is straightforward: the reminder is skippable, and a skippable reminder does not change behaviour. It only gives you the wrong conclusion about your own discipline.</p>
+<p>Cutting time in half comes from changing autoplay and where the app sits, not from setting a ceiling.</p>
+<h2>Get the real number first</h2>
+<p>Open your screen time report and read the seven-day daily average. Not your impression of it. Most people find they had the two apps in the wrong order. Write both numbers on a sticky note so you can compare them in a week.</p>
+<h2>What to do over seven days</h2>
+<ul><li>Day one: turn off TikTok notifications. All of them, including messages.</li><li>Day two: move the icon off the first screen into a folder on the second. Add one step of friction.</li><li>Day three: pick one window of the day when scrolling is allowed, and keep to that window.</li><li>Days four to six: fill the old scrolling slot with something specific. A walk, washing up, stretching. Specific matters more than productive.</li><li>Day seven: go back to the screen time report, compare the two numbers, and decide which single rule to keep.</li></ul>
+<h2>Why keep only one rule</h2>
+<p>Seven rules at once rarely survive three days. Keeping the single rule that moved the number most, and holding it for a month, beats seven rules that collapse in rotation. For most people that rule is either disabling autoplay or moving the icon.</p>
+<h2>FAQ</h2>
+<ul><li><strong>Is deleting an app better?</strong> Not always. If both apps take time, removing one usually just moves the time to the other.</li><li><strong>Are time limits useless?</strong> The ones that require a password to override work. The ones you can dismiss in one tap do almost nothing.</li><li><strong>Should I restart after a bad day?</strong> No. Read the weekly average, not a single day.</li></ul>
+<p>Start with the data. Find the tracking method on the <a href="/blog.html">blog</a>, then look at the focus tools on the <a href="/">home page</a>.</p>`,
+    },
+  },
 ];
