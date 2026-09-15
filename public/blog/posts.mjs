@@ -1887,4 +1887,52 @@ export const posts = [
 <p>PausePaw helps you manage notifications and focus. Visit our <a href="/">homepage</a> for the full guide, or read the <a href="/how-it-works">how it works</a> page.</p>`,
     },
   },
+  {
+    id: 'post45',
+    key: 'bl_post45',
+    day: 43,
+    date: '2026-09-15',
+    zh: {
+      title: `Instagram Reels vs. TikTok：谁更吃时间`,
+      desc: `同样刷 20 分钟，Reels 和 TikTok 的真实消耗差多少？这篇对比两边的计时机制、自动播放行为和退出难度。`,
+      body: `<p><h2>为什么同样的 20 分钟不一样</h2></p>
+<p>很多人以为刷短视频的时间成本只取决于时长。实际上决定消耗的是三件事：有没有天然的中断点、自动播放多快接上下一条、以及退出要几步。Reels 和 TikTok 在这三点上差别不小。</p>
+<p>这篇不谈哪个内容更好，只谈时间是怎么被吃掉的。</p>
+<h2>中断点</h2>
+<p>TikTok 的主信息流没有明显断点，一条接一条，滑不到底。Reels 的入口通常嵌在 Instagram 里，你从朋友动态或消息进入，理论上有更多返回的理由。</p>
+<p>实际体验里，Reels 的返回理由经常不成立——因为返回之后你还是留在 Instagram 里，时间继续流走。这一层差别比看上去小。</p>
+<h2>自动播放行为</h2>
+<ul><li>两边都是静音自动播放下一条，用户不需要做任何决定</li><li>两边都会在你犹豫的那一秒继续播，犹豫被算作继续观看</li><li>TikTok 的推荐切换更平滑，连续刷的断裂感更弱</li></ul>
+<p>「不需要做决定」是核心机制。每一个需要点击的环节都会让人停下来想一想，而自动播放把这一步省掉。</p>
+<h2>退出难度</h2>
+<p>退出成本低的应用，实际使用时长更短。TikTok 需要专门的关闭动作；Reels 常常关掉之后还在 Instagram 里，然后你又点开了别的东西。</p>
+<p>从这个角度看，Reels 的问题不是更难退出，而是退出之后没有真正离开。</p>
+<h2>一个可验证的对比方法</h2>
+<p>打开手机的屏幕使用时间，分别看两个应用的日均时长，连续看七天。不要凭感觉，凭数据。多数人会发现差距和印象不一致。</p>
+<h2>常见问题</h2>
+<ul><li><strong>看屏幕使用时间就够了吗？</strong> 它统计的是前台时长，后台播放不计入。如果你常听短视频的声音，实际更多。</li><li><strong>设了时限为什么没用？</strong> 因为时限提醒是可跳过的。把提醒改成「需要输入密码才能继续」才有约束力。</li><li><strong>卸载一个就够了吗？</strong> 不一定。如果两个都占时间，只卸载一个通常会把时间转移到另一个。</li></ul>
+<p>想先从数据开始，用<a href="/blog.html">博客</a>里的方法记录一周，再到<a href="/">首页</a>看看对应的专注工具。</p>`,
+    },
+    en: {
+      title: `Instagram Reels vs. TikTok: Which One Eats More Time?`,
+      desc: `Twenty minutes in Reels and twenty minutes in TikTok do not cost the same. Here is how the two apps compare on timers, autoplay and how hard they are to leave.`,
+      body: `<p><h2>Why twenty minutes is not twenty minutes</h2></p>
+<p>Most people assume the cost of short-form video is just the duration. What actually decides the cost is three things: whether there are natural stopping points, how fast autoplay chains the next clip, and how many steps it takes to leave.</p>
+<p>This piece is not about which app has better content. It is about how the time gets spent.</p>
+<h2>Stopping points</h2>
+<p>TikTok's main feed has no visible break. One clip follows another and there is no bottom to reach. Reels usually lives inside Instagram, where you arrived from a friend's story or a message, so in theory you have more reasons to go back.</p>
+<p>In practice those reasons often do not hold, because going back leaves you inside Instagram and the time keeps running. The gap is smaller than it looks.</p>
+<h2>Autoplay behaviour</h2>
+<ul><li>Both play the next clip muted and automatically, so the user never makes a decision</li><li>Both count hesitation as continued watching, because the clip keeps playing while you decide</li><li>TikTok's recommendation transitions are smoother, so the break between clips is less noticeable</li></ul>
+<p>Removing the decision is the core mechanism. Any step that requires a tap gives you a moment to reconsider. Autoplay deletes that moment.</p>
+<h2>Exit cost</h2>
+<p>Apps that are cheap to leave get used for less time. TikTok requires a deliberate close. Reels often just returns you to Instagram, where you open something else.</p>
+<p>Seen this way, the problem with Reels is not that it is harder to leave. It is that leaving does not take you anywhere.</p>
+<h2>A comparison you can actually run</h2>
+<p>Open your phone's screen time report and compare the daily averages for both apps across seven days. Use the numbers, not your impression. Most people find the two are not in the order they expected.</p>
+<h2>FAQ</h2>
+<ul><li><strong>Is screen time enough?</strong> It measures foreground time and misses background audio. If you often leave short videos playing for sound, the real number is higher.</li><li><strong>Why do time limits not work?</strong> Because the reminder is skippable. A limit that requires a password to override is the version that holds.</li><li><strong>Is deleting one app enough?</strong> Not always. If both take time, removing one usually just moves the time to the other.</li></ul>
+<p>Start with the data. Record a week using the method on the <a href="/blog.html">blog</a>, then look at the focus tools on the <a href="/">home page</a>.</p>`,
+    },
+  },
 ];
