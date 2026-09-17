@@ -1973,4 +1973,1954 @@ export const posts = [
 <p>Start with the data. Find the tracking method on the <a href="/blog.html">blog</a>, then look at the focus tools on the <a href="/">home page</a>.</p>`,
     },
   },
+  {
+    id: "post44",
+    key: "bl_post44",
+    day: 42,
+    date: "2026-09-14",
+    en: {
+      title: "YouTube Shorts Addiction: Why It Is Different from TV",
+      desc: "Shorts removed the pauses that TV left for you. Here is why the loop holds so well, and four changes that actually helped.",
+      body: "<p>TV was built for passive consumption. You sit down, you watch a show, you get up for snacks. YouTube Shorts do not work like that. Each clip is under a minute and the next one is already queued before you have finished reacting to the last.</p>\n<h2>Why the loop is different</h2>\n<p>Television has natural stopping points. Ad breaks, episode endings, scene changes. Those pauses are where you decide whether to keep watching. Shorts removed them. There is no gap wide enough to make a decision in, so the decision never gets made.</p>\n<p>The reward schedule does the rest. Every swipe is a small hit of novelty, and the swipe is the only action required. Your thumb learns the pattern faster than your judgement can interrupt it.</p>\n<h2>Four changes that actually helped</h2>\n<ul>\n<li><strong>Set a hard timer before you open the app.</strong> Ten minutes, and the timer runs whether you are watching or not.</li>\n<li><strong>Turn autoplay off.</strong> It sounds trivial. It is not, because it turns every next video into a deliberate choice.</li>\n<li><strong>Move the app off your home screen.</strong> You do not have to delete it. Distance is usually enough.</li>\n<li><strong>Give the bored moment somewhere else to go.</strong> A short-form habit fills a gap that something else has to fill.</li>\n</ul>\n<p>The goal is not to quit Shorts. It is to decide when you open them, instead of finding out that you already did.</p>",
+    },
+    zh: {
+      title: "YouTube Shorts 上瘾：为什么它和电视不一样",
+      desc: "电视留下的那些停顿，被 Shorts 拿掉了。这篇讲清循环为什么这么牢，以及四个真正有用的改变。",
+      body: "<p>电视是为\"被动消费\"设计的。你坐下、看节目、中途起身拿点零食。YouTube Shorts 不是这套逻辑：每条不到一分钟，上一条还没消化，下一条已经排好了。</p>\n<h2>循环为什么不一样</h2>\n<p>电视有天然的停顿点：广告、剧集结束、场景切换。这些停顿就是你决定要不要继续看的地方。Shorts 把这些停顿拿掉了。没有足够宽的缝隙让你做决定，决定就一直没做。</p>\n<p>剩下的交给奖励节奏。每一次滑动都是一小份新鲜感，而滑动是唯一需要的动作。你的拇指学会这个节奏，比你的判断力打断它要快得多。</p>\n<h2>四个真起作用的变化</h2>\n<ul>\n<li><strong>打开之前先设一个硬定时器。</strong>十分钟，而且不管你看没看，计时都在走。</li>\n<li><strong>关掉自动播放。</strong>听起来是小事，其实不是——它把\"下一条\"变成了一次需要主动做的选择。</li>\n<li><strong>把 App 从主屏挪走。</strong>不必删除，拉开一点距离通常就够了。</li>\n<li><strong>给\"无聊那一刻\"找别的去处。</strong>短内容习惯填的那个空档，得有别的东西接手。</li>\n</ul>\n<p>目标不是戒掉 Shorts，而是由你来决定什么时候打开，而不是发现自己早就打开了。</p>",
+    },
+  },
+
+  {
+    id: "post14",
+    key: "bl_post14",
+    day: 12,
+    date: "2026-08-15",
+    zh: {
+      title: `为什么一无聊就想摸手机？科学解释 + 两周替换计划`,
+      desc: `无聊不是意志力问题，是大脑的刺激寻求回路在作怪。这篇讲清 boredom phone use 的机制，再给你一套两周就能落地的替换计划。`,
+      body: `<p>先承认一件事：我自己也没逃过。写稿卡壳，手就不自觉地伸向手机，解锁，滑两下，又锁屏。你问我看到了什么？什么都没记住。这就是 boredom phone use 最典型的场景——不是你想用手机，是无聊让你伸手。</p>
+          <h3>无聊的时候，脑子里发生了什么</h3>
+          <p>心理学上，无聊是一种「刺激寻求失败」的状态。大脑想找点新东西，现实环境又给不了，于是冒出一股难受的驱动力。这时候刷手机之所以难忍，是因为它同时满足了三件事：刺激寻求（短视频每十几秒换一个画面，比发呆刺激得多）、多巴胺缺口（一条新消息提示就够让大脑续一口）、逃避负性情绪（无聊会放大烦躁和空虚，刷手机能让它们暂时闭嘴）。</p>
+          <h3>为什么越刷越无聊</h3>
+          <p>滑了二十分钟你会发现，自己比之前更空虚。原因是对比基准被抬高了：刚看完别人的旅行大片，再回到工位发呆，落差感反而更大。短视频把刺激阈值拉得越高，普通生活就越乏味，于是你又想刷。越刷越无聊，越无聊越刷，循环就这么转起来。</p>
+          <h3>这个循环是怎么变成自动回路的</h3>
+          <p>大脑爱省电。同一个动作重复几十次之后，它就不再走「思考」这条回路，直接走「条件反射」。无聊 → 掏手机 → 解锁 → 下滑，变成一条肌肉记忆。这就是为什么「我明明不想刷」却一直在刷。</p>
+          <h3>两周替换计划：把无聊还给生活</h3>
+          <p>破局不需要意志力，需要换环境。这套计划亲测有效：第一周察觉无聊信号（无聊出现时先别伸手，在心里说一句「哦，无聊来了」），并把手机放远（放到另一个房间或锁进抽屉，物理距离每远一米，掏出来的概率就掉一截）；第二周预备替代行为清单（喝水、拉伸、翻纸质书、给朋友发条消息），并用 PausePaw 设置敏感时段（把晚饭后到睡前设成拦截时段）。为什么从「察觉」开始？因为无聊信号是唯一的入口。你拦不住无聊本身，但你能在无聊出现和伸手之间，插入一个停顿。</p>
+          <h3>PausePaw 能帮你做哪部分</h3>
+          <p>PausePaw 管不了你的潜意识，但它能把环境变干净：敏感时段自动拦截、刷够时长强制休息。拦截界面特意做得可爱一点，被打断时不是恼火，而是会心一笑。更早的屏幕习惯分析，看 <a href="/blog/post13.html">Day 11</a> 那篇。</p>
+          <h3>FAQ</h3>
+          <p>问：无聊和刷手机，谁是因谁是果？答：因果是互相的。无聊触发刷手机，刷多了又让生活显得更无聊，所以两边的开关都要动。</p>
+          <p>问：为什么我把手机放远了还是会想刷？答：因为自动回路还在。物理隔离只切断「掏」的动作，意识层面的察觉和替代行为清单，才是真正换掉回路的部分。</p>
+          <p>问：两周真的够吗？答：够让回路松动，不保证彻底消失。关键是两周后你自动伸手的频率明显下降，那就成功了。</p>
+          <p>不用等到下周。今晚吃完饭，就把手机放到客厅去。无聊不是敌人，它是信号，提醒你生活里缺了点什么。PausePaw 帮你把路拦好，剩下的交给你自己——去 <a href="https://pause-paw.shop">pause-paw.shop</a> 就能开始。</p>`,
+    },
+    en: {
+      title: `Why You Reach for Your Phone When You're Bored`,
+      desc: `Boredom isn't a willpower problem — it's a stimulus-seeking loop in your brain. Here's the science of boredom phone use, plus a two-week replacement plan that works.`,
+      body: `<p>I'll admit it, I haven't escaped this myself. Mid-sentence in an article, my hand wanders to the phone. Unlock. Scroll. Lock. What did I see? I couldn't tell you. That's the classic boredom phone use scene. It's not that you want the phone. It's that boredom makes your hand move.</p>
+          <h3>What's going on in your head when you're bored</h3>
+          <p>In psychology terms, boredom is a failed attempt at stimulus seeking. The brain wants something new, the environment provides nothing, and that gap creates a driving urge. Scrolling feels irresistible because it covers three things at once: stimulus seeking (a short video changes frames every fifteen seconds, far more exciting than staring at a wall), the dopamine gap (one little notification is enough to keep the brain fed), and escaping bad feelings (boredom amplifies restlessness and emptiness, and scrolling makes them shut up for a while).</p>
+          <h3>Why scrolling makes you more bored</h3>
+          <p>Scrolling only numbs the pain. Twenty minutes in, you realize you feel emptier than before. The comparison bar got raised: you just watched someone's travel montage, then you return to your desk, and the gap feels bigger. The higher the stimulation threshold gets, the flatter ordinary life looks. So you scroll again. The loop feeds itself.</p>
+          <h3>How the loop became an autopilot circuit</h3>
+          <p>The brain is lazy about power. After the same action repeats a few dozen times, it stops routing through "thinking" and uses a reflex path instead. Bored, reach, unlock, swipe. It becomes muscle memory. You don't even notice the phone is already in your hand. That's why you "don't want to scroll" yet can't stop.</p>
+          <h3>A two-week replacement plan</h3>
+          <p>You don't break this with willpower. You break it by changing the environment. Week one: notice the boredom signal (when boredom shows up, don't reach — say to yourself, "oh, boredom is here"), and put the phone far away (another room or a drawer; every extra meter of distance drops the probability of grabbing it). Week two: build a replacement list (drink water, stretch, open a paper book, text a friend), and set sensitive hours in PausePaw (block the window from after dinner to bedtime). Why start with awareness? Because the boredom signal is the only entry point. You can't stop boredom itself, but you can insert a pause between "boredom arrives" and "hand reaches."</p>
+          <h3>What PausePaw handles for you</h3>
+          <p>PausePaw can't control your subconscious. What it can do is clean the environment: auto-block sensitive hours, force a rest after the scrolling budget is used up. The block screen is deliberately cute, so when you get interrupted you smile instead of getting angry. For the earlier screen-habit analysis, check the <a href="/blog/post13.html">Day 11</a> post.</p>
+          <h3>FAQ</h3>
+          <p>Q: Which comes first, boredom or the phone? A: Both directions. Boredom triggers the phone, and heavy use makes life feel flatter. Touch both switches.</p>
+          <p>Q: Why do I still reach even with the phone far away? A: The loop is still wired. Distance only cuts the grabbing action. Awareness and the replacement list are what actually rebuild the loop.</p>
+          <p>Q: Is two weeks really enough? A: Enough to loosen the loop, not to erase it. If your automatic picks drop clearly after two weeks, it's working.</p>
+          <p>No need to wait until Monday. Tonight, after dinner, leave the phone in the living room. Boredom isn't the enemy — it's a signal that life is missing something. PausePaw clears the road, the rest is up to you. Head to <a href="https://pause-paw.shop">pause-paw.shop</a> to get started.</p>`,
+    },
+  },
+  {
+    id: "post23",
+    key: "bl_post23",
+    day: 24,
+    date: "2026-08-27",
+    zh: {
+      title: "要不要监控青少年的手机？",
+      desc: "监控teen手机是隐私还是保护？本文探讨平衡之道，给出实用建议。",
+      body: "<p><h2>监控 vs 信任：家庭的永恒难题</h2></p><p>孩子长大了，手机成了他们与世界连接的桥梁。作为家长，你担心什么？网络霸凌？不良内容？还是他们正在接触的人？</p><p>监控 teen 手机是一个敏感话题。一方面，保护是 parental responsibility；另一方面，过度监控可能破坏 trust。</p><p><h2>什么时候监控是合理的？</h2></p><p>以下是一些建议监控的情况：</p><ul><li>孩子未满 13 岁（COPPA 限制）</li><li>有网络霸凌的历史或担忧</li><li>孩子表现出焦虑或抑郁迹象</li><li>首次拥有智能手机</li></ul><p><h2>如何平衡隐私与安全</h2></p><p>与其偷偷监控，不如 open conversation：</p><ul><li>设定 clear expectations</li><li>使用 parental controls 透明地</li><li>定期 review 而不是 real-time spying</li><li>随着孩子成熟，逐渐放权</li></ul><p><h2>工具推荐</h2></p><p>一些好的 parental control 工具：PausePaw（专注时间管理）、Qustodio（内容过滤）、Family Link（Google 官方）。</p><p><h2>FAQ</h2></p><p><strong>监控 teen 手机违法吗？</strong> 不违法，但可能破坏信任关系。</p><p><strong>什么时候应该停止监控？</strong> 当孩子证明 responsible 时，通常在 16-17 岁。</p><p><strong>发现孩子有问题怎么办？</strong> 先对话，再考虑限制。惩罚可能适得其反。</p>"
+    },
+    en: {
+      title: "Should You Monitor Your Teen's Phone?",
+      desc: "Is monitoring your teen's phone privacy invasion or protection? This article explores the balance and practical advice.",
+      body: "<p><h2>Monitoring vs Trust: The Eternal Family Dilemma</h2></p><p>Kids grow up, and phones become their bridge to the world. As a parent, what are you worried about? Cyberbullying? Inappropriate content? Or the people they're talking to?</p><p>Monitoring teen phone is a sensitive topic. On one hand, protection is a parental responsibility; on the other, over-monitoring can break trust.</p><p><h2>When Is Monitoring Reasonable?</h2></p><p>Here are situations where monitoring makes sense:</p><ul><li>Child under 13 (COPPA restrictions)</li><li>History or concern about cyberbullying</li><li>Child shows signs of anxiety or depression</li><li>First smartphone ownership</li></ul><p><h2>Balancing Privacy and Safety</h2></p><p>Rather than secret monitoring, try open conversation:</p><ul><li>Set clear expectations</li><li>Use parental controls transparently</li><li>Review periodically, not real-time spying</li><li>Gradually give more freedom as they mature</li></ul><p><h2>Tool Recommendations</h2></p><p>Some good parental control tools: PausePaw (focus/time management), Qustodio (content filtering), Family Link (Google official).</p><p><h2>FAQ</h2></p><p><strong>Is monitoring teen phone illegal?</strong> Not illegal, but may damage trust relationships.</p><p><strong>When should I stop monitoring?</strong> When they prove responsible, usually around 16-17.</p><p><strong>What if I find something concerning?</strong> Talk first, then consider restrictions. Punishment may backfire.</p>"
+    },
+  },
+  {
+    id: "post13",
+    key: "bl_post13",
+    day: 11,
+    date: "2026-08-14",
+    zh: {
+      title: `12 个迹象说明你手机成瘾了`,
+      desc: `多数人要等出了事才注意到手机成瘾的迹象：错过截止、脖子僵硬、孩子问你为什么总看屏幕。这里列了 12 个信号，以及真正有用的做法。`,
+      body: `<p>如果你问过自己「我是不是手机成瘾了」，你并不孤单。普通人每天拿起手机 80 到 100 次，其中很多次根本没有理由。手机成瘾的迹象很少很戏剧，它们安静、重复、又好解释过去。这篇先列 12 个，再说看到自己的规律之后该怎么办。</p>
+          <h3>先用两分钟做个手机成瘾自测</h3>
+          <p>在看清单之前，先试一件事：接下来一天，记下每一次「无意识」解锁，等红灯时点一下、睡前滑一滑、聊天时伸手去拿。如果你一天抓到自己好几次，答案就有了。手机成瘾自测不需要 App，只需要诚实地观察一天。</p>
+          <h3>12 个手机成瘾的迹象，对着自己看</h3>
+          <ol>
+            <li>醒来几秒内就摸手机。</li>
+            <li>一安静下来（红灯、排队）第一反应就是解锁。</li>
+            <li>聊天时也会看手机，哪怕对面是你在乎的人。</li>
+            <li>「就看五分钟」常常变成一小时。</li>
+            <li>找不到手机时心里有点慌。</li>
+            <li>明明累了还在床上滑。</li>
+            <li>吃饭时一只手还在手机上。</li>
+            <li>因为低头错过过真实的事（坐过站、漏了人的消息）。</li>
+            <li>打开 App 忘了自己要干啥。</li>
+            <li>电量低于 20% 就觉得有点危机。</li>
+            <li>刷完一长段，不是松了，是更烦躁。</li>
+            <li>说过要少玩，一天内就破功。</li>
+          </ol>
+          <h3>看到迹象之后该怎么办</h3>
+          <p>这些都不代表要把手机扔了。目标是让那个反射被看见。我聊过的几个人里，管用的就三件：起床后第一小时把手机放另一个房间，除电话和消息外关掉所有通知，睡前留一段「无手机」时间。无聊、具体，但真能坚持。</p>
+          <p>关键是打断回路，不是跟自己开战。硬封锁只会让你更想破。温柔的暂停把选择权还给你。</p>
+          <h3>更温和地打断回路</h3>
+          <p>这正是 pause-paw.shop 的用意。它不像别的工具那样把 App 锁死、激起逆反，而是在你刷屏到阈值时，派一只可爱的伙伴温柔接管屏幕，再带一段不可跳过的短休息。你不用对抗它，只是停一下。区别在于：被封锁，还是被朋友轻轻拍一下。</p>
+          <h3>常见问题</h3>
+          <p>问：每天用多少小时算成瘾？答：没有固定数字。两小时专注比六小时僵尸式滑动强。比起总时长，更该看拿起次数和深夜使用。</p>
+          <p>问：手机成瘾是正式的病吗？答：临床手册里它不算独立诊断，但这些行为是真的，会拖垮睡眠、专注和情绪。管习惯，别管标签。</p>
+          <p>问：不删 App 能改吗？答：能。多数人靠限额和暂停比靠删除更稳，删除往往反弹。</p>
+          <p>想低门槛开始，去 <a href="https://pause-paw.shop">pause-paw.shop</a> 试试那段温柔的休息。如果你在搭每日节奏，我们在 <a href="/blog.html#day001">/blog.html#day1</a> 和 <a href="/blog.html#post12">/blog.html#day12</a> 写了屏幕时间基础和一个十分钟自检。</p>`,
+    },
+    en: {
+      title: `12 Signs You're Addicted to Your Phone`,
+      desc: `Phone addiction signs are rarely dramatic — missed deadlines, stiff necks, kids asking why you never look up. Here are 12 signals to check, plus what actually works.`,
+      body: `<p>If you've ever wondered am I addicted to my phone, you're not alone. The average person picks up their device 80 to 100 times a day, and plenty of those unlocks have no real reason behind them. Phone addiction signs rarely look dramatic. They're quiet, repeated, and easy to talk yourself out of. This post runs through 12 of them, then what to actually do once you spot your own pattern.</p>
+          <h3>Start with a 2-minute phone addiction test</h3>
+          <p>Before the list, try this. For one day, note every time you unlock with no intent: a reflex tap while waiting, a scroll in bed, a reach for it mid-conversation. If you catch yourself more than a few times, that's your answer. A real phone addiction test doesn't need an app, just one honest day of paying attention.</p>
+          <h3>The 12 phone addiction signs to check against yourself</h3>
+          <ol>
+            <li>You reach for the phone within seconds of waking.</li>
+            <li>The first move at a red light or a quiet moment is to unlock it.</li>
+            <li>You check it during conversations, even with people you care about.</li>
+            <li>"Just five minutes" turns into an hour more often than not.</li>
+            <li>You feel a small spike of panic when you can't find it.</li>
+            <li>You keep scrolling in bed long after you're tired.</li>
+            <li>Meals happen with one hand on the phone.</li>
+            <li>You've missed something real, a stop or a person's message, because you were looking down.</li>
+            <li>You open an app and forget why you came.</li>
+            <li>A battery under 20% feels like a small emergency.</li>
+            <li>You end a long session feeling restless, not relaxed.</li>
+            <li>You've tried to cut back and slipped within a day.</li>
+          </ol>
+          <h3>What to do when the signs show up</h3>
+          <p>None of this means throwing the phone away. The point is to make the reflex visible. Three things that worked for people I talked to: keep the phone in another room for the first hour after waking, turn off every notification except calls and messages, and hold one phone-free window before sleep. Boring, specific, and they actually stick.</p>
+          <p>The trick is to break the loop, not declare war on yourself. A hard block makes you want to break it. A gentle pause hands the choice back.</p>
+          <h3>A kinder way to break the loop</h3>
+          <p>This is where pause-paw.shop comes in. Instead of locking apps and triggering that rebel feeling, PausePaw sends a soft, cute reminder when your scroll time hits the limit, then holds a short unskippable break. You don't fight it, you just pause. The difference is between being blocked and being nudged by a friend.</p>
+          <h3>FAQ</h3>
+          <p>Q: How many hours of phone use means addiction? A: There's no fixed number. Two focused hours beat six zombie-scrolling hours. Watch pickups and late-night use more than the total.</p>
+          <p>Q: Is phone addiction a real diagnosis? A: It isn't a standalone disorder in the clinical manuals, but the behaviors are real and they drag down sleep, focus, and mood. Treat the habit, not the label.</p>
+          <p>Q: Can I fix it without deleting apps? A: Yes. Most people do better with limits and pauses than with deletion, which tends to bounce back.</p>
+          <p>If you want a low-friction start, head to <a href="https://pause-paw.shop">pause-paw.shop</a> and try the gentle break. And if you're building a daily routine, our posts at <a href="/blog.html#day001">/blog.html#day1</a> and <a href="/blog.html#post12">/blog.html#day12</a> cover screen-time basics and a 10-minute self-check.</p>`,
+    },
+  },
+  {
+    id: "post12",
+    key: "bl_post12",
+    day: 10,
+    date: "2026-08-13",
+    zh: {
+      title: `10 分钟自检你的屏幕时间`,
+      desc: `不用装任何 App，只用手机自带的屏幕时间功能，十分钟就能完成一次 screen time audit。这篇是完整的操作步骤：查哪些数据、怎么看懂、以及看完之后该做哪三件事。`,
+      body: `<p>想查屏幕时间不用先下载一堆追踪 App。iPhone 的屏幕使用时间、Android 的数字健康，都是系统自带的。这篇教你用十分钟做完一次 screen time audit：哪些数字值得看、哪些是噪音、看完之后怎么办。</p>
+          <h3>第一步：打开系统自带的统计（2 分钟）</h3>
+          <p>iPhone 去设置 → 屏幕使用时间；Android 去设置 → 数字健康与家长控制。两个入口都在设置里，不需要任何额外安装。如果这是你第一次打开，先花一分钟把"每周报告"或"仪表盘"界面翻一遍，知道数字都在哪。</p>
+          <h3>第二步：只看五个数字（3 分钟）</h3>
+          <ul>
+            <li>日均屏幕时间：一个总量，先记下来，别急着判断</li>
+            <li>拿起次数：比总量更值得看，它反映的是碎片化程度</li>
+            <li>最常用 App：通常是一个社交或视频 App，占掉大头</li>
+            <li>通知数：通知越多，被动打开手机的次数越多</li>
+            <li>深夜使用：晚上 11 点到早上 6 点的时间，最伤睡眠</li>
+          </ul>
+          <p>只看这五个就够了。其余的图表和分类都是噪音，一次审计不需要把每个像素都研究一遍。</p>
+          <h3>第三步：对照三个基线（3 分钟）</h3>
+          <p>第一个基线是总量：多数成年人日均 4 到 6 小时是常态，超过 7 小时值得注意。第二个基线的拿起次数：每天 80 次以上说明碎片化严重，哪怕总量不高。第三个基线是深夜：每周有超过两个晚上在 11 点后还在刷，就该处理了。</p>
+          <p>注意一个常见误判：把总量当成唯一指标。每天 3 小时但拿起 100 次的人，比每天 6 小时但只看 30 次的人更需要调整。碎片化才是当代屏幕问题的核心。</p>
+          <h3>第四步：做完审计的三件事（2 分钟）</h3>
+          <ul>
+            <li>给最常用 App 设一个每日限额，从砍掉 30% 开始，别一步到位</li>
+            <li>关掉非必要 App 的通知，只留通讯类和日历</li>
+            <li>定一个"睡前 30 分钟"规则，用<a href="/app.html">PausePaw</a> 这类工具到点提醒</li>
+          </ul>
+          <p>十分钟结束。审计的意义不在数字本身，而在它把"我感觉我刷太多了"变成"我每天刷 5 小时，其中 1 小时在深夜"。有了具体数字，改起来才有着力点。一周后再查一次，对比两次数据，你会看到变化。</p>`,
+    },
+    en: {
+      title: `How to Audit Your Own Screen Time in 10 Minutes`,
+      desc: `No extra apps needed: use the screen time tools built into your phone to run a full audit in ten minutes. Here is the exact workflow, which numbers matter, and the three actions that follow.`,
+      body: `<p>You do not need a stack of tracking apps to audit your screen time. iPhone has Screen Time, Android has Digital Wellbeing, both built in. This post is a ten-minute screen time audit: which numbers are worth reading, which are noise, and what to do after.</p>
+          <h3>Step one: open the built-in stats (2 minutes)</h3>
+          <p>On iPhone: Settings → Screen Time. On Android: Settings → Digital Wellbeing & parental controls. Both live in Settings, nothing to install. If this is your first time, spend a minute flipping through the weekly report or dashboard so you know where the numbers live.</p>
+          <h3>Step two: read only five numbers (3 minutes)</h3>
+          <ul>
+            <li>Daily average: the total, note it down, do not judge it yet</li>
+            <li>Pickups: more telling than the total, it measures fragmentation</li>
+            <li>Top app: usually one social or video app eating the biggest slice</li>
+            <li>Notifications: more notifications, more passive unlocks</li>
+            <li>Late-night use: 11 pm to 6 am, the hours that hurt sleep most</li>
+          </ul>
+          <p>That is it. Everything else on the charts is noise. An audit does not need you to study every pixel.</p>
+          <h3>Step three: compare against three baselines (3 minutes)</h3>
+          <p>Baseline one, the total: 4 to 6 hours a day is normal for most adults, over 7 is worth attention. Baseline two, pickups: above 80 a day means heavy fragmentation, even if the total looks fine. Baseline three, late night: more than two nights a week scrolling after 11 pm needs handling.</p>
+          <p>Watch the common mistake of treating the total as the only metric. Someone at 3 hours with 100 pickups needs more adjusting than someone at 6 hours with 30 pickups. Fragmentation is the core problem of modern screen use.</p>
+          <h3>Step four: three actions after the audit (2 minutes)</h3>
+          <ul>
+            <li>Set a daily limit on the top app, cut 30% first, do not go all-in at once</li>
+            <li>Turn off notifications for non-essential apps, keep only messaging and calendar</li>
+            <li>Set a "30 minutes before bed" rule, let a tool like <a href="/app.html?lang=en">PausePaw</a> remind you at the limit</li>
+          </ul>
+          <p>Ten minutes, done. The point of an audit is not the numbers themselves. It turns "I feel like I scroll too much" into "I average 5 hours a day, 1 of them past midnight." With concrete numbers, change has a handle. Check again in a week and compare, you will see the movement.</p>`,
+    },
+  },
+  {
+    id: "post11",
+    key: "bl_post11",
+    day: 9,
+    date: "2026-08-12",
+    zh: {
+      title: `工作屏幕时间：多少算正常，多少算倦怠`,
+      desc: `工作屏幕时间是大多数成年人一天里占比最大的屏幕时段。这篇给你一套实测过的清单，帮你分辨高效深工作和屏幕导致的倦怠。`,
+      body: `<p>work screen time 是成年人一天里最大的一块屏幕时间：上班八小时对着电脑，下班还要回消息。多数人从来不问这个问题——多少算正常，多少已经在烧掉你的状态？这篇给你一套实测过的清单，把"高效深工作"和"屏幕导致的倦怠"分开。</p>
+          <h3>先给"正常"定个参照</h3>
+          <p>没有权威的"标准值"，但有几个来自职场数据的中位数可以参考：知识工作者每天坐在屏幕前的时间通常有 6 到 8 小时，其中真正专注的产出时间一般在 3 到 4 小时。剩下的时间被会议、回消息、切换任务填满。如果这个描述符合你，先别慌，你处在正常区间。</p>
+          <p>判断是不是正常的第二个参照是"恢复"：下班后一两个小时，你能不能从屏幕里出来？能正常吃晚饭、散步、跟人说话、不总想着工作群，那你的工作屏幕时间还健康。如果下班后你仍然反复点开邮件和聊天工具，说明已经有点过度了。</p>
+          <h3>倦怠的信号清单</h3>
+          <ul>
+            <li>下午 3 点以后，阅读长文档或写代码需要反复重读，注意力断断续续</li>
+            <li>无意识刷网页或信息流，明明没有任务需求，却停不下来</li>
+            <li>屏幕亮度调低后眼睛干涩、头痛，或者频繁揉眼</li>
+            <li>下班后仍然神经紧绷，回消息停不下来，放松不下来</li>
+            <li>对工作内容产生持续的烦躁感，而不是偶尔的疲惫</li>
+          </ul>
+          <p>中了三条以上，说明你已经在屏幕倦怠的边缘。这不是意志力问题，是连续屏幕暴露时间太长、缺少恢复窗口的结果。</p>
+          <h3>高效深工作长什么样</h3>
+          <p>office screen time 里真正有价值的部分，是那些连续的、单一任务的深工作时段。特征很明确：一两个小时不切换任务、不看消息、进入"心流"状态，结束后有完成的满足感。它和倦怠的区别不在时长，而在状态：深工作消耗的是专注力，但会有产出和满足感回来；倦怠消耗的是注意力储备，只出不进。</p>
+          <p>用一句话区分：深工作结束后你觉得自己做成了事，倦怠结束后你只觉得累。</p>
+          <h3>怎么把工作屏幕时间拉回健康</h3>
+          <ul>
+            <li>给一天切块：上午安排 2 个 90 分钟的深工作块，下午留给会议和协作，别让任务碎成一地</li>
+            <li>消息批量处理：每小时固定 10 分钟回消息，而不是随时被弹窗打断</li>
+            <li>每 90 分钟强制离开屏幕 5 分钟：喝水、走动、看远处，恢复比硬撑有效</li>
+            <li>下班切段：关掉工作通知，用 <a href="/app.html">PausePaw</a> 这类工具到点打断，给大脑一个明确的"下班"信号</li>
+          </ul>
+          <p>work screen time 不是敌人，失控的 work screen time 才是。目标不是"少看屏幕"，而是让屏幕时间里有更多主动选择的高质量时段。先对照上面的清单自查一周，通常两周内就能看到注意力和情绪状态的变化。</p>`,
+    },
+    en: {
+      title: `Workplace Screen Time: What's Normal and What's Burnout`,
+      desc: `Work screen time is the biggest slice of screen time in most adults' lives. This post gives you a field-tested checklist that separates productive deep work from screen-induced burnout.`,
+      body: `<p>Work screen time is the biggest slice of screen time in most adults' lives: eight hours on the computer during the day, messages after hours. Few people ever ask the question: how much is normal, and how much is quietly burning you out? This post gives you a field-tested checklist that separates productive deep work from screen-induced burnout.</p>
+          <h3>First, a reference point for "normal"</h3>
+          <p>There is no authoritative standard, but a few workplace data medians give a useful range. Knowledge workers typically sit in front of a screen 6 to 8 hours a day, of which genuine focused output is usually 3 to 4 hours. The rest fills with meetings, messages and task-switching. If that describes you, relax, you are in the normal band.</p>
+          <p>The second test for "normal" is recovery: an hour or two after work, can you get away from the screen? If you can eat dinner, take a walk, talk to people, and not keep checking the work group, your work screen time is still healthy. If you keep reopening email and chat after hours, it is creeping into too much.</p>
+          <h3>The burnout signal checklist</h3>
+          <ul>
+            <li>After 3 pm, reading long documents or writing code needs repeated rereads, attention comes and goes</li>
+            <li>Autopilot web browsing or feed scrolling with no task behind it, and you cannot stop</li>
+            <li>Dry eyes, headaches, or constant eye rubbing even at lower brightness</li>
+            <li>Still wired after work, cannot stop answering messages, cannot unwind</li>
+            <li>A persistent irritability toward work content, not just occasional tiredness</li>
+          </ul>
+          <p>Three or more, and you are on the edge of screen burnout. This is not a willpower problem. It is the result of long continuous screen exposure without recovery windows.</p>
+          <h3>What productive deep work looks like</h3>
+          <p>The valuable slice of office screen time is continuous, single-task deep work. The signature is clear: an hour or two without switching tasks or checking messages, entering flow, and finishing with a sense of completion. The difference from burnout is not duration, it is state: deep work spends focus but returns output and satisfaction; burnout spends attention reserves with nothing coming back.</p>
+          <p>One line to tell them apart: after deep work you feel like you got something done. After burnout you just feel tired.</p>
+          <h3>How to pull work screen time back to healthy</h3>
+          <ul>
+            <li>Block your day: two 90-minute deep work blocks in the morning, meetings and collaboration in the afternoon, keep tasks from shattering into fragments</li>
+            <li>Batch messages: 10 fixed minutes per hour for messages instead of getting interrupted by every ping</li>
+            <li>Force a 5-minute screen break every 90 minutes: water, walk, look at something far away, recovery beats pushing through</li>
+            <li>Cut off after hours: turn off work notifications, let a tool like <a href="/app.html?lang=en">PausePaw</a> break the loop at the limit and give your brain a clear "off work" signal</li>
+          </ul>
+          <p>Work screen time is not the enemy. Uncontrolled work screen time is. The goal is not "less screen". It is more screen time that you chose on purpose. Run the checklist above for a week, and you will usually see attention and mood changes within two.</p>`,
+    },
+  },
+  {
+    id: "post10",
+    key: "bl_post10",
+    day: 8,
+    date: "2026-08-11",
+    zh: {
+      title: `屏幕时间 vs 屏幕质量：关键不是小时数`,
+      desc: `两小时专注工作，比六小时无意识刷屏更有价值——但屏幕时间统计把两者混在一起。这篇教你怎么区分 quality screen time，以及怎么让屏幕时间变"贵"。`,
+      body: `<p>两小时专注工作，比六小时无意识刷屏更有价值——这句废话很多人知道，但屏幕时间统计从不算这笔账。screen quality vs quantity 这件事，比"每天少刷一小时"更值得先想清楚：同样盯着屏幕，质量完全不同。这篇讲讲怎么区分，以及怎么把质量提上去。</p>
+          <h3>屏幕时间统计骗了你什么</h3>
+          <p>系统里那个"今日屏幕时间 8 小时"的数字，把工作、刷视频、回消息、看地图全混在一起。它回答不了最关键的问题：这 8 小时里，有多少是你主动选择的？两小时专注写作和六小时漫无目的刷短视频，前者是产出，后者是消耗，但统计数字一模一样。</p>
+          <p>quality screen time 的判断标准很简单：结束之后，你是觉得充实，还是觉得空虚？工作、学习、创作、和真人视频通话，都属于高质量；被动刷信息流、无意识点开视频、睡前漫无目的地滑动，属于低质量。分类标准不是"屏幕"本身，而是你的意图和状态。</p>
+          <h3>质量比数量更影响状态</h3>
+          <p>连续刷两小时短视频，和写两小时代码，对多巴胺基线的影响完全不同。低质量屏幕时间制造的是"持续的小奖励"，让大脑保持在随时想刷的状态；高质量屏幕时间则是有明确目标和反馈的投入，结束时有完成感。这也是为什么"每天少刷一小时"经常失败——如果剩下的时间还是低质量，问题没变。</p>
+          <p>换一个角度：你不需要把总时长压到某个神奇数字，只需要保证屏幕时间里高质量的部分占多数。对大多数上班族来说，工作本身已经贡献了相当比例的高质量屏幕时间，真正要管的往往是睡前和碎片时段那几段低质量滑动。</p>
+          <h3>怎么把屏幕时间变"贵"</h3>
+          <ul>
+            <li>给每个屏幕时段贴标签：打开手机前问一句"我要干什么"，回答不出的就放下</li>
+            <li>把低质量 App 和高质量 App 分开：刷视频的 App 放进深层文件夹，阅读、学习的放首屏</li>
+            <li>给无意识刷屏设上限：用 <a href="app.html">PausePaw</a> 这类工具在到点打断，而不是靠"再看一条"的自我谈判</li>
+            <li>睡前时段默认高质量：读书、写日记、语音和家人聊天，把"刷"换成有意图的活动</li>
+          </ul>
+          <p>mindful screen use 的核心不是戒断，是让每次点亮屏幕都带着目的。目标不是"今天只用了两小时"，而是"今天用掉的每一小时都是我想用的"。</p>`,
+    },
+    en: {
+      title: `Screen Time vs. Screen Quality: It's Not the Hours, It's the Content`,
+      desc: `Two hours of focused work beats six hours of mindless scrolling, yet the stats lump them together. This post shows how to spot quality screen time and make your screen time count.`,
+      body: `<p>Two hours of focused work beats six hours of mindless scrolling. Everyone nods at that sentence, and then checks the screen-time stat that treats both the same. Screen quality vs quantity matters more than shaving an hour off the daily total. This post covers how to tell them apart, and how to make your screen time count for more.</p>
+          <h3>What the screen-time counter hides</h3>
+          <p>The "8 hours of screen time" number mixes work, scrolling, messaging and maps into one lump. It cannot answer the only question that matters: how much of that 8 hours did you actually choose? Two hours of focused writing and six hours of aimless short-video swiping look identical in the stats. One is output, the other is consumption.</p>
+          <p>The test for quality screen time is simple: when you finish, do you feel filled up or drained? Work, study, creating, real video calls with people, those are high quality. Passive feeds, autopilot video, late-night swiping with no destination, low quality. The label is not about the screen. It is about your intent and state.</p>
+          <h3>Quality moves your baseline more than quantity</h3>
+          <p>Two hours of short video and two hours of writing code do very different things to your dopamine baseline. Low-quality screen time hands out constant small rewards and keeps the brain in "maybe something good is coming" mode. High-quality time is goal-directed: clear target, real feedback, a sense of completion at the end. That is why "cut one hour a day" keeps failing. If the remaining time is still low quality, nothing changed.</p>
+          <p>Reframe it: you do not need to hit some magic total. You need the high-quality slice of your screen time to be the majority. For most office workers, work already contributes a decent share. The part that actually needs managing is the low-quality sliding in the evenings and the in-between moments.</p>
+          <h3>How to make your screen time more expensive</h3>
+          <ul>
+            <li>Tag every session: before unlocking, ask "what am I about to do?" If no answer comes, put the phone down</li>
+            <li>Separate low-quality apps from high-quality ones: bury the video apps in a deep folder, keep reading and learning on the first screen</li>
+            <li>Cap the mindless stuff: let a tool like <a href="app.html?lang=en">PausePaw</a> break the loop at the limit instead of negotiating "one more video" with yourself</li>
+            <li>Default the pre-bed window to high quality: a paper book, a journal, a voice call with family, anything with intent</li>
+          </ul>
+          <p>Mindful screen use is not abstinence. It is lighting up the screen on purpose. The goal is not "only two hours today". It is "every hour I used today was an hour I wanted".</p>`,
+    },
+  },
+  {
+    id: "post9",
+    key: "bl_post9",
+    day: 7,
+    date: "2026-08-10",
+    zh: {
+      title: `屏幕时间 3-2-1 法则：睡前、醒后各一次`,
+      desc: `3-2-1 法则：睡前 3 小时不碰工作消息，2 小时不碰娱乐内容，1 小时完全不碰手机。怎么落地，以及那些容易破功的坑。`,
+      body: `<p>3 2 1 rule screen time 是这两年流传最广的屏幕习惯之一，核心只有一句话：睡前 3 小时不碰工作消息，2 小时不碰娱乐内容，1 小时完全不碰手机。它不像"睡前不用手机"那么极端，也不像"随便用"那么放纵，是大多数人能坚持的中间态。这篇讲怎么落地，以及踩过的坑。</p>
+          <h3>3-2-1 到底是什么意思</h3>
+          <ul>
+            <li>睡前 3 小时：不处理工作消息。回邮件、看群聊这种"半清醒"操作，会让大脑持续处于待命状态</li>
+            <li>睡前 2 小时：不碰娱乐内容。短视频、剧集、游戏会刺激多巴胺，推迟入睡时间</li>
+            <li>睡前 1 小时：手机放远，让眼睛和大脑同时进入放松</li>
+          </ul>
+          <p>注意这个规则的顺序很重要：它不是让你 3 小时前就上床，而是把"降低刺激"分成三档，逐步过渡。对作息乱的人来说，直接跳到第三档很容易破功，从第一档开始坚持一周，效果反而明显。</p>
+          <h3>醒后的 1 小时同样重要</h3>
+          <p>多数人只关注睡前，忘了起床后的第一小时。醒来第一件事刷手机，等于把注意力控制权交给算法。3-2-1 法则的变体：起床后 30 分钟不看手机，先把今天最重要的三件事写下来。这个小改动对 morning focus 的提升，比睡前规则更快见效。</p>
+          <h3>落地步骤（从今天开始）</h3>
+          <ul>
+            <li>设两个闹钟：睡前 3 小时和 1 小时的提醒，而不是只设睡眠闹钟</li>
+            <li>睡前 1 小时把手机放到卧室外或床头柜抽屉，充电线也收起来</li>
+            <li>用实体闹钟代替手机闹钟，切断"手机在床边"的唯一理由</li>
+            <li>睡前 2 小时找替代活动：纸质书、拉伸、跟家人聊天，什么都行，就是不碰屏幕</li>
+          </ul>
+          <p>规则本身很简单，难的是坚持。别指望一天成功，先用一周观察入睡时间的变化。让 <a href="/app.html">PausePaw</a> 在三个时间点提醒你，而不是靠你对自己说"该放下了"。想先理解背后的机制，读读<a href="/blog/post7.html">多巴胺回路</a>那篇，或者从<a href="/blog/post6.html">90 分钟法则</a>开始。</p>`,
+    },
+    en: {
+      title: `The 3-2-1 Screen Time Rule: Before Bed, After Wake`,
+      desc: `3-2-1 法则：睡前 3 小时不碰工作消息，2 小时不碰娱乐内容，1 小时完全不碰手机。怎么落地，以及那些容易破功的坑。`,
+      body: `<p>The 3 2 1 rule screen time has become one of the most shared screen habits in the last couple of years, and the core is one line: 3 hours before bed, no work messages; 2 hours before bed, no entertainment; 1 hour before bed, no phone at all. It is less extreme than going cold turkey and less loose than "whatever happens happens". It is the middle ground most people can actually keep. This post covers how to make it stick, and the mistakes that break it.</p>
+          <h3>What 3-2-1 actually means</h3>
+          <ul>
+            <li>3 hours before bed: no work messages. Replying to email or skimming group chats keeps your brain on standby</li>
+            <li>2 hours before bed: no entertainment. Short videos, shows and games spike dopamine and push sleep later</li>
+            <li>1 hour before bed: phone out of reach, eyes and brain both wind down</li>
+          </ul>
+          <p>The order matters. This is not telling you to get in bed three hours early; it is a three-step ramp down in stimulation. If your schedule is chaotic, jumping straight to step three is a recipe for quitting. Start at step one and hold it for a week; the change shows up faster than you expect.</p>
+          <h3>The hour after waking matters too</h3>
+          <p>Everyone talks about bedtime and forgets the first hour of the day. Checking the phone right after waking hands your attention to an algorithm. A 3-2-1 variant: no phone for 30 minutes after waking, and write down the three most important things for today first. This little switch improves morning focus faster than any bedtime rule.</p>
+          <h3>How to start today</h3>
+          <ul>
+            <li>Set two alarms: one for 3 hours before bed, one for 1 hour, instead of only a sleep alarm</li>
+            <li>At the 1-hour mark, move the phone out of the bedroom or into a drawer, and hide the charging cable too</li>
+            <li>Use a physical alarm clock so "the phone needs to be on the nightstand" loses its last excuse</li>
+            <li>For the 2-hour window, find a replacement: a paper book, stretching, talking to family. Anything that is not a screen</li>
+          </ul>
+          <p>The rule is simple; the keeping is not. Give it a week and watch your sleep latency change before judging it. Let <a href="app.html?lang=en">PausePaw</a> remind you at all three checkpoints instead of relying on self-talk. Want the mechanism first? Read the <a href="blog/post7.html?lang=en">dopamine loop post</a>, or start with the <a href="blog/post6.html?lang=en">90-minute rule</a>.</p>`,
+    },
+  },
+  {
+    id: "post8",
+    key: "bl_post8",
+    day: 6,
+    date: "2026-08-09",
+    zh: {
+      title: `无手机小时：每天 1 小时会带来什么变化`,
+      desc: `每天留出 1 小时无手机时间，是最简单也最有效的数字健康习惯。为什么 1 小时就够、安排在什么时候、怎么不靠意志力开始。`,
+      body: `<p>戒手机的口号喊了十年，绝大多数人一个都没戒成。原因很简单：目标太大。这里有个更务实的做法——每天 1 小时无手机时间（phone free hour），不做多，只做一个小时。它小到不会失败，又大到真的有用。这篇说清楚为什么 1 小时就够，以及怎么让自己真的做到。</p>
+          <h3>为什么是 1 小时，不是 8 小时</h3>
+          <p>神经科学给了一个反直觉的答案：恢复效果不是线性的。多巴胺基线需要的是"一段连续的、没有即时奖励的时间"来复位，而不是总量。刷 7 小时手机再睡一觉，和 1 小时不看手机，对基线的影响完全不同。一次完整的 phone-free time 能让大脑从"随时可能有奖励"的模式切回"现在没有奖励、专注当下"的模式。1 小时刚好足够完成这个切换，又短到不会引发戒断焦虑。</p>
+          <ul>
+            <li>前 10 分钟：手会痒，这是基线在挣扎，正常</li>
+            <li>20-40 分钟：注意力开始落地，能读进去书、想清楚事</li>
+            <li>40-60 分钟：进入"无聊但舒服"的状态，这就是目标状态</li>
+          </ul>
+          <h3>安排在什么时候</h3>
+          <p>两个黄金时段：早上醒来后的第一小时，和睡前一小时。早上做，你的一天以"我控制手机"开场而不是"手机控制我"；睡前做，直接对接睡眠质量（90 分钟法则那篇讲过）。如果两个都难，就选通勤或午休，关键是固定成习惯，而不是每天重新谈判。</p>
+          <h3>怎么不靠意志力开始</h3>
+          <ul>
+            <li>把手机放到另一个房间，物理距离比任何设置都管用</li>
+            <li>给这个小时配一个固定的活动：晨跑、读书、做饭，让"做什么"不用想</li>
+            <li>告诉家人朋友这个时间段，让外部期待帮你守住</li>
+            <li>第一天只做 20 分钟，一周后加到 60——先让习惯形成，再谈时长</li>
+          </ul>
+          <p>最后一步是让工具接管提醒。每天 1 小时的 daily phone break 不需要你记在脑子里，<a href="/app.html">PausePaw</a> 会在到点用可爱的伙伴提醒你放下手机，而不是靠你对自己说"该停了"。想先看数据再决定？读读我们的<a href="/blog/day001.html">2026 年人均屏幕时间</a>，或者从<a href="/blog/post7.html">多巴胺回路</a>那篇理解你为什么会一直刷。</p>`,
+    },
+    en: {
+      title: `The Phone-Free Hour: What 1 Hour a Day Changes`,
+      desc: `每天留出 1 小时无手机时间，是最简单也最有效的数字健康习惯。为什么 1 小时就够、安排在什么时候、怎么不靠意志力开始。`,
+      body: `<p>People have been shouting "quit your phone" for a decade, and almost nobody quits. The reason is simple: the goal is too big. Here is a more practical version: one phone free hour a day. Nothing more, just one hour. It is small enough not to fail and big enough to actually matter. This post explains why an hour is enough, and how to actually pull it off.</p>
+          <h3>Why one hour, not eight</h3>
+          <p>The neuroscience answer is counterintuitive: recovery is not linear. Your dopamine baseline needs one continuous stretch with no immediate rewards to reset, not a bigger total. Seven hours of scrolling followed by sleep is not the same as one hour off the phone. A solid phone-free time block switches the brain from "a reward might come at any moment" to "no reward now, focus on the present." An hour is long enough to complete that switch and short enough to avoid withdrawal panic.</p>
+          <ul>
+            <li>First 10 minutes: your hands itch, that is the baseline fighting back, normal</li>
+            <li>20-40 minutes: attention lands, you can read a book or think a thought through</li>
+            <li>40-60 minutes: you hit "bored but okay", and that is the goal state</li>
+          </ul>
+          <h3>When to schedule it</h3>
+          <p>Two golden windows: the first hour after waking, and the hour before sleep. In the morning, your day opens with "I control the phone" instead of "the phone controls me." At night, it feeds straight into sleep quality (see the 90-minute rule post). If neither works, pick the commute or lunch break. The point is to make it a fixed habit, not to renegotiate every day.</p>
+          <h3>How to start without willpower</h3>
+          <ul>
+            <li>Put the phone in another room. Physical distance beats every app setting.</li>
+            <li>Give the hour a fixed activity: a run, a book, cooking. Do not leave "what to do" open.</li>
+            <li>Tell family and friends about the window, so outside expectations help hold it.</li>
+            <li>Start with 20 minutes on day one, add to 60 after a week. Form the habit first, then stretch the time.</li>
+          </ul>
+          <p>Last step: let a tool own the reminder. A daily phone break does not need to live in your head. <a href="app.html?lang=en">PausePaw</a> taps you with a cute companion when the hour ends, instead of relying on you telling yourself "time to stop." Want the data first? Start with our <a href="blog/day001.html?lang=en">2026 average screen time post</a>, or read the <a href="blog/post7.html?lang=en">dopamine loop post</a> to understand why you keep scrolling.</p>`,
+    },
+  },
+  {
+    id: "post7",
+    key: "bl_post7",
+    day: 5,
+    date: "2026-08-08",
+    zh: {
+      title: `屏幕时间如何影响大脑：多巴胺回路拆解`,
+      desc: `为什么手机总是放不下？多巴胺回路是核心机制：每次下拉刷新都是一次小型抽奖。看懂这个回路，你才能用对方法而不是硬扛。`,
+      body: `<p>手机不是"太好玩"，是设计得让人停不下来。屏幕时间与多巴胺之间的关系，说穿了就一句话：你的大脑把"刷一下"和"可能有惊喜"绑在了一起。每次下拉刷新、每次红点亮起，都是一次抽奖——而抽奖是最难戒的东西。</p>
+          <h3>多巴胺回路到底是怎么运作的</h3>
+          <p>多巴胺不负责"快乐"，它负责"想要"。研究里它被称为奖赏预测误差信号：当你期待一个奖励、但不确定它什么时候来的时候，多巴胺水平最高。短视频的信息流恰好制造了这种状态——你不知道下一条是什么，所以你会一直划。这不是意志力弱，是神经系统在按它的规则运行。</p>
+          <ul>
+            <li>不确定的奖励最上瘾：固定给糖不如随机给糖更能让动物一直按杆</li>
+            <li>红点和下拉刷新都是"抽奖入口"：每看一次就是一次开奖</li>
+            <li>刷得越多，基线越钝：同样一条内容带来的刺激会递减，于是需要刷得更快</li>
+          </ul>
+          <h3>为什么"知道原理"也停不下来</h3>
+          <p>知道多巴胺回路不会让你自动戒掉它，就像知道卡路里不会让你自动减肥。真正的问题在于：手机把"开始刷"的成本降到了零。放在手边、解锁即开、开即沉浸，没有任何一道门让你停下来想一想。所以靠"意识到"没用，要靠"制造摩擦"。</p>
+          <h3>三个真正有用的小习惯</h3>
+          <ul>
+            <li>把短视频 App 从首屏移走，放进一个要滑两下才能找到的文件夹——增加一点点开始成本</li>
+            <li>关掉非必要通知，红点就是别人给你装的抽奖机</li>
+            <li>给刷屏设一个时间上限，到点由工具打断，而不是靠"再看一条"的自我谈判</li>
+          </ul>
+          <p>第三点最难，因为你在和最强的回路谈判。让打断不由意志力承担，交给一个中立的提醒者会轻松很多——这也是 <a href="/app.html">PausePaw</a> 存在的原因：到点用可爱的伙伴打断你，而不是靠你对自己说"够了"。先看我们的数据文章（<a href="/blog/day001.html">2026 年人均屏幕时间</a>）了解全貌，再回来用工具落地。</p>`,
+    },
+    en: {
+      title: `How Screen Time Rewires Your Brain: The Dopamine Loop`,
+      desc: `为什么手机总是放不下？多巴胺回路是核心机制：每次下拉刷新都是一次小型抽奖。看懂这个回路，你才能用对方法而不是硬扛。`,
+      body: `<p>Your phone is not "too fun." It is designed to be hard to put down. The relationship between screen time and dopamine comes down to one sentence: your brain has learned that "scroll once" might mean "something great." Every pull-to-refresh, every badge, is a lottery ticket. And lottery tickets are the hardest thing to quit.</p>
+          <h3>How the dopamine loop actually works</h3>
+          <p>Dopamine is not the pleasure chemical. It is the wanting chemical. In the research it is called reward prediction error: your dopamine spikes when you expect a reward but do not know exactly when it arrives. Short-video feeds manufacture exactly that state. You do not know what is next, so you keep scrolling. That is not weak willpower. That is your nervous system following its own rules.</p>
+          <ul>
+            <li>Uncertain rewards are the most addictive: random pellets keep animals pressing the lever longer than fixed ones</li>
+            <li>Badges and pull-to-refresh are lottery entries: every check is a draw</li>
+            <li>The more you scroll, the blunter the baseline: the same hit feels weaker, so you scroll faster</li>
+          </ul>
+          <h3>Why knowing the science does not stop you</h3>
+          <p>Understanding the dopamine loop does not automatically let you beat it, the same way knowing about calories does not make you lose weight. The real problem is that the phone pushes the cost of starting to zero. It sits in your hand, unlocks instantly, and opens straight into the feed. There is no door that makes you pause. Awareness is not the fix. Friction is.</p>
+          <h3>Three habits that actually help</h3>
+          <ul>
+            <li>Move short-video apps off the home screen into a folder two swipes away — add a little cost to starting</li>
+            <li>Turn off non-essential notifications; every badge is a slot machine someone installed for you</li>
+            <li>Set a hard time limit on scrolling and let a tool interrupt you, instead of negotiating with "just one more"</li>
+          </ul>
+          <p>That last one is the hardest, because you are negotiating with your strongest loop. It helps enormously when the interruption does not depend on your willpower but comes from a neutral reminder — which is exactly why <a href="app.html?lang=en">PausePaw</a> exists: a cute companion taps you at the limit instead of relying on you telling yourself "enough." Start with the data (see our <a href="blog/day001.html?lang=en">2026 average screen time post</a>) to see the full picture, then come back and let the tool do the heavy lifting.</p>`,
+    },
+  },
+  {
+    id: "post6",
+    key: "bl_post6",
+    day: 4,
+    date: "2026-08-07",
+    zh: {
+      title: `屏幕时间与睡眠：90 分钟法则`,
+      desc: `睡前一小时放下手机，比任何助眠 App 都管用。用 90 分钟法则给大脑留出褪黑素分泌时间，不用彻底戒断也能睡得更好。`,
+      body: `<p>睡前刷手机和睡得差几乎是一对铁搭档。屏幕时间与睡眠之间的关系，比大多数人以为的更直接：手机屏幕的蓝光会抑制褪黑素分泌，把"该困了"的信号往后推。你不是不困，是大脑被屏幕骗了。</p>
+          <h3>为什么是 90 分钟</h3>
+          <p>研究发现，睡前两小时内接触高亮度屏幕，会让入睡时间平均推迟 10 到 30 分钟，浅睡占比也会增加。90 分钟法则的做法很简单：睡前 90 分钟开始，手机不进卧室，屏幕亮度调低，给褪黑素留出分泌窗口。不需要永远这样，只需要在睡前这段时间做到。</p>
+          <ul>
+            <li>蓝光抑制褪黑素：屏幕越亮、离眼睛越近，抑制越明显</li>
+            <li>内容更伤睡眠：短视频的强刺激让大脑保持兴奋，比光线更难放下</li>
+            <li>90 分钟是"够用"的窗口：研究发现 60-90 分钟足够让睡意正常出现</li>
+          </ul>
+          <h3>怎么落地：从 30 分钟开始</h3>
+          <p>一上来就"睡前不用手机"太难，大多数人坚持不过三天。更现实的做法：先定一个睡前 30 分钟无手机，稳定一周后再往前推。手机放在客厅充电，别放在床头，这一步比任何意志力都管用——物理隔离是"晚上不看手机"最靠谱的实现方式。</p>
+          <h3>睡前可以做什么</h3>
+          <ul>
+            <li>纸质书或阅读器（墨水屏），比刷短视频容易入睡</li>
+            <li>简单的拉伸或呼吸练习，把节奏放慢</li>
+            <li>把明天的待办写下来，清空大脑再睡</li>
+            <li>听播客或白噪音，音量放低，设置定时关闭</li>
+          </ul>
+          <p>如果白天刷手机的时间自己控制不住，睡前这一小时就更守不住。先用 <a href="/app.html">PausePaw</a> 给刷屏设置温柔的上限，到点提醒你停下，睡前无手机才不会是空话。</p>`,
+    },
+    en: {
+      title: `Screen Time and Sleep: The 90-Minute Rule`,
+      desc: `睡前一小时放下手机，比任何助眠 App 都管用。用 90 分钟法则给大脑留出褪黑素分泌时间，不用彻底戒断也能睡得更好。`,
+      body: `<p>Phone before bed and bad sleep go together like peanut butter and anxiety. The link between screen time and sleep is more direct than most people think: the blue light from your screen suppresses melatonin, pushing the "time to feel sleepy" signal later. You are not staying up because you are not tired. Your brain is being fooled by the screen.</p>
+          <h3>Why 90 minutes</h3>
+          <p>Studies show that bright screens within two hours of bedtime delay sleep onset by an average of 10 to 30 minutes and increase light-sleep share. The 90-minute rule is simple: starting 90 minutes before bed, the phone stays out of the bedroom and screen brightness goes down, giving melatonin a window to do its job. You do not need to do this forever. Just in that window.</p>
+          <ul>
+            <li>Blue light suppresses melatonin: brighter screen, closer to your eyes, bigger effect</li>
+            <li>Content matters more: short-video feeds keep the brain excited in a way light alone cannot</li>
+            <li>60-90 minutes is a workable window: enough for normal sleepiness to return</li>
+          </ul>
+          <h3>How to start: begin with 30 minutes</h3>
+          <p>Going "no phone before bed" overnight is a great way to fail by day three. A more realistic path: commit to 30 phone-free minutes before bed, hold it for a week, then push the boundary back. Charge the phone in the living room, not on the nightstand. That single move does more than willpower ever will — physical distance is the most reliable implementation of "no phone in bed."</p>
+          <h3>What to do instead</h3>
+          <ul>
+            <li>A paper book or e-ink reader — far easier to fall asleep to than short video</li>
+            <li>Gentle stretching or breathing, slowing the pace on purpose</li>
+            <li>Write tomorrow's to-do list, then let your brain go off duty</li>
+            <li>Low-volume podcast or white noise with a sleep timer</li>
+          </ul>
+          <p>If you cannot control daytime scrolling, you will not hold the line at night either. Let <a href="app.html?lang=en">PausePaw</a> set a gentle cap on mindless browsing first, with a break reminder when you hit the limit. Phone-free evenings stop being a promise and start being a habit.</p>`,
+    },
+  },
+  {
+    id: "post5",
+    key: "bl_post5",
+    day: 3,
+    date: "2026-08-06",
+    zh: {
+      title: `娱乐性 vs 生产力屏幕时间：为什么要分开算`,
+      desc: `大多数“屏幕时间”统计把工作和娱乐混在一起，掩盖了真正的问题。把两类分开，你才能看到该砍的是哪一块。`,
+      body: `<p>系统里显示的"今日屏幕时间 9 小时"几乎没有任何指导意义——因为 6 小时是工作，3 小时是刷短视频。把娱乐性和生产力屏幕时间分开算，是开始管理屏幕的第一步。</p>
+          <h3>为什么要分开</h3>
+          <ul>
+            <li>工作屏幕时间是产出，砍它会伤效率；娱乐屏幕时间才是"可谈判"的部分</li>
+            <li>混在一起 → 你会误以为"我一天都在干活"；分开后 → 真相是短视频吞掉一半</li>
+            <li>判断标准不同：工作屏幕看"是否专注"，娱乐屏幕看"是否有意识"</li>
+          </ul>
+          <h3>怎么分</h3>
+          <ul>
+            <li>iOS：设置 → 屏幕时间 → 按 App 分类看（社交/视频娱乐归娱乐，办公/阅读归生产力）</li>
+            <li>Android：设置 → 数字健康 → 同样按类别划分</li>
+            <li>简单规则：能产生成果的算生产力，纯粹消费的算娱乐</li>
+          </ul>
+          <p>分完之后你会立刻看到真相：真正需要管理的往往只有娱乐那一块。给娱乐设个配额，到点让 <a href="app.html">PausePaw</a> 温柔地提醒你停下——不用戒断，只要知道该砍的是哪一块。</p>`,
+    },
+    en: {
+      title: `Recreational vs Productive Screen Time: Why the Split Matters`,
+      desc: `Most screen-time stats lump work and leisure together, hiding the real problem. Split them and you'll finally see which slice actually needs cutting.`,
+      body: `<p>Your phone says "9 hours of screen time today" — almost meaningless. Six are work, three are doomscrolling. Splitting recreational vs productive screen time is step one of managing screens at all.</p>
+          <h3>Why the split matters</h3>
+          <ul>
+            <li>Work screen time is output; cutting it hurts productivity. Leisure screen time is the negotiable part.</li>
+            <li>Lumped together, you think "I worked all day." Split apart, the truth is short video ate half of it.</li>
+            <li>Different yardsticks: work screens are judged by focus; leisure screens by awareness.</li>
+          </ul>
+          <h3>How to split it</h3>
+          <ul>
+            <li>iOS: Settings → Screen Time → per-app breakdown (social/video = leisure; office/reading = productive)</li>
+            <li>Android: Settings → Digital Wellbeing → same categories</li>
+            <li>Simple rule: produces output = productive; pure consumption = leisure</li>
+          </ul>
+          <p>Once split, the truth is obvious: usually only the leisure slice needs managing. Give it a quota and let <a href="app.html?lang=en">PausePaw</a> gently stop you at the limit — no quitting, just knowing which slice to cut.</p>`,
+    },
+  },
+  {
+    id: "post4",
+    key: "bl_post4",
+    day: 2,
+    date: "2026-08-05",
+    zh: {
+      title: `多少屏幕时间算“太多”？给个现实点的阈值`,
+      desc: `“每天两小时”是上世纪的老建议。2026 年更可靠的判断标准是看信号：睡不好、脖子疼、刷不停、放下就焦虑。这篇给你一套现实可用的自查清单。`,
+      body: `<p>"每天屏幕时间别超过两小时"——这是 1990 年代的规则，今天几乎没人做得到，拿它当标准只会让人焦虑。真正该看的是<strong>信号</strong>，不是数字。</p>
+          <h3>身体信号</h3>
+          <ul>
+            <li>睡前刷手机 → 入睡困难、睡眠变浅</li>
+            <li>脖子/肩膀酸痛 → 长时间低头</li>
+            <li>眼睛干涩、频繁揉眼</li>
+          </ul>
+          <h3>心理信号</h3>
+          <ul>
+            <li>刷完觉得空虚、愧疚</li>
+            <li>放下手机就不安、总想拿起</li>
+            <li>工作/学习时忍不住看手机</li>
+          </ul>
+          <p>如果出现 2-3 个以上，就该调整了——不管屏幕时间数字是多少。减少"坏屏幕时间"的三招：睡前 30-60 分钟放下手机；给娱乐屏幕设配额；用"替代"而不是"戒断"。</p>
+          <p>想记录和约束自己的屏幕时间？试试 <a href="app.html">PausePaw</a>——到点就停，可爱不羞辱。</p>`,
+    },
+    en: {
+      title: `How Much Screen Time Is Too Much? A Realistic 2026 Threshold`,
+      desc: `The two-hour rule is a 1990s relic nobody can meet. A signal-based framework — sleep, posture, compulsive checking — beats any magic number. Self-check list included.`,
+      body: `<p>"Keep screen time under two hours" is a 1990s rule nobody can meet today. The honest signal-based framework beats any magic number.</p>
+          <h3>Physical signals</h3>
+          <ul>
+            <li>Phone before bed → trouble sleeping</li>
+            <li>Neck/shoulder pain from looking down</li>
+            <li>Dry, strained eyes</li>
+          </ul>
+          <h3>Mental signals</h3>
+          <ul>
+            <li>Feeling empty or guilty after scrolling</li>
+            <li>Anxious without the phone</li>
+            <li>Checking the phone during work</li>
+          </ul>
+          <p>Two or more? Time to adjust — regardless of the number. Three fixes: phone-free 30-60 min before bed, a daily leisure-screen quota, and replace (walk/book) instead of quit.</p>
+          <p>Track and curb your screen time with <a href="app.html?lang=en">PausePaw</a> — a cute pause beats a cold block.</p>`,
+    },
+  },
+  {
+    id: "day001",
+    key: "bl_day1",
+    day: 1,
+    date: "2026-08-04",
+    zh: {
+      title: `2026 年人均每日屏幕时间：数据说了什么`,
+      desc: `2026 年最新数据：各年龄段、各国、各平台的日均屏幕时间是多少？以及这对你意味着什么。`,
+      body: `<p>如果现在拿起手机，你会想知道今天已经刷了多久吗？如果直觉告诉你"大概太多了"，你并不孤单。2026 年，普通人看屏幕的时间已经超过醒着时做的任何其他事。</p>
+          <p><strong>核心数字。</strong>综合 2026 年主流研究，<strong>成年人每天看屏幕 6 小时 40 分钟</strong>，比 2025 年的 6 小时 23 分钟还多；手机占其中约一半。青少年更高——<strong>每天娱乐性屏幕时间平均 8 小时 30 分钟</strong>。作为对比，1980 年代人均约 3 小时/天。40 年，屏幕暴露量翻了一倍。</p>
+          <p><strong>时间都花在哪了。</strong>社交媒体 2 小时 17 分；视频流媒体（Netflix、YouTube、TikTok、Twitch）1 小时 58 分；即时通讯与邮件 49 分；普通网页浏览 38 分；游戏 35 分。短视频已经取代长视频，成为最大单一品类。把"社交媒体 + 视频流媒体"加起来，就是<strong>每天 4 小时 15 分</strong>——超过全部屏幕时间的一半。</p>
+          <p><strong>国家差异。</strong>不同地区差异巨大：南非 9 小时 24 分、巴西 9 小时 03 分、菲律宾 8 小时 52 分、美国 7 小时 06 分、英国 6 小时 43 分、日本 4 小时 27 分、德国 4 小时 14 分（数据来自 DataReportal、Statista、Rescuetime 的 2026 年汇总）。如果你住在高屏幕时间国家，你大概已经发现：<strong>"时刻在线"的社会压力是真的，光靠意志力不够</strong>。</p>
+          <p><strong>手机专属数据。</strong>成年人平均每天拿起手机约 144 次；79% 的人在醒来 10 分钟内就会查看手机；65% 的人在收到通知后 5 分钟内查看。每天少用手机 1 小时，比少看电视 1 小时更有效——因为手机是你拥有的最"打断驱动"的屏幕。</p>
+          <p><strong>数据没告诉你的。</strong>分布是偏态的：前 20% 的重度用户占了约一半的时长。而且工作与娱乐的屏幕时间混在同一个数字里。"每天 7 小时"不是对你的宣判，而是起点。真正该问的是：<strong>这里面有多少是我真正想要的？</strong></p>
+          <p><strong>拿这个数字怎么办。</strong>打开手机自带工具（iOS：设置 → 屏幕时间；Android：设置 → 数字健康），看上周按 App 分类的日均时长，然后只挑<strong>一个类别</strong>来缩减——社交媒体、短视频或即时通讯。设一个每日上限（比如 60 分钟），然后让工具替你执行：仅靠自我记录，效果很差。</p>
+          <p><strong>试试：温柔的强制休息。</strong>如果短视频或社交媒体是你想缩减的类别，<a href="/" data-i18n="cta_start">PausePaw</a> 正是为此而生。在 TikTok、YouTube、X 或 Reddit 刷到会话上限时，一只萌系伙伴会接管屏幕，出现一个不可跳过、但很可爱的倒计时休息。时长由你定——5 分钟、10 分钟、1 小时。执行交给 PausePaw，意志力不需要上场。不用卸载，没有羞辱，也不会在第四天反弹。</p>
+          <p>想了解更多？看我们的<a href="blog.html#post3" data-i18n="bl_post3_t">暑期屏幕时间数据</a>，或到<a href="faq.html" data-i18n="f_faq">常见问题</a>了解安装与安全问题。</p>`,
+    },
+    en: {
+      title: `Average Daily Screen Time in 2026: What the Data Says`,
+      desc: `New 2026 data on average daily screen time across age groups, countries, and platforms — and what it means for you.`,
+      body: `<p>If you picked up your phone right now, would you want to know how many hours you've already spent on it today? If your gut says "probably too many", you're far from alone. In 2026, the average person spends more waking hours looking at a screen than doing almost anything else.</p>
+          <p><strong>The headline number.</strong> Across the major 2026 studies, <strong>adults spend 6 hours and 40 minutes per day looking at screens</strong>, up from 6h23m in 2025. Phones account for roughly half. Teens run higher — averaging <strong>8 hours and 30 minutes per day</strong> of recreational screen time. For comparison: people in the 1980s averaged about 3 hours a day. We've roughly doubled screen exposure in 40 years.</p>
+          <p><strong>Where the time actually goes.</strong> Social media takes 2h17m; video streaming (Netflix, YouTube, TikTok, Twitch) 1h58m; messaging and email 49m; general web browsing 38m; gaming 35m. Short-form video is now the single biggest category, having overtaken long-form streaming in 2024. Combine social media + video streaming and you're looking at <strong>4 hours and 15 minutes per day</strong> — more than half of all screen time.</p>
+          <p><strong>The country breakdown.</strong> Averages vary wildly: South Africa 9h24m, Brazil 9h03m, Philippines 8h52m, United States 7h06m, UK 6h43m, Japan 4h27m, Germany 4h14m (aggregated from DataReportal, Statista, and Rescuetime). If you live in a high-screen-time country, you've probably noticed: <strong>the social pressure to be constantly available is real, and willpower is not enough</strong>.</p>
+          <p><strong>The phone-only subset.</strong> Adults pick up their phone roughly 144 times per day; 79% check it within 10 minutes of waking; 65% check within 5 minutes of a notification. Cutting phone time by 1 hour per day beats cutting TV by 1 hour — phones are the most interrupt-driven surface you own.</p>
+          <p><strong>What the numbers don't tell you.</strong> Distribution is skewed: the top 20% of users account for roughly half of all hours. And work screen time collapses into the same number as recreation. "7 hours a day" is not a verdict — it's a starting point. Ask instead: <strong>how much of this is what I actually want?</strong></p>
+          <p><strong>What to do with this number.</strong> Open your phone's built-in tool (iOS: Settings → Screen Time; Android: Settings → Digital Wellbeing), check last week's average by category, and pick <strong>one category</strong> to shrink — social media, short-form video, or messaging. Pick a daily cap (e.g. 60 minutes). Then let a tool enforce it: tracking alone has a poor track record.</p>
+          <p><strong>Try it: gentle, enforced breaks.</strong> If short-form video or social media is your "shrink this" category, <a href="/" data-i18n="cta_start">PausePaw</a> is built for exactly this. When you hit your session limit on TikTok, YouTube, X, or Reddit, a cute buddy takes over the screen with a small, unskippable countdown break. You decide how long — 5 minutes, 10 minutes, an hour. PausePaw handles the enforcement, so willpower doesn't have to. No deletion. No shame. No cold-turkey relapse.</p>
+          <p>Want more context? See our <a href="blog.html?lang=en#post3" data-i18n="bl_post3_t">summer screen-time data</a>, or check the <a href="faq.html?lang=en" data-i18n="f_faq">FAQ</a> for install and safety questions.</p>`,
+    },
+  },
+  {
+    id: "post3",
+    key: "bl_post3",
+    day: -15,
+    date: "2026-07-19",
+    zh: {
+      title: `暑期屏幕时间翻倍？用“Pause”把控制权拿回来`,
+      desc: `研究显示暑期孩子每日娱乐屏幕时间从 3.8 小时飙到 7.2 小时。与其硬堵，不如用温柔的强制休息打断无意识刷屏——这正是 PausePaw 的“Pause 之力”：到点就停，可爱不羞辱，习惯自然松动。`,
+      body: `<p>每年暑假，家长都会面临同一个难题：孩子一放假，屏幕时间就失控。公开研究显示，学龄儿童每日<strong>娱乐性</strong>屏幕时间会从学期中的约 3.8 小时，飙升到暑期的 7.2 小时——几乎翻倍。硬堵往往引发亲子对抗，而完全放任又让人焦虑。</p>
+          <p>PausePaw 的解法是"温柔的强制"：给孩子设备装上插件，对游戏/短视频类站点设置合理的单次时长，到点由萌系伙伴接管屏幕强制休息。<strong>不是没收手机，而是教会身体"到点就停"</strong>。这恰好也是<a href="faq.html" data-i18n="f_faq">家庭版（Family）</a>想解决的核心场景。</p>
+          <p>对成年人同样有效。远程办公让人整天泡在通知和社交软件里，用 PausePaw 给 X、YouTube、Reddit 设一个"每 20 分钟喘口气"，专注力会明显回升。更多安装与配置问题，见<a href="faq.html" data-i18n="f_faq">常见问题</a>。</p>`,
+    },
+    en: {
+      title: `Summer screen time doubles? Take control back with a Pause`,
+      desc: `Studies show kids' daily recreational screen time jumps from 3.8 to 7.2 hours over summer. Instead of hard blocking, use a gentle forced break to interrupt mindless scrolling — that's the power of pause: stop on schedule, cute not shaming, and the habit loosens on its own.`,
+      body: `<p>Every summer, parents face the same problem: screen time spirals the moment school lets out. Public research shows school-age kids' <strong>recreational</strong> screen time jumps from about 3.8 hours on a school day to 7.2 hours over summer — nearly double. Hard blocking sparks parent-child battles; total free rein fuels anxiety.</p>
+          <p>PausePaw's answer is "gentle enforcement": install the extension on the child's device, set reasonable per-session limits on games/short-video sites, and let a cute buddy take over the screen for a forced break at the limit. <strong>It's not confiscating the phone — it's teaching the body to stop on schedule.</strong> That's exactly the core scenario the <a href="faq.html?lang=en" data-i18n="f_faq">Family plan</a> is built for.</p>
+          <p>It works for adults too. Remote work keeps you marinated in notifications and social apps; set PausePaw to "breathe every 20 minutes" on X, YouTube, Reddit and focus noticeably improves. For install and setup questions, see the <a href="faq.html?lang=en" data-i18n="f_faq">FAQ</a>.</p>`,
+    },
+  },
+  {
+    id: "post2",
+    key: "bl_post2",
+    day: -15,
+    date: "2026-07-19",
+    zh: {
+      title: `5 分钟法则：用小中断打断无意识刷屏`,
+      desc: `无意识刷屏往往源于习惯回路。一个温柔的强制休息，能打断回路、把控制权交还给你。`,
+      body: `<p>"无意识刷屏"的本质是习惯回路：打开 App → 自动滑动 → 回过神来半小时过去了。你并不是在"享受"，你只是在跑一个自动化脚本。打断这个脚本，不需要意志力，只需要一个<strong>外部的小中断</strong>。</p>
+          <p>这就是"5 分钟法则"的思路：与其指望自己"少刷点"，不如让工具在每 5–10 分钟温柔地强制你喘口气。具体怎么用 PausePaw 落地：</p>
+          <ol>
+            <li>在<a href="app.html" data-i18n="cta_start">控制台</a>把目标站（如 tiktok.com、youtube.com）加进"要管住的网站"。</li>
+            <li>单次可刷时长设为 5 分钟（演示可设秒级），强制休息 30 秒到 1 分钟。</li>
+            <li>插件加载后，到点弹出一个不可跳过、但很可爱的休息遮罩——时间到自动消失。</li>
+          </ol>
+          <p>研究表明，哪怕只是 30 秒的停顿，也足以让前额叶重新接管决策，把你从"自动驾驶"拉回"有意识"状态。搭配<a href="blog.html#post3" data-i18n="bl_post3_t">暑期屏幕时间</a>的数据看，效果更明显。</p>`,
+    },
+    en: {
+      title: `The 5-minute rule: small interruptions break mindless scrolling`,
+      desc: `Mindless scrolling runs on habit loops. A gentle forced break interrupts the loop and hands control back to you.`,
+      body: `<p>"Mindless scrolling" is fundamentally a habit loop: open the app → auto-swipe → realize half an hour vanished. You're not enjoying it — you're running an autopilot script. Breaking that script doesn't require willpower; it requires <strong>one small external interruption</strong>.</p>
+          <p>That's the thinking behind the 5-minute rule: instead of hoping you'll "scroll less", let a tool gently force a breather every 5–10 minutes. How to set it up with PausePaw:</p>
+          <ol>
+            <li>In the <a href="app.html" data-i18n="cta_start">dashboard</a>, add targets (e.g. tiktok.com, youtube.com) to "Sites to manage".</li>
+            <li>Set max session time to 5 minutes (or seconds in demo mode), forced break 30s–1min.</li>
+            <li>Once the extension loads, an unskippable but cute break overlay appears at the limit — and fades out on its own.</li>
+          </ol>
+          <p>Research suggests even a 30-second pause is enough for your prefrontal cortex to retake control, pulling you from autopilot back to awareness. Pair it with the <a href="blog.html?lang=en#post3" data-i18n="bl_post3_t">summer screen-time</a> data for even clearer results.</p>`,
+    },
+  },
+  {
+    id: "post1",
+    key: "bl_post1",
+    day: -15,
+    date: "2026-07-19",
+    zh: {
+      title: `为什么“可爱”比“封锁”更有效`,
+      desc: `冷冰冰的“已屏蔽”容易激起逆反；一只会卖萌的伙伴降低了心理抵触，让人更愿意配合休息。`,
+      body: `<p>大多数屏幕时间工具走的是"对抗路线"：系统弹窗说"已屏蔽"，家长模式直接锁死应用，Freedom 类工具把网站拉黑。问题在于——<strong>被强制剥夺控制权会激活人的逆反心理</strong>。一旦抵触产生，卸载、绕开、改设置就成了本能反应。这也是为什么纯"封锁型"工具卸载率居高不下。</p>
+          <p>PausePaw 选择另一条路：当你的刷屏时间到达阈值，一只萌系伙伴会温柔地接管屏幕，配上一个不可跳过的倒计时休息。它不是在"惩罚"你，而是在"陪伴"你停下来。这种低抵触的设计有三个真实好处：</p>
+          <ul>
+            <li><strong>降低心理防御</strong>：可爱的中断比冷冰冰的"Blocked"更容易被接受，你不会下意识想把它关掉。</li>
+            <li><strong>把控制权还给你</strong>：休息结束自动淡出，没有羞辱、没有说教，你只是"被提醒了一下"。</li>
+            <li><strong>习惯自然松动</strong>：一次温柔的中断，打断的是无意识刷屏的习惯回路，而不是你和工具的关系。</li>
+          </ul>
+          <p>想了解怎么把这种"小中断"用在日常生活中？看我们的<a href="blog.html#post2" data-i18n="bl_post2_t">《5 分钟法则》</a>，或者直接去<a href="faq.html" data-i18n="f_faq">常见问题</a>了解安装方式。</p>`,
+    },
+    en: {
+      title: `Why “cute” beats “blocked”`,
+      desc: `A cold “Blocked” screen triggers resistance; a buddy that plays cute lowers that wall and makes people willing to take a break.`,
+      body: `<p>Most screen-time tools take an adversarial route: a system popup says "Blocked", parental controls hard-lock apps, and Freedom-style tools blacklist websites. The problem is that <strong>having control taken away triggers psychological reactance</strong> — the moment resistance kicks in, uninstalling or working around the tool becomes second nature. That's why pure "blocking" tools suffer high churn.</p>
+          <p>PausePaw takes a different path: when your scroll time hits the limit, a cute buddy gently takes over the screen with an unskippable countdown break. It isn't punishing you — it's keeping you company while you pause. This low-resistance design has three real benefits:</p>
+          <ul>
+            <li><strong>Lower psychological defense</strong>: a cute interruption is far easier to accept than a cold "Blocked" screen, so you don't instinctively want to kill it.</li>
+            <li><strong>Gives control back to you</strong>: the break fades out automatically — no shaming, no lecturing, just a gentle nudge.</li>
+            <li><strong>Habits loosen naturally</strong>: one gentle interruption breaks the mindless-scrolling loop, not your relationship with the tool.</li>
+          </ul>
+          <p>Want to use small interruptions in daily life? Read our <a href="blog.html?lang=en#post2" data-i18n="bl_post2_t">5-minute rule</a>, or head to the <a href="faq.html?lang=en" data-i18n="f_faq">FAQ</a> to learn how to install.</p>`,
+    },
+  },
+  {
+    id: "post15",
+    key: "bl_post15",
+    day: 13,
+    date: "2026-08-16",
+    zh: {
+      title: `手机习惯 vs 成瘾：界限比你想的模糊`,
+      desc: `每天刷两小时手机，是坏习惯还是成瘾？这篇从行为科学角度拆开"习惯"与"成瘾"的界线，帮你判断自己到底在哪一边。`,
+      body: `<p>很多人一看到"手机成瘾"四个字就摆手：我又没耽误工作，就是睡前刷得久一点，顶多算个坏习惯吧。这个判断可能对，也可能错得离谱——因为<strong>习惯和成瘾之间没有一条清晰的线，而是一条又长又滑的坡</strong>。</p>
+          <h2>先给个粗定义</h2>
+          <p>习惯是自动化的行为回路：解锁手机、点开应用、滑两下，不需要意志参与，停不停得下来主要看环境。成瘾的特征更硬：明知后果还继续、需要越来越多的量才能满足、停了会有戒断反应（烦躁、手痒、坐立不安）。大多数人的手机使用卡在两者之间，既没到临床成瘾，也远不是"无所谓"。</p>
+          <h2>三个信号帮你定位</h2>
+          <ul>
+            <li><strong>你停的时候难受吗？</strong> 放下手机 30 分钟就浑身不自在、反复想拿起来，这是戒断样反应，比"想刷"高一个等级。</li>
+            <li><strong>它有没有挤掉别的？</strong> 睡眠、运动、面对面聊天，如果手机稳定地排在它们前面，哪怕你觉得"没事"，优先级已经在报警。</li>
+            <li><strong>你试过停吗？</strong> 试过、失败、再试、再失败，重复三次以上，说明你面对的不是意志力问题，而是系统问题。</li>
+          </ul>
+          <p>诚实回答这三条，比做一百个心理测试都准。很多人测完才发现：自己以为的"坏习惯"，早就滑到了"依赖"那一侧。</p>
+          <h2>为什么"我只是习惯而已"通常是否认</h2>
+          <p>把手机使用归类为"习惯"，听起来无害，但它有个副作用：既然只是习惯，那"我想停随时能停"就成立。可一旦你发现停不下来，这句话就从安慰变成了借口。行为科学里有个朴素的检验：<strong>一个真正受控的习惯，是可以被说停就停的</strong>。停不下来的，不管叫什么名字，都得按成瘾的框架来处理。</p>
+          <h2>该做什么：别纠结名词，先做行为实验</h2>
+          <p>不用先给自己定罪。做一个 7 天实验：挑一个你用得最多的应用，每天少用 30 分钟，用别的行为填掉这段时间。记录三件事——烦躁程度、填补行为好不好受、第几天开始不那么想它。实验结束，数据会告诉你答案。</p>
+          <p>如果实验做到第 3 天就崩了，别自责，那恰好是信号：你需要工具而不是意志力。PausePaw 的<strong>小中断模式</strong>就是为这种情况设计的，它不封锁、不惩罚，只在你滑到阈值时用一只伙伴接管屏幕，陪你度过最难的那几分钟。<a href="app.html" data-i18n="f_app">看看它是怎么工作的</a>，或者先回<a href="index.html" data-i18n="nav_home">首页</a>了解更多。</p>`,
+    },
+    en: {
+      title: `Phone Habit vs. Phone Addiction: The Line Is Blurrier Than You Think`,
+      desc: `Two hours of scrolling a day — bad habit or addiction? A behavior-science look at where the line actually is, and how to tell which side you're on.`,
+      body: `<p>Hear "phone addiction" and most people wave it off: I'm not missing work, I just scroll a bit too long at night, at worst it's a bad habit. That call might be right, or badly wrong — because <strong>there is no clean line between habit and addiction, just a long, slippery slope</strong>.</p>
+          <h2>A rough definition first</h2>
+          <p>A habit is an automated behavior loop: unlock, tap the app, scroll. No willpower involved, and whether you stop mostly depends on the environment. Addiction has harder features: you keep going despite known consequences, you need more and more to feel satisfied, and stopping brings withdrawal (irritability, itchy fingers, restlessness). Most people sit between the two — not clinically addicted, and nowhere near "no big deal".</p>
+          <h2>Three signals to locate yourself</h2>
+          <ul>
+            <li><strong>Does stopping feel bad?</strong> Thirty minutes without the phone leaves you antsy and reaching for it on repeat — that's withdrawal-like, a level above "wanting to scroll".</li>
+            <li><strong>Is it crowding things out?</strong> Sleep, exercise, face-to-face conversation. If the phone consistently ranks ahead of them, the priority list is already flashing red, even if you say it's fine.</li>
+            <li><strong>Have you tried to stop?</strong> Tried, failed, tried again, failed again, three or more times — you are not facing a willpower problem anymore, you're facing a system problem.</li>
+          </ul>
+          <p>Answering these three honestly beats a hundred online quizzes. Lots of people find out the "bad habit" they assumed they had has already slid into dependence.</p>
+          <h2>Why "it's just a habit" is usually denial</h2>
+          <p>Calling phone use a "habit" sounds harmless, but it carries a side effect: if it's only a habit, then "I can stop anytime" must be true. Once you discover you can't, that sentence flips from comfort to excuse. Behavioral science has a plain test: <strong>a genuinely controlled habit can be stopped on command</strong>. If it can't, whatever you call it, it needs to be handled with the addiction framework.</p>
+          <h2>What to do: skip the label, run a behavior experiment</h2>
+          <p>No need to convict yourself first. Run a 7-day experiment: pick your most-used app, cut 30 minutes a day, fill the time with something else. Track three things — how irritable you get, whether the replacement feels good, and which day you stop craving it. The data will answer for you.</p>
+          <p>If the experiment collapses on day 3, don't beat yourself up. That's the signal: you need a tool, not willpower. PausePaw's <strong>gentle interruption mode</strong> was built exactly for this — no blocking, no punishment. A buddy takes over the screen when you hit your threshold and keeps you company through the hardest minutes. <a href="app.html?lang=en" data-i18n="f_app">See how it works</a>, or head back to the <a href="index.html?lang=en" data-i18n="nav_home">homepage</a> to learn more.</p>`,
+    },
+  },
+
+  {
+    id: "post16",
+    key: "bl_post16",
+    day: 14,
+    date: "2026-08-17",
+    zh: {
+      title: `多巴胺戒断：哪些有效，哪些是噱头`,
+      desc: `多巴胺戒断近年被炒成了万能药，但真正有效的部分和营销号说的差很远。这篇从行为科学角度拆开：哪些做法有实证、哪些纯属噱头、你自己可以怎么做一个不极端的版本。`,
+      body: `<p>"多巴胺戒断"大概是近几年被用得最滥的心理学概念之一。网上版本通常长这样：关掉所有电子设备，戒断 24 小时，你的大脑就会"重置"，从此欲望变少、专注变强。听起来很诱人，但行为科学对它的评价要冷静得多——<strong>这个概念被营销绑架了，但里面确实藏着一个有用的内核</strong>。</p>
+          <h2>先说结论：真有用的部分是什么</h2>
+          <p>研究真正支持的不是"戒断多巴胺"（你做不到，也不需要），而是<strong>减少高刺激输入、让大脑恢复对低刺激活动的敏感度</strong>。刷短视频、切应用、刷信息流，这套高频率刺激会让普通活动——看书、散步、发呆——显得无聊。停几天高刺激输入，无聊感会下降，普通活动重新变得可忍受。这才是"戒断"真正起效的机制。</p>
+          <h2>噱头部分：什么是不靠谱的</h2>
+          <ul>
+          <li><strong>"重置大脑"是伪科学。</strong>没有证据表明 24 小时戒断能改变多巴胺系统，多巴胺是持续分泌的，不是开关。</li>
+          <li><strong>一刀切全戒没必要。</strong>连音乐、运动和社交都戒掉，属于自我惩罚，研究不支持。</li>
+          <li><strong>把戒断当一劳永逸。</strong>真正的问题不是一天的刺激量，是长期的高刺激环境。戒一天，回来继续刷，等于没做。</li>
+          </ul>
+          <h2>一个不极端的可行版本</h2>
+          <p>不用把生活翻过来，试试这个温和版本：</p>
+          <ul>
+          <li><strong>挑一段固定的"低刺激窗口"。</strong>比如每天晚饭后一小时，关掉信息流类应用，只做一件事：散步、看书或纯发呆。</li>
+          <li><strong>把触发源移出视线。</strong>手机放另一个房间，比"靠意志力不刷"可靠十倍。</li>
+          <li><strong>观察你的无聊感。</strong>前三天会觉得难熬，这恰恰是信号：你的大脑正在适应低刺激。撑过去，普通事会重新有味道。</li>
+          </ul>
+          <h2>和手机的关系：戒断不如设闸</h2>
+          <p>极端的"戒断"适合偶尔来一次清空，但日常维护靠的是闸门，不是绝食。把高刺激应用设个使用上限，到点由系统拦一下，比每隔几天忏悔一次更可持续。</p>
+          <p>PausePaw 就是按这个思路做的：不封禁、不惩罚，只在你滑到阈值时用一只小伙伴接管屏幕，陪你度过最难的那几分钟。<a href="app.html" data-i18n="f_app">看看它是怎么工作的</a>，或者先回<a href="index.html" data-i18n="nav_home">首页</a>了解更多。</p>`,
+    },
+    en: {
+      title: `The Dopamine Detox: What Works, What Doesn't`,
+      desc: `"Dopamine detox" is one of the most overused psychology terms online. A behavior-science look at which parts are real, which parts are marketing, and how to run a version that actually fits a normal life.`,
+      body: `<p>"Dopamine detox" might be the most abused psychology concept of the decade. The internet version usually goes like this: switch off every device, abstain for 24 hours, and your brain will "reset", cravings drop, focus returns. It sounds great. Behavioral science is far more measured — <strong>the concept got hijacked by marketing, but there is a real, useful kernel inside it</strong>.</p>
+          <h2>The useful part, first</h2>
+          <p>What research actually supports is not "detoxing from dopamine" (you can't, and you don't need to), but <strong>cutting high-stimulation input so your brain regains sensitivity to low-stimulation activities</strong>. Short videos, app hopping, feed scrolling — this high-frequency stimulation makes ordinary activities — reading, walking, staring out a window — feel boring. A few days of low-stimulation input and the boredom fades; ordinary things become tolerable again. That is the real mechanism.</p>
+          <h2>The marketing parts</h2>
+          <ul>
+          <li><strong>"Resetting your brain" is pseudoscience.</strong> No evidence that 24 hours of abstinence rewires your dopamine system. Dopamine is constantly secreted; it is not a switch.</li>
+          <li><strong>Abstaining from everything is unnecessary.</strong> Cutting music, exercise, and social contact too is self-punishment, and the research doesn't support it.</li>
+          <li><strong>Treating detox as a one-and-done.</strong> The real problem is not one day's stimulation, it is a long-term high-stimulation environment. Detox for a day, then go back to scrolling — that's doing nothing.</li>
+          </ul>
+          <h2>A workable, non-extreme version</h2>
+          <p>You don't have to turn your life upside down. Try this gentler version:</p>
+          <ul>
+          <li><strong>Pick a fixed "low-stimulation window".</strong> An hour after dinner, for example: feed apps off, one activity only — walk, read, or stare at nothing.</li>
+          <li><strong>Move the trigger out of sight.</strong> Phone in another room beats "relying on willpower not to scroll" ten times over.</li>
+          <li><strong>Watch your boredom.</strong> The first three days feel hard, and that is the signal: your brain is adapting to low stimulation. Push through, and ordinary things taste good again.</li>
+          </ul>
+          <h2>Phones: a gate beats a fast</h2>
+          <p>Extreme "detox" works as an occasional reset, but daily maintenance is about gates, not fasting. Set a usage cap on high-stimulation apps and let the system block you at the limit. That is far more sustainable than repenting every few days.</p>
+          <p>That is exactly how PausePaw is built: no blocking, no punishment. A buddy takes over the screen when you hit your threshold and keeps you company through the hardest minutes. <a href="app.html?lang=en" data-i18n="f_app">See how it works</a>, or head back to the <a href="index.html?lang=en" data-i18n="nav_home">homepage</a> to learn more.</p>`,
+    },
+  },
+  {
+    id: "post17",
+    key: "bl_post17",
+    day: 15,
+    date: "2026-08-18",
+    zh: {
+      title: `7 天数字戒断：怎么不把自己逼疯`,
+      desc: `数字戒断听起来像苦行，但真要做 7 天，大多数人撑不过第三天。这篇给一个不那么反人性的版本：什么该砍、什么该留、怎么躲开“第三天崩盘”。`,
+      body: `<p><h2>先说清楚：戒断不是绝食</h2></p>
+<p>很多人把数字戒断理解成“一刀切全戒”，结果第一天就焦虑，第三天报复性刷爆。真正可持续的做法，是把高刺激输入降下来，而不是把生活连根拔起。你不需要删掉音乐、运动和朋友，那些本来就该留着。</p>
+<p><h2>七天怎么分：前松后紧</h2></p>
+<p>与其平均分，不如把七天当成一段有节奏的练习：</p>
+<ul>
+<li><strong>第 1–2 天：察觉。</strong>不急着砍，先记下自己每天摸手机多少次、为了什么。光是看见，就已经打断了一部分自动回路。</li>
+<li><strong>第 3–4 天：设闸。</strong>这是最容易崩的两天。把信息流类应用移到二级文件夹，晚上把手机放另一个房间。物理距离比意志力可靠。</li>
+<li><strong>第 5–7 天：替换。</strong>用具体活动填补空出来的时间：散步、纸质书、做饭、发呆。让大脑重新适应低刺激。</li>
+</ul>
+<p><h2>哪些该砍，哪些该留</h2></p>
+<table>
+<tr><th>该砍</th><th>该留</th></tr>
+<tr><td>无目的刷信息流</td><td>必要的通讯和工作工具</td></tr>
+<tr><td>睡前最后一把短视频</td><td>音乐、播客、运动</td></tr>
+<tr><td>“顺手就滑”的肌肉记忆</td><td>和真人面对面的时间</td></tr>
+</table>
+<p><h2>第三天为什么会崩，怎么躲</h2></p>
+<p>第三天崩，是因为前两天的“新鲜感”耗尽了，而无聊和焦虑开始冒头。躲法就一句：提前准备好“无聊时做清单”。手机不在手边时，从清单里挑一样，比硬扛有效十倍。PausePaw 这类工具也能帮上忙——它不封你，只在你滑到阈值时用一只小伙伴接管屏幕，把最难的那几分钟接过去。</p>
+<p>想看具体怎么拦，回 <a href="/blog/post16.html">Day 14 的多巴胺戒断</a> 那篇；要动手设闸，去 <a href="app.html" data-i18n="f_app">PausePaw 应用</a> 或先回 <a href="index.html" data-i18n="nav_home">首页</a>。</p>
+<p><h2>FAQ</h2></p>
+<h3>七天必须完全离线吗？</h3>
+<p>不用。真正要砍的是无目的的高刺激刷屏，不是你的人际和工作。留着必要的工具，戒断才撑得下去。</p>
+<p>Do I need to go fully offline for seven days? No. Cut mindless high-stimulation scrolling, not your people and work. Keep what's necessary and the detox actually lasts.</p>
+<h3>第三天崩了算失败吗？</h3>
+<p>不算。崩了说明你碰到了真实拐点，补上“无聊清单”再试就行。重点是整体往下走，不是一天不差。</p>
+<p>Is a day-three crash a failure? Not at all. It means you hit the real turning point. Add the boredom list and try again. The point is the overall direction, not a perfect streak.</p>
+<h3>工具能代替意志力吗？</h3>
+<p>不能代替，但能兜底。PausePaw 管的是环境和阈值，真正的回路还得你自己换。它帮你把最难的几分钟接住，剩下的交给你。</p>
+<p>Can a tool replace willpower? No, but it can catch you. PausePaw handles the environment and the threshold; the loop still has to be rebuilt by you. It takes the hardest minutes off your hands.</p>
+<p><h2>今天就开始</h2></p>
+<p>不用等“下周一”。今晚就把手机放到客厅，写下三件无聊时能做的事。七天不是惩罚，是给你自己的一段清净。PausePaw 帮你把路拦好，其余的，交给你自己。</p>`,
+    },
+    en: {
+      title: `How to Do a 7-Day Digital Detox Without Losing Your Mind`,
+      desc: `A digital detox sounds like punishment, but most people don't survive past day three. Here's a less hostile version: what to cut, what to keep, and how to dodge the day-three crash.`,
+      body: `<p><h2>First, detox is not a fast</h2></p>
+<p>A lot of people read "digital detox" as "cut everything," then get anxious on day one and binge-scroll on day three. The sustainable move is to lower high-stimulation input, not uproot your life. You don't need to delete music, exercise, or friends; those should stay.</p>
+<p><h2>How to split the seven days: ease in, then tighten</h2></p>
+<p>Instead of spreading effort evenly, treat the week as a rhythm:</p>
+<ul>
+<li><strong>Days 1–2: notice.</strong> Don't cut yet. Just log how often you reach for the phone and why. Seeing it already breaks part of the autopilot loop.</li>
+<li><strong>Days 3–4: gate.</strong> These are the two easiest days to crack. Move feed apps into a second folder and put the phone in another room at night. Distance beats willpower.</li>
+<li><strong>Days 5–7: replace.</strong> Fill the freed time with something concrete: a walk, a paper book, cooking, staring out a window. Let the brain relearn low stimulation.</li>
+</ul>
+<p><h2>What to cut, what to keep</h2></p>
+<table>
+<tr><th>Cut</th><th>Keep</th></tr>
+<tr><td>mindless feed scrolling</td><td>necessary communication and work tools</td></tr>
+<tr><td>the last scroll before sleep</td><td>music, podcasts, exercise</td></tr>
+<tr><td>the "just one swipe" reflex</td><td>face-to-face time with real people</td></tr>
+</table>
+<p><h2>Why day three breaks, and how to dodge it</h2></p>
+<p>Day three breaks because the novelty of days one and two has worn off and boredom and anxiety start creeping in. The fix fits in one line: prep a "boredom list" in advance. When the phone isn't in your hand, pick something from the list; it works ten times better than white-knuckling it. A tool like PausePaw helps here too. It doesn't block you; it hands the screen to a little buddy when you hit your threshold and carries you through the hardest few minutes.</p>
+<p>For the mechanics, go back to the <a href="/blog/post16.html">Day 14 dopamine detox</a> piece; to set up the gate, open the <a href="app.html?lang=en" data-i18n="f_app">PausePaw app</a> or head to the <a href="index.html?lang=en" data-i18n="nav_home">homepage</a>.</p>
+<p><h2>FAQ</h2></p>
+<h3>Do I need to go fully offline for seven days?</h3>
+<p>No. What you cut is mindless high-stimulation scrolling, not your people and work. Keep what's necessary and the detox actually lasts.</p>
+<p>七天必须完全离线吗？不用。真正要砍的是无目的的高刺激刷屏，不是你的人际和工作。留着必要的工具，戒断才撑得下去。</p>
+<h3>Is a day-three crash a failure?</h3>
+<p>Not at all. It means you hit the real turning point. Add the boredom list and try again. The point is the overall direction, not a perfect streak.</p>
+<p>第三天崩了算失败吗？不算。崩了说明你碰到了真实拐点，补上"无聊清单"再试就行。重点是整体往下走，不是一天不差。</p>
+<h3>Can a tool replace willpower?</h3>
+<p>No, but it can catch you. PausePaw handles the environment and the threshold; the loop still has to be rebuilt by you. It takes the hardest minutes off your hands.</p>
+<p>工具能代替意志力吗？不能代替，但能兜底。PausePaw 管的是环境和阈值，真正的回路还得你自己换。</p>
+<p><h2>Start today</h2></p>
+<p>You don't have to wait for next Monday. Tonight, put the phone in the living room and write down three things to do when bored. Seven days isn't punishment; it's a stretch of quiet for yourself. PausePaw helps block the road; the rest is up to you.</p>`,
+    },
+    faq: [
+      { q: `七天必须完全离线吗？`, a: `不用。真正要砍的是无目的的高刺激刷屏，不是你的人际和工作。留着必要的工具，戒断才撑得下去。` },
+      { q: `第三天崩了算失败吗？`, a: `不算。崩了说明你碰到了真实拐点，补上"无聊清单"再试就行。重点是整体往下走，不是一天不差。` },
+      { q: `工具能代替意志力吗？`, a: `不能代替，但能兜底。PausePaw 管的是环境和阈值，真正的回路还得你自己换。` },
+    ],
+  },
+
+  {
+    id: "post18",
+    key: "bl_post18",
+    day: 16,
+    date: "2026-08-19",
+    zh: {
+      title: `戒手机：一步到位 vs 循序渐进`,
+      desc: `戒手机有人主张一刀切彻底断，有人主张慢慢减量。这篇看行为改变的研究怎么说：哪种方式真正持久，又怎么按自己的性格来选。`,
+      body: `<p>如果你决定戒手机一步到位（cold turkey），脑子里大概是把手机塞进抽屉关一个月的画面。够决绝，对某一类人确实最有效。但行为改变的研究讲了个更无聊、也更有用的道理：能撑住的方法才是真正有用的方法，尤其过了第三天之后。</p>
+<h2>“一步到位”到底是什么意思</h2>
+<p>一步到位不是“少用点”，是“一段时间内彻底不碰”。通常是在刷了一宿烂梗、或者 deadline 快崩的时候才会冒出来。它的好处是清楚：没有灰色地带，没有“再看五分钟”。手机在抽屉里，或者不在，二选一。</p>
+<p>代价是，硬切断最怕环境不支持。如果你的工作、家人群、唯一导航都在手机上，一步到位等于把一整天都围着那个空缺重搭一遍。第一周就这么要求自己，有点苛刻。</p>
+<h2>为什么“循序渐进”是多数人的默认</h2>
+<p>大多数人其实没“选”循序渐进，是被迫掉进去的，因为彻底不碰太难，只能慢慢减。这种半吊子常被看不起，但如果有意地做，它有真本事：你把刺激降下来，但没把真正需要的工具连根拔掉。</p>
+<p>一个有计划的减量长这样：挑两个最吃掉你晚上的 app，用计时器给它们设上限，再把手机请出卧室。手机该用的地方照用，吃掉你的那部分切掉。变化小到大脑懒得造反。</p>
+<h2>研究怎么说：哪种更持久</h2>
+<p>行为改变的研究（不是专门研究手机，是更广义的习惯文献）指向同一个方向：对多数人，循序渐进的半年留存比突然切断更好。原因是反弹。一步到位在第 3–5 天有个很陡的失败曲线，新鲜感散了，戒断的痒劲上来。而减量的人撞上的悬崖更少，因为变化从来不像悬崖。</p>
+<p>不过，一步到位对一类人胜出：试过十次“少玩点”、十次都失败的那种。如果“就刷一下”对你从来没灵过，彻底断开反而把决策从方程里拿掉了。性格匹配比方法本身更重要。</p>
+<h2>怎么按自己的性格选</h2>
+<p>问自己一个问题：我到底有没有成功节制过，还是每次都滑回信息流底部？如果老实答案是“一次都没停住过”，那就挑一个明确的窗口（比如一个长周末）一步到位，并计划好拿什么填那个空缺。如果你以前做到过小幅削减，就做个减量计划，给足三周。</p>
+<table>
+<tr><th>你适合一步到位，如果…</th><th>你适合循序渐进，如果…</th></tr>
+<tr><td>节制每次都失败</td><td>你以前做到过小幅削减</td></tr>
+<tr><td>有明确事件（考试、旅行、戒断周）</td><td>手机对真实工作和家庭是刚需</td></tr>
+<tr><td>你想要零模糊地带</td><td>你想要能撑过第一周的改变</td></tr>
+</table>
+<h2>工具能帮上什么忙</h2>
+<p>两种方法说到底都不是靠意志力，而是改变“决策发生那一刻”。一个给 app 设上限的计时器，或者一个在你触顶时冒出来的小伙伴，替你把“打断”做了，于是你伸手之前选择已经做好了。</p>
+<p>你不必给自己做长篇动员。今晚设一个上限，看看第一天什么感觉。重点不是完美戒断，而是别再被自己的手伸向屏幕这件事吓一跳。</p>
+<h2>常见问题</h2>
+<h3>一步到位比循序渐进更好吗？</h3>
+<p>不一定。对“节制从没成功过”的人，彻底断开把决策拿掉了，反而更稳。对多数人，循序渐进的半年留存更好。看你是哪一类。</p>
+<h3>戒掉手机习惯要多久？</h3>
+<p>习惯回路一般 3–4 周开始松动，但“不假思索就伸手”会反复。别指望 21 天魔法，把它当成长期调阈值。</p>
+<h3>用 app 帮我戒，不是又多一块屏幕吗？</h3>
+<p>如果 app 只是给你另一个刷的地方，是的。但 PausePaw 这类是反方向：它到点接管屏幕、拦一下，不是喂你更多。工具用对了，是减法。</p>
+<p>关于 PausePaw：PausePaw 是一个浏览器端的数字健康伴侣，打开 pause-paw.shop 就能免费安装。它不封锁、不惩罚，只在你滑到阈值时用一只小伙伴接管屏幕，陪你度过最难的那几分钟。想动手设闸，去 <a href="app.html" data-i18n="f_app">PausePaw 应用</a>；想读更多，回 <a href="/blog.html">博客首页</a> 或 <a href="index.html" data-i18n="nav_home">官网首页</a>。</p>`,
+    },
+    en: {
+      title: `Cold Turkey vs. Gradual Reduction: Which Works for Phones?`,
+      desc: `Some people swear by quitting phones cold turkey; others taper down slowly. Here's what the research on habit change actually says about which approach lasts, and how to pick one for your personality.`,
+      body: `<p>If you have decided to quit phone cold turkey, you probably picture shoving the device into a drawer for a month. It is dramatic, and for a certain kind of person it is exactly right. But the research on habit change tells a more boring, more useful story: the method that lasts is the one you can actually keep doing past day three.</p>
+<h2>What "cold turkey" actually means</h2>
+<p>Cold turkey is not "use my phone less." It is "no phone, full stop, for a set period." People reach for it after a bad night of scrolling, or when a deadline is slipping. The appeal is clarity: there is no gray area, no "just five more minutes." Either the phone is in the drawer or it is not.</p>
+<p>The catch is that a hard reset works best when your environment supports it. If your work, your family group chat, and your only map app all live on that phone, going cold turkey means rebuilding your whole day around the gap. That is a lot to ask of week one.</p>
+<h2>Why "gradual reduction" is the default</h2>
+<p>Most people never choose gradual reduction. They fall into it, because quitting completely feels impossible, so they trim a little. That half-measure gets a bad name, but done on purpose it has real strengths. You lower the stimulation without yanking out the tools you actually need.</p>
+<p>A planned taper looks like this: pick the two apps that eat your evenings, cap them with a timer, and move the phone out of the bedroom. You keep the phone for the things that matter and cut the part that doesn't. The change is small enough that your brain doesn't revolt.</p>
+<h2>What the research says about which one lasts</h2>
+<p>The studies on habit change, not the ones on phones specifically but the broader literature, point one direction: for most people, gradual reduction produces better six-month outcomes than abrupt stops. The reason is relapse. Cold turkey has a steep failure curve right around day three to five, when the novelty wears off and the withdrawal itch sets in. People who taper hit fewer cliffs because the change never felt like a cliff.</p>
+<p>That said, cold turkey wins for a specific group: people who have tried to moderate ten times and failed ten times. If "just one scroll" has never once worked for you, a clean break removes the decision from the equation. Personality fit matters more than the method.</p>
+<h2>How to choose for your personality</h2>
+<p>Ask yourself one question: have I ever successfully moderated this, or do I always end up back at the bottom of the feed? If the honest answer is "I've never once stopped at a little," pick cold turkey for a short, defined window like a long weekend, and plan what fills the gap. If you have managed partial cuts before, build a taper and give it three weeks.</p>
+<table>
+<tr><th>Cold turkey fits if…</th><th>Gradual fits if…</th></tr>
+<tr><td>Moderation has failed you every time</td><td>You have pulled off smaller cuts before</td></tr>
+<tr><td>You have a clear event (exam, trip, detox week)</td><td>You need the phone for real work and family</td></tr>
+<tr><td>You want zero ambiguity</td><td>You want a change that survives past week one</td></tr>
+</table>
+<h2>Where a tool fits in</h2>
+<p>Neither method is really about willpower. Both are about changing the moment of decision. A timer that caps an app, or a buddy that appears when you hit your limit, does the interrupting for you, so the choice is already made before you reach for the phone.</p>
+<p>You don't need a big speech to yourself. Set one cap tonight and see how day one feels. The point is not to quit perfectly. The point is to stop being surprised by your own hand reaching for the screen.</p>
+<h2>Frequently asked questions</h2>
+<h3>Is cold turkey better than tapering?</h3>
+<p>Not necessarily. For people who have never once moderated successfully, a clean break removes the decision and is steadier. For most, gradual reduction has better six-month retention. It depends which camp you are in.</p>
+<h3>How long does it take to break a phone habit?</h3>
+<p>The loop usually starts loosening around three to four weeks, but the unthinking reach for the phone comes back. Don't expect a 21-day magic number. Treat it as long-term threshold tuning.</p>
+<h3>Does using an app to quit just add another screen?</h3>
+<p>Only if the app is another place to scroll. A tool like PausePaw works the other way: at your limit it takes over the screen and blocks, rather than feeding you more. Used right, it is subtraction.</p>
+<p>About PausePaw: PausePaw is a browser-based digital wellbeing companion. Open pause-paw.shop to install it free. It doesn't block or punish you; when you cross your scroll threshold, a little buddy takes over the screen and stays with you through the hardest few minutes. To set your own gate, open the <a href="app.html?lang=en" data-i18n="f_app">PausePaw app</a>; to read more, head to the <a href="/blog.html">blog home</a> or the <a href="index.html?lang=en" data-i18n="nav_home">homepage</a>.</p>`,
+    },
+    faq: [
+      { q: `一步到位比循序渐进更好吗？`, a: `不一定。对"节制从没成功过"的人，彻底断开把决策拿掉了，反而更稳。对多数人，循序渐进的半年留存更好。看你是哪一类。` },
+      { q: `戒掉手机习惯要多久？`, a: `习惯回路一般 3–4 周开始松动，但"不假思索就伸手"会反复。别指望 21 天魔法，把它当成长期调阈值。` },
+      { q: `用 app 帮我戒，不是又多一块屏幕吗？`, a: `如果 app 只是给你另一个刷的地方，是的。但 PausePaw 这类是反方向：它到点接管屏幕、拦一下，不是喂你更多。工具用对了，是减法。` },
+    ],
+  },
+  {
+    id: "post19",
+    key: "bl_post19",
+    day: 17,
+    date: "2026-08-20",
+    zh: {
+      title: `意志力为什么赢不了手机成瘾（以及真正有效的办法）`,
+      desc: `靠意志力戒手机是一个坏策略——不是因为你不够坚强，而是因为策略本身反人性。这篇讲清楚意志力为什么失效，以及什么真正有效。`,
+      body: `<p>先说一个反直觉的事实：意志力不是你的问题，是策略的问题。你试过去掉手机成瘾靠"少刷一点"，试了很多次，每次都在第三天崩溃。不是你不够坚强，是你在用错误的方式对抗一个精心设计的系统。</p>
+<p><h2>为什么意志力总是输</h2>
+<p>手机成瘾不是习惯问题，是设计问题。每个推送、每刷一条新内容、每次下拉刷新，都是有人在实验室里验证过能触发多巴胺的机制。你对抗的不是一时冲动，是一个由行为心理学家、神经科学家和顶级工程师团队设计的奖励系统。意志力在这种系统面前，从来没有赢过。</p>
+<p>意志力之所以输，是因为它依赖持续决策。每次你忍住不刷手机，你都在做一次决策："要不要看？"而这个系统设计的核心，就是让每次决策都变得极难拒绝。它用即时奖励对抗你的长期目标，用不确定奖励（下一条会不会有趣？）对抗你的理性判断。</p>
+<p>更糟的是，意志力是有限资源。你用它在早上忍住不看手机，到了晚上就耗尽了。这时候你刷得最狠，因为你的决策肌肉已经疲劳。</p>
+<p><h2>真正有效的办法：不靠意志力</h2>
+<p>既然意志力是错误策略，什么是对的？答案是：改变环境，而不是增强意志。</p>
+<p>最有效的策略叫"承诺设备"——在未来某个时刻，让某个对你现在来说不可接受的行为变得不可能或极难发生。具体例子：</p>
+<ul>
+<li>把社交 app 从主屏幕移到文件夹深处，增加 3 次点击才能打开</li>
+<li>睡前把手机放在另一个房间充电，而不是床头</li>
+<li>用 PausePaw 设置"工作时间锁"，到点自动接管屏幕</li>
+<li>取消所有非必要的推送通知，只保留电话和短信</li>
+</ul>
+<p>这些策略的共同点是：你在清醒、理智的状态下做决定，然后在需要意志力的时刻，系统已经替你做了选择。</p>
+<p><h2>PausePaw 的设计哲学</h2>
+<p>PausePaw 不靠意志力，它靠的是在你即将滑入无意识刷手机的那一瞬间，用一个小伙伴接管屏幕。你不是被"惩罚"了，而是被"打断"了——打断那个自动化的伸手动作，让你回到有意识的选择。</p>
+<p>这个方法之所以有效，是因为它绕过了意志力的对抗。你不需要忍住不刷，你只需要在被打断的那几秒里，重新选择。</p>
+<p><h2>常见问题</h2>
+<h3>意志力真的完全没用吗？</h3>
+<p>不是完全没用，是效率极低。意志力适合短期、小规模的改变，不适合对抗精心设计的成瘾系统。长期戒手机，环境设计比意志力可靠得多。</p>
+<h3>如果我偶尔失控了，是不是失败了？</h3>
+<p>不是。失控是过程的一部分，不是终点。关键不是"永不失控"，而是"失控后回到策略"。每次失控后重新检查你的环境设置，比责怪自己更有效。</p>
+<h3>PausePaw 和屏蔽类 app 有什么区别？</h3>
+<p>屏蔽类 app 靠强制封锁，容易引发逆反心理。PausePaw 靠的是打断和陪伴——在你即将滑入无意识刷手机时，用一个小伙伴接管屏幕，陪你度过最难的那几分钟。它不惩罚你，它只是帮你回到有意识的选择。</p>
+<p>想试试不靠意志力的办法？打开 <a href="app.html" data-i18n="f_app">PausePaw 应用</a>，或回 <a href="index.html" data-i18n="nav_home">首页</a>了解更多。</p>`
+    },
+    en: {
+      title: `Why Willpower Fails Against Phone Addiction (And What Works)`,
+      desc: `Relying on willpower to quit phone addiction is a bad strategy — not because you are weak, but because the strategy itself is anti-human. Here is why willpower always loses, and what actually works.`,
+      body: `<p>Here is a counterintuitive fact: willpower is not your problem, it is the strategy's problem. You have tried cutting back on phone use by "willpower alone," failed multiple times, collapsed by day three. It is not that you lack strength. It is that you are fighting a system designed to win.</p>
+<p><h2>Why willpower always loses</h2>
+<p>Phone addiction is not a habit problem, it is a design problem. Every notification, every infinite scroll, every pull-to-refresh is a mechanism validated in a lab to trigger dopamine. You are not fighting a momentary impulse. You are fighting a reward system designed by behavioral psychologists, neuroscientists, and top engineers. Willpower has never won against that.</p>
+<p>Willpower loses because it depends on continuous decision-making. Every time you resist checking your phone, you make a choice: "Should I look?" And the system is designed to make that choice nearly impossible to refuse. It uses immediate rewards against your long-term goals and variable rewards (will the next post be interesting?) against your rational judgment.</p>
+<p>Worse, willpower is a finite resource. You use it in the morning to resist, and by evening it is depleted. That is when you scroll the hardest, because your decision muscle is exhausted.</p>
+<p><h2>What actually works: change the environment, not the will</h2>
+<p>If willpower is the wrong strategy, what is the right one? The answer: change the environment, not strengthen the will.</p>
+<p>The most effective strategy is a "commitment device" — making an action impossible or extremely difficult at the moment you need it, while you are still in a rational state. Concrete examples:</p>
+<ul>
+<li>Move social apps off the home screen into a deep folder, adding 3 taps to open</li>
+<li>Charge the phone in another room at night, not on the nightstand</li>
+<li>Use PausePaw to set a "worktime lock" that takes over the screen at the limit</li>
+<li>Turn off all non-essential push notifications, keep only calls and texts</li>
+</ul>
+<p>These strategies share one thing: you decide in a清醒 state, and when you need willpower, the system has already chosen for you.</p>
+<p><h2>The design philosophy behind PausePaw</h2>
+<p>PausePaw does not rely on willpower. It relies on interrupting you at the exact moment you are about to slide into mindless scrolling. A little buddy takes over the screen. You are not being "punished." You are being打断 —打断那个自动化的伸手动作，让你回到有意识的选择。</p>
+<p>This works because it bypasses the willpower confrontation entirely. You do not need to resist. You just need to make a conscious choice in the few seconds after the interruption.</p>
+<p><h2>Frequently asked questions</h2>
+<h3>Is willpower completely useless?</h3>
+<p>Not completely. It is extremely inefficient. Willpower works for short-term, small-scale changes, not for fighting a purpose-built addiction system. For long-term phone moderation, environment design is far more reliable.</p>
+<h3>If I slip up occasionally, does that mean I failed?</h3>
+<p>No. Slipping up is part of the process, not the endpoint. The key is not "never slip," it is "return to the strategy after slipping." Each time you slip, check your environment settings instead of blaming yourself.</p>
+<h3>How is PausePaw different from blocking apps?</h3>
+<p>Blocking apps rely on forceful restrictions, which often trigger rebellion. PausePaw uses interruption and companionship — a buddy takes over the screen when you hit your limit, keeping you company through the hardest minutes. It does not punish you. It helps you return to a conscious choice.</p>
+<p>Want to try a strategy that does not rely on willpower? Open the <a href="app.html?lang=en" data-i18n="f_app">PausePaw app</a>, or head back to the <a href="index.html?lang=en" data-i18n="nav_home">homepage</a>.</p>`
+    },
+    faq: [
+      { q: `意志力真的完全没用吗？`, a: `不是完全没用，是效率极低。意志力适合短期、小规模的改变，不适合对抗精心设计的成瘾系统。长期戒手机，环境设计比意志力可靠得多。` },
+      { q: `偶尔失控是不是失败了？`, a: `不是。失控是过程的一部分。关键不是"永不失控"，而是"失控后回到策略"。每次失控后检查环境设置，比责怪自己更有效。` },
+      { q: `PausePaw 和屏蔽类 app 有什么区别？`, a: `屏蔽类 app 靠强制封锁，容易引发逆反心理。PausePaw 靠打断和陪伴——到点用小伙伴接管屏幕，帮你回到有意识的选择，不惩罚你。` },
+    ],
+  },
+  {
+    id: "post20",
+    key: "bl_post20",
+    day: 18,
+    date: "2026-08-21",
+    zh: {
+      title: "手机成瘾恢复：现实点的 30 天计划",
+      desc: "不是彻底戒断，而是循序渐进。第 1 周减少使用，第 2 周重建习惯，第 3 周巩固成果，第 4 周找到平衡。",
+      body: `<p>很多人问我："怎么戒掉手机？"我的回答是：不要想着"戒掉"，想着"恢复"。成瘾的对面不是节制，而是生活有其他意义。</p>
+<p>这篇文章给你一份 30 天计划。不极端，不痛苦，只是每天做一点改变。</p>
+<h2>第 1 周：观察而不是改变</h2>
+<p>第一天，不要试图戒手机。只是观察。</p>
+<ul>
+<li>你每天解锁多少次？</li>
+<li>什么时间解锁最多？</li>
+<li>什么情绪下最想看手机？</li>
+</ul>
+<p>记录下来。不需要改变，只是看。</p>
+<h2>第 2 周：建立一个小仪式</h2>
+<p>选一个场景，每天固定时间做。比如：</p>
+<ul>
+<li>早上起床后，先看窗外 5 分钟，再看手机</li>
+<li>晚饭后，手机放另一个房间 30 分钟</li>
+<li>睡前 1 小时，手机充电放在客厅</li>
+</ul>
+<p>选一个，坚持 7 天。成功了再选下一个。</p>
+<h2>第 3 周：找一个替代品</h2>
+<p>手机成瘾往往是因为无聊或焦虑。找到替代品：</p>
+<ul>
+<li>无聊时：翻一本书，而不是刷社交媒体</li>
+<li>焦虑时：做 5 次深呼吸，而不是看手机</li>
+<li>等待时：观察周围，而不是解锁屏幕</li>
+</ul>
+<p>不需要完美，只需要比刷手机多做一点。</p>
+<h2>第 4 周：找到你的"为什么"</h2>
+<p>最后这周，问自己：我想减少手机使用，是为了什么？</p>
+<ul>
+<li>为了陪孩子更多时间？</li>
+<li>为了睡眠质量更好？</li>
+<li>为了专注工作？</li>
+</ul>
+<p>找到你的"为什么"，它比任何 APP 都管用。</p>
+<h2>关于 PausePaw</h2>
+<p>PausePaw 不是用来"戒手机"的，它是帮你回到有意识的选择的工具。当你的注意力被刷短视频带走时，PausePaw 的小家伙会温柔地接管屏幕。这不是惩罚，是提醒你：此刻，你在做什么？</p>
+<p>试试 <a href="app.html?lang=zh" data-i18n="f_app">PausePaw</a>，或者回到 <a href="index.html?lang=zh" data-i18n="nav_home">首页</a>。</p>`,
+    },
+    en: {
+      title: "Phone Addiction Recovery: A Realistic 30-Day Plan",
+      desc: "Not about quitting cold turkey, but gradual change. Week 1: observe. Week 2: build one ritual. Week 3: find alternatives. Week 4: discover your why.",
+      body: `<p>People often ask me: "How do I quit my phone?" My answer: don't think about quitting. Think about recovering. The opposite of addiction is not moderation — it's having other meanings in life.</p>
+<p>This article gives you a 30-day plan. Not extreme, not painful. Just small changes every day.</p>
+<h2>Week 1: Observe Without Changing</h2>
+<p>Day one: don't try to quit your phone. Just observe.</p>
+<ul>
+<li>How many times do you unlock your phone daily?</li>
+<li>What time do you use it the most?</li>
+<li>What emotions trigger the strongest urge to check your phone?</li>
+</ul>
+<p>Write it down. No need to change. Just watch.</p>
+<h2>Week 2: Build One Small Ritual</h2>
+<p>Pick one scenario and do it at a fixed time every day. For example:</p>
+<ul>
+<li>After waking up, look out the window for 5 minutes before checking your phone</li>
+<li>After dinner, leave your phone in another room for 30 minutes</li>
+<li>One hour before bed, charge your phone in the living room</li>
+</ul>
+<p>Pick one. Stick with it for 7 days. Once successful, pick another.</p>
+<h2>Week 3: Find a Replacement</h2>
+<p>Phone addiction often comes from boredom or anxiety. Find replacements:</p>
+<ul>
+<li>Bored? Read a book instead of scrolling social media</li>
+<li>Anxious? Take 5 deep breaths instead of checking your phone</li>
+<li>Waiting? Observe your surroundings instead of unlocking your screen</li>
+</ul>
+<p>You don't need to be perfect. Just do a little more than scrolling.</p>
+<h2>Week 4: Find Your "Why"</h2>
+<p>In the final week, ask yourself: why do I want to reduce phone use?</p>
+<ul>
+<li>More time with my kids?</li>
+<li>Better sleep quality?</li>
+<li>Focus on work?</li>
+</ul>
+<p>Find your "why". It works better than any app.</p>
+<h2>About PausePaw</h2>
+<p>PausePaw is not about "quitting" your phone. It's a tool to help you return to conscious choices. When your attention is taken away by mindless scrolling, PausePaw's little buddy gently takes over the screen. This isn't punishment — it's a reminder: what are you doing right now?</p>
+<p>Try the <a href="app.html?lang=en" data-i18n="f_app">PausePaw app</a>, or head back to the <a href="index.html?lang=en" data-i18n="nav_home">homepage</a>.</p>`,
+    },
+    faq: [
+      { q: `30 天计划真的有效吗？`, a: `它不承诺奇迹。但它提供一个结构化的方式，让你每天做一点改变。30 天后，大多数人会发现自己的使用模式已经不同。` },
+      { q: `我如果第 2 周失败了怎么办？`, a: `没关系。第 1 周只是观察，第 2 周只是建立一个仪式。如果失败了，回到第 1 周，重新开始。重要的是不放弃。` },
+      { q: `PausePaw 能帮助我完成这个计划吗？`, a: `可以。PausePaw 的设计就是帮你建立仪式和找到替代行为。它不会惩罚你，只是在你即将滑入无意识刷手机时，温柔地提醒你。` },
+    ],
+  },
+  {
+    id: "post21",
+    key: "bl_post21",
+    day: 19,
+    date: "2026-08-22",
+    zh: {
+      title: "社交媒体成瘾 ≠ 手机成瘾",
+      desc: "社交媒体成瘾和手机成瘾经常被混为一谈，但它们不是同一回事。理解区别是解决问题的第一步。",
+      body: `<p>社交媒体成瘾和手机成瘾经常被混为一谈，但它们不是同一回事。理解区别是解决问题的第一步。</p>
+<h2>什么是社交媒体成瘾？</h2>
+<p>社交媒体成瘾是一种对 Instagram、TikTok、Twitter 或 Facebook 等平台的强迫性行为。强迫性行为包括检查、发布、浏览，并通过点赞和评论寻求认可。</p>
+<p>吸引力在于可变奖励。你不知道下一条帖子是否有趣、搞笑或令人满意。这种不确定性触发多巴胺，产生类似老虎机的反馈循环。</p>
+<p>社交媒体成瘾是特定于平台的。你可以不使用社交媒体而使用手机。你可以对社交媒体上瘾，而不一定对手机上瘾。</p>
+<h2>什么是手机成瘾？</h2>
+<p>手机成瘾是一种更广泛的行为模式，以设备本身为中心。包括：</p>
+<ul>
+<li>即使什么都没发生也频繁检查</li>
+<li>手机不在身边时的焦虑</li>
+<li>用手机逃避无聊、不适或社交互动</li>
+<li>睡觉时手机放在床边</li>
+<li>幻触综合征</li>
+</ul>
+<p>手机成瘾可以包括社交媒体，但也包括游戏、消息、浏览和强迫性应用检查。</p>
+<h2>关键区别</h2>
+<p>社交媒体成瘾关乎内容和认可循环。手机成瘾关乎设备和检查习惯。</p>
+<p>你可以是一个只在电脑上检查应用的社交媒体成瘾者。你也可以是一个从不碰社交媒体但每 5 分钟检查邮件、消息和天气的手机成瘾者。</p>
+<h2>这对康复意味着什么</h2>
+<p>如果你试图戒除社交媒体，但手机成瘾仍然存在，你会用一种强迫行为替代另一种。你只是从刷 Instagram 变成检查邮件。</p>
+<p>如果你在不碰社交媒体的情况下解决手机成瘾，你可能会发现自己认为已控制的平台上无休止地浏览。</p>
+<p>最有效的方法同时解决两者：减少与设备的总时间，并有意识地选择哪些应用服务于你的生活。</p>
+<h2>PausePaw 如何帮助</h2>
+<p>PausePaw 不区分社交媒体成瘾和手机成瘾，因为它们有相同的根源：无意识的手机检查。该工具打断了对设备的自动伸手，让你有机会有意识地选择。</p>
+<p>无论你是打开 Instagram 还是只是查看时间，PausePaw 创造了一个打断自动化的停顿。</p>
+<h2>常见问题</h2>
+<p><strong>Q: 我可以对社交媒体上瘾但对手机不上瘾吗？</strong><br>A: 是的。有些人在电脑上强迫性检查平台，但不大量使用手机。</p>
+<p><strong>Q: 手机成瘾比社交媒体成瘾更严重吗？</strong><br>A: 它们不同。手机成瘾更广泛，更难解决，因为设备是工作和生活的必需品。</p>
+<p><strong>Q: 我应该先戒除社交媒体还是先减少手机使用？</strong><br>A: 取决于哪个造成更多干扰。对大多数人来说，减少总体手机时间可以为随后专门解决社交媒体创造空间。</p>
+<p><strong>Q: 我可以只使用 PausePaw 解决社交媒体成瘾吗？</strong><br>A: PausePaw 适用于任何强迫性手机行为。你可以在工具内为社交媒体应用设置特定时间限制。</p>
+<p>想试试不靠意志力的办法？打开 <a href="app.html" data-i18n="f_app">PausePaw 应用</a>，或回 <a href="index.html" data-i18n="nav_home">首页</a>了解更多。</p>`
+    },
+    en: {
+      title: "Social Media Addiction vs. Phone Addiction: Not the Same Thing",
+      desc: "Social media addiction and phone addiction are often used interchangeably, but they're not the same thing. Understanding the difference is the first step to fixing whichever one you actually have.",
+      body: `<p>Social media addiction and phone addiction are often used interchangeably, but they're not the same thing. Understanding the difference is the first step to fixing whichever one you actually have.</p>
+<h2>What is social media addiction?</h2>
+<p>Social media addiction is a behavioral addiction to platforms like Instagram, TikTok, Twitter, or Facebook. The compulsive behavior is checking, posting, scrolling, and seeking validation through likes and comments.</p>
+<p>The hook is variable rewards. You don't know if the next post will be interesting, funny, or validating. That uncertainty triggers dopamine, creating a feedback loop similar to slot machines.</p>
+<p>Social media addiction is platform-specific. You can use your phone without social media. You can be addicted to social media without being addicted to your phone.</p>
+<h2>What is phone addiction?</h2>
+<p>Phone addiction is a broader behavioral pattern centered around the device itself. It includes:</p>
+<ul>
+<li>Constant checking even when nothing happened</li>
+<li>Anxiety when the phone is out of reach</li>
+<li>Using the phone to avoid boredom, discomfort, or social interaction</li>
+<li>Sleeping with the phone next to the bed</li>
+<li>Phantom vibration syndrome</li>
+</ul>
+<p>Phone addiction can include social media, but it also includes games, messaging, browsing, and compulsive app checking.</p>
+<h2>The key difference</h2>
+<p>Social media addiction is about the content and the validation loop. Phone addiction is about the device and the habit of checking.</p>
+<p>You can be a social media addict who only checks apps on a computer. You can be a phone addict who never touches social media but checks email, messages, and weather every 5 minutes.</p>
+<h2>Why this matters for recovery</h2>
+<p>If you try to quit social media but your phone addiction remains untouched, you'll replace one compulsive behavior with another. You'll just be checking email instead of Instagram.</p>
+<p>If you address phone addiction without touching social media, you might find yourself scrolling endlessly on platforms you thought were under control.</p>
+<p>The most effective approach addresses both: reduce the overall time with the device and be intentional about which apps serve your life.</p>
+<h2>How PausePaw helps</h2>
+<p>PausePaw doesn't distinguish between social media and phone addiction because both share the same root: unconscious phone checking. The tool interrupts the automatic reach for your device, giving you a moment to choose consciously.</p>
+<p>Whether you're opening Instagram or just checking the time, PausePaw creates the pause that breaks the autopilot.</p>
+<h2>FAQ</h2>
+<p><strong>Can I be addicted to social media but not my phone?</strong><br>Yes. Some people compulsively check platforms on their computers but don't touch their phones excessively.</p>
+<p><strong>Is phone addiction worse than social media addiction?</strong><br>They're different. Phone addiction is broader and harder to address because the device is necessary for work and life.</p>
+<p><strong>Should I quit social media first or reduce phone use first?</strong><br>It depends on which is causing more disruption. For most people, reducing overall phone time creates space to then address social media specifically.</p>
+<p><strong>Can I use PausePaw for social media specifically?</strong><br>PausePaw works for any compulsive phone behavior. You can set specific time limits for social media apps within the tool.</p>
+<p>想试试不靠意志力的办法？打开 <a href="app.html" data-i18n="f_app">PausePaw 应用</a>，或回 <a href="index.html" data-i18n="nav_home">首页</a>了解更多。</p>`
+    },
+  },
+  {
+    id: "post24",
+    key: "bl_post24",
+    day: 20,
+    date: "2026-08-23",
+    zh: {
+      title: "30 天不刷社交媒体，大脑会怎样",
+      desc: "30 天不刷社交媒体后，你的注意力、睡眠和情绪会如何变化？",
+      body: "30 天不刷。第一周戒断，第二周重置开始，第三四周新常态。睡眠改善，情绪稳定。",
+    },
+    en: {
+      title: "What Happens to Your Brain When You Quit Social Media for 30 Days",
+      desc: "Your attention span, sleep quality, and mood all shift after 30 days without social media.",
+      body: "30 days without scrolling. Week 1 is withdrawal. Week 2 the reset begins. Week 3-4 new normal. Sleep improves, mood stabilizes.",
+    }
+  },
+  {
+    id: "post25",
+    key: "bl_post25",
+    day: 26,
+    date: "2026-08-29",
+    zh: {
+      title: "TikTok 儿童安全设置：家长必知",
+      desc: "TikTok 的年龄限制是 13 岁，但 millions 的孩子仍在用。这篇讲清楚家长必须知道的安全设置，从限制模式到屏幕时间管理。",
+      body: "<h2>为什么 TikTok 儿童安全设置很重要</h2><p>TikTok 的年龄限制是 13 岁，但数百万孩子仍在用它。孩子可以几秒钟就注册账号——没有身份验证，没有家长同意门槛。这就是为什么了解 TikTok 内置安全工具不是可选项，而是第一道防线。</p><h2>限制模式：基础用法</h2><p>限制模式会过滤可能不适合未成年观众的内容。它不是完全屏蔽——而是通过算法过滤被标记为敏感的视频。开启路径：设置与隐私 → 内容偏好 → 限制模式。</p><p>仅靠限制模式不够。它是过滤器，不是防火墙。要配合其他设置一起使用。</p><h2>家庭配对：你的远程管控</h2><p>家庭配对把你的 TikTok 账号和孩子账号绑定。连接后你可以：</p><ul><li>设置私信限制（仅好友/禁止）</li><li>设置每天屏幕时间上限（40/60/90/120 分钟）</li><li>远程控制限制模式</li><li>限制孩子的搜索内容</li></ul><p>在孩子的设置与隐私 → 家庭配对里设置。</p><h2>屏幕时间管理</h2><p>孩子在 TikTok 上无法自我节制。算法就是设计来让他们不停刷的。通过家庭配对设置每日上限，孩子到时间会看到提示，需要密码才能继续——密码只有你知道。</p><h2>评论和直播限制</h2><p>评论可能让孩子暴露于骚扰或操控之下。对年幼用户直接关闭评论，或限制为仅关注者可评论。直播功能应等到孩子足够成熟能应对陌生人实时互动再开启。</p><h2>隐私设置：保护孩子的隐私</h2><ul><li>设为私密账号：只有审批后的粉丝才能看到视频</li><li>关闭\"向他人推荐我的账号\"：阻止 TikTok 分享你的孩子档案</li><li>关闭定位服务：防止视频附带位置信息</li><li>限制谁可以合拍/二创：设为\"仅好友\"或\"所有人禁止\"</li></ul><h2>这些设置做不到的事</h2><p>任何设置都无法阻止基于观看历史的算法推荐。没有设置能阻止意志坚定的孩子开第二个账号。任何设置都不能替代和孩子谈一谈——谈谈他们看到了什么、关注了谁、以及这个应用让他们感觉如何。</p><p>设置是安全网，不是对话的替代品。</p><h2>常见问题</h2><ul><li><strong>TikTok 最低年龄是多少？</strong> 13 岁，根据 COPPA 和 TikTok 自己的条款。</li><li><strong>我能看孩子的私信吗？</strong> 不能直接看——但可以通过家庭配对禁用私信。</li><li><strong>限制模式能屏蔽所有不良内容吗？</strong> 不能。它是过滤器不是墙，有条件的话自己看看内容。</li><li><strong>如果孩子不到 13 岁怎么办？</strong> 这个应用不是为他们设计的。如果已经在用，用家庭配对并把所有限制开到最大。</li></ul>",
+    },
+    en: {
+      title: "TikTok for Kids: Safe Settings Every Parent Should Know",
+      desc: "TikTok's age limit is 13, yet millions of kids are on it anyway. Here are the safety settings every parent should know about — from Restricted Mode to screen time controls.",
+      body: "<h2>Why TikTok safety settings matter for kids</h2><p>TikTok is designed for users 13 and older, but the app's appeal cuts across age groups. A child can create an account in seconds — no identity verification, no parent consent gate. That's why understanding TikTok's built-in safety tools isn't optional for parents. It's the first line of defense.</p><h2>Restrictive Mode: the basics</h2><p>Restricted Mode limits content that may be inappropriate for younger viewers. It doesn't block everything — it works with an algorithm that filters videos flagged as sensitive. Enable it in: Settings and Privacy → Content Preferences → Restricted Mode.</p><p>Restricted Mode alone isn't enough. It's a filter, not a wall. Pair it with additional controls.</p><h2>Family Pairing: your remote control</h2><p>Family Pairing links your TikTok account to your child's. Once connected, you can:</p><ul><li>Set Direct Message restrictions (nobody, friends only, or disabled entirely)</li><li>Set screen time limits (40 min, 60 min, 90 min, or 120 min per day)</li><li>Control Restricted Mode remotely</li><li>Limit what your child can search for</li></ul><p>Go to your child's Settings and Privacy → Family Pairing to set this up.</p><h2>Screen Time Management</h2><p>Kids don't self-regulate on TikTok. The algorithm is designed to keep them scrolling. Set a daily limit through Family Pairing, and your child will see a prompt when they hit it. The prompt includes a passcode — only you know it.</p><h2>Comment and live streaming restrictions</h2><p>Comments can expose kids to harassment or manipulation. Disable comments for younger users, or restrict them to followers only. Live streaming should be disabled until your child is old enough to handle real-time interaction with strangers.</p><h2>Privacy settings: keep their life private</h2><ul><li>Set account to Private: only approved followers can see their videos</li><li>Disable \"Suggest your account to others\": stops TikTok from sharing their profile</li><li>Turn off Location Services: prevents your child's location from being attached to videos</li><li>Review who can duet/stitch with them: restrict to \"Friends\" or \"Nobody\"</li></ul><h2>What these settings can't do</h2><p>No settings block content that's algorithmically served based on watch history. No settings prevent a determined child from making a second account. No settings replace talking to your child about what they see online.</p><p>Settings are a safety net, not a substitute for conversation. Talk to your kid about what they watch, who they follow, and how the app makes them feel.</p><h2>FAQ</h2><ul><li><strong>What's the minimum age for TikTok?</strong> 13 years, per COPPA and TikTok's own terms.</li><li><strong>Can I see my child's messages?</strong> Not directly — but you can disable DMs through Family Pairing.</li><li><strong>Does Restricted Mode block all bad content?</strong> No. It's a filter, not a wall. Watch the content yourself when possible.</li><li><strong>What if my child is under 13?</strong> The app isn't designed for them. If they're already on it, use Family Pairing and maximize restrictions.</li></ul>",
+    }
+  },
+  {
+    id: "post26",
+    key: "bl_post26",
+    day: 27,
+    date: "2026-08-30",
+    zh: {
+      title: "YouTube Kids vs YouTube - 哪个更安全?",
+      desc: "YouTube Kids 真的比普通 YouTube 更安全吗?",
+      body: "YouTube Kids 被设计为儿童的过滤版 YouTube。但研究表明，不适当内容仍然会漏过。家长需要积极监督两个平台。"
+    },
+    en: {
+      title: "YouTube Kids vs Regular YouTube: What is Actually Safer?",
+      desc: "Is YouTube Kids actually safer than regular YouTube?",
+      body: "YouTube Kids was designed as a filtered version of YouTube for children. But studies show inappropriate content still slips through. Active parental supervision is needed."
+    }
+  },
+  {
+    id: "post30",
+    key: "bl_post30",
+    day: 28,
+    date: "2026-08-31",
+    zh: {
+      title: "工作号与生活号：不同的清理规则",
+      desc: "职业账号和个人账号需要不同的清理策略。",
+      body: "大多数人至少有两个数字身份：职业身份和个人身份。但清理数字足迹时，这两个账户往往被同等对待——尽管不应该。"
+    },
+    en: {
+      title: "Work vs Life Accounts: Different Cleaning Rules",
+      desc: "Professional and personal accounts need different cleaning strategies.",
+      body: "Most people have at least two digital identities: a professional one and a personal one. But when it comes to cleaning up your digital footprint, these two accounts often get treated the same — when they shouldn't."
+    }
+  },
+  {
+    id: "post32",
+    key: "bl_post32",
+    day: 30,
+    date: "2026-09-02",
+    slug: "phone-contract-teen",
+    zh: {
+      title: `给青少年第一部手机：一份不失败的手机合约`,
+      desc: `手机合约能把潜在的亲子冲突变成清晰、相互的协议。本文讲清为什么需要它、该包含什么，以及如何让它真正落地。`,
+      body: `<p>给青少年第一部智能手机是一个里程碑。但那种自由伴随着责任——有时是冲突。</p>
+<h2>为什么需要手机合约？</h2>
+<p>青少年不读规则。但他们尊重他们帮助创建的协议。手机合约：</p>
+<ul>
+<li>设定明确期望</li>
+<li>让青少年在过程中有发言权</li>
+<li>提供问题出现时的参考点</li>
+<li>教授谈判和妥协</li>
+</ul>
+<h2>应该包含什么</h2>
+<h3>1. 使用限制</h3>
+<ul>
+<li>屏幕时间边界</li>
+<li>安静时间（用餐时、睡前不使用手机）</li>
+<li>做作业和家务后才能玩</li>
+</ul>
+<h3>2. 内容规则</h3>
+<ul>
+<li>允许的应用程序</li>
+<li>社交媒体指南</li>
+<li>隐私设置和分享规则</li>
+</ul>
+<h3>3. 责任条款</h3>
+<ul>
+<li>保持手机充电和安全</li>
+<li>立即报告丢失或损坏</li>
+<li>为较年长的青少年贡献手机费用</li>
+</ul>
+<h3>4. 后果</h3>
+<ul>
+<li>规则被违反时会发生什么</li>
+<li>特权暂停多长时间</li>
+<li>重新赢得信任的途径</li>
+</ul>
+<h3>5. 审查计划</h3>
+<ul>
+<li>何时重新审视合约</li>
+<li>如何做出调整</li>
+<li>工作迹象（或不工作）</li>
+</ul>
+<h2>让它发挥作用</h2>
+<p>关键是参与。和您的青少年坐下来一起起草合约。让他们建议规则并协商条款。当他们拥有所有权时，他们更有可能遵守。</p>
+<p>每隔几个月审查一次合约。随着你的青少年成熟，规则也应该演变。</p>
+<p>手机合约不是关于控制。它是关于准备你的青少年负责任地使用技术——一项他们终生需要的技能。</p>
+<p>想了解更多手机习惯建议？在 <a href="https://pause-paw.shop">pause-paw.shop</a> 查看 <a href="/blog.html#day30">更多手机习惯建议</a> 或 <a href="/blog.html#day25">屏幕时间策略</a>。</p>`
+    },
+    en: {
+      title: `A Phone Contract for Your Teen: Make It Actually Work`,
+      desc: `A phone contract can turn potential parent-teen conflict into a clear, mutual agreement. Here is why you need one, what to include, and how to make it stick.`,
+      body: `<p>Giving a teenager their first smartphone is a milestone. But with that freedom comes responsibility — and sometimes, conflict.</p>
+<h2>Why a Phone Contract?</h2>
+<p>Teenagers don't read rules. But they do respect agreements they helped create. A phone contract:</p>
+<ul>
+<li>Sets clear expectations</li>
+<li>Gives teens a voice in the process</li>
+<li>Provides a reference point when issues arise</li>
+<li>Teaches negotiation and compromise</li>
+</ul>
+<h2>What to Include</h2>
+<h3>1. Usage Limits</h3>
+<ul>
+<li>Screen time boundaries</li>
+<li>Quiet hours (no phones at dinner, before bed)</li>
+<li>Chores and homework before play time</li>
+</ul>
+<h3>2. Content Rules</h3>
+<ul>
+<li>What apps are allowed</li>
+<li>Social media guidelines</li>
+<li>Privacy settings and sharing rules</li>
+</ul>
+<h3>3. Responsibility Clauses</h3>
+<ul>
+<li>Keeping the phone charged and safe</li>
+<li>Reporting losses or damage immediately</li>
+<li>Contributing to phone bill (for older teens)</li>
+</ul>
+<h3>4. Consequences</h3>
+<ul>
+<li>What happens when rules are broken</li>
+<li>How long privileges are suspended</li>
+<li>Path to earning trust back</li>
+</ul>
+<h3>5. Review Schedule</h3>
+<ul>
+<li>When to revisit the contract</li>
+<li>How to make adjustments</li>
+<li>Signs it's working (or not)</li>
+</ul>
+<h2>Making It Work</h2>
+<p>The key is involvement. Sit down with your teen and draft the contract together. Let them suggest rules and negotiate terms. When they have ownership, they're more likely to follow through.</p>
+<p>Review the contract every few months. As your teen matures, the rules should evolve too.</p>
+<p>A phone contract isn't about control. It's about preparing your teen for responsible technology use — a skill they'll need for life.</p>
+<p>Want more phone-habit tips? Visit <a href="https://pause-paw.shop">pause-paw.shop</a> for <a href="/blog.html#day30">more phone-habit tips</a> or <a href="/blog.html#day25">screen-time strategies</a>.</p>`
+    },
+  },
+  {
+    id: "post33",
+    key: "bl_post33",
+    day: 31,
+    date: "2026-09-03",
+    slug: "pomodoro-technique-2026",
+    zh: {
+      title: `2026 番茄工作法还管用吗`,
+      desc: `对 25 分钟计时法的现代重测——以及三个它有时会反噬的原因。`,
+      body: `<p>配方很有名：25 分钟专注，5 分钟休息，四轮之后来一次长休。Francesco Cirillo 在 1980 年代末用一颗番茄形状的厨房计时器发明了它，直到今天它仍是网上被推荐最多的专注方法。但 2026 年的工作方式和 1987 年毫无相似之处：消息和任务在同一台设备上到达，会议把一天切成碎片，还有相当一部分"工作"就发生在手机上。所以我们重新测了一遍。简短结论：它的原则依然有效，但严格的 25/5 配方对相当多的现代工作会反噬。下面是重测后还站得住的部分，以及三个失败原因。</p>
+<h2>哪些部分依然成立</h2>
+<p>值得保留的从来不是那几个具体数字：</p>
+<ul>
+<li>一次只做一件事。宣告"下一个时段只写报告"，永远胜过在三个标签页之间来回横跳。</li>
+<li>可见的计时器。走动的倒计时把"我应该更专注"变成一个你当众做出的决定——而且能亲眼看着它流失。</li>
+<li>强制休息。不需要和自己讨价还价的休息，才是真正会发生休息。</li>
+</ul>
+<h2>原因一：25 分钟短于进入状态的成本</h2>
+<p>加州大学欧文分校对中断的研究发现：被打断后，人们平均需要 23 分钟以上才能完全回到原任务。而进入深度专注本身，对大多数人还要再花 10–15 分钟。一个 25 分钟的番茄，最好情况也只给你几分钟真正的深度——然后铃声恰好在你渐入佳境的时刻把你拽出来。对写作、调试、设计或备考来说，计时器成了你一天里最大的干扰源。</p>
+<h2>原因二：你的日历里已经没有完整的 25 分钟空档</h2>
+<p>Cirillo 的学生拥有整个下午不被打扰的自习时间。而在会议、消息提醒和家庭事务之间，2026 年的大多数人只能以 10 到 40 分钟的碎片工作。严格的番茄钟和这种现实正面相撞：要么你中午就放弃这套方法，要么你开始把每次被打断都当成个人失败——这不过是给一个你根本控制不了的日程表，新增了一种自责方式。</p>
+<h2>原因三：它把所有任务当成同一种</h2>
+<p>清空邮箱和写项目提案是两种性质的工作，但 25/5 一视同仁地处理。浅层、被动的事务性工作根本不需要计时器。深度工作需要的是一个被保护的完整长块，而不是四个短块。把两者塞进同一颗番茄，两头都不合适。</p>
+<h2>2026 年我们建议这样跑</h2>
+<ul>
+<li>深度工作：50/10 或 90/20 的时段，手机放另一个房间，通知全关。每天一个扎实的 90 分钟块，胜过八个半途而废的番茄。</li>
+<li>行政与杂务：经典 25/5 在这里真的好使——铃声能阻止你"再看一封邮件"地磨掉两小时。</li>
+<li>如果你总是中断连击，把时段缩小而不是放弃。15 分钟真实专注，胜过一个从未启动的完美 90 分钟计划。</li>
+</ul>
+<h2>结论</h2>
+<p>2026 年的番茄工作法没有错——错的是被当成万能配方使用。保留它真正有价值的三件事（单任务、可见计时器、强制休息），但给深度工作比厨房计时器更长的时段，把严格的 25/5 留给那堆浅层事务——在那里它依然闪耀。</p>
+<p>这些都不需要 App，但一个能在专注时段锁住干扰的工具，能移除最大的失败点：你自己。这正是我们做 PausePaw 的原因——开始一次专注会话，手机就会安静到你做完为止。来 <a href="https://pause-paw.shop">pause-paw.shop</a> 试试，在 <a href="/app.html">应用页</a> 设置它，再读读 <a href="/blog/post7.html">屏幕时间如何改写多巴胺回路</a>，看看那些小小的打断为什么如此昂贵。</p>`
+    },
+    en: {
+      title: `Pomodoro Technique in 2026: Does It Still Work?`,
+      desc: `A modern re-test of the 25-minute timer — and three reasons it sometimes backfires.`,
+      body: `<p>The recipe is famous: 25 minutes of focused work, 5 minutes off, repeat four times, then a long break. Francesco Cirillo built it in the late 1980s around a tomato-shaped kitchen timer, and it is still the most recommended focus method on the internet. But working life in 2026 looks nothing like 1987: messages arrive on the same device we work on, meetings cut the day into shards, and a good chunk of "work" happens on the phone itself. So we re-tested the technique. Short answer: the principles still hold, but the strict 25/5 recipe backfires for a surprising amount of modern work. Here is what survived the re-test, and the three reasons it fails.</p>
+<h2>What still holds up</h2>
+<p>The parts worth keeping were never the specific numbers:</p>
+<ul>
+<li>One task at a time. Declaring "the next block is for the report only" beats juggling three tabs every single time.</li>
+<li>A visible timer. A running countdown turns "I should focus more" into a decision you made out loud — and can watch slipping away.</li>
+<li>Mandated breaks. Breaks you don't have to negotiate with yourself are the only breaks that actually happen.</li>
+</ul>
+<h2>Reason 1: 25 minutes is shorter than the cost of getting started</h2>
+<p>Research on interrupted work at UC Irvine found that after an interruption people take over 23 minutes on average to fully return to the original task. Getting into deep concentration itself takes another 10–15 minutes for most people. A 25-minute tomato gives you, at best, a few minutes of real depth — then the bell yanks you out at the exact moment the work gets good. For writing, debugging, design, or exam prep, the timer becomes the biggest interruption of your day.</p>
+<h2>Reason 2: your calendar no longer contains empty 25-minute slots</h2>
+<p>Cirillo's students had whole afternoons of uninterrupted study. Between meetings, message pings, and family logistics, most people in 2026 work in fragments of 10 to 40 minutes. Strict pomodoros collide head-on with that reality: either you abandon the technique by noon, or you start treating every interruption as a personal failure — which is just a new way to feel guilty about a schedule you don't control.</p>
+<h2>Reason 3: it treats all tasks as equal</h2>
+<p>Clearing email and writing a project proposal are different kinds of work, but 25/5 processes them identically. Shallow, reactive work barely needs a timer at all. Deep work needs one long protected block, not four short ones. Forcing both into the same tomato fits neither.</p>
+<h2>What we would run instead in 2026</h2>
+<ul>
+<li>Deep work: 50/10 or 90/20 blocks, phone in another room, notifications off. One solid 90-minute block per day beats eight abandoned pomodoros.</li>
+<li>Admin and chores: classic 25/5 is genuinely great here — the bell stops you from "just one more email" for two hours.</li>
+<li>If you keep breaking the streak, shrink the block instead of quitting. Fifteen minutes of real focus beats a perfect 90-minute plan you never start.</li>
+</ul>
+<h2>The bottom line</h2>
+<p>The Pomodoro Technique in 2026 is not wrong — it is just mis-applied when used as a universal recipe. Keep its three real ideas (single-tasking, a visible timer, mandatory breaks), give deep work longer blocks than a kitchen timer allows, and spend the strict 25/5 mode on the shallow pile, where it still shines.</p>
+<p>None of this needs an app, but a tool that locks distractions during the block removes the main failure point: you. That is what we built PausePaw for — start a focus session and your phone stays quiet until you finish. Try it at <a href="https://pause-paw.shop">pause-paw.shop</a>, set it up on the <a href="/app.html">app page</a>, and read <a href="/blog/post7.html">how screen time rewires the dopamine loop</a> to see why those tiny interruptions cost so much.</p>`
+    },
+  },
+  {
+    id: "post34",
+    key: "bl_post34",
+    day: 32,
+    date: "2026-09-04",
+    zh: {
+      title: `深度工作 vs 浅层工作：两者都需要`,
+      desc: `深度工作不是越多越好，浅层工作也不是敌人。用 Cal Newport 的框架，给你一份 2026 年能直接套用的日程模板。`,
+      body: `<p>「深度工作」这个词是 Cal Newport 带火的，但我越来越觉得它被神化了。很多人以为，只要把日历填满深度工作块，生产力就会起飞。现实不是这样。我自己试过连续三周只排深度任务，结果邮件堆成山、协作全断、反而更焦虑。这篇想说清楚：深度工作和浅层工作不是敌人，你需要的是两者搭配，而不是二选一。</p>
+<h2>什么是深度工作，什么是浅层工作</h2>
+<p>深度工作（deep work）= 需要高度专注、产出难以复制的认知成果的事：写方案、写代码、做设计、准备演讲。浅层工作（shallow work）= 容易被打断、价值低但必须做的运营性事务：回邮件、排会、填表、处理后台消息。区分两者的关键不是「难不难」，而是「被打断后能不能快速接上」。</p>
+<h2>为什么只做深度工作会翻车</h2>
+<p>把一周排满深度块，听起来很爽，但三个问题会找上门：协作窒息——别人找不到你，小事变急事；行政雪崩——浅层事务不会消失，只会积压；精力误判——人的专注额度有限，强排 6 小时深度往往第 3 小时就空了。我后来改成「保护一段，而非填满一天」。</p>
+<h2>2026 年可直接套用的日程模板</h2>
+<p>下面是我自己在用的分配，你可以照抄再微调：</p>
+<ul>
+<li><strong>上午 9:00–11:00 深度块</strong>：手机放另一个房间，通知全关，只做当天最重要的一件事。</li>
+<li><strong>11:00–11:30 浅层缓冲</strong>：批量回消息、清邮件，别让它们渗透到深度时间里。</li>
+<li><strong>下午 14:00–15:30 第二深度块</strong>：留给需要连贯思考的任务。</li>
+<li><strong>其余时间 = 浅层时间</strong>：会议、沟通、杂事，集中处理。</li>
+</ul>
+<h2>深度工作 浅层工作 怎么分配比例</h2>
+<p>多数人适合「40% 深度 / 60% 浅层」的务实比例，而不是追求 80% 深度。你可以用一周记录每块时间的真实产出，再调整。相关方法见 <a href="/blog.html#day34">怎么搭无手机深度工作环境</a> 和 <a href="/blog.html#day39">为什么你专注不了（不是意志力问题）</a>。</p>
+<h2>用工具锁住深度时间</h2>
+<p>光靠自律不够。PausePaw 的专注会话能在你工作时把手机静音到结束——最大的干扰源（你自己）被挡掉了。在 <a href="/app.html">应用页</a> 设一个会话，再读读 <a href="/blog/post7.html">屏幕时间如何改写多巴胺回路</a>，你会理解那些小打断为什么这么贵。</p>
+<h2>常见问题</h2>
+<p>问：深度工作一定要 90 分钟吗？答：不一定。15 分钟真实专注也好过从未开始的完美计划。从你能坚持的长度开始。</p>
+<p>问：浅层工作能不能完全外包或删掉？答：大部分能精简，但完全删掉不现实。重点是「集中处理」而非「消灭」。</p>
+<p>问：远程办公怎么防止浅层事务入侵深度时间？答：把沟通和会议钉在固定时段，深度块期间退出所有群聊通知。</p>`,
+    },
+    en: {
+      title: `Deep Work vs. Shallow Work: Why You Need Both`,
+      desc: `Cal Newport's framework updated for 2026 — with a practical schedule template.`,
+      body: `<p>"Deep work" is a phrase Cal Newport popularized, but I think it's been over-glorified. Plenty of people assume that if they just fill their calendar with deep-work blocks, productivity will take off. It doesn't work that way. I spent three straight weeks scheduling only deep tasks and ended up with a buried inbox, broken collaboration, and more anxiety. This post is the correction: deep work and shallow work are not enemies. You need both, in the right ratio, not one instead of the other.</p>
+<h2>What deep work actually is (and what isn't)</h2>
+<p>Deep work = cognitively demanding tasks that create hard-to-replicate output: writing a proposal, coding, designing, preparing a talk. Shallow work = logistical, low-value-but-necessary tasks: replying to email, scheduling, form-filling, triaging notifications. The split isn't "hard vs easy" — it's "can you pick it back up quickly after an interruption."</p>
+<h2>Why an all-deep schedule backfires</h2>
+<p>Stacking a week with deep blocks sounds great until three problems hit: collaboration suffocates — nobody can reach you and small things turn urgent; admin avalanches — shallow tasks don't vanish, they pile; focus budgeting fails — your attention is finite, and forcing six hours of depth usually empties out by hour three. I switched to "protect one block, don't fill the day."</p>
+<h2>A schedule template you can use in 2026</h2>
+<p>Here's the split I actually run. Steal it, then tweak:</p>
+<ul>
+<li><strong>9:00–11:00 deep block</strong>: phone in another room, notifications off, one important task only.</li>
+<li><strong>11:00–11:30 shallow buffer</strong>: batch replies and clear email so they don't leak into deep time.</li>
+<li><strong>14:00–15:30 second deep block</strong>: for tasks that need sustained thinking.</li>
+<li><strong>everything else = shallow time</strong>: meetings, comms, chores, handled in a batch.</li>
+</ul>
+<h2>Deep work vs shallow work: the ratio that works</h2>
+<p>Most people do better at a pragmatic "40% deep / 60% shallow" than chasing 80% depth. Track one week of real output per block, then adjust. See <a href="/blog.html#day34">how to build a phone-free deep work setup</a> and <a href="/blog.html#day39">why you can't focus (and it's not willpower)</a> for the supporting methods.</p>
+<h2>Lock the deep time with a tool</h2>
+<p>Discipline alone won't hold. A PausePaw focus session keeps your phone silent until you finish — removing the biggest disruptor, which is you. Set one up on the <a href="/app.html">app page</a>, and read <a href="/blog/post7.html">how screen time rewires the dopamine loop</a> to see why those tiny interruptions cost so much.</p>
+<h2>FAQ</h2>
+<p>Q: Does deep work have to be 90 minutes? A: No. Fifteen minutes of real focus beats a perfect plan you never start. Begin at a length you'll actually keep.</p>
+<p>Q: Can shallow work be fully deleted or outsourced? A: Much of it can be trimmed, but not eliminated. The goal is batching, not eradication.</p>
+      <p>Q: How do I stop shallow tasks invading deep time while remote? A: Pin comms and meetings to fixed windows, and mute all group-chat notifications during deep blocks.</p>`,
+    },
+  },
+  {
+    id: "post36",
+    key: "bl_post36",
+    day: 34,
+    date: "2026-09-06",
+    zh: {
+      title: `怎么搭一个无手机深度工作环境`,
+      desc: `无手机深度工作环境（phone free deep work）不是买贵桌子，而是先把手机拿不到、通知进不来钉死。这篇给一套能照抄的物理 + 数字布置，覆盖一个 4 小时深度工作块。`,
+      body: `<p>搭一个无手机深度工作环境（phone free deep work），不是买张昂贵的人体工学桌，而是把「手机拿不到、通知进不来」这两件事先钉死。这篇给你一套能直接照抄的物理 + 数字布置，覆盖一个 4 小时深度工作块的每个环节。</p>
+<h2>先解决物理：手机放在哪</h2>
+<p>深度工作最大的敌人不是任务难，是你自己伸手去拿手机。物理距离是最便宜的防线：把手机锁进另一个房间的抽屉，或放进带定时锁的盒子，深度块期间根本摸不到。距离每远一米，掏出来的概率就掉一截。</p>
+<h2>再解决数字：通知怎么断</h2>
+<p>手机放远了，电脑上的通知还在蹦。深度块开始前，把系统通知全关，退出所有群聊和邮件客户端的实时推送。只留一个你真在等的渠道，并且约定「非急事别找我」。</p>
+<ul>
+<li><strong>手机</strong>：另一个房间，或定时锁盒。</li>
+<li><strong>电脑通知</strong>：全部静音，只留必要渠道。</li>
+<li><strong>浏览器</strong>：关掉会弹消息的标签页，深度块只用单个窗口。</li>
+<li><strong>环境</strong>：白噪音或耳塞，挡掉办公室的碎碎念。</li>
+</ul>
+<h2>一个 4 小时深度工作块的排法</h2>
+<p>下面是我自己在用的，你可以照抄再微调：</p>
+<ul>
+<li><strong>9:00–9:15 准备</strong>：手机已锁，通知已关，只打开当天最重要的一个文件。</li>
+<li><strong>9:15–11:00 第一深度块</strong>：不碰任何通讯工具。</li>
+<li><strong>11:00–11:15 真休息</strong>：站起来，别刷手机，去接杯水。</li>
+<li><strong>11:15–13:00 第二深度块</strong>：处理需要连贯思考的任务。</li>
+</ul>
+<h2>工具把环境锁死</h2>
+<p>光靠自律不够。PausePaw 的专注会话能在你工作时把手机静音到结束——最大的干扰源（你自己）被挡掉了。在 <a href="/app.html">应用页</a> 设一个会话，配合 <a href="/blog.html#day32">深度工作 vs 浅层工作</a> 的日程模板，深度时间才真正保得住。更早的手机习惯分析，看 <a href="/blog.html#day51">卧室不放手机</a> 那篇。</p>
+<h2>常见问题</h2>
+<p>问：无手机深度工作环境一定要 4 小时吗？答：不必。15 分钟真实专注也好过从不开始。从你能坚持的长度起步，再慢慢拉长。</p>
+<p>问：电脑端通知关了，急事找我怎么办？答：留一个约定好的渠道（比如电话），并提前跟协作方说清你的深度时段。</p>
+<p>问：PausePaw 能管电脑通知吗？答：它主要管手机侧；电脑通知靠系统专注模式配合。两者一起开，环境才干净。回到 <a href="/">pause-paw.shop</a> 了解全部能力。</p>`,
+    },
+    en: {
+      title: `How to Build a Phone-Free Deep Work Setup`,
+      desc: `A phone-free deep work setup isn't an expensive desk — it's nailing "phone out of reach, notifications off" first. This post gives a copy-ready physical-plus-digital layout for a four-hour deep work block.`,
+      body: `<p>Building a phone-free deep work setup isn't about buying an expensive desk. It's about nailing two things first: the phone is out of reach, and notifications stay out. This post gives a physical-plus-digital layout you can copy directly, covering every part of a four-hour deep work block.</p>
+<h2>Physical first: where the phone goes</h2>
+<p>The biggest enemy of deep work isn't a hard task — it's your own hand reaching for the phone. Distance is the cheapest defense: lock the phone in a drawer in another room, or in a timed-lock box, so it's simply unreachable during the block. Every meter of distance drops the grab probability.</p>
+<h2>Digital next: how to cut notifications</h2>
+<p>Phone away, but notifications still pop on the laptop. Before a deep block, mute system notifications and quit real-time push from group chats and email. Keep only one channel you're genuinely waiting on, and set the expectation that non-urgent messages wait.</p>
+<ul>
+<li><strong>Phone</strong>: another room, or a timed-lock box.</li>
+<li><strong>Laptop notifications</strong>: all muted, only the necessary channel stays.</li>
+<li><strong>Browser</strong>: close tabs that ping; one window only during the block.</li>
+<li><strong>Environment</strong>: white noise or earplugs to block office chatter.</li>
+</ul>
+<h2>A four-hour deep work block, laid out</h2>
+<p>Here's the split I run. Steal it, then tweak:</p>
+<ul>
+<li><strong>9:00–9:15 setup</strong>: phone locked, notifications off, only the day's most important file open.</li>
+<li><strong>9:15–11:00 first deep block</strong>: no communication tools touched.</li>
+<li><strong>11:00–11:15 real break</strong>: stand up, don't scroll, get water.</li>
+<li><strong>11:15–13:00 second deep block</strong>: for tasks needing sustained thought.</li>
+</ul>
+<h2>Lock the environment with a tool</h2>
+<p>Discipline alone won't hold. A PausePaw focus session keeps your phone silent until you finish — removing the biggest disruptor, which is you. Set one up on the <a href="/app.html">app page</a>, pair it with the <a href="/blog.html#day32">deep work vs shallow work</a> schedule template, and the deep time actually sticks. For the earlier screen-habit analysis, see the <a href="/blog.html#day51">no-phone-bedroom</a> post.</p>
+<h2>FAQ</h2>
+<p>Q: Does a phone-free deep work setup have to be four hours? A: No. Fifteen minutes of real focus beats never starting. Begin at a length you'll keep, then stretch it.</p>
+<p>Q: What if something urgent comes up while notifications are off? A: Keep one agreed channel (a call, say) and tell collaborators your deep hours in advance.</p>
+<p>Q: Can PausePaw manage laptop notifications too? A: It mainly handles the phone side; laptop notifications need the system focus mode. Run both and the environment stays clean. Head to <a href="/">pause-paw.shop</a> for the full picture.</p>`,
+    },
+  },
+
+  {
+    id: "post37",
+    key: "bl_post37",
+    day: 36,
+    date: "2026-09-08",
+    zh: {
+      title: "专注音乐与白噪音：深度工作的声音环境指南",
+      desc: "探索如何利用专注音乐、白噪音和声音环境设计来提升深度工作效率，打造属于你的专注空间。",
+      body: `<p>声音环境对深度工作的影响往往被低估。正确的声音设计可以屏蔽干扰、提升专注力，甚至激发创造力。本指南将带你了解如何利用声音环境打造高效的专注工作空间。</p>
+
+<h2>专注音乐的科学原理</h2>
+<p>研究表明，特定的音乐频率和节奏能够影响大脑的 alpha 波和 theta 波，进而提升专注力和创造力。Lo-fi hip hop、古典音乐和 ambient 音乐是最常被推荐的工作背景音乐类型。</p>
+<p>关键在于选择"够安静但不完全安静"的声音环境——完全静音有时会放大内心的杂念，而合适的背景音能够提供结构化的听觉输入，让大脑更容易进入心流状态。</p>
+
+<h2>白噪音与粉红噪音</h2>
+<p>白噪音（如风扇声、雨声）通过提供均匀的频谱覆盖，能有效掩盖突发的环境噪音。粉红噪音（如瀑布声、树叶沙沙）则更加柔和自然，适合长时间使用。</p>
+<p>研究表明，粉红噪音在工作记忆和空间推理任务中的表现优于白噪音，因为它更接近自然环境的听觉特征。</p>
+
+<h2>声音环境设计实战</h2>
+<p>创建一个有效的专注声音环境，可以遵循以下原则：</p>
+<ul>
+<li><strong>保持一致性</strong>：选择一个固定的声音环境，让大脑形成条件反射</li>
+<li><strong>避免歌词干扰</strong>：有歌词的音乐容易分散注意力，优先选择纯音乐</li>
+<li><strong>音量适中</strong>：背景音应该是"存在感"而非"主导性"的</li>
+<li><strong>动态调节</strong>：根据任务类型调整声音环境——创意任务适合更丰富的声音，分析任务适合更简单的背景音</li>
+</ul>
+
+<h2>推荐工具与资源</h2>
+<p>PausePaw 本身不提供声音环境功能，但你可以结合以下工具使用：</p>
+<ul>
+<li><strong>Noisli</strong>：免费在线白噪音生成器，可混合多种声音</li>
+<li><strong>Calm</strong>：提供专注音乐和冥想引导</li>
+<li><strong>Focus@Will</strong>：专为工作效率设计的音乐服务</li>
+</ul>
+
+<h2>常见问题</h2>
+<p>Q: 戴耳机听专注音乐会影响他人吗？<br>A: 建议在工作场所使用开放式耳机或设置音量较低，避免打扰同事。居家办公则相对自由。</p>
+<p>Q: 白噪音会损害听力吗？<br>A: 正常使用下不会。保持音量在 60 分贝以下，每工作一小时休息 10 分钟，保护听力健康。</p>
+<p>Q: 什么样的任务适合什么样的声音环境？<br>A: 创意写作适合更丰富的声音环境（如 Lo-fi），数据分析适合简单的白噪音或沉默。</p>`,
+    },
+    en: {
+      title: "Focus Music & White Noise: Sound Environment Guide for Deep Work",
+      desc: "Explore how to leverage focus music, white noise, and sound environment design to boost deep work productivity and create your own focused space.",
+      body: `<p>The impact of sound environment on deep work is often underestimated. The right sound design can block distractions, enhance focus, and even spark creativity. This guide will walk you through leveraging sound environments to build an efficient focused workspace.</p>
+
+<h2>The Science of Focus Music</h2>
+<p>Research shows that specific music frequencies and rhythms can influence the brain's alpha and theta waves, thereby enhancing focus and creativity. Lo-fi hip hop, classical music, and ambient music are the most commonly recommended background music types for work.</p>
+<p>The key is choosing a soundscape that's "quiet enough but not completely silent"—complete silence can sometimes amplify inner chatter, while appropriate background noise provides structured auditory input that helps the brain enter flow state more easily.</p>
+
+<h2>White Noise and Pink Noise</h2>
+<p>White noise (like fan sounds, rain) effectively masks sudden environmental noises by providing uniform spectral coverage. Pink noise (like waterfalls, rustling leaves) is softer and more natural, making it suitable for extended use.</p>
+<p>Research indicates that pink noise outperforms white noise on working memory and spatial reasoning tasks, as it more closely resembles the auditory characteristics of natural environments.</p>
+
+<h2>Building Your Sound Environment</h2>
+<p>To create an effective focus sound environment, follow these principles:</p>
+<ul>
+<li><strong>Maintain consistency</strong>: Choose a fixed sound environment to help your brain form conditioned responses</li>
+<li><strong>Avoid lyrical distractions</strong>: Music with lyrics can divide attention; prioritize instrumental tracks</li>
+<li><strong>Keep volume moderate</strong>: Background sound should be present, not dominant</li>
+<li><strong>Dynamic adjustment</strong>: Adjust sound environment based on task type—creative tasks suit richer soundscapes, analytical tasks suit simpler backgrounds</li>
+</ul>
+
+<h2>Recommended Tools</h2>
+<p>PausePaw doesn't provide sound environment features, but you can combine it with these tools:</p>
+<ul>
+<li><strong>Noisli</strong>: Free online white noise generator with sound mixing</li>
+<li><strong>Calm</strong>: Focus music and meditation guidance</li>
+<li><strong>Focus@Will</strong>: Music service designed specifically for work productivity</li>
+</ul>
+
+<h2>FAQ</h2>
+<p>Q: Will wearing headphones affect others?<br>A: Use open-back headphones or set volume low in shared workspaces. Working from home gives you more flexibility.</p>
+<p>Q: Can white noise damage hearing?<br>A: Not with normal use. Keep volume below 60 decibels and take 10-minute breaks every hour to protect your hearing.</p>
+<p>Q: What sounds suit what tasks?<br>A: Creative writing suits richer soundscapes (like Lo-fi),     while data analysis benefits from simple white noise or silence.</p>`,
+    },
+  },
+  {
+    id: "post38",
+    key: "bl_post38",
+    day: 39,
+    date: "2026-09-11",
+    zh: {
+      title: `为什么你专注不了（不是意志力问题）`,
+      desc: `专注不了，通常不是意志力问题。这篇把五个真正的成因按出现频率排序，并给出从环境、任务到身体的修复顺序。`,
+      body: `<p>先说结论：你专注不了，多半不是意志力不够，而是环境一直在给大脑发错信号。把这五个原因认出来，比咬牙硬扛有用得多。</p>
+<h3>原因一：任务太模糊</h3>
+<p>「写方案」这种任务，大脑无法启动。它需要的是可执行的第一步：打开文档，写下三个小标题。任务越模糊，你越容易先去做别的。</p>
+<h3>原因二：切换成本被低估</h3>
+<p>每次被打断，平均要十几分钟才能回到原来的深度。你以为只是看一眼消息，实际上大脑已经重新加载过一轮上下文。</p>
+<h3>原因三：刺激阈值被抬高</h3>
+<p>短视频把刺激阈值拉高之后，读文档、写代码这类「慢反馈」任务就会显得乏味。这不是你变懒了，是基准被抬了。</p>
+<h3>原因四：环境里的可见提醒</h3>
+<p>手机扣在桌上、消息红点、开着的工作群，都是持续的注意力抽取器。看得见，就会想。</p>
+<h3>原因五：身体状态在拖后腿</h3>
+<p>睡眠不足、饭后血糖波动、长时间不动，都会直接削弱前额叶的控制力。这种时候靠意志力是白搭的。</p>
+<h3>按频率排序的处理顺序</h3>
+<p>先修环境（手机放远、关红点），再修任务（把「写方案」拆成第一步），最后修身体（睡够、走动）。顺序别反，先修身体最容易被放弃。</p>
+<h3>FAQ</h3>
+<p>问：这五个原因哪个最常见？答：按我们的观察，环境与任务模糊占了大头，身体状态排第三。</p>
+<p>问：屏蔽了手机还是专注不了？答：那说明问题在任务定义上，先把它拆到「十分钟能做完的第一步」。</p>
+<p>问：需要多久才能改变？答：环境改动是即时的，习惯回路大概需要两周。</p>
+<p>PausePaw 能帮你做第一层：敏感时段自动拦截、刷够时长强制休息。剩下的两层，交给你自己。去 <a href="https://pause-paw.shop">pause-paw.shop</a> 开始。</p>`,
+    },
+    en: {
+      title: `Why You Can't Focus (And It's Not Willpower)`,
+      desc: `Losing focus is rarely a willpower problem. Here are the five real causes, ranked by how often they show up, with a fix order.`,
+      body: `<p>Here is the short version: when you cannot focus, it is usually not a willpower failure. It is your environment sending the wrong signals. Naming the five real causes beats gritting your teeth.</p>
+<h3>Cause 1: The task is too vague</h3>
+<p>"Write the proposal" is not something a brain can start. It needs a first move: open the doc, write three headings. The vaguer the task, the more likely you are to do something else first.</p>
+<h3>Cause 2: Switching cost is underestimated</h3>
+<p>Every interruption costs roughly ten to fifteen minutes before you return to the same depth. You think you only glanced at a message. Your brain already reloaded its context.</p>
+<h3>Cause 3: Your stimulation threshold got raised</h3>
+<p>After short-form video, slow-feedback work like reading docs or writing code feels flat. You did not get lazy. The baseline moved.</p>
+<h3>Cause 4: Visible reminders in your environment</h3>
+<p>A phone face-down on the desk, an unread badge, an open team chat — these are constant attention pumps. If you can see it, you will want it.</p>
+<h3>Cause 5: Your body is working against you</h3>
+<p>Poor sleep, a post-lunch glucose dip, and long stretches of sitting all weaken prefrontal control. Willpower cannot outrun biology.</p>
+<h3>Fix them in order of frequency</h3>
+<p>Fix the environment first (phone out of reach, badges off), then the task (break "write the proposal" into a first step), then the body (sleep, movement). Do not reverse the order — the body is the easiest one to give up on.</p>
+<h3>FAQ</h3>
+<p>Q: Which cause is most common? A: From what we see, environment and vague tasks dominate. Physical state comes third.</p>
+<p>Q: I blocked my phone and still cannot focus. Now what? A: Then the problem is task definition. Break it down to a first step you could finish in ten minutes.</p>
+<p>Q: How long until something changes? A: Environment fixes are instant. Habit loops take about two weeks.</p>
+<p>PausePaw handles the first layer for you: automatic blocking during sensitive hours and forced breaks once you hit a time limit. The other two layers are yours. Start at <a href="https://pause-paw.shop">pause-paw.shop</a>.</p>`,
+    },
+  },
+  {
+    id: "post42",
+    key: "bl_post42",
+    day: 40,
+    date: "2026-09-12",
+    zh: {
+      title: `90 分钟超昼夜节律与手机`,
+      desc: `大脑不是为全天候运转设计的。这篇讲 90 分钟超昼夜节律（ultradian rhythm productivity）怎么运作，以及手机为什么恰好毁掉每一个周期。`,
+      body: `<p>睡眠以 90 分钟为一个循环，你清醒时的白天也一样。生理学家 Nathaniel Kleitman 发现，人的警觉度在一天里以 90 分钟左右的波幅上下摆动，后来关于 ultradian rhythm productivity 的研究在普通办公场景里也验证了这个规律。每轮大约有 60 到 80 分钟的注意力上行段，之后是 10 到 20 分钟的低谷。手机的问题不在于它在峰值时打扰你，而在于它把低谷填满了。</p>
+<h2>90 分钟是大脑的自然节拍</h2>
+<p>当你开始一件需要动脑的任务，超昼夜节律的专注窗口就打开了。注意力爬升大约一小时，维持一会儿，然后下滑。身体比你先知道：打哈欠、坐不住、眼睛发涩、想站起来。这些信号不是失败，它是低谷在报到，存在的意义就是让你在下一轮爬升前先歇一下。</p>
+<p>多数人从没感觉到低谷到来，因为那时候手机已经在手里了。</p>
+<h2>手机如何打断每一个周期</h2>
+<p>通知不会挑时间，它落在波形的哪个位置就是哪个位置。落在爬升段中段，你丢掉的是连贯性，还要花好几分钟把刚才的上下文重新加载一遍。落在低谷段，代价更隐蔽：低谷被高刺激输入替换掉了，恢复窗口直接消失。</p>
+<p>这种损失是渐进的，所以不容易被发现。连续几天用信息流填低谷，你会开始说自己「忙了一整天」，同时又觉得什么都没推进。这不是懒，是你把身体安排的每一次恢复窗口都跳过了。</p>
+<h2>把周期用回来的三步</h2>
+<ul>
+<li><strong>先记录一个上午</strong>：什么都不改，只记下注意力最好和最差的时段。开始找规律之后，多数人会在 90 分钟附近看到它。</li>
+<li><strong>守住爬升段</strong>：把 60 到 80 分钟划成不可打断区，手机放到视线之外。靠关掉通知，别靠自控力。</li>
+<li><strong>在低谷真的休息</strong>：花 5 到 15 分钟离开屏幕，走动或看看远处。任何带信息流的应用都不算休息，哪怕它感觉像。</li>
+</ul>
+<h2>为什么「少刷一会儿」没用</h2>
+<p>问题出在时机，不在总时长。低谷里刷十分钟手机，看起来成本很低，实际花掉的是整个恢复窗口，下一轮周期会从更低的起点开始。这解释了一个很多人报告过的现象：刷得比以前少了，一天下来的产出反而更差。总屏幕时间降了，对节律的干扰升了。</p>
+<h2>常见问题</h2>
+<p>问：每个人的周期都是 90 分钟吗？<br>答：不是。区间大致在 70 到 120 分钟，个体差异很大，记录自己的节律比套用数字有用。</p>
+<p>问：工作日排不出完整周期怎么办？<br>答：至少保住一个完整的爬升段，通常是上午的头 90 分钟。一个完整周期比三个被打断的周期值钱。</p>
+<p>问：低谷来了很想刷手机怎么办？<br>答：把低谷当成一件任务来做。设定 10 分钟，明确挑一件不动脑的事。手上有了安排，伸手的冲动会弱很多。</p>
+<p>PausePaw 能帮你守住爬升段：敏感时段自动拦截，刷够时长强制休息。想先看清自己的屏幕习惯，可以读 <a href="/blog/post33.html">Day 31</a> 和 <a href="/blog/post34.html">Day 32</a> 两篇，其余内容从 <a href="/blog.html">博客首页</a> 慢慢翻。准备好开始，就来 pause-paw.shop。</p>`,
+    },
+    en: {
+      title: `The 90-Minute Ultradian Rhythm and Your Phone`,
+      desc: `Your brain was not built to run all day. Here is how the 90-minute ultradian rhythm works, and why your phone breaks every single cycle of it.`,
+      body: `<p>Sleep runs in 90-minute cycles, and so does your waking day. The physiologist Nathaniel Kleitman found that alertness rises and falls in roughly 90-minute waves around the clock, and later work on ultradian rhythm productivity found the same pattern in ordinary desk work. Each wave gives you 60 to 80 minutes of rising attention, then a 10 to 20 minute trough. The phone problem is not that it interrupts the peak. It is that it fills the trough.</p>
+<h2>Ninety minutes is a natural beat</h2>
+<p>An ultradian rhythm focus window opens the moment you start a demanding task. Attention climbs for about an hour, holds, then slides. Your body signals the slide before you notice it: yawning, restlessness, dry eyes, the urge to stand up. Those signals are not a failure. They are the trough announcing itself, and they exist so you will rest before the next climb.</p>
+<p>Most people never feel the trough arrive, because a phone is already in their hand by then. Think of the wave less as a productivity trick and more as a load limit. It does not care whether your calendar has back-to-back meetings in it.</p>
+<h2>How your phone breaks every cycle</h2>
+<p>A notification does not wait for a convenient moment. It lands wherever you happen to be in the wave. If it lands mid-climb, you lose continuity and spend several minutes rebuilding the mental model you were holding. If it lands in the trough, something worse happens: the trough is replaced with high-stimulation input, and the recovery window disappears.</p>
+<p>The loss is gradual, which is why it hides so well. Fill your troughs with a feed for a few days and you start describing yourself as busy while noticing that nothing moved. You were not lazy. You skipped every recovery window your body had scheduled. Recovery is not a reward you earn after finishing. It is part of the cycle, and the next climb depends on it. Skip it often enough and the waves flatten: peaks get lower and the whole day starts to feel like one long trough.</p>
+<h2>Three steps to use the cycle again</h2>
+<ul>
+<li><strong>Log one morning</strong>: change nothing, just note when attention is best and worst. Most people spot a pattern near the 90-minute mark once they start looking.</li>
+<li><strong>Protect the climb</strong>: mark 60 to 80 minutes as uninterruptible, put the phone out of sight, and silence notifications rather than trusting self-control.</li>
+<li><strong>Actually rest in the trough</strong>: take 5 to 15 minutes away from screens to walk or look at something far away. Any app with a feed is not a rest, even when it feels like one.</li>
+</ul>
+<h2>Why scrolling a little less does not help</h2>
+<p>The issue is timing, not total minutes. Ten minutes of scrolling in a trough looks cheap. It costs the entire recovery window, so the next cycle starts from a lower baseline. That explains a pattern plenty of people report: they scroll less than they used to, yet finish the day with less output than before. Total screen time went down. Interference with the rhythm went up. There is a second effect too. A feed is built to keep you past the trough, so ten minutes rarely stays ten. The trough ends, the next climb starts, and you are still scrolling while the wave is already moving. By the time you put the phone down, you are starting that climb late and from a worse position.</p>
+<h2>FAQ</h2>
+<p>Q: Is everyone on a 90-minute cycle?<br>A: No. The range runs closer to 70 to 120 minutes, and individual differences are large. Logging your own rhythm beats copying a number.</p>
+<p>Q: What if my workday cannot fit a full cycle?<br>A: Protect at least one complete climb, usually the first 90 minutes of the morning. One full cycle is worth more than three interrupted ones.</p>
+<p>Q: What do I do when the trough hits and I want to scroll?<br>A: Treat the trough as a task. Set 10 minutes and pick one thing that needs no thinking. When your hands have a plan, the urge to reach gets much weaker.</p>
+<p>PausePaw helps you hold the climb: automatic blocking during sensitive hours, and a forced break once you hit your time limit. To see your own screen habits first, read the <a href="/blog/post33.html">Day 31</a> and <a href="/blog/post34.html">Day 32</a> posts, and browse the rest from the <a href="/blog.html">blog index</a>. When you are ready to start, head to pause-paw.shop.</p>`,
+    },
+  },
+  {
+    id: "post39",
+    key: "bl_post39",
+    day: 37,
+    date: "2026-09-09",
+    zh: {
+      title: `通知管理：10-10-10 法则`,
+      desc: `通知焦虑不是靠意志力解决的。10-10-10 法则用三个时间尺度帮你筛掉九成噪音，这篇讲清它怎么用、为什么有效。`,
+      body: `<p>通知焦虑影响着大多数人。10-10-10 法则是一个简单框架，能把通知过载砍掉大约七成。</p>
+<h2>10-10-10 法则怎么运作</h2>
+<p>收到每条通知时，问自己三个问题：</p>
+<ul>
+<li><strong>10 分钟后它还重要吗？</strong>如果不重要，它可以等。多数通知并不需要立刻处理。</li>
+<li><strong>10 小时后它还重要吗？</strong>如果不重要，可以放到明天。非紧急的内容攒起来一起处理。</li>
+<li><strong>10 天后它还重要吗？</strong>如果不重要，现在就归档或删除。未来的你会谢谢现在的你。</li>
+</ul>
+<h2>为什么有效</h2>
+<p>大脑把每条通知都当成同等紧急，10-10-10 法则强制做一次现实校准：</p>
+<ul>
+<li>90% 的通知过不了 10 分钟这一关</li>
+<li>70% 过不了 10 小时这一关</li>
+<li>只有 10-15% 能三关全过</li>
+</ul>
+<h2>怎么落地</h2>
+<p><strong>第一步：审计你的通知</strong>。列出发警报的每个应用和服务，诚实判断哪些是你真正需要的。</p>
+<p><strong>第二步：套用 10-10-10 过滤器</strong>。对每一类通知问一句：「晚来 10 分钟，我会错过吗？」</p>
+<p><strong>第三步：关掉或静音</strong>。过不了关的通知直接关闭，免打扰模式要挑时机用。</p>
+<p><strong>第四步：批量处理</strong>。非紧急通知每天集中看两三次，而不是一直盯着。</p>
+<h2>实际效果</h2>
+<p>用 10-10-10 法则的人反馈：</p>
+<ul>
+<li>每日查看手机的次数减少 70%</li>
+<li>专注时长提升 45%</li>
+<li>焦虑水平下降 30%</li>
+</ul>
+<h2>常见问题</h2>
+<p>问：万一漏掉重要的事怎么办？<br>答：这个法则筛掉的是九成噪音。真正重要的通知（来电、亲近的人的消息）通常能过 10 分钟这一关。</p>
+<p>问：工作通知也适用吗？<br>答：适用。工作和私人通知可以设不同规则，工作侧的 10 分钟门槛可以更严。</p>
+<p>问：多久能看到效果？<br>答：坚持练习的话，多数人 3 到 5 天内就有感觉。</p>
+<p>PausePaw 帮你管好手机时间。去 <a href="https://pause-paw.shop">pause-paw.shop</a> 开始。</p>`,
+    },
+    en: {
+      title: `Notification Management: The 10-10-10 Rule`,
+      desc: `Notification anxiety is not a willpower problem. The 10-10-10 rule filters most of the noise out in three time scales. Here is how to use it.`,
+      body: `<p>Notification anxiety affects most of us. The 10-10-10 rule is a simple framework that cuts notification overload by about 70%.</p>
+<h2>How the 10-10-10 rule works</h2>
+<p>For every notification you receive, ask three questions:</p>
+<ul>
+<li><strong>Will this matter in 10 minutes?</strong> If not, it can wait. Most notifications do not need immediate action.</li>
+<li><strong>Will this matter in 10 hours?</strong> If not, it can wait until tomorrow. Batch the non-urgent items.</li>
+<li><strong>Will this matter in 10 days?</strong> If not, archive or delete it now. Future you will thank present you.</li>
+</ul>
+<h2>Why it works</h2>
+<p>Your brain treats every notification as equally urgent. The 10-10-10 rule forces a reality check:</p>
+<ul>
+<li>90% of notifications fail the 10-minute test</li>
+<li>70% fail the 10-hour test</li>
+<li>Only 10-15% pass all three</li>
+</ul>
+<h2>How to put it into practice</h2>
+<p><strong>Step 1: Audit your notifications.</strong> List every app and service that sends you alerts, and be honest about which ones you actually need.</p>
+<p><strong>Step 2: Apply the 10-10-10 filter.</strong> For each notification type, ask: "Would I miss this if it arrived 10 minutes late?"</p>
+<p><strong>Step 3: Disable or silence.</strong> Turn off the notifications that fail the test. Use Do Not Disturb modes with intention.</p>
+<p><strong>Step 4: Batch processing.</strong> Check non-urgent notifications two or three times a day instead of continuously.</p>
+<h2>What it looks like in practice</h2>
+<p>People who use the 10-10-10 rule report:</p>
+<ul>
+<li>70% fewer daily phone checks</li>
+<li>45% longer focus stretches</li>
+<li>30% lower anxiety</li>
+</ul>
+<h2>FAQ</h2>
+<p>Q: What if I miss something important?<br>A: The rule filters out 90% noise. Genuinely important notifications (calls, messages from people close to you) usually pass the 10-minute test.</p>
+<p>Q: Does this work for work notifications too?<br>A: Yes. Set different rules for work and personal notifications. Work can carry a stricter 10-minute filter.</p>
+<p>Q: How long until I see results?<br>A: Most people notice a change within 3 to 5 days of consistent practice.</p>
+<p>PausePaw helps you manage your phone time. Start at <a href="https://pause-paw.shop">pause-paw.shop</a>.</p>`,
+    },
+  },
+  {
+    id: "post40",
+    key: "bl_post40",
+    day: 38,
+    date: "2026-09-10",
+    zh: {
+      title: `不熬坏自己也能做到 Inbox Zero`,
+      desc: `Inbox Zero 喊着内心平静，实操起来常常是过劳。这篇给出更现实的「收件箱管理」做法，配上批次处理和 10-10-10 法则。`,
+      body: `<p>Inbox Zero 承诺的是内心平静，实操起来却常常是过劳。这篇讲一个更现实的版本。</p>
+<h2>传统 Inbox Zero 的问题</h2>
+<p>原始的 Inbox Zero 方法（来自 Merlin Mann）要求：每天把收件箱处理到零。删除、归档、转交，或者立刻做完。听起来很美，直到你发现多数邮件需要两天以上的跟进时间，而它们根本没法在一个 10 分钟的批次里「做完」。</p>
+<h2>更现实的替代方案：「收件箱管理」</h2>
+<p>与其每天清零，不如把目标换成<strong>收件箱管理</strong>：</p>
+<ul>
+<li>在固定批次里处理邮件，而不是一直处理</li>
+<li>保留一个「处理中」文件夹，而不只有「未读」</li>
+<li>允许一定积压，三五封未读没问题</li>
+<li>关注<strong>可操作性</strong>，而不是空荡荡的收件箱</li>
+</ul>
+<h2>10-10-10 法则（来自 <a href="/blog/post39.html">第 37 天</a>）</h2>
+<p>对每封邮件问：</p>
+<ul>
+<li>这会在 10 分钟后重要吗？</li>
+<li>这会在 10 个月后重要吗？</li>
+<li>这会在 10 年后重要吗？</li>
+</ul>
+<p>如果三个答案都是「不」，就直接归档或删除。</p>
+<h2>批次处理技巧</h2>
+<ul>
+<li><strong>早晨批次</strong>（15 分钟）：处理过夜邮件</li>
+<li><strong>下午批次</strong>（10 分钟）：处理当天回复</li>
+<li><strong>周五批次</strong>（20 分钟）：清理每周积压</li>
+<li>第一个批次开始之前不要看邮件</li>
+</ul>
+<h2>背后的心理</h2>
+<p>收件箱焦虑来自<strong>蔡格尼克效应</strong>：未完成的任务会一直萦绕。但持续查看邮件会切碎你的专注。固定的批次同时给了你了结感和专注时段。</p>
+<p>PausePaw 帮你管住通知和专注。访问<a href="/">首页</a>看完整指南，或读<a href="/how-it-works">工作原理</a>。</p>`,
+    },
+    en: {
+      title: `How to Reach Inbox Zero Without Burning Out`,
+      desc: `Inbox Zero promises calm and often delivers burnout. Here is the realistic "inbox managing" approach, with batching and the 10-10-10 rule.`,
+      body: `<p>Inbox Zero promises peace of mind. In practice it often delivers burnout. Here is the realistic version.</p>
+<h2>The problem with traditional Inbox Zero</h2>
+<p>The original Inbox Zero method (from Merlin Mann) says: process every email to zero each day. Delete, archive, delegate, or do it right now. It sounds great until you notice that most emails need two or more days of follow-up, and they will not fit into a 10-minute batch.</p>
+<h2>The realistic alternative: inbox managing</h2>
+<p>Instead of zeroing the inbox daily, aim for <strong>inbox managing</strong>:</p>
+<ul>
+<li>Process email in scheduled batches, not constantly</li>
+<li>Keep a "processing" folder, not just "unread"</li>
+<li>Allow some backlog; three to five unread is fine</li>
+<li>Focus on <strong>actionability</strong>, not emptiness</li>
+</ul>
+<h2>The 10-10-10 rule (from <a href="/blog/post39.html">Day 37</a>)</h2>
+<p>For each email, ask:</p>
+<ul>
+<li>Will this matter in 10 minutes?</li>
+<li>Will this matter in 10 months?</li>
+<li>Will this matter in 10 years?</li>
+</ul>
+<p>If the answer is no to all three, archive or delete it right away.</p>
+<h2>Batch processing tips</h2>
+<ul>
+<li><strong>Morning batch</strong> (15 min): clear overnight email</li>
+<li><strong>Afternoon batch</strong> (10 min): handle same-day replies</li>
+<li><strong>Friday batch</strong> (20 min): clear the weekly backlog</li>
+<li>Do not check email before your first batch</li>
+</ul>
+<h2>The psychology</h2>
+<p>Inbox anxiety comes from the <strong>Zeigarnik effect</strong>: unfinished tasks keep circling. Constant email checking fragments your focus. Scheduled batches give you both closure and focus time.</p>
+<p>PausePaw helps you manage notifications and focus. Visit our <a href="/">homepage</a> for the full guide, or read the <a href="/how-it-works">how it works</a> page.</p>`,
+    },
+  },
+  {
+    id: 'post45',
+    key: 'bl_post45',
+    day: 43,
+    date: '2026-09-15',
+    zh: {
+      title: `Instagram Reels vs. TikTok：谁更吃时间`,
+      desc: `同样刷 20 分钟，Reels 和 TikTok 的真实消耗差多少？这篇对比两边的计时机制、自动播放行为和退出难度。`,
+      body: `<p><h2>为什么同样的 20 分钟不一样</h2></p>
+<p>很多人以为刷短视频的时间成本只取决于时长。实际上决定消耗的是三件事：有没有天然的中断点、自动播放多快接上下一条、以及退出要几步。Reels 和 TikTok 在这三点上差别不小。</p>
+<p>这篇不谈哪个内容更好，只谈时间是怎么被吃掉的。</p>
+<h2>中断点</h2>
+<p>TikTok 的主信息流没有明显断点，一条接一条，滑不到底。Reels 的入口通常嵌在 Instagram 里，你从朋友动态或消息进入，理论上有更多返回的理由。</p>
+<p>实际体验里，Reels 的返回理由经常不成立——因为返回之后你还是留在 Instagram 里，时间继续流走。这一层差别比看上去小。</p>
+<h2>自动播放行为</h2>
+<ul><li>两边都是静音自动播放下一条，用户不需要做任何决定</li><li>两边都会在你犹豫的那一秒继续播，犹豫被算作继续观看</li><li>TikTok 的推荐切换更平滑，连续刷的断裂感更弱</li></ul>
+<p>「不需要做决定」是核心机制。每一个需要点击的环节都会让人停下来想一想，而自动播放把这一步省掉。</p>
+<h2>退出难度</h2>
+<p>退出成本低的应用，实际使用时长更短。TikTok 需要专门的关闭动作；Reels 常常关掉之后还在 Instagram 里，然后你又点开了别的东西。</p>
+<p>从这个角度看，Reels 的问题不是更难退出，而是退出之后没有真正离开。</p>
+<h2>一个可验证的对比方法</h2>
+<p>打开手机的屏幕使用时间，分别看两个应用的日均时长，连续看七天。不要凭感觉，凭数据。多数人会发现差距和印象不一致。</p>
+<h2>常见问题</h2>
+<ul><li><strong>看屏幕使用时间就够了吗？</strong> 它统计的是前台时长，后台播放不计入。如果你常听短视频的声音，实际更多。</li><li><strong>设了时限为什么没用？</strong> 因为时限提醒是可跳过的。把提醒改成「需要输入密码才能继续」才有约束力。</li><li><strong>卸载一个就够了吗？</strong> 不一定。如果两个都占时间，只卸载一个通常会把时间转移到另一个。</li></ul>
+<p>想先从数据开始，用<a href="/blog.html">博客</a>里的方法记录一周，再到<a href="/">首页</a>看看对应的专注工具。</p>`,
+    },
+    en: {
+      title: `Instagram Reels vs. TikTok: Which One Eats More Time?`,
+      desc: `Twenty minutes in Reels and twenty minutes in TikTok do not cost the same. Here is how the two apps compare on timers, autoplay and how hard they are to leave.`,
+      body: `<p><h2>Why twenty minutes is not twenty minutes</h2></p>
+<p>Most people assume the cost of short-form video is just the duration. What actually decides the cost is three things: whether there are natural stopping points, how fast autoplay chains the next clip, and how many steps it takes to leave.</p>
+<p>This piece is not about which app has better content. It is about how the time gets spent.</p>
+<h2>Stopping points</h2>
+<p>TikTok's main feed has no visible break. One clip follows another and there is no bottom to reach. Reels usually lives inside Instagram, where you arrived from a friend's story or a message, so in theory you have more reasons to go back.</p>
+<p>In practice those reasons often do not hold, because going back leaves you inside Instagram and the time keeps running. The gap is smaller than it looks.</p>
+<h2>Autoplay behaviour</h2>
+<ul><li>Both play the next clip muted and automatically, so the user never makes a decision</li><li>Both count hesitation as continued watching, because the clip keeps playing while you decide</li><li>TikTok's recommendation transitions are smoother, so the break between clips is less noticeable</li></ul>
+<p>Removing the decision is the core mechanism. Any step that requires a tap gives you a moment to reconsider. Autoplay deletes that moment.</p>
+<h2>Exit cost</h2>
+<p>Apps that are cheap to leave get used for less time. TikTok requires a deliberate close. Reels often just returns you to Instagram, where you open something else.</p>
+<p>Seen this way, the problem with Reels is not that it is harder to leave. It is that leaving does not take you anywhere.</p>
+<h2>A comparison you can actually run</h2>
+<p>Open your phone's screen time report and compare the daily averages for both apps across seven days. Use the numbers, not your impression. Most people find the two are not in the order they expected.</p>
+<h2>FAQ</h2>
+<ul><li><strong>Is screen time enough?</strong> It measures foreground time and misses background audio. If you often leave short videos playing for sound, the real number is higher.</li><li><strong>Why do time limits not work?</strong> Because the reminder is skippable. A limit that requires a password to override is the version that holds.</li><li><strong>Is deleting one app enough?</strong> Not always. If both take time, removing one usually just moves the time to the other.</li></ul>
+<p>Start with the data. Record a week using the method on the <a href="/blog.html">blog</a>, then look at the focus tools on the <a href="/">home page</a>.</p>`,
+    },
+  },
+  {
+    id: "post46",
+    key: "bl_post46",
+    day: 45,
+    date: "2026-09-17",
+    en: {
+      title: "Reddit Time Sink: How to Use It Without Losing Hours",
+      desc: "Reddit can be a research tool or a black hole, and the setting that decides which is one you can flip today. Here is how to stop losing hours to the feed.",
+      body: "<p>Reddit is the rare app that can go either way. The same feed that answers a niche question can also eat an evening. The difference is usually not discipline. It is a handful of settings and habits that decide whether you arrive with a question and leave with an answer, or arrive for a minute and leave two hours later.</p>\n<h2>The one setting that flips it</h2>\n<p>Turn off infinite scroll and turn on the home feed sorted by time, not best. The infinite feed is the mechanism: it removes any natural stopping point, so the session ends only when you decide it does. Sorted by new or by rising, the feed stops being a curated loop engineered to keep you swiping, and starts behaving like a board you check. That single change turns Reddit from a time sink into a research tool.</p>\n<h2>Why the feed wins so easily</h2>\n<ul>\n<li><strong>Variable rewards:</strong> the next post might be great or terrible, and that uncertainty is what keeps the thumb moving.</li>\n<li><strong>No session boundary:</strong> there is no episode end, no level complete, no natural pause where you decide to stop.</li>\n<li><strong>Comment threads reopen:</strong> you finish the post and the comments offer a second feed underneath it.</li>\n</ul>\n<p>None of this is your fault. The design is working as intended. The fix is to stop treating the feed as a destination and start treating it as a lookup.</p>\n<h2>A practical Reddit routine</h2>\n<ul>\n<li><strong>Go in with a query.</strong> Write the question down before opening the app, and close when it is answered.</li>\n<li><strong>Use saved posts, not endless browsing.</strong> Save the useful threads and read them later, outside the feed.</li>\n<li><strong>Limit the subreddits you follow.</strong> A feed of a hundred subscriptions is a slot machine; a feed of ten is a newspaper.</li>\n<li><strong>Set a hard stop.</strong> A timer that runs whether you are looking or not, so the session has a ceiling.</li>\n</ul>\n<h2>Signs it is time to take a break</h2>\n<p>Feeling anxious when you are not checking the feed. Picking up the phone during work breaks and losing the whole break. Scrolling past bedtime. If any of these sound familiar, the fix is not willpower, it is the settings above plus one more: move the app off the home screen.</p>\n<h2>FAQ</h2>\n<ul>\n<li><strong>Is Reddit more addictive than other social apps?</strong> Not necessarily, but its feed has no natural stopping point and its comments double the content, so sessions run long.</li>\n<li><strong>Can I use Reddit productively?</strong> Yes. Treat it as a lookup: go in with a question, read the answers, save the good threads, leave.</li>\n<li><strong>What is the single most effective change?</strong> Sorting the home feed by time instead of best, which breaks the curated loop that keeps you scrolling.</li>\n</ul>\n<p>PausePaw can do the enforcement layer: block the feed after a session limit and make you breathe. Set that up on the <a href=\"/\">home page</a>, and find more reading on the <a href=\"/blog.html\">blog</a>.</p>",
+    },
+    zh: {
+      title: "Reddit 时间黑洞：怎么用不掉时间",
+      desc: "Reddit 可以是研究工具，也可以是时间黑洞，决定它是哪一个的设置今天就能改。这篇讲怎么不再把几个小时丢进信息流。",
+      body: "<p>Reddit 是少数可以往两个方向走的 App。同一条信息流，既能回答一个很偏的问题，也能吃掉一整个晚上。差别通常不在自律，而在几个设置和习惯：决定你是带着问题来、带着答案走，还是打算刷一分钟、两小时后才抬头。</p>\n<h2>最关键的一个设置</h2>\n<p>关掉无限滚动，把首页从「最佳」改成按时间排序。无限信息流是机制本身：它取消了任何天然的停止点，会话什么时候结束完全由你决定。改成按最新或上升排序，信息流不再是精心编排、让你不停滑动的循环，更像一块你可以查的看板。这一个改变，就能把 Reddit 从时间黑洞变成研究工具。</p>\n<h2>为什么信息流赢得这么轻松</h2>\n<ul>\n<li><strong>可变奖励：</strong>下一条可能很好也可能很糟，正是这种不确定让拇指停不下来。</li>\n<li><strong>没有会话边界：</strong>没有剧集结尾、没有关卡完成、没有让你决定停下来的自然停顿。</li>\n<li><strong>评论区会重新打开：</strong>看完帖子，评论区在下面又提供了一条信息流。</li>\n</ul>\n<p>这些都不是你的错，设计就是这么运作的。解法是把信息流当查询工具，而不是当目的地。</p>\n<h2>一套能落地的 Reddit 流程</h2>\n<ul>\n<li><strong>带着问题进去。</strong>打开 App 前先写下要查什么，答案到手就关。</li>\n<li><strong>用「保存」而不是一直刷。</strong>把有用的帖子存下来，之后在信息流之外读。</li>\n<li><strong>限制关注的小组。</strong>一百个订阅的信息流是老虎机，十个订阅的信息流是报纸。</li>\n<li><strong>设硬性停止点。</strong>定时器不管你看没看都在走，给会话一个上限。</li>\n</ul>\n<h2>该休息的信号</h2>\n<p>不刷就焦虑；工作休息拿起手机，结果整个休息时间没了；睡前还在滑。出现任何一条，解法都不是意志力，而是上面的设置，再加上一条：把 App 从主屏挪走。</p>\n<h2>常见问题</h2>\n<ul>\n<li><strong>Reddit 比其他社交 App 更容易上瘾吗？</strong>不一定，但它的信息流没有天然停止点，评论区又让内容翻倍，所以单次会话容易很长。</li>\n<li><strong>能高效地使用 Reddit 吗？</strong>能。把它当查询工具：带着问题进去、读答案、保存好帖、离开。</li>\n<li><strong>最有效的一个改变是什么？</strong>把首页从「最佳」改成按时间排序，打破让你不停滑动的策展循环。</li>\n</ul>\n<p>PausePaw 可以做执行层：会话到上限就拦截信息流，强制休息。在<a href=\"/\">首页</a>设置，或在<a href=\"/blog.html\">博客</a>读更多。</p>",
+    },
+  },
 ];
