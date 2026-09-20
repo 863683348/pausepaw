@@ -3940,4 +3940,75 @@ export const posts = [
     },
   },
 
+  {
+    id: "post51",
+    key: "bl_post51",
+    day: 51,
+    date: "2026-09-21",
+    en: {
+      title: "Why Your Cat Sleeps on Your Keyboard (And Other Warm-Spot Mysteries)",
+      desc: "Cats seek out the warmest, most inconvenient surface in the house. The reasons are part thermodynamics and part social bonding - and once you know them, you can stop taking the keyboard thing personally.",
+      body: `There is a simple explanation for why your cat abandons a perfectly good bed to sleep across your keyboard, and it is not spite.
+
+Cats have a resting body temperature of roughly 38 to 39 degrees Celsius, higher than ours, and they are markedly less efficient than humans at retaining that heat. Their ideal ambient temperature for comfort sits several degrees above what most of us keep our homes at. A laptop running for an hour radiates exactly the kind of gentle, localised warmth a cat is built to seek out. It is not that your cat chose the keyboard over the bed. It is that the keyboard is a better heat source, and the bed is not.
+
+This is the same reason cats gravitate to laundry fresh from the dryer, to the top of a refrigerator, to a windowsill in direct sun, and to the space directly in front of a space heater. In each case the animal is solving a thermal problem with the tools available.
+
+**The social layer**
+
+Warmth alone does not explain everything, because cats also choose spots that are warm *and* occupied. A cat that sleeps on your lap while you work is not merely harvesting heat. Cats are social sleepers. In a multi-cat household, cats that have a good relationship will often sleep in physical contact, and a cat that chooses to sleep against you is making a statement about the relationship, not just about the temperature.
+
+The keyboard sits at the intersection of both drives. It is the warmest patch of the house, and it is the place where your attention is already focused. From the cat's point of view, this is the single best real estate in the building.
+
+**Why the inconvenient spot specifically**
+
+Cats also prefer elevated, enclosed, or central positions where they can observe without being observed. A keyboard in front of a screen on a desk is elevated, is central to the household's activity, and gives a clear sightline to the door. Add the heat, add the attention, and you have an irresistible location.
+
+If you want your cat to stop using the laptop as a bed, do not push it away. Give it a better version of the same thing: a heated pad on a raised platform near your desk. Cats do not respond well to being displaced, but they respond very well to being offered a superior alternative on their own terms.
+
+**What the behaviour is not**
+
+It is worth saying plainly that sleeping on your keyboard is not a sign that your cat is unwell, cold in a dangerous way, or neglected. It is normal feline thermoregulation plus normal feline sociability. Watch for changes in the pattern - a cat that suddenly seeks heat obsessively, or that stops seeking it entirely - but the behaviour itself is a healthy one.
+
+The keyboard belongs to the cat now. The reasonable move is to buy a second keyboard.`,
+      faq: [
+        { q: "Is it bad for my cat to sleep on my laptop?", a: "No. The surface is warm but not hot enough to harm a healthy cat, and the behaviour is normal heat-seeking. The main risk is to your laptop, not to your pet." },
+        { q: "Why does my cat sleep on my keyboard and not on its bed?", a: "Heat retention. A laptop radiates gentle warmth close to a cat's ideal comfort range, while most cat beds do not. Adding a heated pad usually solves the problem." },
+        { q: "Does sleeping on me mean my cat is bonded to me?", a: "Often, yes. Cats are social sleepers, so choosing contact with you is a meaningful signal about the relationship, not just about temperature." },
+      ],
+    },
+    zh: {
+      title: "猫为什么睡在你的键盘上（以及其它暖点之谜）",
+      desc: "猫总能找到家里最暖、最碍事的那块地方。原因一半是热力学，一半是社交。搞清楚之后，你就不用再把键盘这件事往心里去了。",
+      body: `你的猫放着好好的猫窝不睡，偏偏横躺在键盘上，这件事有一个很简单的解释，而且它不是在报复你。
+
+猫的静息体温大约是 38 到 39 摄氏度，比人高，而它们保温的效率明显不如人类。对它们来说舒适的理想环境温度，比我们大多数人家里设定的温度要高好几度。一台开了一小时的笔记本，散发的正是猫天生要去寻找的那种温和的局部热源。所以不是你的猫在猫窝和键盘之间选了键盘，而是键盘本身就是更好的热源，而猫窝不是。
+
+同样的道理，猫会往刚烘干的衣服上钻，会爬到冰箱顶，会趴在直射阳光的窗台，会挤在取暖器正前方。每一种情况里，这只动物都在用手边的资源解决一个热力学问题。
+
+**社交那一层**
+
+但光靠热量解释不了全部，因为猫还会挑那种既暖、又有人占着的位置。你在工作时猫睡在你腿上，它并不只是在蹭热量。猫是群居性睡眠动物。在多猫家庭里，关系好的猫常常会挨着睡，而一只选择贴着你睡的猫，是在表达它和你的关系，不只是表达它的体温偏好。
+
+键盘恰好落在两种需求的交集上。它是全屋最暖的一块 Patch，也是你的注意力本来就集中的地方。从猫的视角看，这是整栋楼里最好的一块地皮。
+
+**为什么偏偏是那个碍事的位置**
+
+猫还偏爱高的、半封闭的、或者居于中心的位置——这样它可以观察别人而不被别人观察。书桌上屏幕前的键盘，位置高、位于家庭活动中心、还能一眼看到门口。再加上热量，加上你的注意力，这个位置就变得无法抗拒。
+
+如果你想让猫别再把笔记本当床，不要去推它。给它一个同样东西的更好版本：一个放在桌边高台上的加热垫。猫不喜欢被赶走，但对「按它自己的规则获得一个更优选项」这件事接受度非常高。
+
+**这个行为不是什么**
+
+有一点值得明确说清楚：睡在你键盘上，并不代表你的猫生病了、冷到危险的程度，或者被忽视了。这是正常的猫科体温调节，加上正常的猫科社交性。真正需要留意的是这个模式发生了变化——比如猫突然过度地、强迫性地找热源，或者完全不找了——但这个行为本身是健康的。
+
+键盘现在归猫了。比较理性的做法是：再买一个键盘。`,
+      faq: [
+        { q: "猫睡在我笔记本上会对它不好吗？", a: "不会。表面是温的，但不足以伤害一只健康的猫，这个行为属于正常的趋热习性。真正的风险在笔记本，不在宠物。" },
+        { q: "为什么我的猫睡键盘而不睡猫窝？", a: "保暖。笔记本散发的温和热量接近猫的理想舒适区间，而大多数猫窝达不到。加一个加热垫通常就能解决。" },
+        { q: "它睡在我身上说明它跟我亲吗？", a: "往往是的。猫是群居性睡眠动物，选择和你身体接触，是关于关系的重要信号，不只是关于温度。" },
+      ],
+    },
+  },
+
 ];
