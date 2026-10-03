@@ -1,17 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://pause-paw.shop/app.html</loc>
-    <lastmod>2026-08-29</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://pause-paw.shop/app.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://pause-paw.shop/app.html?lang=en"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://pause-paw.shop/app.html"/>
-  </url>
-  <url>
     <loc>https://pause-paw.shop/blog.html</loc>
-    <lastmod>2026-08-29</lastmod>
+    <lastmod>2026-10-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="zh" href="https://pause-paw.shop/blog.html"/>
@@ -19,17 +10,8 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://pause-paw.shop/blog.html"/>
   </url>
   <url>
-    <loc>https://pause-paw.shop/blog/day001.html</loc>
-    <lastmod>2026-08-29</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://pause-paw.shop/blog/day001.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://pause-paw.shop/blog/day001.html?lang=en"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://pause-paw.shop/blog/day001.html"/>
-  </url>
-  <url>
     <loc>https://pause-paw.shop/blog/post1.html</loc>
-    <lastmod>2026-08-29</lastmod>
+    <lastmod>2026-10-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="zh" href="https://pause-paw.shop/blog/post1.html"/>
@@ -38,7 +20,7 @@
   </url>
   <url>
     <loc>https://pause-paw.shop/blog/post10.html</loc>
-    <lastmod>2026-08-29</lastmod>
+    <lastmod>2026-10-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="zh" href="https://pause-paw.shop/blog/post10.html"/>
@@ -47,7 +29,7 @@
   </url>
   <url>
     <loc>https://pause-paw.shop/blog/post11.html</loc>
-    <lastmod>2026-08-29</lastmod>
+    <lastmod>2026-10-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="zh" href="https://pause-paw.shop/blog/post11.html"/>
@@ -56,7 +38,7 @@
   </url>
   <url>
     <loc>https://pause-paw.shop/blog/post12.html</loc>
-    <lastmod>2026-08-29</lastmod>
+    <lastmod>2026-10-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="zh" href="https://pause-paw.shop/blog/post12.html"/>
@@ -65,7 +47,7 @@
   </url>
   <url>
     <loc>https://pause-paw.shop/blog/post13.html</loc>
-    <lastmod>2026-08-29</lastmod>
+    <lastmod>2026-10-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="zh" href="https://pause-paw.shop/blog/post13.html"/>
@@ -74,7 +56,7 @@
   </url>
   <url>
     <loc>https://pause-paw.shop/blog/post14.html</loc>
-    <lastmod>2026-08-29</lastmod>
+    <lastmod>2026-10-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="zh" href="https://pause-paw.shop/blog/post14.html"/>
@@ -83,7 +65,7 @@
   </url>
   <url>
     <loc>https://pause-paw.shop/blog/post15.html</loc>
-    <lastmod>2026-08-29</lastmod>
+    <lastmod>2026-10-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="zh" href="https://pause-paw.shop/blog/post15.html"/>
@@ -92,7 +74,7 @@
   </url>
   <url>
     <loc>https://pause-paw.shop/blog/post16.html</loc>
-    <lastmod>2026-08-29</lastmod>
+    <lastmod>2026-10-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="zh" href="https://pause-paw.shop/blog/post16.html"/>
@@ -101,7 +83,7 @@
   </url>
   <url>
     <loc>https://pause-paw.shop/blog/post17.html</loc>
-    <lastmod>2026-08-29</lastmod>
+    <lastmod>2026-10-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="zh" href="https://pause-paw.shop/blog/post17.html"/>
@@ -110,7 +92,7 @@
   </url>
   <url>
     <loc>https://pause-paw.shop/blog/post18.html</loc>
-    <lastmod>2026-08-29</lastmod>
+    <lastmod>2026-10-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="zh" href="https://pause-paw.shop/blog/post18.html"/>
@@ -119,7 +101,7 @@
   </url>
   <url>
     <loc>https://pause-paw.shop/blog/post19.html</loc>
-    <lastmod>2026-08-29</lastmod>
+    <lastmod>2026-10-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="zh" href="https://pause-paw.shop/blog/post19.html"/>
@@ -128,7 +110,7 @@
   </url>
   <url>
     <loc>https://pause-paw.shop/blog/post2.html</loc>
-    <lastmod>2026-08-29</lastmod>
+    <lastmod>2026-10-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="zh" href="https://pause-paw.shop/blog/post2.html"/>
@@ -137,7 +119,7 @@
   </url>
   <url>
     <loc>https://pause-paw.shop/blog/post20.html</loc>
-    <lastmod>2026-08-29</lastmod>
+    <lastmod>2026-10-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="zh" href="https://pause-paw.shop/blog/post20.html"/>
@@ -146,7 +128,7 @@
   </url>
   <url>
     <loc>https://pause-paw.shop/blog/post21.html</loc>
-    <lastmod>2026-08-29</lastmod>
+    <lastmod>2026-10-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="zh" href="https://pause-paw.shop/blog/post21.html"/>
@@ -155,7 +137,7 @@
   </url>
   <url>
     <loc>https://pause-paw.shop/blog/post23.html</loc>
-    <lastmod>2026-08-29</lastmod>
+    <lastmod>2026-10-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="zh" href="https://pause-paw.shop/blog/post23.html"/>
@@ -164,7 +146,7 @@
   </url>
   <url>
     <loc>https://pause-paw.shop/blog/post24.html</loc>
-    <lastmod>2026-08-29</lastmod>
+    <lastmod>2026-10-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="zh" href="https://pause-paw.shop/blog/post24.html"/>
@@ -173,7 +155,7 @@
   </url>
   <url>
     <loc>https://pause-paw.shop/blog/post25.html</loc>
-    <lastmod>2026-08-29</lastmod>
+    <lastmod>2026-10-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="zh" href="https://pause-paw.shop/blog/post25.html"/>
@@ -181,8 +163,17 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://pause-paw.shop/blog/post25.html"/>
   </url>
   <url>
+    <loc>https://pause-paw.shop/blog/post26.html</loc>
+    <lastmod>2026-10-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://pause-paw.shop/blog/post26.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pause-paw.shop/blog/post26.html?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pause-paw.shop/blog/post26.html"/>
+  </url>
+  <url>
     <loc>https://pause-paw.shop/blog/post3.html</loc>
-    <lastmod>2026-08-29</lastmod>
+    <lastmod>2026-10-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="zh" href="https://pause-paw.shop/blog/post3.html"/>
@@ -190,8 +181,80 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://pause-paw.shop/blog/post3.html"/>
   </url>
   <url>
+    <loc>https://pause-paw.shop/blog/post30.html</loc>
+    <lastmod>2026-10-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://pause-paw.shop/blog/post30.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pause-paw.shop/blog/post30.html?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pause-paw.shop/blog/post30.html"/>
+  </url>
+  <url>
+    <loc>https://pause-paw.shop/blog/post32.html</loc>
+    <lastmod>2026-10-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://pause-paw.shop/blog/post32.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pause-paw.shop/blog/post32.html?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pause-paw.shop/blog/post32.html"/>
+  </url>
+  <url>
+    <loc>https://pause-paw.shop/blog/post33.html</loc>
+    <lastmod>2026-10-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://pause-paw.shop/blog/post33.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pause-paw.shop/blog/post33.html?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pause-paw.shop/blog/post33.html"/>
+  </url>
+  <url>
+    <loc>https://pause-paw.shop/blog/post34.html</loc>
+    <lastmod>2026-10-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://pause-paw.shop/blog/post34.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pause-paw.shop/blog/post34.html?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pause-paw.shop/blog/post34.html"/>
+  </url>
+  <url>
+    <loc>https://pause-paw.shop/blog/post36.html</loc>
+    <lastmod>2026-10-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://pause-paw.shop/blog/post36.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pause-paw.shop/blog/post36.html?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pause-paw.shop/blog/post36.html"/>
+  </url>
+  <url>
+    <loc>https://pause-paw.shop/blog/post37.html</loc>
+    <lastmod>2026-10-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://pause-paw.shop/blog/post37.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pause-paw.shop/blog/post37.html?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pause-paw.shop/blog/post37.html"/>
+  </url>
+  <url>
+    <loc>https://pause-paw.shop/blog/post38.html</loc>
+    <lastmod>2026-10-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://pause-paw.shop/blog/post38.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pause-paw.shop/blog/post38.html?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pause-paw.shop/blog/post38.html"/>
+  </url>
+  <url>
+    <loc>https://pause-paw.shop/blog/post39.html</loc>
+    <lastmod>2026-10-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://pause-paw.shop/blog/post39.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pause-paw.shop/blog/post39.html?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pause-paw.shop/blog/post39.html"/>
+  </url>
+  <url>
     <loc>https://pause-paw.shop/blog/post4.html</loc>
-    <lastmod>2026-08-29</lastmod>
+    <lastmod>2026-10-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="zh" href="https://pause-paw.shop/blog/post4.html"/>
@@ -199,8 +262,71 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://pause-paw.shop/blog/post4.html"/>
   </url>
   <url>
+    <loc>https://pause-paw.shop/blog/post40.html</loc>
+    <lastmod>2026-10-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://pause-paw.shop/blog/post40.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pause-paw.shop/blog/post40.html?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pause-paw.shop/blog/post40.html"/>
+  </url>
+  <url>
+    <loc>https://pause-paw.shop/blog/post42.html</loc>
+    <lastmod>2026-10-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://pause-paw.shop/blog/post42.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pause-paw.shop/blog/post42.html?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pause-paw.shop/blog/post42.html"/>
+  </url>
+  <url>
+    <loc>https://pause-paw.shop/blog/post43.html</loc>
+    <lastmod>2026-10-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://pause-paw.shop/blog/post43.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pause-paw.shop/blog/post43.html?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pause-paw.shop/blog/post43.html"/>
+  </url>
+  <url>
+    <loc>https://pause-paw.shop/blog/post44.html</loc>
+    <lastmod>2026-10-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://pause-paw.shop/blog/post44.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pause-paw.shop/blog/post44.html?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pause-paw.shop/blog/post44.html"/>
+  </url>
+  <url>
+    <loc>https://pause-paw.shop/blog/post45.html</loc>
+    <lastmod>2026-10-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://pause-paw.shop/blog/post45.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pause-paw.shop/blog/post45.html?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pause-paw.shop/blog/post45.html"/>
+  </url>
+  <url>
+    <loc>https://pause-paw.shop/blog/post46.html</loc>
+    <lastmod>2026-10-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://pause-paw.shop/blog/post46.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pause-paw.shop/blog/post46.html?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pause-paw.shop/blog/post46.html"/>
+  </url>
+  <url>
+    <loc>https://pause-paw.shop/blog/post47.html</loc>
+    <lastmod>2026-10-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://pause-paw.shop/blog/post47.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pause-paw.shop/blog/post47.html?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pause-paw.shop/blog/post47.html"/>
+  </url>
+  <url>
     <loc>https://pause-paw.shop/blog/post5.html</loc>
-    <lastmod>2026-08-29</lastmod>
+    <lastmod>2026-10-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="zh" href="https://pause-paw.shop/blog/post5.html"/>
@@ -208,8 +334,35 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://pause-paw.shop/blog/post5.html"/>
   </url>
   <url>
+    <loc>https://pause-paw.shop/blog/post51.html</loc>
+    <lastmod>2026-10-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://pause-paw.shop/blog/post51.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pause-paw.shop/blog/post51.html?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pause-paw.shop/blog/post51.html"/>
+  </url>
+  <url>
+    <loc>https://pause-paw.shop/blog/post52.html</loc>
+    <lastmod>2026-10-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://pause-paw.shop/blog/post52.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pause-paw.shop/blog/post52.html?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pause-paw.shop/blog/post52.html"/>
+  </url>
+  <url>
+    <loc>https://pause-paw.shop/blog/post53.html</loc>
+    <lastmod>2026-10-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://pause-paw.shop/blog/post53.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pause-paw.shop/blog/post53.html?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pause-paw.shop/blog/post53.html"/>
+  </url>
+  <url>
     <loc>https://pause-paw.shop/blog/post6.html</loc>
-    <lastmod>2026-08-29</lastmod>
+    <lastmod>2026-10-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="zh" href="https://pause-paw.shop/blog/post6.html"/>
@@ -217,8 +370,17 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://pause-paw.shop/blog/post6.html"/>
   </url>
   <url>
+    <loc>https://pause-paw.shop/blog/post64.html</loc>
+    <lastmod>2026-10-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://pause-paw.shop/blog/post64.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pause-paw.shop/blog/post64.html?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pause-paw.shop/blog/post64.html"/>
+  </url>
+  <url>
     <loc>https://pause-paw.shop/blog/post7.html</loc>
-    <lastmod>2026-08-29</lastmod>
+    <lastmod>2026-10-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="zh" href="https://pause-paw.shop/blog/post7.html"/>
@@ -227,7 +389,7 @@
   </url>
   <url>
     <loc>https://pause-paw.shop/blog/post8.html</loc>
-    <lastmod>2026-08-29</lastmod>
+    <lastmod>2026-10-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="zh" href="https://pause-paw.shop/blog/post8.html"/>
@@ -236,7 +398,7 @@
   </url>
   <url>
     <loc>https://pause-paw.shop/blog/post9.html</loc>
-    <lastmod>2026-08-29</lastmod>
+    <lastmod>2026-10-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="zh" href="https://pause-paw.shop/blog/post9.html"/>
