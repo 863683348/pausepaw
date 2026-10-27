@@ -4469,4 +4469,75 @@ The keyboard belongs to the cat now. The reasonable move is to buy a second keyb
       { q: "What is the smallest change worth trying?", a: "A cutoff 60 minutes before bed, with the phone charging somewhere you have to stand up to reach. It is one hour, it is measurable, and it is the version people are still following after two weeks." },
     ],
   },
+
+  {
+    id: "post82",
+    key: "bl_post82",
+    day: 86,
+    date: "2026-10-28",
+    en: {
+      title: "Mindful Tech Use: The Buddhist Approach to Smartphones",
+      desc: "Mindful phone use borrows from a 2,500-year-old playbook about attention. Three practices that carry over, two places the analogy breaks, and a five-minute version.",
+      body: `<p>Mindful phone use has a marketing problem. The most useful material on it is about 2,500 years old, nobody owns it, and so nobody sells it. Buddhist practice spent that time working on one question that a smartphone now raises roughly eighty times a day: what do you do with an impulse you did not choose?</p>
+<p>To be clear about the frame: this is not religious instruction, and it does not require believing anything. What follows is attention training that has been field-tested for longer than any alternative, translated to a device that none of its authors could have pictured.</p>
+<h2>What the tradition says about attention</h2>
+<p>The relevant idea is craving, or tanha, and it is described as a mechanism with a shape rather than a moral failing. An impulse arises. You act on it. Relief follows, briefly. The impulse returns slightly stronger than before, and the interval between impulses shortens. Anyone who has opened a social app, closed it, and reopened it ninety seconds later has run this loop.</p>
+<p>The part worth taking is what the practice does next. It does not ask you to fight the impulse or to feel guilty about having it. It asks you to notice the impulse, name it, and let it pass without acting. That small gap between noticing and acting is where every useful change to a phone habit lives, and it is the only thing any of this trains.</p>
+<h2>Three practices that carry over</h2>
+<table><tr><th>Practice</th><th>Original use</th><th>Phone version</th></tr><tr><td>Noting</td><td>Labeling a mental state as it arises in meditation</td><td>Say what the impulse is, out loud or in your head: bored, avoiding, checking for news. One word is enough.</td></tr><tr><td>One breath first</td><td>A pause before a deliberate action</td><td>Before you unlock, take one breath. Six seconds. Most urges have weakened by then.</td></tr><tr><td>One thing at a time</td><td>Single-tasking as the default of daily life</td><td>Pick one tab and one app for a block of 25 minutes. Two is already a switching problem.</td></tr></table>
+<p>Noting is the one people skip, and it is the one doing the most work. An urge you have named is an urge you can watch. An urge you have not named is just a hand moving toward a phone.</p>
+<h2>Where the analogy breaks down</h2>
+<p>Two places, and both matter.</p>
+<p>First, the original practitioners were not up against variable reward schedules tuned by engineering teams running thousands of experiments. The pull your phone has on you is stronger than anything these texts were written against, and pretending otherwise sets people up to blame themselves for a mismatch that is not their fault.</p>
+<p>Second, "be more mindful" fails for the same reason "eat less" fails: it puts the whole burden on the moment of weakness. The practices above are worth training, but they work better as a second line than as a first one. Moving the app off your home screen will outperform a month of noting practice, and it takes twenty seconds.</p>
+<h2>A five-minute version</h2>
+<ul>
+<li><strong>Pick one recurring moment.</strong> Not "use my phone less". Something concrete: the first ten minutes after you sit down at your desk.</li>
+<li><strong>Name the impulse once.</strong> One word, said silently, when your hand moves.</li>
+<li><strong>Add a breath before the unlock.</strong> Six seconds, counted. Skip the counting and it turns into nothing.</li>
+<li><strong>Leave a note where the phone is.</strong> Not a rule, a reminder. The reminder is the part that survives a busy week.</li>
+<li><strong>Review after two weeks, not two days.</strong> The first three days of any attention practice feel worse before they feel better, because you are noticing the impulse for the first time instead of obeying it.</li>
+</ul>
+<p>A phone-free life is not the target here. Reaching for the phone while awake enough to notice that you reached is closer to it.</p>
+<p>PausePaw handles the browser half. After your limit, the next page waits ten seconds before it loads, and ten seconds is roughly the length of the gap this whole article is about. Set it up at <a href="/">pause-paw.shop</a>.</p>
+<h2>The one thing to keep</h2>
+<p>If you take a single idea from mindful phone use, take noting. Everything else here is optional. Naming the impulse once, in one word, is the smallest unit of the practice that still works on its own.</p>
+<p>The rest of the habits live at <a href="/">pause-paw.shop</a>. Install from the <a href="/app.html">App page</a>, and the <a href="/faq.html">FAQ</a> covers exactly what a pause looks like. For the movement version of the same idea, there is <a href="/blog/post52.html">phone-free walking</a>. If the impulse you keep naming is boredom rather than anxiety, <a href="/blog/post14.html">why you reach for your phone when you are bored</a> is the better next read. And if you have already tried the strict version, <a href="/blog/post16.html">the dopamine detox piece</a> separates what holds up from what does not.</p>`,
+    },
+    zh: {
+      title: "正念科技使用：佛教角度的智能手机观",
+      desc: "mindful phone use 借的是一套有 2500 年历史、专门处理注意力的训练。三条能直接搬过来的做法，两个类比失效的地方，以及一个五分钟版本。",
+      body: `<p>mindful phone use 有个营销上的问题：关于它最有用的材料大约有 2500 年历史，谁都不拥有它，于是谁都不卖它。佛教用这段时间反复处理的那个问题，恰好是智能手机现在每天提出大约八十次的同一个：一个不是你选择的冲动，你拿它怎么办。</p>
+<p>先把框架说清楚：这不是宗教指导，也不需要你相信什么。下面这些是注意力训练，只是它们的实测时间比任何替代品都长，被翻译到了一个写这些文本的人想象不到的设备上。</p>
+<h2>这套传统对注意力说了什么</h2>
+<p>相关的概念是「渴爱」（tanha），它被描述成一种有形状的机制，而不是一种道德缺陷。冲动升起，你照着做，短暂的缓解，然后冲动回来，比上一次略强，两次之间的间隔还变短了。任何打开过社交应用、关掉、九十秒后又打开的人，都跑过这个循环。</p>
+<p>值得拿走的是这套练习接下来做的事。它不要求你跟冲动对抗，也不要求你为有这个冲动而内疚。它要求你注意到它，给它一个名字，然后让它过去而不行动。注意和行动之间那道小缝，就是手机习惯里所有有效改动待的地方，也是这套训练唯一在练的东西。</p>
+<h2>三条能直接搬过来的做法</h2>
+<table><tr><th>做法</th><th>原本的用途</th><th>手机上的版本</th></tr><tr><td>标记（noting）</td><td>禅修中给升起的心念贴标签</td><td>冲动出现时说出它是什么：无聊、在逃避、想看有没有新消息。一个词就够。</td></tr><tr><td>先呼吸一次</td><td>在有意的行为之前留一个停顿</td><td>解锁之前吸一口气，六秒。多数冲动到那时已经弱下去了。</td></tr><tr><td>一次一件事</td><td>把单任务当成日常默认</td><td>25 分钟里只留一个标签页、一个应用。开两个就已经是切换问题了。</td></tr></table>
+<p>标记是最容易被跳过的，也是干最多活的那一条。被你命名的冲动，是一个你可以看着它的冲动；没被命名的冲动，就只是一只正在伸向手机的手。</p>
+<h2>类比在哪里失效</h2>
+<p>两处，两处都重要。</p>
+<p>第一，当年修行的人面对的，不是由工程团队用上千次实验调出来的变比率奖励。你的手机对你的拉力，比这些文本写作时面对的任何东西都强。假装不是这样，会让人为一个不是自己造成的错配去责怪自己。</p>
+<p>第二，「多一点正念」失败的原因，和「少吃一点」失败的原因一样：它把全部负担压在最虚弱的那一刻。上面的做法值得练，但它们当第二道防线比当第一道更合适。把应用从主屏挪走，效果会好过一个月的标记练习，而且只要二十秒。</p>
+<h2>五分钟版本</h2>
+<ul>
+<li><strong>挑一个反复出现的时刻。</strong>别写「少用手机」，写一件具体的事：在书桌前坐下的头十分钟。</li>
+<li><strong>给冲动命一次名。</strong>手动的时候，心里说一个词。</li>
+<li><strong>解锁之前加一次呼吸。</strong>六秒，数着来。不数，它就会变成什么都不是。</li>
+<li><strong>在手机在的地方贴张便签。</strong>不是规矩，是提醒。能活过一个忙周的是提醒。</li>
+<li><strong>两周后复盘，不是两天后。</strong>任何注意力练习的前三天都先变糟再变好，因为你第一次注意到那些冲动，而不是照着做。</li>
+</ul>
+<p>不用手机的生活不是这里的目标。够清醒地注意到自己伸手了，更接近这个目标。</p>
+<p>PausePaw 管的是浏览器这一段：过了你设的时间，下一个页面会晚十秒加载，而十秒大约就是这篇讲的这道缝的长度。在<a href="/">pause-paw.shop</a>设置。</p>
+<h2>只留一条的话</h2>
+<p>如果 mindful phone use 里你只带走一件事，带走标记。其余的都是可选的。用一个词、给冲动命一次名，是这套练习里最小、但单独拿出来仍然有用的那个单位。</p>
+<p>其余的习惯都在 <a href="/">pause-paw.shop</a>。从<a href="/app.html">App 页面</a>装上，<a href="/faq.html">FAQ</a>里有暂停具体怎么跑的说明。同一个思路的「动起来」版本，看<a href="/blog/post52.html">不带手机的散步</a>；如果你反复命名的那个冲动是无聊而不是焦虑，<a href="/blog/post14.html">一无聊就想摸手机那篇</a>更该接着读；而严格版本你已经试过的话，<a href="/blog/post16.html">多巴胺戒断那篇</a>把站得住的和站不住的分开了。</p>`,
+    },
+    faq: [
+      { q: "Do I have to be Buddhist to use these techniques?", a: "No. Noting, a deliberate pause, and single-tasking are attention training. They were developed inside a religious tradition and work the same way outside one, the way stretching works whether or not you care where yoga came from." },
+      { q: "Isn't this just \"put your phone down\" with extra steps?", a: "The extra steps are the point. Telling yourself to stop puts the burden on the moment of weakness. Noting moves the work to the moment just before it, when you still have a choice." },
+      { q: "How long before it changes anything?", a: "Two weeks on one recurring moment is a fair test. The first three days often feel worse, because you start noticing impulses you previously obeyed without registering them." },
+      { q: "What if I keep forgetting to do it?", a: "Attach it to something you already do, and put a physical note where the phone is. Practices that depend on remembering to start them rarely survive a busy week." },
+    ],
+  },
 ];
