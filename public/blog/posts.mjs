@@ -4540,4 +4540,75 @@ The keyboard belongs to the cat now. The reasonable move is to buy a second keyb
       { q: "What if I keep forgetting to do it?", a: "Attach it to something you already do, and put a physical note where the phone is. Practices that depend on remembering to start them rarely survive a busy week." },
     ],
   },
+
+  {
+    id: "post83",
+    key: "bl_post83",
+    day: 85,
+    date: "2026-10-27",
+    en: {
+      title: "Text Neck: How to Fix Phone Posture in 5 Minutes a Day",
+      desc: "Text neck fix advice ranges from sit up straight to expensive gadgets. What is actually happening in your neck, three exercises that take five minutes, and how long before it changes.",
+      body: `<p>Text neck is the name given to a sore, stiff upper back that shows up after years of looking down at a phone. The text neck fix advice online ranges from "sit up straight" to devices that cost more than the phone. The useful part sits in the middle, and it takes about five minutes a day.</p>
+<p>What follows is not medical treatment. If you have numbness, tingling in your hands, or pain that wakes you at night, that belongs with a physiotherapist, not a blog post. For the ordinary ache that builds up over an afternoon, here is what is happening and what to do about it.</p>
+<h2>What is actually happening in your neck</h2>
+<p>Your head weighs roughly five kilograms. Held directly above your shoulders, the neck muscles carry that without complaint. Tilt it forward 45 degrees to look at a phone and the effective load on the cervical spine rises to around 22 kilograms, because the muscles are now holding the head at the end of a lever rather than balancing it.</p>
+<p>Nothing is damaged by an afternoon of this. The problem is duration. An hour or two a day, every day, for years, keeps a set of small muscles contracted for longer than they recover from, and they get sore the way any muscle held in one position gets sore.</p>
+<h2>Three exercises that take five minutes</h2>
+<table><tr><th>Exercise</th><th>How</th><th>Dose</th><th>What it targets</th></tr><tr><td>Chin tucks</td><td>Sit upright, draw your chin straight back to make a double chin, hold, release. Do not tilt your head up or down.</td><td>10 reps, hold 5 seconds</td><td>The deep neck flexors at the front, which have gone quiet</td></tr><tr><td>Scapular squeezes</td><td>Arms at your sides, squeeze the shoulder blades together and down, as if pinching a pencil between them.</td><td>10 reps, hold 5 seconds</td><td>The mid-back muscles that hold the shoulders back</td></tr><tr><td>Doorway chest stretch</td><td>Forearm on a doorframe at shoulder height, step through until you feel a stretch across the front of the chest.</td><td>30 seconds each side</td><td>The chest muscles that have shortened from hunching</td></tr></table>
+<p>The order matters. Squeezing the shoulder blades back without stretching what is tight at the front is like pulling on a door that is still latched. Stretch first on the days you are especially stiff.</p>
+<h2>Why five minutes beats a good chair</h2>
+<p>Phone posture fix equipment sells well because buying something feels like progress. A better chair changes the angle you hold for the eight hours at a desk, and it does nothing about the three hours on a phone afterwards, which is where most of the forward head position comes from.</p>
+<p>The exercises work on the muscles directly. A chair works on the furniture. Both have a place, and only one of them travels with you.</p>
+<h2>Four changes that reduce the load</h2>
+<ul>
+<li><strong>Raise the phone, not the chin.</strong> Bring the device up toward eye level rather than dropping your head toward it. This single change accounts for more of the load difference than any exercise.</li>
+<li><strong>Take the phone out of the hand-off.</strong> Long reading goes to a tablet on a stand or a laptop. The five-minute scroll is not the problem; the fifty-minute one is.</li>
+<li><strong>Set the reminder where the phone is.</strong> A note on the charging spot gets seen. An app notification gets dismissed.</li>
+<li><strong>Do the exercises at a fixed time, not when it hurts.</strong> By the time it hurts you have already lost the argument. After your morning coffee works better than "when I remember".</li>
+</ul>
+<h2>How long before it changes</h2>
+<p>Two weeks of daily chin tucks and squeezes is usually enough to notice that the afternoon ache arrives later than it used to. Six weeks is where the resting posture starts to shift, and that is the part that lasts. Skipping days is fine. Skipping weeks is not.</p>
+<p>If you have done this daily for a month and nothing has moved, or the pain is sharp, one-sided, or runs down into your arm, stop guessing and get it looked at. Persistent symptoms are cheaper to sort out early.</p>
+<p>PausePaw covers the part of this that is a habit rather than a muscle. After your limit, the next page waits ten seconds before it loads, and ten seconds is long enough to put the phone down and look at the far wall. Set it up at <a href="/">pause-paw.shop</a>.</p>
+<h2>Start with one exercise</h2>
+<p>Chin tucks alone, ten reps after your morning coffee, for two weeks. That is the whole assignment. The other two exercises are there for when the first one has become automatic, and the stretch is there for the mornings you wake up stiff.</p>
+<p>The rest of the habits live at <a href="/">pause-paw.shop</a>. Install from the <a href="/app.html">App page</a>, and the <a href="/faq.html">FAQ</a> covers exactly what a pause looks like. Phone posture is the physical half of the same problem; the other posts are at <a href="/blog.html">the blog index</a>, including <a href="/blog/post52.html">phone-free walking</a> for the movement version and <a href="/blog/post80.html">the eye strain piece</a> for what screens do to the rest of your head.</p>`,
+    },
+    zh: {
+      title: "脖子前倾：每天 5 分钟矫正手机姿势",
+      desc: "关于 text neck fix 的建议，从「坐直一点」到昂贵的矫正器都有。这篇讲清脖子里在发生什么、三个五分钟能做完的动作，以及多久会变。",
+      body: `<p>「脖子前倾」（text neck）说的是多年低头看手机之后，脖子和上背部那种又僵又酸的状态。网上关于 text neck fix 的建议，从「坐直一点」一路到比手机还贵的矫正器都有。有用的部分在中间，而且每天大约五分钟。</p>
+<p>下面这些不是医疗处置。如果你有手麻、手指发麻，或者晚上会被痛醒，那该去找物理治疗师，而不是看一篇博客。至于一下午攒出来的那种普通酸痛，这篇讲清它在发生什么，以及该怎么办。</p>
+<h2>脖子里到底在发生什么</h2>
+<p>你的头大约重 5 公斤。端端正正地待在肩膀正上方时，颈部肌肉扛着这个重量毫无怨言。往前低 45 度去看手机，颈椎承受的等效负荷会升到 22 公斤左右，因为肌肉此时是在杠杆的末端吊着这个头，而不是托着它。</p>
+<p>一个下午的姿势不会造成什么损伤，问题出在时长上。每天一两个小时，天天如此，年复一年，一组小肌肉被维持在收缩状态的时间超过了它们恢复的时间，于是它们像任何一块被固定在一个姿势上太久的肌肉一样开始酸痛。</p>
+<h2>五分钟就能做完的三个动作</h2>
+<table><tr><th>动作</th><th>怎么做</th><th>剂量</th><th>练的是哪里</th></tr><tr><td>收下巴</td><td>坐直，下巴平着往后收，收出双下巴，停住，松开。头不要抬也不要低。</td><td>10 次，每次停 5 秒</td><td>前面那组已经「下班」了的深层颈屈肌</td></tr><tr><td>夹肩胛</td><td>手臂自然下垂，两侧肩胛骨往中间并、往下沉，像是要夹住一支铅笔。</td><td>10 次，每次停 5 秒</td><td>把肩膀往后拉住的中背部肌肉</td></tr><tr><td>门框扩胸</td><td>前臂搭在门框上，与肩同高，往前迈一步，直到胸口前侧有拉伸感。</td><td>每侧 30 秒</td><td>因为含胸而缩短的胸肌</td></tr></table>
+<p>顺序是有讲究的。前面还紧着的时候就去夹肩胛，等于在拉一扇还锁着的门。特别僵的那几天，先拉伸。</p>
+<h2>为什么五分钟比一把好椅子管用</h2>
+<p>矫正姿态的器材卖得好，是因为买点什么像是取得了进展。更好的椅子改变的是你在书桌前那八个小时的角度，它管不了之后在手机上那三小时，而多数头部前倾的姿势是从那三小时来的。</p>
+<p>练的是肌肉，买的是家具。两者各有各的位置，但只有其中一个会跟着你走。</p>
+<h2>四个能减少负荷的改动</h2>
+<ul>
+<li><strong>把手机抬起来，不是把头低下去。</strong>把设备往眼睛的高度送，而不是让头往下凑。光这一项带来的负荷差别，比任何一个动作都大。</li>
+<li><strong>把长时间阅读从手机里挪走。</strong>长文用支架上的平板或者笔记本看。五分钟的刷不是问题，五十分钟的才是。</li>
+<li><strong>提醒要放在手机在的地方。</strong>贴在充电位的便签会被看见，App 通知会被划掉。</li>
+<li><strong>把动作放在固定时间做，不要等疼了再做。</strong>疼的时候你已经输了。早饭后的咖啡比「想起来的时候」好用得多。</li>
+</ul>
+<h2>多久会变</h2>
+<p>每天做收下巴和夹肩胛，两周通常就够让你发现下午那阵酸痛来得比过去晚了。六周左右，静止状态下的姿态开始移动，而那部分才是能留下来的。漏几天没关系，漏几周不行。</p>
+<p>如果你认真做了一个月什么都没变，或者疼痛是尖锐的、只在单侧、或者顺着胳膊往下走，别再自己猜了，去给医生看一下。持续的症状早处理更便宜。</p>
+<p>PausePaw 管的是这里面属于习惯、不属于肌肉的那一段。过了你设的时间，下一个页面会晚十秒加载，而十秒足够你放下手机去看看最远的那面墙。在<a href="/">pause-paw.shop</a>设置。</p>
+<h2>先做一个动作</h2>
+<p>只做收下巴，早饭后的咖啡之后 10 次，坚持两周。这就是全部作业。另外两个动作留到第一个已经变成自动的之后，而拉伸留给早上醒来发僵的那几天。</p>
+<p>其余的习惯都在 <a href="/">pause-paw.shop</a>。从<a href="/app.html">App 页面</a>装上，<a href="/faq.html">FAQ</a>里有暂停具体怎么跑的说明。手机姿态是同一个问题的物理那一半，其余的文章在<a href="/blog.html">博客索引</a>里，包括「动起来」版本的<a href="/blog/post52.html">不带手机的散步</a>，以及讲屏幕对头部其余部分做了什么的<a href="/blog/post80.html">眼疲劳那篇</a>。</p>`,
+    },
+    faq: [
+      { q: "Is text neck permanent?", a: "The ache is not. It comes from muscles held in one position and it responds to movement and to changing the load. What can become lasting is the resting head position you trained over years, which is why the exercises belong in a daily slot rather than saved for flare-ups." },
+      { q: "Do posture corrector braces work?", a: "They hold you in a better position while you are wearing one and do little afterwards, because the muscles are not doing any of the work. The exercises take longer to show anything and keep working on the days you are wearing nothing." },
+      { q: "How long until my neck stops hurting?", a: "Two weeks of daily chin tucks and squeezes usually pushes the afternoon ache later into the day. Around six weeks is where resting posture starts to move. If a month of daily work changes nothing, get it assessed." },
+      { q: "When should I see a doctor instead of doing exercises?", a: "Numbness or tingling in the hands, pain running down the arm, weakness in your grip, or anything that wakes you at night. Those point at a nerve rather than a tired muscle and need an actual examination." },
+    ],
+  },
 ];
