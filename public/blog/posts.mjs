@@ -4611,4 +4611,62 @@ The keyboard belongs to the cat now. The reasonable move is to buy a second keyb
       { q: "When should I see a doctor instead of doing exercises?", a: "Numbness or tingling in the hands, pain running down the arm, weakness in your grip, or anything that wakes you at night. Those point at a nerve rather than a tired muscle and need an actual examination." },
     ],
   },
+  {
+    id: "post84",
+    key: "bl_post84",
+    day: 89,
+    date: "2026-10-31",
+    en: {
+      title: "Screen Time and Self-Esteem: A Quiet Crisis",
+      desc: "Why this is not only a teenage problem, what the comparison does to adults, and four changes that actually help.",
+      body: `<p>Screen time and self-esteem gets filed as a teenage problem. That was a fair description in 2015 and it is not one now. Of the readers who wrote to me this year saying an evening of scrolling left them feeling smaller, more were adults than students.</p>
+<p>The reason is not mysterious. Adults scroll through people in their own field and former colleagues. The comparison lands closer to home than a teenager's does, so the gap it opens is more specific. Teenagers measure themselves against peers; adults measure themselves against people who started from the same place.</p>
+<h2>How self-esteem actually gets worn down</h2>
+<p>Rarely by one blow. More often by a few hundred small ones: a promotion here, a finished project there. None of them means much on its own. Stacked across a year they settle into a conclusion, and that conclusion is the part worth dealing with.</p>
+<h2>Social media self esteem: the three feeds that do the most damage</h2>
+<table><tr><th>What you scroll past</th><th>The thought it starts</th><th>A more accurate reading</th></tr><tr><td>Someone posting a result</td><td>I am behind</td><td>You are looking at the launch day, not the six months before it</td></tr><tr><td>Someone posting an ordinary day</td><td>Their life is better than mine</td><td>The fragment was selected, and selecting is work</td></tr><tr><td>Someone posting numbers</td><td>I picked the wrong field</td><td>One screenshot carries no sample size and no costs</td></tr></table>
+<h2>Why adults admit it less</h2>
+<p>Teenagers get asked about this by parents and by schools. Adults get asked by nobody, and saying that an evening on your phone left you feeling small sounds like complaining about nothing. So it stays unsaid, which is most of the reason it stays quiet.</p>
+<h2>Four changes that do something</h2>
+<ul>
+<li><strong>Compare against a nearer version.</strong> Yourself three months ago rather than someone else's best Tuesday.</li>
+<li><strong>Unfollow the accounts that reliably leave you worse.</strong> No announcement required, no need to explain it to anyone.</li>
+<li><strong>Move the scrolling out of the worst hour.</strong> The two hours before bed are the worst slot, because nothing else is there to balance what you just watched.</li>
+<li><strong>Give yourself an interruption.</strong> After your limit the next page waits ten seconds before it loads, and ten seconds is long enough to remember what you opened the phone for.</li>
+</ul>
+<p>PausePaw covers the last one. After the limit you set, the next page waits ten seconds before it loads, which is long enough to remember what you came for. You can set it up at <a href="/">pause-paw.shop</a>.</p>
+<h2>Start with one thing</h2>
+<p>Tonight, unfollow the three accounts that most reliably leave you feeling worse. That single change removes the comparison at the source instead of asking you to resist it, and it takes about two minutes.</p>
+<p>The rest of it is on the <a href="/app.html">App page</a>. Two posts cover the ground next door: <a href="/blog/post81.html">screen time and anxiety</a> for what the research shows, and <a href="/blog/post78.html">the doom scrolling piece</a> for how the loop forms.</p>`,
+    },
+    zh: {
+      title: "屏幕时间与自尊：一场安静的危机",
+      desc: "为什么这不只是青少年的问题、成年人的比较为什么更难熬，以及四个真的有用的改动。",
+      body: `<p>「屏幕时间与自尊」通常被归到青少年那一栏。2015 年这么分还算准确，现在不准确了。今年写信给我的读者里，说刷完一晚上手机之后觉得自己变小的，成年人比学生多。</p>
+<p>原因不复杂。成年人刷的是同行和前同事，比较的对象更近，因此落差也更具体。青少年比的是同龄人，成年人比的是当年和自己站在同一起点的人。</p>
+<h2>自尊是怎么被磨掉的</h2>
+<p>很少有一次重击。更常见的过程是几百次小事：这里一个升职消息，那里一个做完的项目。单独看都不算什么，一年累积下来会沉淀成一个结论，而那个结论才是要处理的东西。</p>
+<h2>三类最容易伤到 social media self esteem 的内容</h2>
+<table><tr><th>你刷到的</th><th>它引发的想法</th><th>更准确的读法</th></tr><tr><td>别人发布一个成果</td><td>我落后了</td><td>你看到的是发布那天，不是前面半年</td></tr><tr><td>别人发一段日常</td><td>他们的生活比我好</td><td>片段是被挑出来的，挑选本身就是工作</td></tr><tr><td>别人晒一组数据</td><td>我选错了行</td><td>一张截图既没有样本量，也没有成本</td></tr></table>
+<h2>为什么成年人更不愿意承认</h2>
+<p>青少年会被家长和学校问到这件事，成年人没有人问。而且说「刷了一晚上手机之后觉得自己不行」，听起来像在无病呻吟。于是它一直没被说出来，这也正是它安静的原因。</p>
+<h2>四个真的有用的改动</h2>
+<ul>
+<li><strong>换一个更近的比较对象。</strong>和三个月前的自己比，而不是和别人状态最好的那个周二比。</li>
+<li><strong>取消关注那些稳定让你心情变差的人。</strong>不用宣告，也不用向谁解释。</li>
+<li><strong>把刷手机挪出最差的时段。</strong>睡前两小时是最差的时段，因为那时没有别的东西可以对冲你刚看到的那些。</li>
+<li><strong>给自己一个中断点。</strong>过了你设的时长，下一个页面会晚十秒加载，十秒足够想起来你原本要拿手机做什么。</li>
+</ul>
+<p>PausePaw 管的是最后这条。过了你设的时长，下一个页面会晚十秒加载，那十秒足够让你想起原本要做什么。可以在 <a href="/">pause-paw.shop</a> 设置。</p>
+<h2>先做一件事</h2>
+<p>今晚把最稳定让你心情变差的三个账号取消关注。这一件事是在源头上去掉比较，而不是要求你每次都忍住，大概两分钟就能做完。</p>
+<p>其余的在<a href="/app.html">App 页面</a>上。相邻的两篇可以接着看：<a href="/blog/post81.html">屏幕时间与焦虑</a>讲了研究实际说了什么，<a href="/blog/post78.html">doom scrolling 那篇</a>讲这个循环是怎么成型的。</p>`,
+    },
+    faq: [
+      { q: "Is screen time linked to low self-esteem?", a: "The link runs through comparison rather than through the hours themselves. Two people can spend the same three hours and come out differently, depending on who they follow and whether they opened the app to relax or to check on someone." },
+      { q: "How much screen time is too much?", a: "There is no number that suits everyone. The useful signal is what you feel afterwards: if you close the app feeling smaller than when you opened it, that amount is already too much for you." },
+      { q: "Does this affect adults as much as teenagers?", a: "It affects adults and gets discussed less. Teenagers are asked about it by parents and schools. Adults are asked by nobody, so the same pattern goes unnamed and unaddressed." },
+      { q: "What is the fastest thing to try?", a: "Unfollow the three accounts that most reliably leave you feeling worse, tonight. It takes two minutes and it removes the comparison at the source instead of asking you to resist it several times a day." },
+    ],
+  },
 ];
