@@ -4669,4 +4669,133 @@ The keyboard belongs to the cat now. The reasonable move is to buy a second keyb
       { q: "What is the fastest thing to try?", a: "Unfollow the three accounts that most reliably leave you feeling worse, tonight. It takes two minutes and it removes the comparison at the source instead of asking you to resist it several times a day." },
     ],
   },
+  {
+    id: "post85",
+    key: "bl_post85",
+    day: 90,
+    date: "2026-11-01",
+    en: {
+      title: "How to Be Present: A Digital Minimalist's Toolkit",
+      desc: "Why presence is a scheduling problem rather than a personality trait, the four tools worth trying, and the flat first week nobody warns you about.",
+      body: `<p>Most people who go looking for a <strong>digital minimalist toolkit</strong> are not trying to quit their phone. They tried that already and it lasted four days. What they want is to stop reaching the end of the day unable to account for most of it.</p>
+<p>This is the most practical part of the digital minimalism material, and the part that gets skipped most often, because it sounds soft. It is not soft. It is a short list of specific things done at specific times, and it either holds for a week or it does not.</p>
+<h2>Presence is a scheduling problem</h2>
+<p>Being present gets treated as a personality trait. It behaves more like a scheduling outcome. If your day has gaps and nothing is assigned to them, the nearest screen fills every one of them, and resolve has nothing to push against.</p>
+<p>So the move is to decide in advance what goes in the gap. Not "less phone" as a general intention, but a concrete thing: a walk, the washing up, ten minutes of looking out of a window. Concrete beats virtuous here, and it is not close.</p>
+<h2>Four tools and what each one is for</h2>
+<table><tr><th>Tool</th><th>What it is</th><th>When it fits</th></tr><tr><td>The phone-free hour</td><td>One fixed hour with the phone in another room</td><td>The first hour after waking, or the last before bed</td></tr><tr><td>Scheduled batches</td><td>Reading messages two or three times a day instead of all day</td><td>Any job where you are not on call</td></tr><tr><td>The leaving-the-house rule</td><td>No phone while walking somewhere</td><td>Short trips, under fifteen minutes</td></tr><tr><td>A hard stop</td><td>A time after which the phone goes on charge, out of arm's reach</td><td>Ninety minutes before sleep</td></tr></table>
+<h2>What I kept and what I dropped</h2>
+<p>I tried seven of these over a few months and kept three. The phone-free hour, because it is one decision instead of forty small ones. Scheduled batches, because the constant checking was what left me tired, more than the total hours did. And the hard stop, which took roughly two weeks to stop feeling strange.</p>
+<p>The ones I dropped all had the same flaw. They asked me to decide in the moment. Anything that requires a judgement call at eleven at night, while you are already scrolling, loses that call nearly every time.</p>
+<h2>How to tell it is working</h2>
+<p>Not by the screen time number. The first signal is that you remember parts of your day again. The second is that you stop describing whole evenings as wasted. Both show up before the number moves, and both are more honest than the hours, which will still look bad for a while.</p>
+<h2>Where this goes wrong</h2>
+<p>The most common way it goes wrong is that the list turns into an identity. Someone starts living by these rules and then cannot resist explaining to the people around them that they are doing digital minimalism, and the explaining takes longer than the doing. The rules are for you. They do not need announcing.</p>
+<p>The second way is starting all four at once. Four rules launched together start fighting each other by day three, and none of them survives. Add one, let it hold for a week, then add the next. That pace looks slow and is not.</p>
+<h2>The week nobody warns you about</h2>
+<p>The first week is flat rather than hard. You have removed a steady supply of small rewards and not yet put anything in the space, and the flatness is the gap itself rather than evidence that this is failing. For most people I have talked to, it lifts somewhere around day ten.</p>
+<p>The second thing worth knowing is that your total hours barely move in the first two weeks. What changes first is the shape of the day. The number follows later, and checking it every morning during that stretch is a reliable way to talk yourself out of continuing.</p>
+<h2>Start with one</h2>
+<p>Take the phone-free hour and run it for seven days. One hour, one week, phone in a different room. If it holds, add the hard stop. If it does not, switch to scheduled batches rather than concluding that none of this suits you.</p>
+<p>PausePaw covers the hard stop. After the time you set, the next page loads ten seconds later, which is long enough to remember what you picked the phone up for. Set it on the <a href="/">pause-paw.shop</a> home page, and the rest of the settings are on the <a href="/app.html">App page</a>.</p>
+<p>Two posts sit next to this one: <a href="/blog/post82.html">mindful tech use</a> for the thinking behind it, and <a href="/blog/post8.html">the phone-free hour</a> for that hour, step by step.</p>`,
+    },
+    zh: {
+      title: "活在当下：数字极简工具包",
+      desc: "为什么「活在当下」更像排班问题而不是性格问题、四个值得试的工具，以及没人提前告诉你的那一周平缓期。",
+      body: `<p>多数去搜 digital minimalist toolkit（数字极简工具包）的人，并不是想戒掉手机。他们试过，坚持了四天。他们真正想要的是：一天结束的时候，能说得出这一天大部分时间去了哪里。</p>
+<p>这是数字极简这套东西里最实用的一章，也是被跳过最多的一章，因为听起来很虚。它一点都不虚，就是一张很短的清单，写着具体的时间做具体的事，撑得住一周就算成，撑不住就不算。</p>
+<h2>活在当下是排班问题</h2>
+<p>「活在当下」常被当成一种性格。它更像排班的结果。你的一天里如果有空档，而空档里没有安排任何东西，最近的那一块屏幕就会把每个空档都填上，意志力在这种情况下没有可以借力的地方。</p>
+<p>所以动作是提前决定空档里放什么。先丢掉「少玩手机」这种笼统的意愿，换成一件具体的事：走一段路、洗个碗、对着窗外发十分钟呆。具体比正确管用，而且差距不小。</p>
+<h2>四个工具，各自解决什么</h2>
+<table><tr><th>工具</th><th>它是什么</th><th>适合什么时候</th></tr><tr><td>无手机一小时</td><td>每天固定一小时，手机放在另一个房间</td><td>起床后第一小时，或者睡前最后一小时</td></tr><tr><td>定时批处理</td><td>一天只看两三次消息，而不是整天都在看</td><td>不需要随时待命的工作</td></tr><tr><td>出门不带手机</td><td>走路去某处的时候不看手机</td><td>十五分钟以内的短途</td></tr><tr><td>硬性停手</td><td>过了某个时间手机就上充电器，放到够不着的地方</td><td>睡前九十分钟</td></tr></table>
+<h2>我留下来的和丢掉的</h2>
+<p>几个月里我试了七个，留下三个。无手机一小时，因为它是「一个决定」而不是四十个小决定。定时批处理，因为让我累的是不停查看这个动作，不是总时长。还有硬性停手，大概两周之后它才不再显得奇怪。</p>
+<p>被我丢掉的那几个有一个共同的毛病：它们都要求我在当下那一刻做判断。任何需要你在深夜十一点、已经刷起来之后再做一次判断的规则，几乎每次都会输。</p>
+<h2>怎么知道它在起作用</h2>
+<p>不是看屏幕时间那个数字。第一个信号是你重新记得一天里的某些片段；第二个是你不再把整晚整晚描述成「又废了」。这两个都出现在数字变化之前，也都比小时数更诚实。在很长一段时间里，小时数看起来依然很难看，这是正常的。</p>
+<h2>这套东西在哪里会跑偏</h2>
+<p>最常见的一种跑偏是把清单变成身份。有人开始按这套规则生活之后，会忍不住向身边的人说明自己在做数字极简，然后花在解释上的时间超过了执行的时间。规则是给自己用的，不需要对外交代。</p>
+<p>第二种跑偏是一次上全部。四条规则同时启动，在第三天互相打架，最后一条都留不下来。一次加一条，等上一条撑过一周再加下一条，这个速度看起来慢，实际是最快的。</p>
+<h2>没人提前告诉你的那一周</h2>
+<p>第一周是「平」，不是「难」。你拿走了一份稳定的小奖励供应，还没往那个位置放别的东西，这种平缓就是那段空档本身，不等于这件事失败了。我聊过的人里，多数在第十天左右开始回升。</p>
+<p>第二件值得知道的事：前两周你的总时长几乎不会变。先变的是一天的形态，数字后面才跟上。在这段时间里每天早上都去看那个数字，是劝退自己的可靠方式。</p>
+<h2>从一件开始</h2>
+<p>拿走「无手机一小时」，先跑七天。一小时、一周、手机放在另一个房间。撑住了就加硬性停手；没撑住就换成定时批处理，而不是得出结论说这些都不适合你。</p>
+<p>PausePaw 管的就是硬性停手。过了你设的时间，下一个页面会晚十秒加载，十秒足够想起你原本拿起手机要做什么。可以在 <a href="/">pause-paw.shop</a> 首页设置，其余选项在<a href="/app.html">App 页面</a>上。</p>
+<p>相邻的两篇可以接着看：<a href="/blog/post82.html">正念用手机</a>讲背后的想法，<a href="/blog/post8.html">无手机一小时</a>讲这一小时具体怎么过。</p>`,
+    },
+    faq: [
+      { q: "What is a digital minimalist toolkit?", a: "A small set of rules you apply at fixed times, rather than a general intention to use your phone less. The four that survive longest are the phone-free hour, scheduled message batches, no phone while walking, and a hard stop before sleep." },
+      { q: "Do I have to delete social media?", a: "No. Most people who delete an app move the same hours to a different one within two weeks. Scheduled batches tend to reduce the hours further than deletion does, because they keep the app and remove the reflex." },
+      { q: "How long before it feels normal?", a: "The flat stretch runs about ten days. The hard stop takes closer to two weeks to stop feeling strange. Judge it on the weekly average rather than any single day, and do not read the screen time number during the first fortnight." },
+      { q: "What is the fastest change to try?", a: "The phone-free hour, for seven days. One fixed hour, phone in another room. It is one decision made in advance instead of forty small ones made while you are already tired." },
+    ],
+  },
+  {
+    id: "post86",
+    key: "bl_post86",
+    day: 88,
+    date: "2026-10-30",
+    en: {
+      title: "Phone FOMO: How to Stop Comparing on Social Media",
+      desc: "Why the comparison runs on a schedule rather than on willpower, the three feeds that do the damage, and a seven-day journal that actually changed something.",
+      body: `<p>Phone FOMO gets described as a fear of missing out. That framing is wrong in a way that matters. What most people feel when they put the phone down is not fear of an event they missed. It is the flat sense that other lives are running ahead of theirs, and <strong>social media comparison</strong> is what produces it.</p>
+<p>I want to be careful here, because the usual advice is to be grateful for what you have, and in my experience that does nothing. Gratitude does not survive contact with a feed that updates four hundred times a day. What works is narrowing what you are comparing against.</p>
+<h2>Why the comparison is scheduled, not chosen</h2>
+<p>You do not decide to compare. The app decides for you, at the moments it opens. By the time you notice what you are doing, the comparison has already happened, which is why telling yourself to stop is close to useless.</p>
+<p>The useful move is upstream: change what loads when the app opens. That is a settings change, made once, rather than a decision you have to win several times a day.</p>
+<h2>What the research keeps finding</h2>
+<p>Studies on this converge on an unglamorous point. The hours matter less than the direction of attention. Two people can spend the same ninety minutes, one on a feed of close friends and one on a feed of strangers, and only the second reports feeling worse afterwards.</p>
+<p>That is also why "spend less time on it" keeps underperforming as advice. The hours are easy to measure and mostly beside the point. Whose posts you are reading is harder to measure, and it does nearly all of the work.</p>
+<h2>Three feeds that do the most damage</h2>
+<table><tr><th>Feed</th><th>What it triggers</th><th>What to change</th></tr><tr><td>People from your old job or cohort</td><td>Comparing your current year to their best year</td><td>Mute, do not unfollow. Muting is quiet</td></tr><tr><td>Productivity and fitness accounts</td><td>A standard that no one actually holds</td><td>Unfollow outright</td></tr><tr><td>Travel and house content</td><td>Comparing your ordinary Tuesday to someone else's best week</td><td>Move it out of the main feed, keep it if you like it</td></tr></table>
+<h2>The seven-day comparison journal</h2>
+<p>This is the part I was most sceptical about, and it is the part that worked. For seven days, every time you close an app feeling smaller than when you opened it, write three things in a note: which app, whose post, and what you told yourself afterwards.</p>
+<p>By day three a pattern shows up, and it is almost always two or three specific accounts rather than the app as a whole. By day seven the list is stable enough to act on, which is the point. You are not trying to feel differently about the feed. You are trying to find out which three names are doing it.</p>
+<h2>What to do with the list</h2>
+<ul>
+<li><strong>Mute rather than unfollow the first three.</strong> Unfollowing carries a social cost that makes people hesitate. Muting has none, and nobody is told.</li>
+<li><strong>Pick a closer comparison.</strong> Yourself three months ago, not someone else's best Tuesday. The gap is smaller and it is real.</li>
+<li><strong>Move the scroll out of the worst window.</strong> The two hours before sleep are the worst window, because nothing else is there to offset what you just saw.</li>
+</ul>
+<h2>Start tonight</h2>
+<p>Open the app you check most, go to the accounts that reliably leave you feeling worse, and mute three of them. It takes about two minutes and it removes the comparison at the source instead of asking you to resist it several times a day.</p>
+<p>PausePaw handles the window rather than the accounts. After the time you set, the next page loads ten seconds later, which is long enough to notice what you are doing. Set it on the <a href="/">pause-paw.shop</a> home page, and the rest of the options are on the <a href="/app.html">App page</a>.</p>
+<p>Two posts sit next to this one: <a href="/blog/post21.html">social media addiction versus phone addiction</a> for where the line sits, and <a href="/blog/post78.html">doom scrolling and depression</a> for what happens when the comparison keeps running.</p>`,
+    },
+    zh: {
+      title: "手机 FOMO：怎么停止社交媒体对比",
+      desc: "为什么这个对比是「被排好程的」而不是你选的、三类伤害最大的信息流，以及一本真的改变了些什么的七天对比日志。",
+      body: `<p>手机 FOMO 通常被描述成「错失恐惧」。这个说法错在一个要紧的地方：多数人放下手机时感受到的，并不是怕错过了某件事。那是一种钝钝的感觉：别人的生活跑在自己前面。产生这个感觉的是 social media comparison（社交媒体对比），不是事件本身。</p>
+<p>这里我想说得谨慎一点，因为常见的建议是「感恩自己拥有的」，而我的经验是那没用。感恩扛不住一天更新四百次的信息流。真正起作用的是把「你拿来比的对象」收窄。</p>
+<h2>为什么这个对比是被排好程的</h2>
+<p>你并没有决定要比较。是 App 在它打开的那一刻替你决定了。等你意识到自己在做什么，比较已经完成了，所以叫自己「别比了」基本没用。</p>
+<p>有用的动作在上游：改变打开 App 时加载出来的东西。这是一次性的设置修改，不是你每天要赢好几次的决定。</p>
+<h2>研究反复指出的是哪一点</h2>
+<p>这类研究收敛到一个不怎么起眼的结论：时长不如注意力的方向重要。两个人同样花九十分钟，一个刷的是亲近朋友的动态，另一个刷的是陌生人，事后觉得更难受的通常只有后者。</p>
+<p>这也是「少花点时间」这个建议一直效果平平的原因。小时数容易测量，但它基本不在要害上；你在读谁的内容不容易测量，而它几乎承担了全部的作用。</p>
+<h2>伤害最大的三类信息流</h2>
+<table><tr><th>信息流</th><th>它触发什么</th><th>该改什么</th></tr><tr><td>前公司或同届的人</td><td>拿你现在的这一年，比他们最好的那一年</td><td>静音，不要取关。静音是安静的</td></tr><tr><td>效率和健身账号</td><td>一个实际上没人遵守的标准</td><td>直接取关</td></tr><tr><td>旅行和房子内容</td><td>拿你普通的周二，比别人挑出来的高光</td><td>移出主信息流，喜欢就留着</td></tr></table>
+<h2>七天对比日志</h2>
+<p>这是我最怀疑的环节，也是真正起作用的环节。七天里，每次你关掉一个 App、觉得自己比打开前更小了一点，就在备忘录里写三样东西：哪个 App、谁的内容、以及你事后对自己说了什么。</p>
+<p>第三天就能看出模式，而且几乎总是两三个具体账号，不是整个 App。第七天这份名单就稳定到可以动手了，这才是重点。你要做的不是「对信息流产生不同的感觉」，目标要小得多：找出到底是哪三个名字在起作用。</p>
+<h2>拿着这份名单做什么</h2>
+<ul>
+<li><strong>前三个用静音，不要取关。</strong>取关有社交成本，会让人犹豫；静音没有，而且不会通知任何人。</li>
+<li><strong>换一个更近的比较对象。</strong>和三个月前的自己比，而不是和别人状态最好的那个周二比。差距更小，而且是真实的。</li>
+<li><strong>把刷手机挪出最差的时段。</strong>睡前两小时是最差的时段，因为那时没有别的东西可以对冲你刚看到的那些。</li>
+</ul>
+<h2>今晚就做一件事</h2>
+<p>打开你查看次数最多的那个 App，找到那些稳定让你心情变差的账号，静音其中三个。大概两分钟，它是在源头上去掉比较，而不是要求你一天忍好几次。</p>
+<p>PausePaw 管的是时段，不是账号。过了你设的时间，下一个页面会晚十秒加载，十秒足够让你注意到自己在做什么。可以在 <a href="/">pause-paw.shop</a> 首页设置，其余选项在<a href="/app.html">App 页面</a>上。</p>
+<p>相邻的两篇可以接着看：<a href="/blog/post21.html">社交媒体成瘾与手机成瘾</a>讲界线在哪里，<a href="/blog/post78.html">doom scrolling 与抑郁</a>讲这个对比一直跑下去会发生什么。</p>`,
+    },
+    faq: [
+      { q: "Is phone FOMO the same as social media addiction?", a: "They overlap but they are not the same. Addiction is about the compulsion to open the app. FOMO is about what happens after you close it. You can scroll for twenty minutes and feel fine, or five minutes and feel smaller, and the difference is who you follow rather than how long." },
+      { q: "Does muting accounts actually help?", a: "It helps more than unfollowing, because people hesitate before unfollowing someone they know. Muting removes the content and tells nobody. In the seven-day journal, the accounts that show up repeatedly are the ones worth muting first." },
+      { q: "Why do I feel worse at night?", a: "The two hours before sleep have nothing to offset what you just saw. During the day, work or people interrupt the comparison. At night nothing interrupts it, so it runs to the end of the thought." },
+    ],
+  },
 ];
